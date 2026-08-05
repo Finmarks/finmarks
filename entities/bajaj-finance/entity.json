@@ -1,0 +1,33 @@
+{
+  "id": "bajaj-finance",
+  "name": "Bajaj Finance",
+  "short_name": "Bajaj Finance",
+  "legal_name": "Bajaj Finance Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1987,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.bajajfinserv.in",
+  "status": "active",
+  "tags": [
+    "nbfc",
+    "listed",
+    "consumer-lending",
+    "emi"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

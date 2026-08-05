@@ -1,0 +1,38 @@
+{
+  "id": "yes-bank",
+  "name": "Yes Bank",
+  "short_name": "Yes Bank",
+  "legal_name": "Yes Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2004,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "YESB",
+  "upi_handles": [
+    "@ybl",
+    "@idfcfirst"
+  ],
+  "fip_id": null,
+  "website": "https://www.yesbank.in",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "psp-bank",
+    "phonepe-psp"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

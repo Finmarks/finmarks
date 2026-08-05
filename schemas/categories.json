@@ -1,0 +1,145 @@
+{
+  "$comment": "Category taxonomy. Order here is the canonical display order. Keep ids in sync with the categories enum in entity.schema.json.",
+  "categories": [
+    {
+      "id": "public-sector-bank",
+      "label": "Public sector banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Government-majority-owned scheduled commercial banks."
+    },
+    {
+      "id": "private-bank",
+      "label": "Private banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Privately held scheduled commercial banks."
+    },
+    {
+      "id": "small-finance-bank",
+      "label": "Small finance banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Niche banks serving underserved and unbanked segments."
+    },
+    {
+      "id": "payments-bank",
+      "label": "Payments banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Deposit-taking banks that cannot lend."
+    },
+    {
+      "id": "upi-psp",
+      "label": "UPI / PSP apps",
+      "regulator": "NPCI",
+      "phase": 1,
+      "description": "Payment service provider apps on the UPI rails."
+    },
+    {
+      "id": "wallet",
+      "label": "Prepaid wallets",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Prepaid payment instrument issuers."
+    },
+    {
+      "id": "payment-gateway",
+      "label": "Payment gateways",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Online payment acceptance and aggregation platforms."
+    },
+    {
+      "id": "neobank",
+      "label": "Neobanks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Digital-first banking experiences built on a partner bank licence."
+    },
+    {
+      "id": "bnpl",
+      "label": "Buy Now Pay Later",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Deferred payment and short-tenure credit at checkout."
+    },
+    {
+      "id": "lending-platform",
+      "label": "Digital lending",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Digital personal, consumer and SME lending platforms."
+    },
+    {
+      "id": "wealthtech",
+      "label": "Investing platforms",
+      "regulator": "SEBI",
+      "phase": 1,
+      "description": "Broking, mutual fund and wealth management platforms."
+    },
+    {
+      "id": "insurtech",
+      "label": "Insurance platforms",
+      "regulator": "IRDAI",
+      "phase": 1,
+      "description": "Digital insurers, brokers and aggregators."
+    },
+    {
+      "id": "infra-api",
+      "label": "Infra / API platforms",
+      "regulator": "Varies",
+      "phase": 1,
+      "description": "Banking-as-a-service, payment orchestration and fintech API infrastructure."
+    },
+    {
+      "id": "account-aggregator",
+      "label": "Account Aggregators",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "RBI-licensed NBFC-AAs operating the consented data-sharing framework."
+    },
+    {
+      "id": "credit-bureau",
+      "label": "Credit bureaus",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Credit information companies."
+    },
+    {
+      "id": "nbfc",
+      "label": "NBFCs",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Non-banking financial companies."
+    },
+    {
+      "id": "international-bank",
+      "label": "International banks",
+      "regulator": "Varies",
+      "phase": 3,
+      "description": "Global banks operating in India or globally relevant."
+    },
+    {
+      "id": "crypto-exchange",
+      "label": "Crypto exchanges",
+      "regulator": "FIU-IND",
+      "phase": 3,
+      "description": "Registered virtual digital asset platforms."
+    },
+    {
+      "id": "pos-terminal",
+      "label": "POS / terminals",
+      "regulator": "RBI",
+      "phase": 3,
+      "description": "Point-of-sale hardware and merchant terminal vendors."
+    },
+    {
+      "id": "regulator",
+      "label": "Regulators",
+      "regulator": "None",
+      "phase": 3,
+      "description": "Regulatory and standard-setting bodies."
+    }
+  ]
+}

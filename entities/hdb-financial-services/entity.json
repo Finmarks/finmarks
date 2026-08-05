@@ -1,0 +1,32 @@
+{
+  "id": "hdb-financial-services",
+  "name": "HDB Financial Services",
+  "short_name": "HDB Financial",
+  "legal_name": "HDB Financial Services Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#004C8F",
+  "country": "IN",
+  "founded": 2008,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.hdbfs.com",
+  "status": "active",
+  "tags": [
+    "nbfc",
+    "hdfc-group",
+    "consumer-lending"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

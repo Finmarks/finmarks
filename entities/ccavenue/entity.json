@@ -1,0 +1,31 @@
+{
+  "id": "ccavenue",
+  "name": "CCAvenue",
+  "short_name": "CCAvenue",
+  "legal_name": "Infibeam Avenues Limited",
+  "categories": [
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2001,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.ccavenue.com",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "payment-aggregator",
+    "listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

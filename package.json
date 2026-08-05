@@ -1,0 +1,29 @@
+{
+  "name": "bharatbrands-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open-source brand asset library for the Indian fintech ecosystem",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "seed": "node scripts/seed-entities.mjs",
+    "validate": "node scripts/validate.mjs",
+    "check-logos": "node scripts/check-logos.mjs",
+    "generate": "node scripts/generate-index.mjs",
+    "convert-png": "node scripts/convert-png.mjs",
+    "build": "pnpm validate && pnpm generate && pnpm -F bharatbrands build",
+    "test": "pnpm validate && pnpm -F bharatbrands test"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

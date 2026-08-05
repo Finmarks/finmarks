@@ -1,0 +1,31 @@
+{
+  "id": "punjab-sind-bank",
+  "name": "Punjab & Sind Bank",
+  "short_name": "PSB",
+  "legal_name": "Punjab & Sind Bank",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1908,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "PSIB",
+  "upi_handles": [],
+  "website": "https://punjabandsindbank.co.in",
+  "status": "active",
+  "tags": [
+    "government"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

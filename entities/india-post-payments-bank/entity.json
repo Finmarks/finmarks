@@ -1,0 +1,36 @@
+{
+  "id": "india-post-payments-bank",
+  "name": "India Post Payments Bank",
+  "short_name": "IPPB",
+  "legal_name": "India Post Payments Bank Limited",
+  "categories": [
+    "payments-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#C8102E",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "IPOS",
+  "upi_handles": [
+    "@postbank"
+  ],
+  "website": "https://ippbonline.com",
+  "status": "active",
+  "tags": [
+    "payments-bank",
+    "government",
+    "india-post"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,19 @@
+node_modules/
+.DS_Store
+*.log
+
+# Package build output — published to npm, not committed.
+packages/*/dist/
+packages/*/data/
+
+# Rasterised PNGs are build output, regenerated on release.
+dist/png/
+
+# dist/*.json IS committed — it is the published index and its diff is the
+# review surface for data changes. Do not add it here.
+
+.env
+.env.local
+*.tsbuildinfo
+.turbo/
+coverage/

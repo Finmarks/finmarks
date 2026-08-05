@@ -1,0 +1,31 @@
+{
+  "id": "transunion-cibil",
+  "name": "TransUnion CIBIL",
+  "short_name": "CIBIL",
+  "legal_name": "TransUnion CIBIL Limited",
+  "categories": [
+    "credit-bureau"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2000,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.cibil.com",
+  "status": "active",
+  "tags": [
+    "credit-bureau",
+    "credit-score",
+    "rbi-licensed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "open-banking",
+  "name": "Open",
+  "short_name": "Open",
+  "legal_name": "Open Financial Technologies Private Limited",
+  "categories": [
+    "neobank",
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#6C3FE7",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://open.money",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "sme-neobank",
+    "business-current-account"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

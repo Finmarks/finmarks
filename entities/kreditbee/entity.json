@@ -1,0 +1,30 @@
+{
+  "id": "kreditbee",
+  "name": "KreditBee",
+  "short_name": "KreditBee",
+  "legal_name": "Krazybee Services Private Limited",
+  "categories": [
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00AB66",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://kreditbee.in",
+  "status": "active",
+  "tags": [
+    "personal-loan",
+    "consumer"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

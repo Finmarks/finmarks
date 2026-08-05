@@ -1,0 +1,12 @@
+{
+  "//": "Binds the entity schema to every entity.json so VS Code gives contributors inline validation and autocomplete while they edit.",
+  "json.schemas": [
+    {
+      "fileMatch": ["/entities/*/entity.json"],
+      "url": "./schemas/entity.schema.json"
+    }
+  ],
+  "files.associations": {
+    "entity.json": "json"
+  }
+}

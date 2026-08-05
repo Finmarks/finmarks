@@ -1,0 +1,38 @@
+{
+  "id": "state-bank-of-india",
+  "name": "State Bank of India",
+  "short_name": "SBI",
+  "legal_name": "State Bank of India",
+  "categories": [
+    "public-sector-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#22409A",
+  "country": "IN",
+  "founded": 1955,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "SBIN",
+  "upi_handles": [
+    "@sbi",
+    "@oksbi"
+  ],
+  "website": "https://www.sbi.co.in",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "largest-bank",
+    "government",
+    "psp-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

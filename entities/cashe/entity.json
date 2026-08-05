@@ -1,0 +1,30 @@
+{
+  "id": "cashe",
+  "name": "CASHe",
+  "short_name": "CASHe",
+  "legal_name": "Bhanix Finance and Investment Limited",
+  "categories": [
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E94A00",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://cashe.co.in",
+  "status": "active",
+  "tags": [
+    "personal-loan",
+    "salary-advance"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,1101 @@
+{
+  "version": "0.1.0",
+  "generated_at": "2026-08-05",
+  "total": 115,
+  "entities": [
+    {
+      "id": "5paisa",
+      "name": "5paisa",
+      "short_name": "5paisa",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#E8173C"
+    },
+    {
+      "id": "acko",
+      "name": "Acko",
+      "short_name": "Acko",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#00C4B4"
+    },
+    {
+      "id": "airtel-payments-bank",
+      "name": "Airtel Payments Bank",
+      "short_name": "Airtel Bank",
+      "categories": [
+        "payments-bank",
+        "wallet",
+        "upi-psp"
+      ],
+      "brand_color": "#E40000"
+    },
+    {
+      "id": "amazon-pay",
+      "name": "Amazon Pay",
+      "short_name": "Amazon Pay",
+      "categories": [
+        "upi-psp",
+        "wallet"
+      ],
+      "brand_color": "#FF9900"
+    },
+    {
+      "id": "angel-one",
+      "name": "Angel One",
+      "short_name": "Angel One",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#2A294E"
+    },
+    {
+      "id": "anumati",
+      "name": "Anumati",
+      "short_name": "Anumati",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#5F259F"
+    },
+    {
+      "id": "atom-technologies",
+      "name": "Atom Technologies",
+      "short_name": "Atom",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#0066CC"
+    },
+    {
+      "id": "au-small-finance-bank",
+      "name": "AU Small Finance Bank",
+      "short_name": "AU Bank",
+      "categories": [
+        "small-finance-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#E40520"
+    },
+    {
+      "id": "axio",
+      "name": "Axio",
+      "short_name": "Axio",
+      "categories": [
+        "bnpl",
+        "lending-platform"
+      ],
+      "brand_color": "#6247EE"
+    },
+    {
+      "id": "axis-bank",
+      "name": "Axis Bank",
+      "short_name": "Axis",
+      "categories": [
+        "private-bank",
+        "upi-psp",
+        "payment-gateway"
+      ],
+      "brand_color": "#97144D"
+    },
+    {
+      "id": "bajaj-finance",
+      "name": "Bajaj Finance",
+      "short_name": "Bajaj Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "bandhan-bank",
+      "name": "Bandhan Bank",
+      "short_name": "Bandhan",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#E3001B"
+    },
+    {
+      "id": "bank-of-baroda",
+      "name": "Bank of Baroda",
+      "short_name": "BOB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#F26522"
+    },
+    {
+      "id": "bank-of-india",
+      "name": "Bank of India",
+      "short_name": "BOI",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003399"
+    },
+    {
+      "id": "bank-of-maharashtra",
+      "name": "Bank of Maharashtra",
+      "short_name": "BOM",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "bhim",
+      "name": "BHIM",
+      "short_name": "BHIM",
+      "categories": [
+        "upi-psp"
+      ],
+      "brand_color": "#1B3DA4"
+    },
+    {
+      "id": "billdesk",
+      "name": "BillDesk",
+      "short_name": "BillDesk",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "camsfinserv",
+      "name": "CAMSfinserv",
+      "short_name": "CAMSfinserv",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "canara-bank",
+      "name": "Canara Bank",
+      "short_name": "Canara",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#005CA9"
+    },
+    {
+      "id": "capital-small-finance-bank",
+      "name": "Capital Small Finance Bank",
+      "short_name": "Capital SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "cashe",
+      "name": "CASHe",
+      "short_name": "CASHe",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#E94A00"
+    },
+    {
+      "id": "cashfree-payments",
+      "name": "Cashfree Payments",
+      "short_name": "Cashfree",
+      "categories": [
+        "payment-gateway",
+        "infra-api"
+      ],
+      "brand_color": "#1A55E3"
+    },
+    {
+      "id": "ccavenue",
+      "name": "CCAvenue",
+      "short_name": "CCAvenue",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "central-bank-of-india",
+      "name": "Central Bank of India",
+      "short_name": "Central Bank",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "city-union-bank",
+      "name": "City Union Bank",
+      "short_name": "CUB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "cred",
+      "name": "CRED",
+      "short_name": "CRED",
+      "categories": [
+        "upi-psp",
+        "bnpl",
+        "lending-platform"
+      ],
+      "brand_color": "#1A1A1A"
+    },
+    {
+      "id": "crif-highmark",
+      "name": "CRIF Highmark",
+      "short_name": "CRIF Highmark",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "csb-bank",
+      "name": "CSB Bank",
+      "short_name": "CSB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "dcb-bank",
+      "name": "DCB Bank",
+      "short_name": "DCB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#E2211B"
+    },
+    {
+      "id": "decentro",
+      "name": "Decentro",
+      "short_name": "Decentro",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#6B4EFF"
+    },
+    {
+      "id": "ditto-insurance",
+      "name": "Ditto Insurance",
+      "short_name": "Ditto",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#2F4F7F"
+    },
+    {
+      "id": "equifax-india",
+      "name": "Equifax India",
+      "short_name": "Equifax",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#E31837"
+    },
+    {
+      "id": "equitas-small-finance-bank",
+      "name": "Equitas Small Finance Bank",
+      "short_name": "Equitas SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#F7941D"
+    },
+    {
+      "id": "esaf-small-finance-bank",
+      "name": "ESAF Small Finance Bank",
+      "short_name": "ESAF SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#006838"
+    },
+    {
+      "id": "experian-india",
+      "name": "Experian India",
+      "short_name": "Experian",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#9B1B2E"
+    },
+    {
+      "id": "federal-bank",
+      "name": "Federal Bank",
+      "short_name": "Federal",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "fi-money",
+      "name": "Fi Money",
+      "short_name": "Fi",
+      "categories": [
+        "neobank",
+        "wealthtech"
+      ],
+      "brand_color": "#3CB46E"
+    },
+    {
+      "id": "fibe",
+      "name": "Fibe",
+      "short_name": "Fibe",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#5B37EA"
+    },
+    {
+      "id": "fincare-small-finance-bank",
+      "name": "Fincare Small Finance Bank",
+      "short_name": "Fincare SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "fino-payments-bank",
+      "name": "Fino Payments Bank",
+      "short_name": "Fino",
+      "categories": [
+        "payments-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#0066B3"
+    },
+    {
+      "id": "finvu",
+      "name": "Finvu",
+      "short_name": "Finvu",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#1B3DA4"
+    },
+    {
+      "id": "freecharge",
+      "name": "FreeCharge",
+      "short_name": "FreeCharge",
+      "categories": [
+        "wallet",
+        "upi-psp"
+      ],
+      "brand_color": "#00B9F2"
+    },
+    {
+      "id": "freo",
+      "name": "Freo",
+      "short_name": "Freo",
+      "categories": [
+        "neobank",
+        "lending-platform"
+      ],
+      "brand_color": "#1DB89A"
+    },
+    {
+      "id": "go-digit",
+      "name": "Go Digit",
+      "short_name": "Digit",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#F05A27"
+    },
+    {
+      "id": "gpay",
+      "name": "Google Pay",
+      "short_name": "GPay",
+      "categories": [
+        "upi-psp"
+      ],
+      "brand_color": "#4285F4"
+    },
+    {
+      "id": "groww",
+      "name": "Groww",
+      "short_name": "Groww",
+      "categories": [
+        "wealthtech",
+        "upi-psp"
+      ],
+      "brand_color": "#5367FF"
+    },
+    {
+      "id": "hdb-financial-services",
+      "name": "HDB Financial Services",
+      "short_name": "HDB Financial",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#004C8F"
+    },
+    {
+      "id": "hdfc-bank",
+      "name": "HDFC Bank",
+      "short_name": "HDFC",
+      "categories": [
+        "private-bank",
+        "upi-psp",
+        "payment-gateway"
+      ],
+      "brand_color": "#004C8F"
+    },
+    {
+      "id": "icici-bank",
+      "name": "ICICI Bank",
+      "short_name": "ICICI",
+      "categories": [
+        "private-bank",
+        "upi-psp",
+        "payment-gateway"
+      ],
+      "brand_color": "#B02A30"
+    },
+    {
+      "id": "idfc-first-bank",
+      "name": "IDFC FIRST Bank",
+      "short_name": "IDFC FIRST",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#9E1B32"
+    },
+    {
+      "id": "india-post-payments-bank",
+      "name": "India Post Payments Bank",
+      "short_name": "IPPB",
+      "categories": [
+        "payments-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#C8102E"
+    },
+    {
+      "id": "indian-bank",
+      "name": "Indian Bank",
+      "short_name": "Indian Bank",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#00529F"
+    },
+    {
+      "id": "indian-overseas-bank",
+      "name": "Indian Overseas Bank",
+      "short_name": "IOB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "indmoney",
+      "name": "INDmoney",
+      "short_name": "INDmoney",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#FF5F46"
+    },
+    {
+      "id": "indusind-bank",
+      "name": "IndusInd Bank",
+      "short_name": "IndusInd",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#004C97"
+    },
+    {
+      "id": "instamojo",
+      "name": "Instamojo",
+      "short_name": "Instamojo",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#ED6237"
+    },
+    {
+      "id": "jana-small-finance-bank",
+      "name": "Jana Small Finance Bank",
+      "short_name": "Jana SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#E01E26"
+    },
+    {
+      "id": "jio-payments-bank",
+      "name": "Jio Payments Bank",
+      "short_name": "Jio Bank",
+      "categories": [
+        "payments-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "short_name": "Jupiter",
+      "categories": [
+        "neobank",
+        "wealthtech"
+      ],
+      "brand_color": "#3C1AF5"
+    },
+    {
+      "id": "juspay",
+      "name": "Juspay",
+      "short_name": "Juspay",
+      "categories": [
+        "payment-gateway",
+        "infra-api"
+      ],
+      "brand_color": "#1A1A2E"
+    },
+    {
+      "id": "karnataka-bank",
+      "name": "Karnataka Bank",
+      "short_name": "KBL",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "kotak-mahindra-bank",
+      "name": "Kotak Mahindra Bank",
+      "short_name": "Kotak",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#E1251B"
+    },
+    {
+      "id": "kreditbee",
+      "name": "KreditBee",
+      "short_name": "KreditBee",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#00AB66"
+    },
+    {
+      "id": "kuvera",
+      "name": "Kuvera",
+      "short_name": "Kuvera",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#0070BA"
+    },
+    {
+      "id": "lazypay",
+      "name": "LazyPay",
+      "short_name": "LazyPay",
+      "categories": [
+        "bnpl",
+        "lending-platform"
+      ],
+      "brand_color": "#FF6B6B"
+    },
+    {
+      "id": "loantap",
+      "name": "LoanTap",
+      "short_name": "LoanTap",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#FF6600"
+    },
+    {
+      "id": "lt-finance",
+      "name": "L&T Finance",
+      "short_name": "L&T Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "m2p-fintech",
+      "name": "M2P Fintech",
+      "short_name": "M2P",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "mahindra-finance",
+      "name": "Mahindra Finance",
+      "short_name": "Mahindra Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#CC0000"
+    },
+    {
+      "id": "mobikwik",
+      "name": "MobiKwik",
+      "short_name": "MobiKwik",
+      "categories": [
+        "wallet",
+        "bnpl"
+      ],
+      "brand_color": "#1DACE8"
+    },
+    {
+      "id": "moneyview",
+      "name": "MoneyView",
+      "short_name": "MoneyView",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#1E4D9B"
+    },
+    {
+      "id": "muthoot-finance",
+      "name": "Muthoot Finance",
+      "short_name": "Muthoot",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E8B91B"
+    },
+    {
+      "id": "nadl",
+      "name": "NADL",
+      "short_name": "NADL",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "navi",
+      "name": "Navi",
+      "short_name": "Navi",
+      "categories": [
+        "upi-psp",
+        "lending-platform",
+        "insurtech"
+      ],
+      "brand_color": "#3F5FFA"
+    },
+    {
+      "id": "niyo",
+      "name": "Niyo",
+      "short_name": "Niyo",
+      "categories": [
+        "neobank",
+        "wealthtech"
+      ],
+      "brand_color": "#0060DF"
+    },
+    {
+      "id": "nsdl-payments-bank",
+      "name": "NSDL Payments Bank",
+      "short_name": "NSDL Bank",
+      "categories": [
+        "payments-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "ola-money",
+      "name": "Ola Money",
+      "short_name": "Ola Money",
+      "categories": [
+        "wallet"
+      ],
+      "brand_color": "#00B140"
+    },
+    {
+      "id": "onemoney",
+      "name": "OneMoney",
+      "short_name": "OneMoney",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "open-banking",
+      "name": "Open",
+      "short_name": "Open",
+      "categories": [
+        "neobank",
+        "payment-gateway"
+      ],
+      "brand_color": "#6C3FE7"
+    },
+    {
+      "id": "paytm",
+      "name": "Paytm",
+      "short_name": "Paytm",
+      "categories": [
+        "upi-psp",
+        "wallet",
+        "bnpl",
+        "wealthtech",
+        "payment-gateway"
+      ],
+      "brand_color": "#002970"
+    },
+    {
+      "id": "paytm-payments-bank",
+      "name": "Paytm Payments Bank",
+      "short_name": "PPBL",
+      "categories": [
+        "payments-bank"
+      ],
+      "brand_color": "#002970"
+    },
+    {
+      "id": "payu-india",
+      "name": "PayU India",
+      "short_name": "PayU",
+      "categories": [
+        "payment-gateway",
+        "lending-platform"
+      ],
+      "brand_color": "#009DDB"
+    },
+    {
+      "id": "perfios",
+      "name": "Perfios",
+      "short_name": "Perfios",
+      "categories": [
+        "infra-api",
+        "account-aggregator"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "phonepe",
+      "name": "PhonePe",
+      "short_name": "PhonePe",
+      "categories": [
+        "upi-psp",
+        "wallet",
+        "wealthtech",
+        "insurtech"
+      ],
+      "brand_color": "#5F259F"
+    },
+    {
+      "id": "policybazaar",
+      "name": "PolicyBazaar",
+      "short_name": "PolicyBazaar",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#EE3424"
+    },
+    {
+      "id": "punjab-national-bank",
+      "name": "Punjab National Bank",
+      "short_name": "PNB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#002D8C"
+    },
+    {
+      "id": "punjab-sind-bank",
+      "name": "Punjab & Sind Bank",
+      "short_name": "PSB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "short_name": "Razorpay",
+      "categories": [
+        "payment-gateway",
+        "neobank",
+        "infra-api",
+        "lending-platform"
+      ],
+      "brand_color": "#2B6CB0"
+    },
+    {
+      "id": "razorpayx",
+      "name": "RazorpayX",
+      "short_name": "RazorpayX",
+      "categories": [
+        "neobank",
+        "infra-api"
+      ],
+      "brand_color": "#2B6CB0"
+    },
+    {
+      "id": "rbl-bank",
+      "name": "RBL Bank",
+      "short_name": "RBL",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "scripbox",
+      "name": "Scripbox",
+      "short_name": "Scripbox",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#2A6495"
+    },
+    {
+      "id": "setu",
+      "name": "Setu",
+      "short_name": "Setu",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#7B5EA7"
+    },
+    {
+      "id": "shriram-finance",
+      "name": "Shriram Finance",
+      "short_name": "Shriram Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E8A000"
+    },
+    {
+      "id": "signzy",
+      "name": "Signzy",
+      "short_name": "Signzy",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#4A00E0"
+    },
+    {
+      "id": "simpl",
+      "name": "Simpl",
+      "short_name": "Simpl",
+      "categories": [
+        "bnpl"
+      ],
+      "brand_color": "#FF5C35"
+    },
+    {
+      "id": "slice",
+      "name": "Slice",
+      "short_name": "Slice",
+      "categories": [
+        "neobank",
+        "bnpl"
+      ],
+      "brand_color": "#FFDE59"
+    },
+    {
+      "id": "snapmint",
+      "name": "Snapmint",
+      "short_name": "Snapmint",
+      "categories": [
+        "bnpl"
+      ],
+      "brand_color": "#00A4E4"
+    },
+    {
+      "id": "south-indian-bank",
+      "name": "South Indian Bank",
+      "short_name": "SIB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "stashfin",
+      "name": "Stashfin",
+      "short_name": "Stashfin",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#FF4500"
+    },
+    {
+      "id": "state-bank-of-india",
+      "name": "State Bank of India",
+      "short_name": "SBI",
+      "categories": [
+        "public-sector-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#22409A"
+    },
+    {
+      "id": "suryodaya-small-finance-bank",
+      "name": "Suryodaya Small Finance Bank",
+      "short_name": "Suryodaya SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#FF6600"
+    },
+    {
+      "id": "tata-capital",
+      "name": "Tata Capital",
+      "short_name": "Tata Capital",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "transunion-cibil",
+      "name": "TransUnion CIBIL",
+      "short_name": "CIBIL",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "turtlemint",
+      "name": "Turtlemint",
+      "short_name": "Turtlemint",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#2DBD95"
+    },
+    {
+      "id": "uco-bank",
+      "name": "UCO Bank",
+      "short_name": "UCO",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "ujjivan-small-finance-bank",
+      "name": "Ujjivan Small Finance Bank",
+      "short_name": "Ujjivan SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#F37321"
+    },
+    {
+      "id": "union-bank-of-india",
+      "name": "Union Bank of India",
+      "short_name": "Union Bank",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "unity-small-finance-bank",
+      "name": "Unity Small Finance Bank",
+      "short_name": "Unity SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "upstox",
+      "name": "Upstox",
+      "short_name": "Upstox",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#F70D4B"
+    },
+    {
+      "id": "utkarsh-small-finance-bank",
+      "name": "Utkarsh Small Finance Bank",
+      "short_name": "Utkarsh SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#E6332A"
+    },
+    {
+      "id": "whatsapp-pay",
+      "name": "WhatsApp Pay",
+      "short_name": "WhatsApp Pay",
+      "categories": [
+        "upi-psp"
+      ],
+      "brand_color": "#25D366"
+    },
+    {
+      "id": "yap",
+      "name": "YAP",
+      "short_name": "YAP",
+      "categories": [
+        "infra-api",
+        "neobank"
+      ],
+      "brand_color": "#F25F00"
+    },
+    {
+      "id": "yes-bank",
+      "name": "Yes Bank",
+      "short_name": "Yes Bank",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087"
+    },
+    {
+      "id": "zerodha",
+      "name": "Zerodha",
+      "short_name": "Zerodha",
+      "categories": [
+        "wealthtech",
+        "upi-psp"
+      ],
+      "brand_color": "#387ED1"
+    },
+    {
+      "id": "zestmoney",
+      "name": "ZestMoney",
+      "short_name": "ZestMoney",
+      "categories": [
+        "bnpl"
+      ],
+      "brand_color": "#00C4B3"
+    }
+  ]
+}

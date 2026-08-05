@@ -1,0 +1,42 @@
+{
+  "id": "paytm",
+  "name": "Paytm",
+  "short_name": "Paytm",
+  "legal_name": "One97 Communications Limited",
+  "categories": [
+    "upi-psp",
+    "wallet",
+    "bnpl",
+    "wealthtech",
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#002970",
+  "country": "IN",
+  "founded": 2010,
+  "regulated_by": [
+    "NPCI",
+    "RBI",
+    "SEBI"
+  ],
+  "upi_handles": [
+    "@paytm"
+  ],
+  "website": "https://paytm.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "consumer",
+    "super-app",
+    "listed",
+    "nse-listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

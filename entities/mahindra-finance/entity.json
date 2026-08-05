@@ -1,0 +1,33 @@
+{
+  "id": "mahindra-finance",
+  "name": "Mahindra Finance",
+  "short_name": "Mahindra Finance",
+  "legal_name": "Mahindra & Mahindra Financial Services Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#CC0000",
+  "country": "IN",
+  "founded": 1991,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.mahindrafinance.com",
+  "status": "active",
+  "tags": [
+    "nbfc",
+    "vehicle-loan",
+    "rural",
+    "listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

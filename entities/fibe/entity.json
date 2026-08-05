@@ -1,0 +1,31 @@
+{
+  "id": "fibe",
+  "name": "Fibe",
+  "short_name": "Fibe",
+  "legal_name": "Social Worth Technologies Private Limited",
+  "categories": [
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#5B37EA",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://fibe.in",
+  "status": "active",
+  "tags": [
+    "personal-loan",
+    "consumer",
+    "formerly-earlysalary"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

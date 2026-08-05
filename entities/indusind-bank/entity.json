@@ -1,0 +1,36 @@
+{
+  "id": "indusind-bank",
+  "name": "IndusInd Bank",
+  "short_name": "IndusInd",
+  "legal_name": "IndusInd Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#004C97",
+  "country": "IN",
+  "founded": 1994,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "INDB",
+  "upi_handles": [
+    "@indus"
+  ],
+  "fip_id": null,
+  "website": "https://www.indusind.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "private-sector"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "navi",
+  "name": "Navi",
+  "short_name": "Navi",
+  "legal_name": "Navi Technologies Limited",
+  "categories": [
+    "upi-psp",
+    "lending-platform",
+    "insurtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#3F5FFA",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "NPCI",
+    "RBI",
+    "IRDAI"
+  ],
+  "upi_handles": [
+    "@naviaxis"
+  ],
+  "website": "https://navi.com",
+  "status": "active",
+  "tags": [
+    "sachin-bansal",
+    "fintech",
+    "consumer"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

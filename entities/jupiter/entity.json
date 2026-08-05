@@ -1,0 +1,33 @@
+{
+  "id": "jupiter",
+  "name": "Jupiter",
+  "short_name": "Jupiter",
+  "legal_name": "Amica Financial Technologies Private Limited",
+  "categories": [
+    "neobank",
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#3C1AF5",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "RBI"
+  ],
+  "fiu_id": null,
+  "website": "https://jupiter.money",
+  "status": "active",
+  "tags": [
+    "consumer",
+    "federal-bank-partner",
+    "savings-account"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

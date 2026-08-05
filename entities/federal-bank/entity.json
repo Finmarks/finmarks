@@ -1,0 +1,40 @@
+{
+  "id": "federal-bank",
+  "name": "Federal Bank",
+  "short_name": "Federal",
+  "legal_name": "The Federal Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1931,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "FDRL",
+  "upi_handles": [
+    "@federal",
+    "@fifederal"
+  ],
+  "fip_id": null,
+  "website": "https://www.federalbank.co.in",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "kerala",
+    "psp-bank",
+    "fi-money-psp",
+    "jupiter-psp"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

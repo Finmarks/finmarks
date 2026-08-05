@@ -1,0 +1,31 @@
+{
+  "id": "simpl",
+  "name": "Simpl",
+  "short_name": "Simpl",
+  "legal_name": "Mool Financial Technologies Private Limited",
+  "categories": [
+    "bnpl"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF5C35",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://simpl.credit",
+  "status": "active",
+  "tags": [
+    "bnpl",
+    "checkout-credit",
+    "b2b2c"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

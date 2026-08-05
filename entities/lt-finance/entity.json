@@ -1,0 +1,33 @@
+{
+  "id": "lt-finance",
+  "name": "L&T Finance",
+  "short_name": "L&T Finance",
+  "legal_name": "L&T Finance Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1994,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.ltfs.com",
+  "status": "active",
+  "tags": [
+    "nbfc",
+    "lt-group",
+    "rural-lending",
+    "listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "whatsapp-pay",
+  "name": "WhatsApp Pay",
+  "short_name": "WhatsApp Pay",
+  "legal_name": "Meta Platforms India Private Limited",
+  "categories": [
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#25D366",
+  "country": "IN",
+  "founded": 2020,
+  "regulated_by": [
+    "NPCI"
+  ],
+  "upi_handles": [
+    "@waaxis",
+    "@wahdfcbank",
+    "@waicici",
+    "@wasbi"
+  ],
+  "website": "https://www.whatsapp.com/payments/in",
+  "status": "active",
+  "tags": [
+    "meta",
+    "consumer"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

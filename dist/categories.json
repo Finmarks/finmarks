@@ -1,0 +1,167 @@
+{
+  "version": "0.1.0",
+  "generated_at": "2026-08-05",
+  "total": 20,
+  "categories": [
+    {
+      "id": "public-sector-bank",
+      "label": "Public sector banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Government-majority-owned scheduled commercial banks.",
+      "count": 12
+    },
+    {
+      "id": "private-bank",
+      "label": "Private banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Privately held scheduled commercial banks.",
+      "count": 15
+    },
+    {
+      "id": "small-finance-bank",
+      "label": "Small finance banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Niche banks serving underserved and unbanked segments.",
+      "count": 10
+    },
+    {
+      "id": "payments-bank",
+      "label": "Payments banks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Deposit-taking banks that cannot lend.",
+      "count": 6
+    },
+    {
+      "id": "upi-psp",
+      "label": "UPI / PSP apps",
+      "regulator": "NPCI",
+      "phase": 1,
+      "description": "Payment service provider apps on the UPI rails.",
+      "count": 26
+    },
+    {
+      "id": "wallet",
+      "label": "Prepaid wallets",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Prepaid payment instrument issuers.",
+      "count": 7
+    },
+    {
+      "id": "payment-gateway",
+      "label": "Payment gateways",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Online payment acceptance and aggregation platforms.",
+      "count": 13
+    },
+    {
+      "id": "neobank",
+      "label": "Neobanks",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Digital-first banking experiences built on a partner bank licence.",
+      "count": 9
+    },
+    {
+      "id": "bnpl",
+      "label": "Buy Now Pay Later",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Deferred payment and short-tenure credit at checkout.",
+      "count": 9
+    },
+    {
+      "id": "lending-platform",
+      "label": "Digital lending",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Digital personal, consumer and SME lending platforms.",
+      "count": 20
+    },
+    {
+      "id": "wealthtech",
+      "label": "Investing platforms",
+      "regulator": "SEBI",
+      "phase": 1,
+      "description": "Broking, mutual fund and wealth management platforms.",
+      "count": 13
+    },
+    {
+      "id": "insurtech",
+      "label": "Insurance platforms",
+      "regulator": "IRDAI",
+      "phase": 1,
+      "description": "Digital insurers, brokers and aggregators.",
+      "count": 7
+    },
+    {
+      "id": "infra-api",
+      "label": "Infra / API platforms",
+      "regulator": "Varies",
+      "phase": 1,
+      "description": "Banking-as-a-service, payment orchestration and fintech API infrastructure.",
+      "count": 10
+    },
+    {
+      "id": "account-aggregator",
+      "label": "Account Aggregators",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "RBI-licensed NBFC-AAs operating the consented data-sharing framework.",
+      "count": 6
+    },
+    {
+      "id": "credit-bureau",
+      "label": "Credit bureaus",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Credit information companies.",
+      "count": 4
+    },
+    {
+      "id": "nbfc",
+      "label": "NBFCs",
+      "regulator": "RBI",
+      "phase": 1,
+      "description": "Non-banking financial companies.",
+      "count": 7
+    },
+    {
+      "id": "international-bank",
+      "label": "International banks",
+      "regulator": "Varies",
+      "phase": 3,
+      "description": "Global banks operating in India or globally relevant.",
+      "count": 0
+    },
+    {
+      "id": "crypto-exchange",
+      "label": "Crypto exchanges",
+      "regulator": "FIU-IND",
+      "phase": 3,
+      "description": "Registered virtual digital asset platforms.",
+      "count": 0
+    },
+    {
+      "id": "pos-terminal",
+      "label": "POS / terminals",
+      "regulator": "RBI",
+      "phase": 3,
+      "description": "Point-of-sale hardware and merchant terminal vendors.",
+      "count": 0
+    },
+    {
+      "id": "regulator",
+      "label": "Regulators",
+      "regulator": "None",
+      "phase": 3,
+      "description": "Regulatory and standard-setting bodies.",
+      "count": 0
+    }
+  ]
+}

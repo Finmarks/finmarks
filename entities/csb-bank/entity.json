@@ -1,0 +1,34 @@
+{
+  "id": "csb-bank",
+  "name": "CSB Bank",
+  "short_name": "CSB",
+  "legal_name": "CSB Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1920,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "CSBK",
+  "upi_handles": [
+    "@csbpay"
+  ],
+  "website": "https://www.csb.co.in",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "formerly-catholic-syrian-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

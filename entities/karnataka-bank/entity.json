@@ -1,0 +1,32 @@
+{
+  "id": "karnataka-bank",
+  "name": "Karnataka Bank",
+  "short_name": "KBL",
+  "legal_name": "Karnataka Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1924,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "KARB",
+  "upi_handles": [],
+  "website": "https://karnatakabank.com",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "karnataka"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

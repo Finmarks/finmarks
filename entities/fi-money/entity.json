@@ -1,0 +1,36 @@
+{
+  "id": "fi-money",
+  "name": "Fi Money",
+  "short_name": "Fi",
+  "legal_name": "EpiFi Technologies Private Limited",
+  "categories": [
+    "neobank",
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#3CB46E",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "RBI"
+  ],
+  "upi_handles": [
+    "@fifederal"
+  ],
+  "fiu_id": null,
+  "website": "https://fi.money",
+  "status": "active",
+  "tags": [
+    "consumer",
+    "federal-bank-partner",
+    "savings-account"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

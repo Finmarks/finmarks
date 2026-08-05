@@ -1,0 +1,30 @@
+{
+  "id": "decentro",
+  "name": "Decentro",
+  "short_name": "Decentro",
+  "legal_name": "Decentro Tech Private Limited",
+  "categories": [
+    "infra-api"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#6B4EFF",
+  "country": "IN",
+  "founded": 2020,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://decentro.tech",
+  "status": "active",
+  "tags": [
+    "api-banking",
+    "b2b"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

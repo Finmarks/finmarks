@@ -1,0 +1,33 @@
+{
+  "id": "perfios",
+  "name": "Perfios",
+  "short_name": "Perfios",
+  "legal_name": "Perfios Account Aggregation Services Private Limited",
+  "categories": [
+    "infra-api",
+    "account-aggregator"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2008,
+  "regulated_by": [
+    "RBI"
+  ],
+  "aa_id": "perfios-aa",
+  "website": "https://www.perfios.com",
+  "status": "active",
+  "tags": [
+    "bank-statement-analysis",
+    "aa-operator",
+    "b2b"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

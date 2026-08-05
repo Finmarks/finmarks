@@ -1,0 +1,32 @@
+{
+  "id": "payu-india",
+  "name": "PayU India",
+  "short_name": "PayU",
+  "legal_name": "PayU Payments Private Limited",
+  "categories": [
+    "payment-gateway",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#009DDB",
+  "country": "IN",
+  "founded": 2002,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://payu.in",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "prosus-backed",
+    "payment-aggregator"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

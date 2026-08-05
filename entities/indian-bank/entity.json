@@ -1,0 +1,35 @@
+{
+  "id": "indian-bank",
+  "name": "Indian Bank",
+  "short_name": "Indian Bank",
+  "legal_name": "Indian Bank",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00529F",
+  "country": "IN",
+  "founded": 1907,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "IDIB",
+  "upi_handles": [
+    "@indianbank"
+  ],
+  "website": "https://indianbank.in",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "government",
+    "merged-allahabad-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

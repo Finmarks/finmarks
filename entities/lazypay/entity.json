@@ -1,0 +1,31 @@
+{
+  "id": "lazypay",
+  "name": "LazyPay",
+  "short_name": "LazyPay",
+  "legal_name": "PayU Finance India Private Limited",
+  "categories": [
+    "bnpl",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF6B6B",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://lazypay.in",
+  "status": "active",
+  "tags": [
+    "bnpl",
+    "payu-product"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

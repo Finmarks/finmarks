@@ -1,0 +1,31 @@
+{
+  "id": "angel-one",
+  "name": "Angel One",
+  "short_name": "Angel One",
+  "legal_name": "Angel One Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#2A294E",
+  "country": "IN",
+  "founded": 1996,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.angelone.in",
+  "status": "active",
+  "tags": [
+    "stock-broker",
+    "formerly-angel-broking",
+    "listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

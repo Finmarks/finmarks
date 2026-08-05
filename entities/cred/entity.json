@@ -1,0 +1,37 @@
+{
+  "id": "cred",
+  "name": "CRED",
+  "short_name": "CRED",
+  "legal_name": "Dreamplug Technologies Private Limited",
+  "categories": [
+    "upi-psp",
+    "bnpl",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1A1A1A",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "NPCI",
+    "RBI"
+  ],
+  "upi_handles": [
+    "@axl"
+  ],
+  "website": "https://cred.club",
+  "status": "active",
+  "tags": [
+    "fintech",
+    "credit-card-payments",
+    "premium"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

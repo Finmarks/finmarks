@@ -1,0 +1,36 @@
+{
+  "id": "airtel-payments-bank",
+  "name": "Airtel Payments Bank",
+  "short_name": "Airtel Bank",
+  "legal_name": "Airtel Payments Bank Limited",
+  "categories": [
+    "payments-bank",
+    "wallet",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E40000",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "AIRP",
+  "upi_handles": [
+    "@airtel"
+  ],
+  "website": "https://www.airtel.in/bank",
+  "status": "active",
+  "tags": [
+    "payments-bank",
+    "telecom-backed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

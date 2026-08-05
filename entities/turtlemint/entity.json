@@ -1,0 +1,30 @@
+{
+  "id": "turtlemint",
+  "name": "Turtlemint",
+  "short_name": "Turtlemint",
+  "legal_name": "Turtlemint Insurance Broking Services Private Limited",
+  "categories": [
+    "insurtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#2DBD95",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "IRDAI"
+  ],
+  "website": "https://www.turtlemint.com",
+  "status": "active",
+  "tags": [
+    "insurance-b2b2c",
+    "advisor-platform"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

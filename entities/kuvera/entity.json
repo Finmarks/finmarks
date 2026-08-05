@@ -1,0 +1,30 @@
+{
+  "id": "kuvera",
+  "name": "Kuvera",
+  "short_name": "Kuvera",
+  "legal_name": "Arevuk Advisory Services Private Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0070BA",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://kuvera.in",
+  "status": "active",
+  "tags": [
+    "mf",
+    "free-direct-mf"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

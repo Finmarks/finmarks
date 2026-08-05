@@ -1,0 +1,34 @@
+{
+  "id": "bank-of-maharashtra",
+  "name": "Bank of Maharashtra",
+  "short_name": "BOM",
+  "legal_name": "Bank of Maharashtra",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1935,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "MAHB",
+  "upi_handles": [
+    "@bom"
+  ],
+  "website": "https://bankofmaharashtra.in",
+  "status": "active",
+  "tags": [
+    "government",
+    "maharashtra"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

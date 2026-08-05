@@ -1,0 +1,60 @@
+name: Request an entity
+description: Ask for a brand to be added to the dataset
+title: 'add: '
+labels: ['entity-request']
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Brand name
+      placeholder: HDFC Bank
+    validations:
+      required: true
+
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+      placeholder: https://www.hdfcbank.com
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: categories
+    attributes:
+      label: Categories
+      description: Pick every category that applies.
+      options:
+        - label: public-sector-bank
+        - label: private-bank
+        - label: small-finance-bank
+        - label: payments-bank
+        - label: upi-psp
+        - label: wallet
+        - label: payment-gateway
+        - label: neobank
+        - label: bnpl
+        - label: lending-platform
+        - label: wealthtech
+        - label: insurtech
+        - label: infra-api
+        - label: account-aggregator
+        - label: credit-bureau
+        - label: nbfc
+        - label: international-bank
+        - label: crypto-exchange
+        - label: pos-terminal
+        - label: regulator
+
+  - type: input
+    id: brand_kit
+    attributes:
+      label: Brand kit or press-assets URL
+      description: Where can an official logo be sourced? This is the slowest part to research, so it helps a lot.
+      placeholder: https://www.hdfcbank.com/personal/about-us/media-kit
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
+      description: IFSC prefix, UPI handles, FIP id, or anything else you already know.

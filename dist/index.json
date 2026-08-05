@@ -1,0 +1,2904 @@
+{
+  "version": "0.1.0",
+  "generated_at": "2026-08-05",
+  "schema_version": "1.0",
+  "cdn_base": "https://cdn.bharatbrands.dev",
+  "total": 115,
+  "category_counts": {
+    "public-sector-bank": 12,
+    "private-bank": 15,
+    "small-finance-bank": 10,
+    "payments-bank": 6,
+    "upi-psp": 26,
+    "wallet": 7,
+    "payment-gateway": 13,
+    "neobank": 9,
+    "bnpl": 9,
+    "lending-platform": 20,
+    "wealthtech": 13,
+    "insurtech": 7,
+    "infra-api": 10,
+    "account-aggregator": 6,
+    "credit-bureau": 4,
+    "nbfc": 7,
+    "international-bank": 0,
+    "crypto-exchange": 0,
+    "pos-terminal": 0,
+    "regulator": 0
+  },
+  "entities": [
+    {
+      "id": "5paisa",
+      "name": "5paisa",
+      "short_name": "5paisa",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#E8173C",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "5paisa Capital Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.5paisa.com",
+      "tags": [
+        "stock-broker",
+        "discount-broker",
+        "listed"
+      ]
+    },
+    {
+      "id": "acko",
+      "name": "Acko",
+      "short_name": "Acko",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#00C4B4",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Acko General Insurance Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.acko.com",
+      "tags": [
+        "general-insurance",
+        "digital-first"
+      ]
+    },
+    {
+      "id": "airtel-payments-bank",
+      "name": "Airtel Payments Bank",
+      "short_name": "Airtel Bank",
+      "categories": [
+        "payments-bank",
+        "wallet",
+        "upi-psp"
+      ],
+      "brand_color": "#E40000",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Airtel Payments Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "AIRP",
+      "upi_handles": [
+        "@airtel"
+      ],
+      "website": "https://www.airtel.in/bank",
+      "tags": [
+        "payments-bank",
+        "telecom-backed"
+      ]
+    },
+    {
+      "id": "amazon-pay",
+      "name": "Amazon Pay",
+      "short_name": "Amazon Pay",
+      "categories": [
+        "upi-psp",
+        "wallet"
+      ],
+      "brand_color": "#FF9900",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Amazon Pay (India) Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "NPCI",
+        "RBI"
+      ],
+      "upi_handles": [
+        "@apl",
+        "@yapl",
+        "@rapl"
+      ],
+      "website": "https://www.amazon.in/amazonpay",
+      "tags": [
+        "consumer",
+        "amazon",
+        "wallet"
+      ]
+    },
+    {
+      "id": "angel-one",
+      "name": "Angel One",
+      "short_name": "Angel One",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#2A294E",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Angel One Limited",
+      "founded": 1996,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.angelone.in",
+      "tags": [
+        "stock-broker",
+        "formerly-angel-broking",
+        "listed"
+      ]
+    },
+    {
+      "id": "anumati",
+      "name": "Anumati",
+      "short_name": "Anumati",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#5F259F",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "PhonePe Private Limited (Anumati)",
+      "founded": 2021,
+      "regulated_by": [
+        "RBI"
+      ],
+      "aa_id": "anumati",
+      "website": "https://anumati.com",
+      "tags": [
+        "aa-operator",
+        "nbfc-aa",
+        "phonepe-group"
+      ]
+    },
+    {
+      "id": "atom-technologies",
+      "name": "Atom Technologies",
+      "short_name": "Atom",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#0066CC",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Atom Technologies Limited",
+      "founded": 2006,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.atomtech.in",
+      "tags": [
+        "b2b",
+        "payment-aggregator"
+      ]
+    },
+    {
+      "id": "au-small-finance-bank",
+      "name": "AU Small Finance Bank",
+      "short_name": "AU Bank",
+      "categories": [
+        "small-finance-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#E40520",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "AU Small Finance Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "AUBL",
+      "upi_handles": [
+        "@aubank"
+      ],
+      "website": "https://www.aubank.in",
+      "tags": [
+        "sfb",
+        "rajasthan",
+        "formerly-au-financiers"
+      ]
+    },
+    {
+      "id": "axio",
+      "name": "Axio",
+      "short_name": "Axio",
+      "categories": [
+        "bnpl",
+        "lending-platform"
+      ],
+      "brand_color": "#6247EE",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Capital Float Financial Services Private Limited",
+      "founded": 2013,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://axio.credit",
+      "tags": [
+        "bnpl",
+        "formerly-capital-float"
+      ]
+    },
+    {
+      "id": "axis-bank",
+      "name": "Axis Bank",
+      "short_name": "Axis",
+      "categories": [
+        "private-bank",
+        "upi-psp",
+        "payment-gateway"
+      ],
+      "brand_color": "#97144D",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Axis Bank Limited",
+      "founded": 1993,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "UTIB",
+      "upi_handles": [
+        "@axisbank",
+        "@okaxis"
+      ],
+      "website": "https://www.axisbank.com",
+      "tags": [
+        "tier-1",
+        "private-sector",
+        "psp-bank",
+        "formerly-uti-bank"
+      ]
+    },
+    {
+      "id": "bajaj-finance",
+      "name": "Bajaj Finance",
+      "short_name": "Bajaj Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Bajaj Finance Limited",
+      "founded": 1987,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.bajajfinserv.in",
+      "tags": [
+        "nbfc",
+        "listed",
+        "consumer-lending",
+        "emi"
+      ]
+    },
+    {
+      "id": "bandhan-bank",
+      "name": "Bandhan Bank",
+      "short_name": "Bandhan",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#E3001B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Bandhan Bank Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "BDBL",
+      "upi_handles": [
+        "@bandhan"
+      ],
+      "website": "https://bandhanbank.com",
+      "tags": [
+        "private-sector",
+        "microfinance-origin"
+      ]
+    },
+    {
+      "id": "bank-of-baroda",
+      "name": "Bank of Baroda",
+      "short_name": "BOB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#F26522",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Bank of Baroda",
+      "founded": 1908,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "BARB",
+      "upi_handles": [
+        "@barodampay"
+      ],
+      "website": "https://bankofbaroda.in",
+      "tags": [
+        "tier-1",
+        "government",
+        "merged-vijaya-dena"
+      ]
+    },
+    {
+      "id": "bank-of-india",
+      "name": "Bank of India",
+      "short_name": "BOI",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003399",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Bank of India",
+      "founded": 1906,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "BKID",
+      "upi_handles": [
+        "@boi"
+      ],
+      "website": "https://bankofindia.co.in",
+      "tags": [
+        "tier-1",
+        "government",
+        "swift-founder"
+      ]
+    },
+    {
+      "id": "bank-of-maharashtra",
+      "name": "Bank of Maharashtra",
+      "short_name": "BOM",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Bank of Maharashtra",
+      "founded": 1935,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "MAHB",
+      "upi_handles": [
+        "@bom"
+      ],
+      "website": "https://bankofmaharashtra.in",
+      "tags": [
+        "government",
+        "maharashtra"
+      ]
+    },
+    {
+      "id": "bhim",
+      "name": "BHIM",
+      "short_name": "BHIM",
+      "categories": [
+        "upi-psp"
+      ],
+      "brand_color": "#1B3DA4",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "National Payments Corporation of India",
+      "founded": 2016,
+      "regulated_by": [
+        "NPCI"
+      ],
+      "upi_handles": [
+        "@upi"
+      ],
+      "website": "https://www.bhimupi.org.in",
+      "tags": [
+        "npci",
+        "government",
+        "reference-app"
+      ]
+    },
+    {
+      "id": "billdesk",
+      "name": "BillDesk",
+      "short_name": "BillDesk",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "IndiaIdeas.com Limited",
+      "founded": 2000,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.billdesk.com",
+      "acquired_by": "payu-india",
+      "tags": [
+        "b2b",
+        "payment-aggregator",
+        "payu-acquired-2021"
+      ]
+    },
+    {
+      "id": "camsfinserv",
+      "name": "CAMSfinserv",
+      "short_name": "CAMSfinserv",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "CAMS Financial Information Services Private Limited",
+      "founded": 2020,
+      "regulated_by": [
+        "RBI"
+      ],
+      "aa_id": "camsfinserv",
+      "website": "https://www.camsfinserv.com",
+      "tags": [
+        "aa-operator",
+        "nbfc-aa",
+        "cams-group"
+      ]
+    },
+    {
+      "id": "canara-bank",
+      "name": "Canara Bank",
+      "short_name": "Canara",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#005CA9",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Canara Bank",
+      "founded": 1906,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CNRB",
+      "upi_handles": [
+        "@cnrb"
+      ],
+      "website": "https://canarabank.com",
+      "tags": [
+        "tier-1",
+        "government",
+        "merged-syndicate-bank"
+      ]
+    },
+    {
+      "id": "capital-small-finance-bank",
+      "name": "Capital Small Finance Bank",
+      "short_name": "Capital SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Capital Small Finance Bank Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CLBL",
+      "website": "https://capitalbank.co.in",
+      "tags": [
+        "sfb",
+        "punjab"
+      ]
+    },
+    {
+      "id": "cashe",
+      "name": "CASHe",
+      "short_name": "CASHe",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#E94A00",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Bhanix Finance and Investment Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://cashe.co.in",
+      "tags": [
+        "personal-loan",
+        "salary-advance"
+      ]
+    },
+    {
+      "id": "cashfree-payments",
+      "name": "Cashfree Payments",
+      "short_name": "Cashfree",
+      "categories": [
+        "payment-gateway",
+        "infra-api"
+      ],
+      "brand_color": "#1A55E3",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Cashfree Payments India Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.cashfree.com",
+      "tags": [
+        "b2b",
+        "payment-aggregator",
+        "pa-license"
+      ]
+    },
+    {
+      "id": "ccavenue",
+      "name": "CCAvenue",
+      "short_name": "CCAvenue",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Infibeam Avenues Limited",
+      "founded": 2001,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.ccavenue.com",
+      "tags": [
+        "b2b",
+        "payment-aggregator",
+        "listed"
+      ]
+    },
+    {
+      "id": "central-bank-of-india",
+      "name": "Central Bank of India",
+      "short_name": "Central Bank",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Central Bank of India",
+      "founded": 1911,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CBIN",
+      "upi_handles": [
+        "@centralbank"
+      ],
+      "website": "https://centralbank.org.in",
+      "tags": [
+        "government"
+      ]
+    },
+    {
+      "id": "city-union-bank",
+      "name": "City Union Bank",
+      "short_name": "CUB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "City Union Bank Limited",
+      "founded": 1904,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CIUB",
+      "website": "https://www.cityunionbank.com",
+      "tags": [
+        "private-sector",
+        "tamil-nadu"
+      ]
+    },
+    {
+      "id": "cred",
+      "name": "CRED",
+      "short_name": "CRED",
+      "categories": [
+        "upi-psp",
+        "bnpl",
+        "lending-platform"
+      ],
+      "brand_color": "#1A1A1A",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Dreamplug Technologies Private Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "NPCI",
+        "RBI"
+      ],
+      "upi_handles": [
+        "@axl"
+      ],
+      "website": "https://cred.club",
+      "tags": [
+        "fintech",
+        "credit-card-payments",
+        "premium"
+      ]
+    },
+    {
+      "id": "crif-highmark",
+      "name": "CRIF Highmark",
+      "short_name": "CRIF Highmark",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "CRIF High Mark Credit Information Services Private Limited",
+      "founded": 2010,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.crifhighmark.com",
+      "tags": [
+        "credit-bureau",
+        "credit-score",
+        "rbi-licensed"
+      ]
+    },
+    {
+      "id": "csb-bank",
+      "name": "CSB Bank",
+      "short_name": "CSB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "CSB Bank Limited",
+      "founded": 1920,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CSBK",
+      "upi_handles": [
+        "@csbpay"
+      ],
+      "website": "https://www.csb.co.in",
+      "tags": [
+        "private-sector",
+        "formerly-catholic-syrian-bank"
+      ]
+    },
+    {
+      "id": "dcb-bank",
+      "name": "DCB Bank",
+      "short_name": "DCB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#E2211B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "DCB Bank Limited",
+      "founded": 1930,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "DCBL",
+      "website": "https://www.dcbbank.com",
+      "tags": [
+        "private-sector"
+      ]
+    },
+    {
+      "id": "decentro",
+      "name": "Decentro",
+      "short_name": "Decentro",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#6B4EFF",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Decentro Tech Private Limited",
+      "founded": 2020,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://decentro.tech",
+      "tags": [
+        "api-banking",
+        "b2b"
+      ]
+    },
+    {
+      "id": "ditto-insurance",
+      "name": "Ditto Insurance",
+      "short_name": "Ditto",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#2F4F7F",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Finshots Media Private Limited",
+      "founded": 2021,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://joinditto.in",
+      "tags": [
+        "insurance-advisory",
+        "zerodha-group"
+      ]
+    },
+    {
+      "id": "equifax-india",
+      "name": "Equifax India",
+      "short_name": "Equifax",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#E31837",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Equifax Credit Information Services Private Limited",
+      "founded": 2010,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.equifax.co.in",
+      "tags": [
+        "credit-bureau",
+        "credit-score",
+        "rbi-licensed"
+      ]
+    },
+    {
+      "id": "equitas-small-finance-bank",
+      "name": "Equitas Small Finance Bank",
+      "short_name": "Equitas SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#F7941D",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Equitas Small Finance Bank Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "ESFB",
+      "upi_handles": [
+        "@equitas"
+      ],
+      "website": "https://www.equitasbank.com",
+      "tags": [
+        "sfb",
+        "tamil-nadu"
+      ]
+    },
+    {
+      "id": "esaf-small-finance-bank",
+      "name": "ESAF Small Finance Bank",
+      "short_name": "ESAF SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#006838",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "ESAF Small Finance Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "ESAF",
+      "website": "https://esafbank.com",
+      "tags": [
+        "sfb",
+        "kerala"
+      ]
+    },
+    {
+      "id": "experian-india",
+      "name": "Experian India",
+      "short_name": "Experian",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#9B1B2E",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Experian Credit Information Company of India Private Limited",
+      "founded": 2010,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.experian.in",
+      "tags": [
+        "credit-bureau",
+        "credit-score",
+        "rbi-licensed"
+      ]
+    },
+    {
+      "id": "federal-bank",
+      "name": "Federal Bank",
+      "short_name": "Federal",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "The Federal Bank Limited",
+      "founded": 1931,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "FDRL",
+      "upi_handles": [
+        "@federal",
+        "@fifederal"
+      ],
+      "website": "https://www.federalbank.co.in",
+      "tags": [
+        "private-sector",
+        "kerala",
+        "psp-bank",
+        "fi-money-psp",
+        "jupiter-psp"
+      ]
+    },
+    {
+      "id": "fi-money",
+      "name": "Fi Money",
+      "short_name": "Fi",
+      "categories": [
+        "neobank",
+        "wealthtech"
+      ],
+      "brand_color": "#3CB46E",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "EpiFi Technologies Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "RBI"
+      ],
+      "upi_handles": [
+        "@fifederal"
+      ],
+      "website": "https://fi.money",
+      "tags": [
+        "consumer",
+        "federal-bank-partner",
+        "savings-account"
+      ]
+    },
+    {
+      "id": "fibe",
+      "name": "Fibe",
+      "short_name": "Fibe",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#5B37EA",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Social Worth Technologies Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://fibe.in",
+      "tags": [
+        "personal-loan",
+        "consumer",
+        "formerly-earlysalary"
+      ]
+    },
+    {
+      "id": "fincare-small-finance-bank",
+      "name": "Fincare Small Finance Bank",
+      "short_name": "Fincare SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Fincare Small Finance Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "FSFB",
+      "website": "https://fincarebank.com",
+      "tags": [
+        "sfb"
+      ]
+    },
+    {
+      "id": "fino-payments-bank",
+      "name": "Fino Payments Bank",
+      "short_name": "Fino",
+      "categories": [
+        "payments-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#0066B3",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Fino Payments Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "FINO",
+      "upi_handles": [
+        "@fino"
+      ],
+      "website": "https://www.finobank.com",
+      "tags": [
+        "payments-bank",
+        "fintech-first"
+      ]
+    },
+    {
+      "id": "finvu",
+      "name": "Finvu",
+      "short_name": "Finvu",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#1B3DA4",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Cookiejar Technologies Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "RBI"
+      ],
+      "aa_id": "finvu",
+      "website": "https://finvu.in",
+      "tags": [
+        "aa-operator",
+        "nbfc-aa",
+        "sahamati"
+      ]
+    },
+    {
+      "id": "freecharge",
+      "name": "FreeCharge",
+      "short_name": "FreeCharge",
+      "categories": [
+        "wallet",
+        "upi-psp"
+      ],
+      "brand_color": "#00B9F2",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Axis Bank Limited (FreeCharge)",
+      "founded": 2010,
+      "regulated_by": [
+        "RBI"
+      ],
+      "upi_handles": [
+        "@freecharge"
+      ],
+      "website": "https://www.freecharge.in",
+      "acquired_by": "axis-bank",
+      "tags": [
+        "wallet",
+        "axis-bank-owned"
+      ]
+    },
+    {
+      "id": "freo",
+      "name": "Freo",
+      "short_name": "Freo",
+      "categories": [
+        "neobank",
+        "lending-platform"
+      ],
+      "brand_color": "#1DB89A",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "MoneyTap Financial Services Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://freo.money",
+      "tags": [
+        "consumer",
+        "formerly-moneytap",
+        "credit-line"
+      ]
+    },
+    {
+      "id": "go-digit",
+      "name": "Go Digit",
+      "short_name": "Digit",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#F05A27",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Go Digit General Insurance Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.godigit.com",
+      "tags": [
+        "general-insurance",
+        "digital-first",
+        "listed"
+      ]
+    },
+    {
+      "id": "gpay",
+      "name": "Google Pay",
+      "short_name": "GPay",
+      "categories": [
+        "upi-psp"
+      ],
+      "brand_color": "#4285F4",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Google India Digital Services Private Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "NPCI"
+      ],
+      "upi_handles": [
+        "@okicici",
+        "@okhdfcbank",
+        "@okaxis",
+        "@oksbi"
+      ],
+      "website": "https://pay.google.com/intl/en_in/about/",
+      "tags": [
+        "tier-1",
+        "upi-market-leader",
+        "google",
+        "consumer"
+      ]
+    },
+    {
+      "id": "groww",
+      "name": "Groww",
+      "short_name": "Groww",
+      "categories": [
+        "wealthtech",
+        "upi-psp"
+      ],
+      "brand_color": "#5367FF",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Nextbillion Technology Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "SEBI",
+        "NPCI"
+      ],
+      "upi_handles": [
+        "@yesg"
+      ],
+      "website": "https://groww.in",
+      "tags": [
+        "stock-broker",
+        "mf",
+        "consumer",
+        "listed"
+      ]
+    },
+    {
+      "id": "hdb-financial-services",
+      "name": "HDB Financial Services",
+      "short_name": "HDB Financial",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#004C8F",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "HDB Financial Services Limited",
+      "founded": 2008,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.hdbfs.com",
+      "tags": [
+        "nbfc",
+        "hdfc-group",
+        "consumer-lending"
+      ]
+    },
+    {
+      "id": "hdfc-bank",
+      "name": "HDFC Bank",
+      "short_name": "HDFC",
+      "categories": [
+        "private-bank",
+        "upi-psp",
+        "payment-gateway"
+      ],
+      "brand_color": "#004C8F",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "HDFC Bank Limited",
+      "founded": 1994,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "HDFC",
+      "upi_handles": [
+        "@hdfcbank",
+        "@okhdfcbank"
+      ],
+      "website": "https://www.hdfcbank.com",
+      "tags": [
+        "tier-1",
+        "private-sector",
+        "psp-bank"
+      ]
+    },
+    {
+      "id": "icici-bank",
+      "name": "ICICI Bank",
+      "short_name": "ICICI",
+      "categories": [
+        "private-bank",
+        "upi-psp",
+        "payment-gateway"
+      ],
+      "brand_color": "#B02A30",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "ICICI Bank Limited",
+      "founded": 1994,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "ICIC",
+      "upi_handles": [
+        "@icici",
+        "@okicici"
+      ],
+      "website": "https://www.icicibank.com",
+      "tags": [
+        "tier-1",
+        "private-sector",
+        "psp-bank"
+      ]
+    },
+    {
+      "id": "idfc-first-bank",
+      "name": "IDFC FIRST Bank",
+      "short_name": "IDFC FIRST",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#9E1B32",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "IDFC FIRST Bank Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "IDFB",
+      "upi_handles": [
+        "@idfcfirst",
+        "@axl"
+      ],
+      "website": "https://www.idfcfirstbank.com",
+      "tags": [
+        "private-sector"
+      ]
+    },
+    {
+      "id": "india-post-payments-bank",
+      "name": "India Post Payments Bank",
+      "short_name": "IPPB",
+      "categories": [
+        "payments-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#C8102E",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "India Post Payments Bank Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "IPOS",
+      "upi_handles": [
+        "@postbank"
+      ],
+      "website": "https://ippbonline.com",
+      "tags": [
+        "payments-bank",
+        "government",
+        "india-post"
+      ]
+    },
+    {
+      "id": "indian-bank",
+      "name": "Indian Bank",
+      "short_name": "Indian Bank",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#00529F",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Indian Bank",
+      "founded": 1907,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "IDIB",
+      "upi_handles": [
+        "@indianbank"
+      ],
+      "website": "https://indianbank.in",
+      "tags": [
+        "tier-1",
+        "government",
+        "merged-allahabad-bank"
+      ]
+    },
+    {
+      "id": "indian-overseas-bank",
+      "name": "Indian Overseas Bank",
+      "short_name": "IOB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Indian Overseas Bank",
+      "founded": 1937,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "IOBA",
+      "upi_handles": [
+        "@iob"
+      ],
+      "website": "https://iob.in",
+      "tags": [
+        "government"
+      ]
+    },
+    {
+      "id": "indmoney",
+      "name": "INDmoney",
+      "short_name": "INDmoney",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#FF5F46",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "INDWealth Technologies Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.indmoney.com",
+      "tags": [
+        "mf",
+        "us-stocks",
+        "portfolio-tracker"
+      ]
+    },
+    {
+      "id": "indusind-bank",
+      "name": "IndusInd Bank",
+      "short_name": "IndusInd",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#004C97",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "IndusInd Bank Limited",
+      "founded": 1994,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "INDB",
+      "upi_handles": [
+        "@indus"
+      ],
+      "website": "https://www.indusind.com",
+      "tags": [
+        "tier-1",
+        "private-sector"
+      ]
+    },
+    {
+      "id": "instamojo",
+      "name": "Instamojo",
+      "short_name": "Instamojo",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#ED6237",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Instamojo Technologies Private Limited",
+      "founded": 2012,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.instamojo.com",
+      "tags": [
+        "b2b",
+        "sme-focus",
+        "d2c"
+      ]
+    },
+    {
+      "id": "jana-small-finance-bank",
+      "name": "Jana Small Finance Bank",
+      "short_name": "Jana SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#E01E26",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Jana Small Finance Bank Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "JSFB",
+      "upi_handles": [
+        "@jana"
+      ],
+      "website": "https://janabank.com",
+      "tags": [
+        "sfb"
+      ]
+    },
+    {
+      "id": "jio-payments-bank",
+      "name": "Jio Payments Bank",
+      "short_name": "Jio Bank",
+      "categories": [
+        "payments-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Jio Payments Bank Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "JIOP",
+      "upi_handles": [
+        "@jio"
+      ],
+      "website": "https://www.jio.com/en-in/jio-payments-bank/",
+      "tags": [
+        "payments-bank",
+        "telecom-backed",
+        "reliance"
+      ]
+    },
+    {
+      "id": "jupiter",
+      "name": "Jupiter",
+      "short_name": "Jupiter",
+      "categories": [
+        "neobank",
+        "wealthtech"
+      ],
+      "brand_color": "#3C1AF5",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Amica Financial Technologies Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://jupiter.money",
+      "tags": [
+        "consumer",
+        "federal-bank-partner",
+        "savings-account"
+      ]
+    },
+    {
+      "id": "juspay",
+      "name": "Juspay",
+      "short_name": "Juspay",
+      "categories": [
+        "payment-gateway",
+        "infra-api"
+      ],
+      "brand_color": "#1A1A2E",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Juspay Technologies Private Limited",
+      "founded": 2012,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://juspay.in",
+      "tags": [
+        "b2b",
+        "checkout-infra",
+        "hyperswitch"
+      ]
+    },
+    {
+      "id": "karnataka-bank",
+      "name": "Karnataka Bank",
+      "short_name": "KBL",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Karnataka Bank Limited",
+      "founded": 1924,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "KARB",
+      "website": "https://karnatakabank.com",
+      "tags": [
+        "private-sector",
+        "karnataka"
+      ]
+    },
+    {
+      "id": "kotak-mahindra-bank",
+      "name": "Kotak Mahindra Bank",
+      "short_name": "Kotak",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#E1251B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Kotak Mahindra Bank Limited",
+      "founded": 2003,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "KKBK",
+      "upi_handles": [
+        "@kotak"
+      ],
+      "website": "https://www.kotak.com",
+      "tags": [
+        "tier-1",
+        "private-sector"
+      ]
+    },
+    {
+      "id": "kreditbee",
+      "name": "KreditBee",
+      "short_name": "KreditBee",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#00AB66",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Krazybee Services Private Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://kreditbee.in",
+      "tags": [
+        "personal-loan",
+        "consumer"
+      ]
+    },
+    {
+      "id": "kuvera",
+      "name": "Kuvera",
+      "short_name": "Kuvera",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#0070BA",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Arevuk Advisory Services Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://kuvera.in",
+      "tags": [
+        "mf",
+        "free-direct-mf"
+      ]
+    },
+    {
+      "id": "lazypay",
+      "name": "LazyPay",
+      "short_name": "LazyPay",
+      "categories": [
+        "bnpl",
+        "lending-platform"
+      ],
+      "brand_color": "#FF6B6B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "PayU Finance India Private Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://lazypay.in",
+      "tags": [
+        "bnpl",
+        "payu-product"
+      ]
+    },
+    {
+      "id": "loantap",
+      "name": "LoanTap",
+      "short_name": "LoanTap",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#FF6600",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "LoanTap Credit Products Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://loantap.in",
+      "tags": [
+        "personal-loan",
+        "consumer"
+      ]
+    },
+    {
+      "id": "lt-finance",
+      "name": "L&T Finance",
+      "short_name": "L&T Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "L&T Finance Limited",
+      "founded": 1994,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.ltfs.com",
+      "tags": [
+        "nbfc",
+        "lt-group",
+        "rural-lending",
+        "listed"
+      ]
+    },
+    {
+      "id": "m2p-fintech",
+      "name": "M2P Fintech",
+      "short_name": "M2P",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "M2P Solutions Private Limited",
+      "founded": 2014,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://m2pfintech.com",
+      "tags": [
+        "card-infra",
+        "api-banking",
+        "b2b"
+      ]
+    },
+    {
+      "id": "mahindra-finance",
+      "name": "Mahindra Finance",
+      "short_name": "Mahindra Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#CC0000",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Mahindra & Mahindra Financial Services Limited",
+      "founded": 1991,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.mahindrafinance.com",
+      "tags": [
+        "nbfc",
+        "vehicle-loan",
+        "rural",
+        "listed"
+      ]
+    },
+    {
+      "id": "mobikwik",
+      "name": "MobiKwik",
+      "short_name": "MobiKwik",
+      "categories": [
+        "wallet",
+        "bnpl"
+      ],
+      "brand_color": "#1DACE8",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "MobiKwik Systems Private Limited",
+      "founded": 2009,
+      "regulated_by": [
+        "RBI"
+      ],
+      "upi_handles": [
+        "@ikwik"
+      ],
+      "website": "https://www.mobikwik.com",
+      "tags": [
+        "wallet",
+        "ppi-licensed",
+        "listed"
+      ]
+    },
+    {
+      "id": "moneyview",
+      "name": "MoneyView",
+      "short_name": "MoneyView",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#1E4D9B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Whizdm Innovations Private Limited",
+      "founded": 2014,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://moneyview.in",
+      "tags": [
+        "personal-loan",
+        "credit-line",
+        "consumer"
+      ]
+    },
+    {
+      "id": "muthoot-finance",
+      "name": "Muthoot Finance",
+      "short_name": "Muthoot",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E8B91B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "The Muthoot Finance Limited",
+      "founded": 1939,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.muthootfinance.com",
+      "tags": [
+        "nbfc",
+        "gold-loan",
+        "listed",
+        "kerala"
+      ]
+    },
+    {
+      "id": "nadl",
+      "name": "NADL",
+      "short_name": "NADL",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "NSDL Data Analytics Limited",
+      "founded": 2020,
+      "regulated_by": [
+        "RBI"
+      ],
+      "aa_id": "nadl",
+      "website": "https://www.nadl.co.in",
+      "tags": [
+        "aa-operator",
+        "nbfc-aa",
+        "nsdl-group"
+      ]
+    },
+    {
+      "id": "navi",
+      "name": "Navi",
+      "short_name": "Navi",
+      "categories": [
+        "upi-psp",
+        "lending-platform",
+        "insurtech"
+      ],
+      "brand_color": "#3F5FFA",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Navi Technologies Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "NPCI",
+        "RBI",
+        "IRDAI"
+      ],
+      "upi_handles": [
+        "@naviaxis"
+      ],
+      "website": "https://navi.com",
+      "tags": [
+        "sachin-bansal",
+        "fintech",
+        "consumer"
+      ]
+    },
+    {
+      "id": "niyo",
+      "name": "Niyo",
+      "short_name": "Niyo",
+      "categories": [
+        "neobank",
+        "wealthtech"
+      ],
+      "brand_color": "#0060DF",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "BankOpen Financial Technologies Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.goniyo.com",
+      "tags": [
+        "consumer",
+        "salary-account",
+        "forex"
+      ]
+    },
+    {
+      "id": "nsdl-payments-bank",
+      "name": "NSDL Payments Bank",
+      "short_name": "NSDL Bank",
+      "categories": [
+        "payments-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "NSDL Payments Bank Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "NSPB",
+      "website": "https://nsdlbank.com",
+      "tags": [
+        "payments-bank"
+      ]
+    },
+    {
+      "id": "ola-money",
+      "name": "Ola Money",
+      "short_name": "Ola Money",
+      "categories": [
+        "wallet"
+      ],
+      "brand_color": "#00B140",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Zipcash Card Services Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.olamoney.com",
+      "tags": [
+        "wallet",
+        "ola-backed",
+        "ppi-licensed"
+      ]
+    },
+    {
+      "id": "onemoney",
+      "name": "OneMoney",
+      "short_name": "OneMoney",
+      "categories": [
+        "account-aggregator"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "OneMoney (Cygnet Infotech)",
+      "founded": 2019,
+      "regulated_by": [
+        "RBI"
+      ],
+      "aa_id": "onemoney",
+      "website": "https://onemoney.in",
+      "tags": [
+        "aa-operator",
+        "nbfc-aa",
+        "sahamati"
+      ]
+    },
+    {
+      "id": "open-banking",
+      "name": "Open",
+      "short_name": "Open",
+      "categories": [
+        "neobank",
+        "payment-gateway"
+      ],
+      "brand_color": "#6C3FE7",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Open Financial Technologies Private Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://open.money",
+      "tags": [
+        "b2b",
+        "sme-neobank",
+        "business-current-account"
+      ]
+    },
+    {
+      "id": "paytm",
+      "name": "Paytm",
+      "short_name": "Paytm",
+      "categories": [
+        "upi-psp",
+        "wallet",
+        "bnpl",
+        "wealthtech",
+        "payment-gateway"
+      ],
+      "brand_color": "#002970",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "One97 Communications Limited",
+      "founded": 2010,
+      "regulated_by": [
+        "NPCI",
+        "RBI",
+        "SEBI"
+      ],
+      "upi_handles": [
+        "@paytm"
+      ],
+      "website": "https://paytm.com",
+      "tags": [
+        "tier-1",
+        "consumer",
+        "super-app",
+        "listed",
+        "nse-listed"
+      ]
+    },
+    {
+      "id": "paytm-payments-bank",
+      "name": "Paytm Payments Bank",
+      "short_name": "PPBL",
+      "categories": [
+        "payments-bank"
+      ],
+      "brand_color": "#002970",
+      "country": "IN",
+      "status": "defunct",
+      "logos": {},
+      "legal_name": "Paytm Payments Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "PYTM",
+      "website": "https://www.paytmbank.com",
+      "tags": [
+        "payments-bank",
+        "rbi-action-2024",
+        "operations-halted"
+      ]
+    },
+    {
+      "id": "payu-india",
+      "name": "PayU India",
+      "short_name": "PayU",
+      "categories": [
+        "payment-gateway",
+        "lending-platform"
+      ],
+      "brand_color": "#009DDB",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "PayU Payments Private Limited",
+      "founded": 2002,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://payu.in",
+      "tags": [
+        "b2b",
+        "prosus-backed",
+        "payment-aggregator"
+      ]
+    },
+    {
+      "id": "perfios",
+      "name": "Perfios",
+      "short_name": "Perfios",
+      "categories": [
+        "infra-api",
+        "account-aggregator"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Perfios Account Aggregation Services Private Limited",
+      "founded": 2008,
+      "regulated_by": [
+        "RBI"
+      ],
+      "aa_id": "perfios-aa",
+      "website": "https://www.perfios.com",
+      "tags": [
+        "bank-statement-analysis",
+        "aa-operator",
+        "b2b"
+      ]
+    },
+    {
+      "id": "phonepe",
+      "name": "PhonePe",
+      "short_name": "PhonePe",
+      "categories": [
+        "upi-psp",
+        "wallet",
+        "wealthtech",
+        "insurtech"
+      ],
+      "brand_color": "#5F259F",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "PhonePe Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "NPCI",
+        "RBI",
+        "SEBI",
+        "IRDAI"
+      ],
+      "upi_handles": [
+        "@ybl",
+        "@axl",
+        "@ibl"
+      ],
+      "website": "https://www.phonepe.com",
+      "tags": [
+        "tier-1",
+        "upi-market-leader",
+        "walmart",
+        "consumer",
+        "super-app"
+      ]
+    },
+    {
+      "id": "policybazaar",
+      "name": "PolicyBazaar",
+      "short_name": "PolicyBazaar",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#EE3424",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "PB Fintech Limited",
+      "founded": 2008,
+      "regulated_by": [
+        "IRDAI",
+        "SEBI"
+      ],
+      "website": "https://www.policybazaar.com",
+      "tags": [
+        "insurance-marketplace",
+        "listed"
+      ]
+    },
+    {
+      "id": "punjab-national-bank",
+      "name": "Punjab National Bank",
+      "short_name": "PNB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#002D8C",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Punjab National Bank",
+      "founded": 1894,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "PUNB",
+      "upi_handles": [
+        "@pnb"
+      ],
+      "website": "https://www.pnbindia.in",
+      "tags": [
+        "tier-1",
+        "government",
+        "merged-oriental-bank-united-bank"
+      ]
+    },
+    {
+      "id": "punjab-sind-bank",
+      "name": "Punjab & Sind Bank",
+      "short_name": "PSB",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Punjab & Sind Bank",
+      "founded": 1908,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "PSIB",
+      "website": "https://punjabandsindbank.co.in",
+      "tags": [
+        "government"
+      ]
+    },
+    {
+      "id": "razorpay",
+      "name": "Razorpay",
+      "short_name": "Razorpay",
+      "categories": [
+        "payment-gateway",
+        "neobank",
+        "infra-api",
+        "lending-platform"
+      ],
+      "brand_color": "#2B6CB0",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Razorpay Software Private Limited",
+      "founded": 2014,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://razorpay.com",
+      "tags": [
+        "b2b",
+        "saas",
+        "yc-alum",
+        "payment-aggregator",
+        "pa-license"
+      ]
+    },
+    {
+      "id": "razorpayx",
+      "name": "RazorpayX",
+      "short_name": "RazorpayX",
+      "categories": [
+        "neobank",
+        "infra-api"
+      ],
+      "brand_color": "#2B6CB0",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Razorpay Software Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://razorpay.com/x/",
+      "tags": [
+        "b2b",
+        "business-banking",
+        "razorpay-product"
+      ]
+    },
+    {
+      "id": "rbl-bank",
+      "name": "RBL Bank",
+      "short_name": "RBL",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "RBL Bank Limited",
+      "founded": 1943,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "RATN",
+      "upi_handles": [
+        "@rbl",
+        "@rapl"
+      ],
+      "website": "https://www.rblbank.com",
+      "tags": [
+        "private-sector",
+        "formerly-ratnakar-bank"
+      ]
+    },
+    {
+      "id": "scripbox",
+      "name": "Scripbox",
+      "short_name": "Scripbox",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#2A6495",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Scripbox Advisors Private Limited",
+      "founded": 2012,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://scripbox.com",
+      "tags": [
+        "mf",
+        "wealth-management"
+      ]
+    },
+    {
+      "id": "setu",
+      "name": "Setu",
+      "short_name": "Setu",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#7B5EA7",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Pine Labs Private Limited (Setu)",
+      "founded": 2018,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://setu.co",
+      "tags": [
+        "api-infra",
+        "aa-tsp",
+        "pine-labs-acquired"
+      ]
+    },
+    {
+      "id": "shriram-finance",
+      "name": "Shriram Finance",
+      "short_name": "Shriram Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E8A000",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Shriram Finance Limited",
+      "founded": 1974,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.shriramfinance.in",
+      "tags": [
+        "nbfc",
+        "vehicle-loan",
+        "listed",
+        "merged-shriram-transport-city"
+      ]
+    },
+    {
+      "id": "signzy",
+      "name": "Signzy",
+      "short_name": "Signzy",
+      "categories": [
+        "infra-api"
+      ],
+      "brand_color": "#4A00E0",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Signzy Technologies Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://signzy.com",
+      "tags": [
+        "kyc-infra",
+        "b2b",
+        "bureau-of-indian-standards"
+      ]
+    },
+    {
+      "id": "simpl",
+      "name": "Simpl",
+      "short_name": "Simpl",
+      "categories": [
+        "bnpl"
+      ],
+      "brand_color": "#FF5C35",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Mool Financial Technologies Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://simpl.credit",
+      "tags": [
+        "bnpl",
+        "checkout-credit",
+        "b2b2c"
+      ]
+    },
+    {
+      "id": "slice",
+      "name": "Slice",
+      "short_name": "Slice",
+      "categories": [
+        "neobank",
+        "bnpl"
+      ],
+      "brand_color": "#FFDE59",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Quadrillion Finance Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.sliceit.com",
+      "tags": [
+        "consumer",
+        "merged-northeast-sfb-2024",
+        "credit-card"
+      ]
+    },
+    {
+      "id": "snapmint",
+      "name": "Snapmint",
+      "short_name": "Snapmint",
+      "categories": [
+        "bnpl"
+      ],
+      "brand_color": "#00A4E4",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Niro Technologies India Private Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://snapmint.com",
+      "tags": [
+        "bnpl",
+        "emi"
+      ]
+    },
+    {
+      "id": "south-indian-bank",
+      "name": "South Indian Bank",
+      "short_name": "SIB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "The South Indian Bank Limited",
+      "founded": 1929,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "SIBL",
+      "website": "https://www.southindianbank.com",
+      "tags": [
+        "private-sector",
+        "kerala"
+      ]
+    },
+    {
+      "id": "stashfin",
+      "name": "Stashfin",
+      "short_name": "Stashfin",
+      "categories": [
+        "lending-platform"
+      ],
+      "brand_color": "#FF4500",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Akara Capital Advisors Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://stashfin.com",
+      "tags": [
+        "personal-loan",
+        "credit-line"
+      ]
+    },
+    {
+      "id": "state-bank-of-india",
+      "name": "State Bank of India",
+      "short_name": "SBI",
+      "categories": [
+        "public-sector-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#22409A",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "State Bank of India",
+      "founded": 1955,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "SBIN",
+      "upi_handles": [
+        "@sbi",
+        "@oksbi"
+      ],
+      "website": "https://www.sbi.co.in",
+      "tags": [
+        "tier-1",
+        "largest-bank",
+        "government",
+        "psp-bank"
+      ]
+    },
+    {
+      "id": "suryodaya-small-finance-bank",
+      "name": "Suryodaya Small Finance Bank",
+      "short_name": "Suryodaya SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#FF6600",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Suryodaya Small Finance Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "SURY",
+      "website": "https://suryodayabank.com",
+      "tags": [
+        "sfb"
+      ]
+    },
+    {
+      "id": "tata-capital",
+      "name": "Tata Capital",
+      "short_name": "Tata Capital",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Tata Capital Financial Services Limited",
+      "founded": 2007,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.tatacapital.com",
+      "tags": [
+        "nbfc",
+        "tata-group",
+        "consumer-lending"
+      ]
+    },
+    {
+      "id": "transunion-cibil",
+      "name": "TransUnion CIBIL",
+      "short_name": "CIBIL",
+      "categories": [
+        "credit-bureau"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "TransUnion CIBIL Limited",
+      "founded": 2000,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.cibil.com",
+      "tags": [
+        "credit-bureau",
+        "credit-score",
+        "rbi-licensed"
+      ]
+    },
+    {
+      "id": "turtlemint",
+      "name": "Turtlemint",
+      "short_name": "Turtlemint",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#2DBD95",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Turtlemint Insurance Broking Services Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.turtlemint.com",
+      "tags": [
+        "insurance-b2b2c",
+        "advisor-platform"
+      ]
+    },
+    {
+      "id": "uco-bank",
+      "name": "UCO Bank",
+      "short_name": "UCO",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "UCO Bank",
+      "founded": 1943,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "UCBA",
+      "upi_handles": [
+        "@ucobank"
+      ],
+      "website": "https://ucobank.com",
+      "tags": [
+        "government"
+      ]
+    },
+    {
+      "id": "ujjivan-small-finance-bank",
+      "name": "Ujjivan Small Finance Bank",
+      "short_name": "Ujjivan SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#F37321",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Ujjivan Small Finance Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "UJVN",
+      "upi_handles": [
+        "@ujjivan"
+      ],
+      "website": "https://www.ujjivansfb.in",
+      "tags": [
+        "sfb",
+        "microfinance-origin"
+      ]
+    },
+    {
+      "id": "union-bank-of-india",
+      "name": "Union Bank of India",
+      "short_name": "Union Bank",
+      "categories": [
+        "public-sector-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Union Bank of India",
+      "founded": 1919,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "UBIN",
+      "upi_handles": [
+        "@unionbank"
+      ],
+      "website": "https://unionbankofindia.co.in",
+      "tags": [
+        "tier-1",
+        "government",
+        "merged-andhra-corporation-bank"
+      ]
+    },
+    {
+      "id": "unity-small-finance-bank",
+      "name": "Unity Small Finance Bank",
+      "short_name": "Unity SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Unity Small Finance Bank Limited",
+      "founded": 2021,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "UNTY",
+      "website": "https://unitysb.com",
+      "tags": [
+        "sfb"
+      ]
+    },
+    {
+      "id": "upstox",
+      "name": "Upstox",
+      "short_name": "Upstox",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#F70D4B",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "RKSV Securities India Private Limited",
+      "founded": 2012,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://upstox.com",
+      "tags": [
+        "stock-broker",
+        "discount-broker",
+        "tiger-global"
+      ]
+    },
+    {
+      "id": "utkarsh-small-finance-bank",
+      "name": "Utkarsh Small Finance Bank",
+      "short_name": "Utkarsh SFB",
+      "categories": [
+        "small-finance-bank"
+      ],
+      "brand_color": "#E6332A",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Utkarsh Small Finance Bank Limited",
+      "founded": 2017,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "UTKS",
+      "website": "https://utkarsh.bank",
+      "tags": [
+        "sfb"
+      ]
+    },
+    {
+      "id": "whatsapp-pay",
+      "name": "WhatsApp Pay",
+      "short_name": "WhatsApp Pay",
+      "categories": [
+        "upi-psp"
+      ],
+      "brand_color": "#25D366",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Meta Platforms India Private Limited",
+      "founded": 2020,
+      "regulated_by": [
+        "NPCI"
+      ],
+      "upi_handles": [
+        "@waaxis",
+        "@wahdfcbank",
+        "@waicici",
+        "@wasbi"
+      ],
+      "website": "https://www.whatsapp.com/payments/in",
+      "tags": [
+        "meta",
+        "consumer"
+      ]
+    },
+    {
+      "id": "yap",
+      "name": "YAP",
+      "short_name": "YAP",
+      "categories": [
+        "infra-api",
+        "neobank"
+      ],
+      "brand_color": "#F25F00",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "YAP Payments Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://yap.co.in",
+      "tags": [
+        "card-infra",
+        "api-banking",
+        "b2b"
+      ]
+    },
+    {
+      "id": "yes-bank",
+      "name": "Yes Bank",
+      "short_name": "Yes Bank",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003087",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Yes Bank Limited",
+      "founded": 2004,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "YESB",
+      "upi_handles": [
+        "@ybl",
+        "@idfcfirst"
+      ],
+      "website": "https://www.yesbank.in",
+      "tags": [
+        "private-sector",
+        "psp-bank",
+        "phonepe-psp"
+      ]
+    },
+    {
+      "id": "zerodha",
+      "name": "Zerodha",
+      "short_name": "Zerodha",
+      "categories": [
+        "wealthtech",
+        "upi-psp"
+      ],
+      "brand_color": "#387ED1",
+      "country": "IN",
+      "status": "active",
+      "logos": {},
+      "legal_name": "Zerodha Broking Limited",
+      "founded": 2010,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "upi_handles": [
+        "@zerodha"
+      ],
+      "website": "https://zerodha.com",
+      "tags": [
+        "stock-broker",
+        "discount-broker",
+        "coin-mf"
+      ]
+    },
+    {
+      "id": "zestmoney",
+      "name": "ZestMoney",
+      "short_name": "ZestMoney",
+      "categories": [
+        "bnpl"
+      ],
+      "brand_color": "#00C4B3",
+      "country": "IN",
+      "status": "defunct",
+      "logos": {},
+      "legal_name": "Camden Town Technologies Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.zestmoney.in",
+      "tags": [
+        "bnpl",
+        "shut-down-2024"
+      ]
+    }
+  ]
+}

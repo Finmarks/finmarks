@@ -1,0 +1,33 @@
+{
+  "id": "uco-bank",
+  "name": "UCO Bank",
+  "short_name": "UCO",
+  "legal_name": "UCO Bank",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1943,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "UCBA",
+  "upi_handles": [
+    "@ucobank"
+  ],
+  "website": "https://ucobank.com",
+  "status": "active",
+  "tags": [
+    "government"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "idfc-first-bank",
+  "name": "IDFC FIRST Bank",
+  "short_name": "IDFC FIRST",
+  "legal_name": "IDFC FIRST Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#9E1B32",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "IDFB",
+  "upi_handles": [
+    "@idfcfirst",
+    "@axl"
+  ],
+  "fip_id": null,
+  "website": "https://www.idfcfirstbank.com",
+  "status": "active",
+  "tags": [
+    "private-sector"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

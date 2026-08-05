@@ -1,0 +1,36 @@
+{
+  "id": "kotak-mahindra-bank",
+  "name": "Kotak Mahindra Bank",
+  "short_name": "Kotak",
+  "legal_name": "Kotak Mahindra Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E1251B",
+  "country": "IN",
+  "founded": 2003,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "KKBK",
+  "upi_handles": [
+    "@kotak"
+  ],
+  "fip_id": null,
+  "website": "https://www.kotak.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "private-sector"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

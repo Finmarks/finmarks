@@ -1,0 +1,33 @@
+{
+  "id": "paytm-payments-bank",
+  "name": "Paytm Payments Bank",
+  "short_name": "PPBL",
+  "legal_name": "Paytm Payments Bank Limited",
+  "categories": [
+    "payments-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#002970",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "PYTM",
+  "upi_handles": [],
+  "website": "https://www.paytmbank.com",
+  "status": "defunct",
+  "tags": [
+    "payments-bank",
+    "rbi-action-2024",
+    "operations-halted"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

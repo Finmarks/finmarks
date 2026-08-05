@@ -1,0 +1,32 @@
+{
+  "id": "billdesk",
+  "name": "BillDesk",
+  "short_name": "BillDesk",
+  "legal_name": "IndiaIdeas.com Limited",
+  "categories": [
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2000,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.billdesk.com",
+  "status": "active",
+  "acquired_by": "payu-india",
+  "tags": [
+    "b2b",
+    "payment-aggregator",
+    "payu-acquired-2021"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

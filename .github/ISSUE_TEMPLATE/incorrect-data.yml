@@ -1,0 +1,34 @@
+name: Report incorrect data
+description: A wrong logo, colour, or metadata field
+title: 'fix: '
+labels: ['data-correction']
+body:
+  - type: input
+    id: entity
+    attributes:
+      label: Entity id
+      placeholder: hdfc-bank
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field
+    attributes:
+      label: What is wrong?
+      options:
+        - Logo is outdated or incorrect
+        - brand_color is wrong
+        - Categories are wrong
+        - IFSC prefix / UPI handle is wrong
+        - Status is wrong (acquired, defunct, rebranded)
+        - Other metadata
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it be?
+      description: Include a source if you have one — an official page is ideal.
+    validations:
+      required: true

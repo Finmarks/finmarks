@@ -1,0 +1,39 @@
+{
+  "id": "hdfc-bank",
+  "name": "HDFC Bank",
+  "short_name": "HDFC",
+  "legal_name": "HDFC Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp",
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#004C8F",
+  "country": "IN",
+  "founded": 1994,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "HDFC",
+  "upi_handles": [
+    "@hdfcbank",
+    "@okhdfcbank"
+  ],
+  "fip_id": null,
+  "website": "https://www.hdfcbank.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "private-sector",
+    "psp-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

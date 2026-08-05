@@ -1,0 +1,33 @@
+{
+  "id": "indian-overseas-bank",
+  "name": "Indian Overseas Bank",
+  "short_name": "IOB",
+  "legal_name": "Indian Overseas Bank",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1937,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "IOBA",
+  "upi_handles": [
+    "@iob"
+  ],
+  "website": "https://iob.in",
+  "status": "active",
+  "tags": [
+    "government"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

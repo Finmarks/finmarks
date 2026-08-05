@@ -1,0 +1,31 @@
+{
+  "id": "indmoney",
+  "name": "INDmoney",
+  "short_name": "INDmoney",
+  "legal_name": "INDWealth Technologies Private Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF5F46",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.indmoney.com",
+  "status": "active",
+  "tags": [
+    "mf",
+    "us-stocks",
+    "portfolio-tracker"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

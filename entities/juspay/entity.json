@@ -1,0 +1,32 @@
+{
+  "id": "juspay",
+  "name": "Juspay",
+  "short_name": "Juspay",
+  "legal_name": "Juspay Technologies Private Limited",
+  "categories": [
+    "payment-gateway",
+    "infra-api"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1A1A2E",
+  "country": "IN",
+  "founded": 2012,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://juspay.in",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "checkout-infra",
+    "hyperswitch"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

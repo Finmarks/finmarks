@@ -1,0 +1,30 @@
+{
+  "id": "snapmint",
+  "name": "Snapmint",
+  "short_name": "Snapmint",
+  "legal_name": "Niro Technologies India Private Limited",
+  "categories": [
+    "bnpl"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00A4E4",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://snapmint.com",
+  "status": "active",
+  "tags": [
+    "bnpl",
+    "emi"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

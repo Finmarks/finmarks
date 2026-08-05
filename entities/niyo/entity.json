@@ -1,0 +1,32 @@
+{
+  "id": "niyo",
+  "name": "Niyo",
+  "short_name": "Niyo",
+  "legal_name": "BankOpen Financial Technologies Private Limited",
+  "categories": [
+    "neobank",
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0060DF",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.goniyo.com",
+  "status": "active",
+  "tags": [
+    "consumer",
+    "salary-account",
+    "forex"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

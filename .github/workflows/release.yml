@@ -1,0 +1,48 @@
+name: Release
+
+# Publishes the npm package on release. Requires the NPM_TOKEN secret; skipped
+# with a notice when it is absent so the workflow is safe to have in a fork.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate, build and test
+        run: |
+          pnpm validate
+          pnpm generate
+          pnpm -F bharatbrands build
+          pnpm -F bharatbrands test
+
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::notice::NPM_TOKEN not configured — skipping publish."
+            exit 0
+          fi
+          pnpm -F bharatbrands publish --no-git-checks --access public --provenance

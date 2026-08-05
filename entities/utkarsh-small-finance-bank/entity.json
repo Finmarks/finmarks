@@ -1,0 +1,31 @@
+{
+  "id": "utkarsh-small-finance-bank",
+  "name": "Utkarsh Small Finance Bank",
+  "short_name": "Utkarsh SFB",
+  "legal_name": "Utkarsh Small Finance Bank Limited",
+  "categories": [
+    "small-finance-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E6332A",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "UTKS",
+  "upi_handles": [],
+  "website": "https://utkarsh.bank",
+  "status": "active",
+  "tags": [
+    "sfb"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

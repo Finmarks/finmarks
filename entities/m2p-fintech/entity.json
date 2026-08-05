@@ -1,0 +1,31 @@
+{
+  "id": "m2p-fintech",
+  "name": "M2P Fintech",
+  "short_name": "M2P",
+  "legal_name": "M2P Solutions Private Limited",
+  "categories": [
+    "infra-api"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2014,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://m2pfintech.com",
+  "status": "active",
+  "tags": [
+    "card-infra",
+    "api-banking",
+    "b2b"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

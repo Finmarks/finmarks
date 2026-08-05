@@ -1,0 +1,34 @@
+{
+  "id": "bandhan-bank",
+  "name": "Bandhan Bank",
+  "short_name": "Bandhan",
+  "legal_name": "Bandhan Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E3001B",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "BDBL",
+  "upi_handles": [
+    "@bandhan"
+  ],
+  "website": "https://bandhanbank.com",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "microfinance-origin"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "rbl-bank",
+  "name": "RBL Bank",
+  "short_name": "RBL",
+  "legal_name": "RBL Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1943,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "RATN",
+  "upi_handles": [
+    "@rbl",
+    "@rapl"
+  ],
+  "website": "https://www.rblbank.com",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "formerly-ratnakar-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

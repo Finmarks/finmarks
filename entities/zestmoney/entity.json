@@ -1,0 +1,30 @@
+{
+  "id": "zestmoney",
+  "name": "ZestMoney",
+  "short_name": "ZestMoney",
+  "legal_name": "Camden Town Technologies Private Limited",
+  "categories": [
+    "bnpl"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00C4B3",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.zestmoney.in",
+  "status": "defunct",
+  "tags": [
+    "bnpl",
+    "shut-down-2024"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

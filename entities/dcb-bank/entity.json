@@ -1,0 +1,31 @@
+{
+  "id": "dcb-bank",
+  "name": "DCB Bank",
+  "short_name": "DCB",
+  "legal_name": "DCB Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E2211B",
+  "country": "IN",
+  "founded": 1930,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "DCBL",
+  "upi_handles": [],
+  "website": "https://www.dcbbank.com",
+  "status": "active",
+  "tags": [
+    "private-sector"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

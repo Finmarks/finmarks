@@ -1,0 +1,35 @@
+{
+  "id": "bank-of-india",
+  "name": "Bank of India",
+  "short_name": "BOI",
+  "legal_name": "Bank of India",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003399",
+  "country": "IN",
+  "founded": 1906,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "BKID",
+  "upi_handles": [
+    "@boi"
+  ],
+  "website": "https://bankofindia.co.in",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "government",
+    "swift-founder"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

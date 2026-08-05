@@ -1,0 +1,32 @@
+{
+  "id": "onemoney",
+  "name": "OneMoney",
+  "short_name": "OneMoney",
+  "legal_name": "OneMoney (Cygnet Infotech)",
+  "categories": [
+    "account-aggregator"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "RBI"
+  ],
+  "aa_id": "onemoney",
+  "website": "https://onemoney.in",
+  "status": "active",
+  "tags": [
+    "aa-operator",
+    "nbfc-aa",
+    "sahamati"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

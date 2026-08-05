@@ -1,0 +1,31 @@
+{
+  "id": "moneyview",
+  "name": "MoneyView",
+  "short_name": "MoneyView",
+  "legal_name": "Whizdm Innovations Private Limited",
+  "categories": [
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1E4D9B",
+  "country": "IN",
+  "founded": 2014,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://moneyview.in",
+  "status": "active",
+  "tags": [
+    "personal-loan",
+    "credit-line",
+    "consumer"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

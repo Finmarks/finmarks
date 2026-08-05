@@ -1,0 +1,32 @@
+{
+  "id": "capital-small-finance-bank",
+  "name": "Capital Small Finance Bank",
+  "short_name": "Capital SFB",
+  "legal_name": "Capital Small Finance Bank Limited",
+  "categories": [
+    "small-finance-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "CLBL",
+  "upi_handles": [],
+  "website": "https://capitalbank.co.in",
+  "status": "active",
+  "tags": [
+    "sfb",
+    "punjab"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

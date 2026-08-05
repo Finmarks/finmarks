@@ -1,0 +1,115 @@
+name: CDN deploy
+
+# Publishes SVGs, generated PNGs and the JSON index to Cloudflare R2 on release.
+#
+# Required repository secrets:
+#   R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET
+#
+# Until those exist the job is skipped rather than failing the release, so the
+# repo works end to end for contributors without CDN credentials.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'List what would be uploaded without uploading'
+        type: boolean
+        default: true
+
+concurrency:
+  group: cdn-deploy
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Publish assets to R2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate
+        run: pnpm validate
+
+      - name: Generate index
+        run: pnpm generate
+
+      - name: Rasterise PNGs
+        run: pnpm convert-png
+
+      - name: Check for CDN credentials
+        id: creds
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+        run: |
+          if [ -n "$R2_ACCOUNT_ID" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::R2 secrets not configured — skipping upload."
+          fi
+
+      - name: Stage the CDN tree
+        if: steps.creds.outputs.available == 'true'
+        run: |
+          mkdir -p cdn/entities
+          # SVG sources, mirroring the cdn.bharatbrands.dev/entities/{id}/ layout.
+          for dir in entities/*/; do
+            id=$(basename "$dir")
+            if compgen -G "$dir*.svg" > /dev/null; then
+              mkdir -p "cdn/entities/$id"
+              cp "$dir"*.svg "cdn/entities/$id/"
+            fi
+          done
+          # Generated PNGs land beside the SVGs.
+          if [ -d dist/png ]; then
+            for dir in dist/png/*/; do
+              id=$(basename "$dir")
+              mkdir -p "cdn/entities/$id"
+              cp "$dir"*.png "cdn/entities/$id/" 2>/dev/null || true
+            done
+          fi
+          cp dist/index.json dist/index-lite.json dist/categories.json cdn/
+          echo "staged $(find cdn -type f | wc -l) files"
+
+      - name: Upload to R2
+        if: steps.creds.outputs.available == 'true' && inputs.dry_run != true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          ENDPOINT: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+          BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          # Assets are content-addressed by release tag, so cache them hard.
+          aws s3 sync cdn/entities "s3://$BUCKET/entities" \
+            --endpoint-url "$ENDPOINT" \
+            --cache-control "public, max-age=31536000, immutable" \
+            --delete
+          # The index changes every release, so keep its TTL short.
+          aws s3 cp cdn/index.json "s3://$BUCKET/index.json" \
+            --endpoint-url "$ENDPOINT" \
+            --cache-control "public, max-age=300" \
+            --content-type application/json
+          aws s3 cp cdn/index-lite.json "s3://$BUCKET/index-lite.json" \
+            --endpoint-url "$ENDPOINT" \
+            --cache-control "public, max-age=300" \
+            --content-type application/json
+          aws s3 cp cdn/categories.json "s3://$BUCKET/categories.json" \
+            --endpoint-url "$ENDPOINT" \
+            --cache-control "public, max-age=300" \
+            --content-type application/json

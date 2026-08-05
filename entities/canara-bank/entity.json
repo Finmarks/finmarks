@@ -1,0 +1,35 @@
+{
+  "id": "canara-bank",
+  "name": "Canara Bank",
+  "short_name": "Canara",
+  "legal_name": "Canara Bank",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#005CA9",
+  "country": "IN",
+  "founded": 1906,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "CNRB",
+  "upi_handles": [
+    "@cnrb"
+  ],
+  "website": "https://canarabank.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "government",
+    "merged-syndicate-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

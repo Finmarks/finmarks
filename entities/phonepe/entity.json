@@ -1,0 +1,44 @@
+{
+  "id": "phonepe",
+  "name": "PhonePe",
+  "short_name": "PhonePe",
+  "legal_name": "PhonePe Private Limited",
+  "categories": [
+    "upi-psp",
+    "wallet",
+    "wealthtech",
+    "insurtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#5F259F",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "NPCI",
+    "RBI",
+    "SEBI",
+    "IRDAI"
+  ],
+  "upi_handles": [
+    "@ybl",
+    "@axl",
+    "@ibl"
+  ],
+  "website": "https://www.phonepe.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "upi-market-leader",
+    "walmart",
+    "consumer",
+    "super-app"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "groww",
+  "name": "Groww",
+  "short_name": "Groww",
+  "legal_name": "Nextbillion Technology Private Limited",
+  "categories": [
+    "wealthtech",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#5367FF",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "SEBI",
+    "NPCI"
+  ],
+  "upi_handles": [
+    "@yesg"
+  ],
+  "website": "https://groww.in",
+  "status": "active",
+  "tags": [
+    "stock-broker",
+    "mf",
+    "consumer",
+    "listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

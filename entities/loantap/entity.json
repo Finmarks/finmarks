@@ -1,0 +1,30 @@
+{
+  "id": "loantap",
+  "name": "LoanTap",
+  "short_name": "LoanTap",
+  "legal_name": "LoanTap Credit Products Private Limited",
+  "categories": [
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF6600",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://loantap.in",
+  "status": "active",
+  "tags": [
+    "personal-loan",
+    "consumer"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

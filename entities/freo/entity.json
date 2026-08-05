@@ -1,0 +1,32 @@
+{
+  "id": "freo",
+  "name": "Freo",
+  "short_name": "Freo",
+  "legal_name": "MoneyTap Financial Services Private Limited",
+  "categories": [
+    "neobank",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1DB89A",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://freo.money",
+  "status": "active",
+  "tags": [
+    "consumer",
+    "formerly-moneytap",
+    "credit-line"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

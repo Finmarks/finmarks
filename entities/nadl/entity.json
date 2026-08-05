@@ -1,0 +1,32 @@
+{
+  "id": "nadl",
+  "name": "NADL",
+  "short_name": "NADL",
+  "legal_name": "NSDL Data Analytics Limited",
+  "categories": [
+    "account-aggregator"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 2020,
+  "regulated_by": [
+    "RBI"
+  ],
+  "aa_id": "nadl",
+  "website": "https://www.nadl.co.in",
+  "status": "active",
+  "tags": [
+    "aa-operator",
+    "nbfc-aa",
+    "nsdl-group"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

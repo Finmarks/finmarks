@@ -1,0 +1,35 @@
+{
+  "id": "fino-payments-bank",
+  "name": "Fino Payments Bank",
+  "short_name": "Fino",
+  "legal_name": "Fino Payments Bank Limited",
+  "categories": [
+    "payments-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0066B3",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "FINO",
+  "upi_handles": [
+    "@fino"
+  ],
+  "website": "https://www.finobank.com",
+  "status": "active",
+  "tags": [
+    "payments-bank",
+    "fintech-first"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

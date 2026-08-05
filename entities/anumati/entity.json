@@ -1,0 +1,32 @@
+{
+  "id": "anumati",
+  "name": "Anumati",
+  "short_name": "Anumati",
+  "legal_name": "PhonePe Private Limited (Anumati)",
+  "categories": [
+    "account-aggregator"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#5F259F",
+  "country": "IN",
+  "founded": 2021,
+  "regulated_by": [
+    "RBI"
+  ],
+  "aa_id": "anumati",
+  "website": "https://anumati.com",
+  "status": "active",
+  "tags": [
+    "aa-operator",
+    "nbfc-aa",
+    "phonepe-group"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "zerodha",
+  "name": "Zerodha",
+  "short_name": "Zerodha",
+  "legal_name": "Zerodha Broking Limited",
+  "categories": [
+    "wealthtech",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#387ED1",
+  "country": "IN",
+  "founded": 2010,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "upi_handles": [
+    "@zerodha"
+  ],
+  "website": "https://zerodha.com",
+  "status": "active",
+  "tags": [
+    "stock-broker",
+    "discount-broker",
+    "coin-mf"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "finvu",
+  "name": "Finvu",
+  "short_name": "Finvu",
+  "legal_name": "Cookiejar Technologies Private Limited",
+  "categories": [
+    "account-aggregator"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1B3DA4",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "RBI"
+  ],
+  "aa_id": "finvu",
+  "website": "https://finvu.in",
+  "status": "active",
+  "tags": [
+    "aa-operator",
+    "nbfc-aa",
+    "sahamati"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

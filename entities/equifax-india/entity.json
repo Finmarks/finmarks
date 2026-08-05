@@ -1,0 +1,31 @@
+{
+  "id": "equifax-india",
+  "name": "Equifax India",
+  "short_name": "Equifax",
+  "legal_name": "Equifax Credit Information Services Private Limited",
+  "categories": [
+    "credit-bureau"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E31837",
+  "country": "IN",
+  "founded": 2010,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.equifax.co.in",
+  "status": "active",
+  "tags": [
+    "credit-bureau",
+    "credit-score",
+    "rbi-licensed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

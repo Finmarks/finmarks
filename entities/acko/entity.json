@@ -1,0 +1,30 @@
+{
+  "id": "acko",
+  "name": "Acko",
+  "short_name": "Acko",
+  "legal_name": "Acko General Insurance Limited",
+  "categories": [
+    "insurtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00C4B4",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "IRDAI"
+  ],
+  "website": "https://www.acko.com",
+  "status": "active",
+  "tags": [
+    "general-insurance",
+    "digital-first"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

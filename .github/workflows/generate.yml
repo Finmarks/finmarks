@@ -1,0 +1,56 @@
+name: Generate
+
+# Keeps dist/ in sync on main. When a merged PR changes entity data, this
+# regenerates the index and commits it back, so dist/ is never hand-maintained.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'entities/**'
+      - 'schemas/**'
+      - 'scripts/**'
+      - 'packages/bharatbrands/package.json'
+  workflow_dispatch:
+
+concurrency:
+  group: generate-main
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    name: Regenerate dist/
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate
+        run: pnpm validate
+
+      - name: Generate
+        run: pnpm generate
+
+      - name: Commit dist/ if it changed
+        run: |
+          if git diff --quiet -- dist/; then
+            echo "dist/ already up to date"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          git commit -m "chore: regenerate dist/ [skip ci]"
+          git push

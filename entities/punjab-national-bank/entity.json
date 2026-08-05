@@ -1,0 +1,35 @@
+{
+  "id": "punjab-national-bank",
+  "name": "Punjab National Bank",
+  "short_name": "PNB",
+  "legal_name": "Punjab National Bank",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#002D8C",
+  "country": "IN",
+  "founded": 1894,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "PUNB",
+  "upi_handles": [
+    "@pnb"
+  ],
+  "website": "https://www.pnbindia.in",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "government",
+    "merged-oriental-bank-united-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

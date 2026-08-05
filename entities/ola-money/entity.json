@@ -1,0 +1,32 @@
+{
+  "id": "ola-money",
+  "name": "Ola Money",
+  "short_name": "Ola Money",
+  "legal_name": "Zipcash Card Services Private Limited",
+  "categories": [
+    "wallet"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00B140",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "RBI"
+  ],
+  "upi_handles": [],
+  "website": "https://www.olamoney.com",
+  "status": "active",
+  "tags": [
+    "wallet",
+    "ola-backed",
+    "ppi-licensed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "slice",
+  "name": "Slice",
+  "short_name": "Slice",
+  "legal_name": "Quadrillion Finance Private Limited",
+  "categories": [
+    "neobank",
+    "bnpl"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FFDE59",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.sliceit.com",
+  "status": "active",
+  "tags": [
+    "consumer",
+    "merged-northeast-sfb-2024",
+    "credit-card"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

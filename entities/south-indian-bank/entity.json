@@ -1,0 +1,32 @@
+{
+  "id": "south-indian-bank",
+  "name": "South Indian Bank",
+  "short_name": "SIB",
+  "legal_name": "The South Indian Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1929,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "SIBL",
+  "upi_handles": [],
+  "website": "https://www.southindianbank.com",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "kerala"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

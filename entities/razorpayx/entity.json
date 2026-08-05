@@ -1,0 +1,32 @@
+{
+  "id": "razorpayx",
+  "name": "RazorpayX",
+  "short_name": "RazorpayX",
+  "legal_name": "Razorpay Software Private Limited",
+  "categories": [
+    "neobank",
+    "infra-api"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#2B6CB0",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://razorpay.com/x/",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "business-banking",
+    "razorpay-product"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "instamojo",
+  "name": "Instamojo",
+  "short_name": "Instamojo",
+  "legal_name": "Instamojo Technologies Private Limited",
+  "categories": [
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#ED6237",
+  "country": "IN",
+  "founded": 2012,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.instamojo.com",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "sme-focus",
+    "d2c"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

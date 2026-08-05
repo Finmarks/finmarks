@@ -1,0 +1,34 @@
+{
+  "id": "bhim",
+  "name": "BHIM",
+  "short_name": "BHIM",
+  "legal_name": "National Payments Corporation of India",
+  "categories": [
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1B3DA4",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "NPCI"
+  ],
+  "upi_handles": [
+    "@upi"
+  ],
+  "website": "https://www.bhimupi.org.in",
+  "status": "active",
+  "tags": [
+    "npci",
+    "government",
+    "reference-app"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

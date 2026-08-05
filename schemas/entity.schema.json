@@ -1,0 +1,226 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://bharatbrands.dev/schemas/entity.schema.json",
+  "title": "BharatBrands Entity",
+  "description": "A single fintech brand entity with logos and metadata",
+  "type": "object",
+  "required": ["id", "name", "short_name", "categories", "country", "logos"],
+  "additionalProperties": false,
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Kebab-case unique identifier. Used as folder name and npm export key.",
+      "examples": ["hdfc-bank", "phonepe", "razorpay", "finvu"]
+    },
+
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Full official brand name",
+      "examples": ["HDFC Bank", "PhonePe", "Razorpay"]
+    },
+
+    "short_name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 24,
+      "description": "Abbreviated name used in space-constrained UI",
+      "examples": ["HDFC", "PhonePe", "Razorpay"]
+    },
+
+    "legal_name": {
+      "type": "string",
+      "description": "Registered legal entity name",
+      "examples": ["HDFC Bank Limited", "PhonePe Private Limited"]
+    },
+
+    "categories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "public-sector-bank",
+          "private-bank",
+          "small-finance-bank",
+          "payments-bank",
+          "upi-psp",
+          "wallet",
+          "payment-gateway",
+          "neobank",
+          "bnpl",
+          "lending-platform",
+          "wealthtech",
+          "insurtech",
+          "infra-api",
+          "account-aggregator",
+          "credit-bureau",
+          "nbfc",
+          "international-bank",
+          "crypto-exchange",
+          "pos-terminal",
+          "regulator"
+        ]
+      },
+      "description": "One or more category tags. An entity can belong to multiple."
+    },
+
+    "logos": {
+      "type": "object",
+      "description": "Logo variants for this entity. A null value means the asset has not been sourced yet; a string is a path relative to the entity folder.",
+      "required": ["full"],
+      "additionalProperties": false,
+      "properties": {
+        "icon": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9._/-]+\\.svg$",
+          "description": "Symbol/mark only, no wordmark."
+        },
+        "full": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9._/-]+\\.svg$",
+          "description": "Symbol + wordmark. Primary logo. Key is required; null until sourced."
+        },
+        "wordmark": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9._/-]+\\.svg$",
+          "description": "Text/wordmark only, no symbol."
+        },
+        "mono_dark": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9._/-]+\\.svg$",
+          "description": "Single-color version for dark backgrounds (white or light)."
+        },
+        "mono_light": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9._/-]+\\.svg$",
+          "description": "Single-color version for light backgrounds (black or dark)."
+        },
+        "square": {
+          "type": ["string", "null"],
+          "pattern": "^[a-z0-9._/-]+\\.svg$",
+          "description": "Square/app-icon format, used for circular avatar UI."
+        }
+      }
+    },
+
+    "brand_color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$",
+      "description": "Primary brand hex color. Used for UI accent when displaying this entity.",
+      "examples": ["#004C8F", "#5F259F", "#1A1A2E"]
+    },
+
+    "country": {
+      "type": "string",
+      "enum": ["IN", "US", "GB", "SG", "AE"],
+      "default": "IN",
+      "description": "ISO 3166-1 alpha-2 country code of the entity's primary market."
+    },
+
+    "founded": {
+      "type": "integer",
+      "minimum": 1800,
+      "maximum": 2030,
+      "description": "Year the entity was founded or launched."
+    },
+
+    "regulated_by": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["RBI", "SEBI", "IRDAI", "NPCI", "PFRDA", "IFSCA", "MCA", "None"]
+      },
+      "description": "Regulatory bodies governing this entity. Array to support dual regulation."
+    },
+
+    "ifsc_prefix": {
+      "type": ["string", "null"],
+      "pattern": "^[A-Z]{4}$",
+      "description": "4-letter IFSC bank code prefix. Only for banks.",
+      "examples": ["HDFC", "SBIN", "ICIC", "UTIB"]
+    },
+
+    "upi_handles": {
+      "type": ["array", "null"],
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^@[a-zA-Z0-9]+$"
+      },
+      "description": "UPI VPA suffixes supported by this entity.",
+      "examples": [["@hdfcbank"], ["@ybl", "@idfcfirst"]]
+    },
+
+    "fip_id": {
+      "type": ["string", "null"],
+      "description": "Account Aggregator FIP ID as registered with Sahamati / ReBIT. Null when present but unverified.",
+      "examples": ["HDFC-FIP", "SBIN-FIP"]
+    },
+
+    "fiu_id": {
+      "type": ["string", "null"],
+      "description": "Account Aggregator FIU ID. For entities that consume AA data. Null when present but unverified.",
+      "examples": ["JUPITER-FIU", "CRED-FIU"]
+    },
+
+    "aa_id": {
+      "type": ["string", "null"],
+      "description": "AA operator ID. Only for Account Aggregator entities.",
+      "examples": ["finvu", "onemoney", "nadl"]
+    },
+
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "description": "Official website URL."
+    },
+
+    "status": {
+      "type": "string",
+      "enum": ["active", "acquired", "defunct", "rebranded"],
+      "default": "active",
+      "description": "Current operational status of the entity."
+    },
+
+    "acquired_by": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "The acquiring/successor entity id. Set when the brand is owned by another entity in this dataset, whether or not it still operates independently.",
+      "examples": ["axis-bank", "payu-india"]
+    },
+
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string" },
+      "description": "Free-form additional tags for search and filtering.",
+      "examples": [["b2b", "api-first"], ["consumer", "super-app"]]
+    },
+
+    "added_at": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO date when this entity was added to the dataset."
+    },
+
+    "updated_at": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "ISO date of the last update to this entity record."
+    },
+
+    "contributors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "GitHub usernames of contributors who added/maintained this entity."
+    }
+  }
+}

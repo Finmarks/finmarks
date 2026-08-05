@@ -1,0 +1,33 @@
+{
+  "id": "shriram-finance",
+  "name": "Shriram Finance",
+  "short_name": "Shriram Finance",
+  "legal_name": "Shriram Finance Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E8A000",
+  "country": "IN",
+  "founded": 1974,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.shriramfinance.in",
+  "status": "active",
+  "tags": [
+    "nbfc",
+    "vehicle-loan",
+    "listed",
+    "merged-shriram-transport-city"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

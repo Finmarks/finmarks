@@ -1,0 +1,33 @@
+{
+  "id": "muthoot-finance",
+  "name": "Muthoot Finance",
+  "short_name": "Muthoot",
+  "legal_name": "The Muthoot Finance Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E8B91B",
+  "country": "IN",
+  "founded": 1939,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.muthootfinance.com",
+  "status": "active",
+  "tags": [
+    "nbfc",
+    "gold-loan",
+    "listed",
+    "kerala"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

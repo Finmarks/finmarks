@@ -1,0 +1,31 @@
+{
+  "id": "suryodaya-small-finance-bank",
+  "name": "Suryodaya Small Finance Bank",
+  "short_name": "Suryodaya SFB",
+  "legal_name": "Suryodaya Small Finance Bank Limited",
+  "categories": [
+    "small-finance-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF6600",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "SURY",
+  "upi_handles": [],
+  "website": "https://suryodayabank.com",
+  "status": "active",
+  "tags": [
+    "sfb"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

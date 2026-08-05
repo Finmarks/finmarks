@@ -1,0 +1,36 @@
+{
+  "id": "razorpay",
+  "name": "Razorpay",
+  "short_name": "Razorpay",
+  "legal_name": "Razorpay Software Private Limited",
+  "categories": [
+    "payment-gateway",
+    "neobank",
+    "infra-api",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#2B6CB0",
+  "country": "IN",
+  "founded": 2014,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://razorpay.com",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "saas",
+    "yc-alum",
+    "payment-aggregator",
+    "pa-license"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

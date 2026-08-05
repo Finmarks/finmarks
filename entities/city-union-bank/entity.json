@@ -1,0 +1,32 @@
+{
+  "id": "city-union-bank",
+  "name": "City Union Bank",
+  "short_name": "CUB",
+  "legal_name": "City Union Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003087",
+  "country": "IN",
+  "founded": 1904,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "CIUB",
+  "upi_handles": [],
+  "website": "https://www.cityunionbank.com",
+  "status": "active",
+  "tags": [
+    "private-sector",
+    "tamil-nadu"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

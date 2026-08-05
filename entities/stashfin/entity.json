@@ -1,0 +1,30 @@
+{
+  "id": "stashfin",
+  "name": "Stashfin",
+  "short_name": "Stashfin",
+  "legal_name": "Akara Capital Advisors Private Limited",
+  "categories": [
+    "lending-platform"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF4500",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://stashfin.com",
+  "status": "active",
+  "tags": [
+    "personal-loan",
+    "credit-line"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

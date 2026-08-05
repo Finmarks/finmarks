@@ -1,0 +1,35 @@
+{
+  "id": "freecharge",
+  "name": "FreeCharge",
+  "short_name": "FreeCharge",
+  "legal_name": "Axis Bank Limited (FreeCharge)",
+  "categories": [
+    "wallet",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00B9F2",
+  "country": "IN",
+  "founded": 2010,
+  "regulated_by": [
+    "RBI"
+  ],
+  "upi_handles": [
+    "@freecharge"
+  ],
+  "website": "https://www.freecharge.in",
+  "status": "active",
+  "acquired_by": "axis-bank",
+  "tags": [
+    "wallet",
+    "axis-bank-owned"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

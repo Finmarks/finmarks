@@ -1,0 +1,58 @@
+name: Validate
+
+# The merge gate. Every PR must pass schema validation, typecheck, build and
+# tests before it can land. Logo coverage is reported but never blocks.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: validate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate data and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
+
+      - name: Validate entity data against schema
+        run: pnpm validate
+
+      # Runs before `generate` so it compares the committed dist/ against what
+      # the current entities/ would produce. Running it after would always pass.
+      - name: Confirm committed dist/ is not stale
+        run: pnpm generate -- --check
+
+      - name: Generate index
+        run: pnpm generate
+
+      - name: Typecheck package
+        run: pnpm -F bharatbrands typecheck
+
+      - name: Build package
+        run: pnpm -F bharatbrands build
+
+      - name: Test package
+        run: pnpm -F bharatbrands test
+
+      - name: Logo coverage report
+        if: always()
+        run: pnpm check-logos

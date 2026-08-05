@@ -1,0 +1,30 @@
+{
+  "id": "scripbox",
+  "name": "Scripbox",
+  "short_name": "Scripbox",
+  "legal_name": "Scripbox Advisors Private Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#2A6495",
+  "country": "IN",
+  "founded": 2012,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://scripbox.com",
+  "status": "active",
+  "tags": [
+    "mf",
+    "wealth-management"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,40 @@
+{
+  "id": "axis-bank",
+  "name": "Axis Bank",
+  "short_name": "Axis",
+  "legal_name": "Axis Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp",
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#97144D",
+  "country": "IN",
+  "founded": 1993,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "UTIB",
+  "upi_handles": [
+    "@axisbank",
+    "@okaxis"
+  ],
+  "fip_id": null,
+  "website": "https://www.axisbank.com",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "private-sector",
+    "psp-bank",
+    "formerly-uti-bank"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

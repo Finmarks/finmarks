@@ -1,0 +1,35 @@
+{
+  "id": "mobikwik",
+  "name": "MobiKwik",
+  "short_name": "MobiKwik",
+  "legal_name": "MobiKwik Systems Private Limited",
+  "categories": [
+    "wallet",
+    "bnpl"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1DACE8",
+  "country": "IN",
+  "founded": 2009,
+  "regulated_by": [
+    "RBI"
+  ],
+  "upi_handles": [
+    "@ikwik"
+  ],
+  "website": "https://www.mobikwik.com",
+  "status": "active",
+  "tags": [
+    "wallet",
+    "ppi-licensed",
+    "listed"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

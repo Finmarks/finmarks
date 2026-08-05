@@ -1,0 +1,35 @@
+{
+  "id": "bank-of-baroda",
+  "name": "Bank of Baroda",
+  "short_name": "BOB",
+  "legal_name": "Bank of Baroda",
+  "categories": [
+    "public-sector-bank"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#F26522",
+  "country": "IN",
+  "founded": 1908,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "BARB",
+  "upi_handles": [
+    "@barodampay"
+  ],
+  "website": "https://bankofbaroda.in",
+  "status": "active",
+  "tags": [
+    "tier-1",
+    "government",
+    "merged-vijaya-dena"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

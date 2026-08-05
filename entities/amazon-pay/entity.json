@@ -1,0 +1,38 @@
+{
+  "id": "amazon-pay",
+  "name": "Amazon Pay",
+  "short_name": "Amazon Pay",
+  "legal_name": "Amazon Pay (India) Private Limited",
+  "categories": [
+    "upi-psp",
+    "wallet"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF9900",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "NPCI",
+    "RBI"
+  ],
+  "upi_handles": [
+    "@apl",
+    "@yapl",
+    "@rapl"
+  ],
+  "website": "https://www.amazon.in/amazonpay",
+  "status": "active",
+  "tags": [
+    "consumer",
+    "amazon",
+    "wallet"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "setu",
+  "name": "Setu",
+  "short_name": "Setu",
+  "legal_name": "Pine Labs Private Limited (Setu)",
+  "categories": [
+    "infra-api"
+  ],
+  "logos": {
+    "full": null,
+    "icon": null,
+    "wordmark": null,
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#7B5EA7",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://setu.co",
+  "status": "active",
+  "tags": [
+    "api-infra",
+    "aa-tsp",
+    "pine-labs-acquired"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2025-08-05"
+}
