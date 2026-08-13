@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64">
+  <path fill="#ee3362" fill-rule="evenodd" d="M2.14 53.75c-1.68 0-2.14-.8-2.14-2.16V14.96c0-1.7.8-2.16 2.14-2.16h7.25c1.3 0 2.14.42 2.14 2.16v28.32" clip-rule="evenodd" style="fill:#ee3362;fill:color(display-p3 .9333 .2 .3843);fill-opacity:1"/>
+  <path fill="#111333" fill-rule="evenodd" d="m2.14 9.4 44.05 15.94c1.88.9 2.18 1.4 2.18 3.06v7.12c0 1.6-.3 2.16-2.18 3.05L2.14 54.59c-.97.39-2.14.09-2.14-1.3v-8.23C0 43.15.6 42.6 2.35 42l30.43-10.09L2.35 21.74C.59 21.14 0 20.64 0 18.64V10.8c.04-1.48 1.22-1.78 2.14-1.4" clip-rule="evenodd" style="fill:#111333;fill:color(display-p3 .0667 .0745 .2);fill-opacity:1"/>
+  <path fill="#ee3362" fill-rule="evenodd" d="m17.77 9.4 44.05 15.94c1.89.9 2.18 1.4 2.18 3.06v7.12c0 1.6-.3 2.16-2.18 3.05L17.77 54.59c-.96.39-2.14.09-2.14-1.3v-8.23c0-1.91.59-2.46 2.35-3.06l30.43-10.09-30.43-10.17c-1.76-.6-2.35-1.1-2.35-3.1V10.8c0-1.48 1.18-1.78 2.14-1.4" clip-rule="evenodd" style="fill:#ee3362;fill:color(display-p3 .9333 .2 .3843);fill-opacity:1"/>
+</svg>

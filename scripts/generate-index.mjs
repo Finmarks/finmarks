@@ -36,7 +36,7 @@ const check = process.argv.includes('--check');
 
 /** Version comes from the package, not a hardcoded literal. */
 async function packageVersion() {
-  const pkg = JSON.parse(await readFile(join(ROOT, 'packages', 'bharatbrands', 'package.json'), 'utf8'));
+  const pkg = JSON.parse(await readFile(join(ROOT, 'packages', 'finmarks', 'package.json'), 'utf8'));
   return pkg.version;
 }
 

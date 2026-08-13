@@ -1,0 +1,26 @@
+[
+  {
+    "id": "5paisa",
+    "variant": "full",
+    "reason": "raster-embedded SVG, pending official vector re-source",
+    "since": "2026-08-14"
+  },
+  {
+    "id": "5paisa",
+    "variant": "icon",
+    "reason": "raster-embedded SVG, pending official vector re-source",
+    "since": "2026-08-14"
+  },
+  {
+    "id": "camsfinserv",
+    "variant": "full",
+    "reason": "raster-embedded SVG, pending official vector re-source",
+    "since": "2026-08-14"
+  },
+  {
+    "id": "rbi",
+    "variant": "full",
+    "reason": "raster-embedded SVG, pending official vector re-source",
+    "since": "2026-08-14"
+  }
+]

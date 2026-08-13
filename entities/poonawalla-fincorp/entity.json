@@ -1,0 +1,30 @@
+{
+  "id": "poonawalla-fincorp",
+  "name": "Poonawalla Fincorp",
+  "short_name": "Poonawalla Fincorp",
+  "legal_name": "Poonawalla Fincorp Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#6A1B9A",
+  "country": "IN",
+  "founded": 1978,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.poonawallafincorp.com",
+  "status": "active",
+  "tags": [
+    "listed",
+    "consumer-lending"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

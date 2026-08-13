@@ -1,0 +1,102 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="Trademarks"
+  description="What the MIT licence does and does not cover when using logos from the FinMarks dataset."
+>
+  <p class="eyebrow">Contributing</p>
+  <h1>Trademarks</h1>
+
+  <p class="intro">
+    The MIT licence covers <strong>this repository's code, schemas and metadata</strong>. It does
+    <strong>not</strong> cover the logos. Every mark distributed here belongs to its owner. Nothing
+    about this repository transfers, dilutes, or licenses those rights.
+  </p>
+
+
+  <h2>What that means in practice</h2>
+
+  <p>
+    Reproducing a logo to <strong>identify the thing it names</strong> is normally fine. That is
+    nominative use, and it is why a comparison table can show competitor logos and why your app can
+    show a bank's mark next to a linked account.
+  </p>
+
+  <h3>Typical safe uses</h3>
+
+  <ul>
+    <li>Showing a bank's logo beside a user's linked account</li>
+    <li>A payment method picker displaying UPI app icons</li>
+    <li>An account aggregator consent screen naming the FIP</li>
+    <li>Documentation or a comparison table referring to real providers</li>
+  </ul>
+
+  <h3>Typical unsafe uses</h3>
+
+  <ul>
+    <li>Putting a bank's logo on your marketing site in a way that implies partnership</li>
+    <li>Using a mark in your own logo, product name, app icon, or domain</li>
+    <li>Suggesting endorsement, affiliation, or certification you do not have</li>
+    <li>Modifying a mark — recolouring, distorting, adding to it — and continuing to present it as the brand's</li>
+  </ul>
+
+
+  <h2>For contributors</h2>
+
+  <p>By submitting a logo you confirm:</p>
+
+  <ul>
+    <li>It came from an official source, which you have declared in the PR</li>
+    <li>You are not aware of brand guidelines that forbid its redistribution</li>
+    <li>You claim no ownership of the mark</li>
+  </ul>
+
+  <p>
+    If a brand kit explicitly forbids redistribution, <strong>do not submit the asset</strong>. Open
+    an issue instead — the entity's metadata is still valuable, and the record can carry a
+    <code>null</code> logo indefinitely.
+  </p>
+
+  <h2>For brand owners</h2>
+
+  <p>
+    If you own a mark in this dataset and want it changed or removed, open an issue titled
+    <code>trademark: &lt;brand&gt;</code>. Requests are honoured — we will remove the asset without
+    arguing the merits.
+  </p>
+
+  <p>Two things worth knowing before you ask:</p>
+
+  <p>
+    <strong>We would rather host your correct logo than have developers use a wrong one.</strong>
+    Removal does not stop your mark appearing in Indian fintech products; it just means the version
+    in circulation is a stale screenshot someone scraped. If your objection is to a specific outdated
+    or distorted asset, sending us the current one solves the problem better than removal does.
+  </p>
+
+  <p>
+    <strong>Metadata is separate from artwork.</strong> We can drop the SVG and keep the factual
+    record — name, category, IFSC prefix, website — which is public information. Tell us which you
+    want.
+  </p>
+
+  <div class="page-nav">
+    <a href="/docs/contributing">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Contributing Guide</span>
+    </a>
+    <div></div>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .page-nav { display:flex; justify-content:space-between; align-items:center; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

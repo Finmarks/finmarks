@@ -1,0 +1,28 @@
+{
+  "id": "insurancedekho",
+  "name": "InsuranceDekho",
+  "short_name": "InsuranceDekho",
+  "legal_name": "Digital Insurance Marketplace Private Limited",
+  "categories": [
+    "insurtech"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#FF6B35",
+  "country": "IN",
+  "founded": 2016,
+  "regulated_by": [
+    "IRDAI"
+  ],
+  "website": "https://www.insurancedekho.com",
+  "status": "active",
+  "tags": [
+    "insurance-aggregator"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

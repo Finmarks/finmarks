@@ -1,0 +1,192 @@
+---
+import "../styles/global.css";
+import { VERSION, GENERATED_AT } from "../lib/data";
+import SidebarLinks, { SidebarBottom } from "../components/SidebarLinks";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Optional OG image path, relative to the site root. */
+  ogImage?: string;
+  hideHeader?: boolean;
+}
+
+const { title, description, ogImage, hideHeader = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {
+      ogImage && (
+        <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+      )
+    }
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Lexend:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--
+      Applied before first paint so a dark-mode visitor never sees a white
+      flash. Kept inline and tiny for that reason.
+    -->
+    <script is:inline>
+      (function () {
+        try {
+          var saved = localStorage.getItem("bb-theme");
+          if (saved === "dark" || saved === "light") {
+            document.documentElement.setAttribute("data-theme", saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <script is:inline src="https://tally.so/widgets/embed.js"></script>
+  </head>
+
+  <body>
+    <a href="#main" class="sr">Skip to content</a>
+
+    {!hideHeader ? (
+      <div class={`app-layout ${isHome ? 'is-home-layout' : ''}`}>
+        <header class="mobile-header">
+          <a class="brand" href="/" aria-label="FinMarks">
+            <img src="/finmark_light.svg" alt="FinMarks" class="logo-light brand-logo" />
+            <img src="/finmark_dark.svg" alt="FinMarks" class="logo-dark brand-logo" />
+          </a>
+          <button class="menu-toggle" aria-label="Toggle Menu" id="mobile-menu-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+        </header>
+
+        <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+        
+        <aside class="app-sidebar" id="app-sidebar">
+          <SidebarLinks currentPath={Astro.url.pathname} />
+          <SidebarBottom client:load />
+        </aside>
+        
+        <main class="app-main" id="main">
+          <slot />
+        </main>
+      </div>
+    ) : (
+      <main id="main">
+        <slot />
+      </main>
+    )}
+
+    <script is:inline>
+      // Mobile sidebar toggle logic
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const overlay = document.getElementById("mobile-overlay");
+      const sidebarLinks = document.querySelectorAll("#app-sidebar .nav-link");
+
+      function toggleSidebar() {
+        document.body.classList.toggle("sidebar-open");
+      }
+
+      function closeSidebar() {
+        document.body.classList.remove("sidebar-open");
+      }
+
+      if (menuToggle) menuToggle.addEventListener("click", toggleSidebar);
+      if (overlay) overlay.addEventListener("click", closeSidebar);
+      
+      // Close sidebar when clicking any navigation link on mobile
+      sidebarLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth < 940) closeSidebar();
+        });
+      });
+
+      // Desktop progressive scroll reveal for sidebar on homepage
+      (function initHomeScrollSidebar() {
+        const appLayout = document.querySelector(".app-layout.is-home-layout");
+        const appMain = document.getElementById("main");
+        const sidebar = document.getElementById("app-sidebar");
+
+        if (!appLayout || !appMain || !sidebar) return;
+
+        let ticking = false;
+
+        function updateSidebar() {
+          ticking = false;
+          if (window.innerWidth < 940) {
+            appLayout.style.removeProperty("--home-rail-offset");
+            sidebar.style.removeProperty("transform");
+            sidebar.style.removeProperty("opacity");
+            sidebar.style.removeProperty("pointer-events");
+            return;
+          }
+
+          const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (prefersReduced) {
+            appLayout.style.setProperty("--home-rail-offset", "var(--rail)");
+            sidebar.style.transform = "translateX(0)";
+            sidebar.style.opacity = "1";
+            sidebar.style.pointerEvents = "auto";
+            return;
+          }
+
+          const universalFeature = document.getElementById("feature-universal-asset");
+          const cdnFeature = document.getElementById("feature-cdn");
+          const scrollTop = appMain.scrollTop || 0;
+          
+          // Calculate destination target offset (when snapping to Universal Asset Repo / features container)
+          let targetOffset = 500;
+          if (universalFeature) {
+            targetOffset = Math.max(150, universalFeature.offsetTop * 0.7);
+          } else if (cdnFeature) {
+            targetOffset = Math.max(150, cdnFeature.offsetTop - (appMain.clientHeight * 0.45));
+          }
+
+          const progress = Math.min(Math.max(scrollTop / targetOffset, 0), 1);
+          // Easing function for smooth organic slide-in
+          const eased = Math.sin((progress * Math.PI) / 2);
+
+          // Get rail width in px (standard desktop rail is 224px)
+          const railWidth = 224;
+          const currentOffset = eased * railWidth;
+
+          appLayout.style.setProperty("--home-rail-offset", `${currentOffset.toFixed(2)}px`);
+          const translateX = (1 - eased) * -100;
+          sidebar.style.transform = `translateX(${translateX.toFixed(2)}%)`;
+          sidebar.style.opacity = (eased * 1.0).toFixed(3);
+          sidebar.style.pointerEvents = progress > 0.08 ? "auto" : "none";
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateSidebar);
+            ticking = true;
+          }
+        }
+
+        appMain.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll, { passive: true });
+        // Run once on init
+        updateSidebar();
+      })();
+    </script>
+  </body>
+</html>

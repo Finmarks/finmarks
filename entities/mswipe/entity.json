@@ -1,0 +1,29 @@
+{
+  "id": "mswipe",
+  "name": "Mswipe",
+  "short_name": "Mswipe",
+  "legal_name": "Mswipe Technologies Private Limited",
+  "categories": [
+    "pos-terminal"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#EE3124",
+  "country": "IN",
+  "founded": 2011,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.mswipe.com",
+  "status": "active",
+  "tags": [
+    "pos-hardware",
+    "merchant-acquiring"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

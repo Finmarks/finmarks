@@ -5,8 +5,8 @@ Two things move this project forward: **new entities** and **missing logo varian
 ## Setup
 
 ```bash
-git clone https://github.com/bharatbrands/bharatbrands.git
-cd bharatbrands
+git clone https://github.com/finmarks/finmarks.git
+cd finmarks
 pnpm install
 pnpm validate
 ```
@@ -117,7 +117,7 @@ These are enforced by `pnpm validate` and are not negotiable, because a malforme
 - **No raster embeds.** No `<image>` tags, no `data:image/png` payloads. A traced vector or nothing.
 - **`viewBox` must be set.** Without it the logo will not scale.
 - **No `<script>` tags.**
-- **Under 50KB.** Anything larger needs cleanup.
+- **Under 150KB.** Anything larger needs cleanup.
 
 **Expected**
 

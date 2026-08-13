@@ -8,24 +8,30 @@
     "logo fields are null — to be populated as SVG assets are sourced",
     "upi_handles reflect PSP bank handles, not user-specific VPA suffixes"
   ],
-  "total": 115,
+  "total": 151,
   "category_counts": {
     "public-sector-bank": 12,
-    "upi-psp": 26,
-    "private-bank": 15,
-    "payment-gateway": 13,
+    "upi-psp": 27,
+    "private-bank": 18,
+    "payment-gateway": 15,
     "small-finance-bank": 10,
     "payments-bank": 6,
     "wallet": 7,
-    "wealthtech": 13,
-    "insurtech": 7,
+    "wealthtech": 17,
+    "insurtech": 10,
     "bnpl": 9,
-    "lending-platform": 20,
+    "lending-platform": 25,
     "neobank": 9,
-    "infra-api": 10,
+    "infra-api": 11,
     "account-aggregator": 6,
     "credit-bureau": 4,
-    "nbfc": 7
+    "nbfc": 12,
+    "regulator": 5,
+    "crypto-exchange": 4,
+    "pos-terminal": 3,
+    "international-bank": 4,
+    "stock-exchange": 4,
+    "tax-filing": 1
   },
   "entities": [
     {
@@ -57,9 +63,8 @@
         "psp-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -90,9 +95,8 @@
         "merged-oriental-bank-united-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -123,9 +127,8 @@
         "swift-founder"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -156,9 +159,8 @@
         "merged-syndicate-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -189,9 +191,8 @@
         "merged-andhra-corporation-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -222,9 +223,8 @@
         "merged-vijaya-dena"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -255,9 +255,8 @@
         "merged-allahabad-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -287,9 +286,8 @@
         "maharashtra"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -318,9 +316,8 @@
         "government"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -347,9 +344,8 @@
         "government"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -378,9 +374,8 @@
         "government"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -409,9 +404,8 @@
         "government"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -446,9 +440,8 @@
         "psp-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -483,9 +476,8 @@
         "psp-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -521,9 +513,8 @@
         "formerly-uti-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -555,9 +546,8 @@
         "private-sector"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -589,9 +579,8 @@
         "private-sector"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -625,9 +614,8 @@
         "phonepe-psp"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -659,9 +647,8 @@
         "private-sector"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -697,9 +684,8 @@
         "jupiter-psp"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -729,9 +715,8 @@
         "formerly-catholic-syrian-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -763,9 +748,8 @@
         "formerly-ratnakar-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -793,9 +777,8 @@
         "kerala"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -825,9 +808,8 @@
         "microfinance-origin"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -855,9 +837,8 @@
         "karnataka"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -885,9 +866,8 @@
         "tamil-nadu"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -914,9 +894,8 @@
         "private-sector"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -948,9 +927,8 @@
         "formerly-au-financiers"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -980,9 +958,8 @@
         "tamil-nadu"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1012,9 +989,8 @@
         "microfinance-origin"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1043,9 +1019,8 @@
         "sfb"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1073,9 +1048,8 @@
         "kerala"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1102,9 +1076,8 @@
         "sfb"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1131,9 +1104,8 @@
         "sfb"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1161,9 +1133,8 @@
         "punjab"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1190,9 +1161,8 @@
         "sfb"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1219,9 +1189,8 @@
         "sfb"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1253,9 +1222,8 @@
         "telecom-backed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1287,9 +1255,8 @@
         "reliance"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1321,9 +1288,8 @@
         "india-post"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1354,9 +1320,8 @@
         "fintech-first"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1385,9 +1350,8 @@
         "operations-halted"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1414,9 +1378,8 @@
         "payments-bank"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1450,9 +1413,8 @@
         "consumer"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1492,9 +1454,8 @@
         "super-app"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1524,9 +1485,8 @@
         "reference-app"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1564,9 +1524,8 @@
         "nse-listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1600,9 +1559,8 @@
         "wallet"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1634,9 +1592,8 @@
         "consumer"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1669,9 +1626,8 @@
         "premium"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1705,9 +1661,8 @@
         "consumer"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1738,9 +1693,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1771,9 +1725,8 @@
         "axis-bank-owned"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1801,9 +1754,8 @@
         "ppi-licensed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1835,9 +1787,8 @@
         "pa-license"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1865,9 +1816,8 @@
         "pa-license"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1895,9 +1845,8 @@
         "payment-aggregator"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1924,9 +1873,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1954,9 +1902,8 @@
         "payu-acquired-2021"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -1982,9 +1929,8 @@
         "payment-aggregator"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2011,9 +1957,8 @@
         "d2c"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2041,9 +1986,8 @@
         "hyperswitch"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2072,9 +2016,8 @@
         "savings-account"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2106,9 +2049,8 @@
         "savings-account"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2136,9 +2078,8 @@
         "business-current-account"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2166,9 +2107,8 @@
         "razorpay-product"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2196,9 +2136,8 @@
         "forex"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2226,9 +2165,8 @@
         "credit-card"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2256,9 +2194,8 @@
         "credit-line"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2285,9 +2222,8 @@
         "b2b2c"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2314,9 +2250,8 @@
         "payu-product"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2342,9 +2277,8 @@
         "shut-down-2024"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2371,9 +2305,8 @@
         "formerly-capital-float"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2399,9 +2332,8 @@
         "emi"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2428,9 +2360,8 @@
         "consumer"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2456,9 +2387,8 @@
         "consumer"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2485,9 +2415,8 @@
         "formerly-earlysalary"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2513,9 +2442,8 @@
         "consumer"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2541,9 +2469,8 @@
         "credit-line"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2569,9 +2496,8 @@
         "salary-advance"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2602,9 +2528,8 @@
         "coin-mf"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2637,9 +2562,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2666,9 +2590,8 @@
         "tiger-global"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2695,9 +2618,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2724,9 +2646,8 @@
         "portfolio-tracker"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2752,9 +2673,8 @@
         "wealth-management"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2780,9 +2700,8 @@
         "free-direct-mf"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2809,9 +2728,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2837,9 +2755,8 @@
         "digital-first"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2866,9 +2783,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2895,9 +2811,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2923,9 +2838,8 @@
         "advisor-platform"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2951,9 +2865,8 @@
         "zerodha-group"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -2980,9 +2893,8 @@
         "pine-labs-acquired"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3009,9 +2921,8 @@
         "b2b"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3037,9 +2948,8 @@
         "b2b"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3067,9 +2977,8 @@
         "b2b"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3098,9 +3007,8 @@
         "b2b"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3127,9 +3035,8 @@
         "bureau-of-indian-standards"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3157,9 +3064,8 @@
         "sahamati"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3187,9 +3093,8 @@
         "sahamati"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3217,9 +3122,8 @@
         "cams-group"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3247,9 +3151,8 @@
         "nsdl-group"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3277,9 +3180,8 @@
         "phonepe-group"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3306,9 +3208,8 @@
         "rbi-licensed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3335,9 +3236,8 @@
         "rbi-licensed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3364,9 +3264,8 @@
         "rbi-licensed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3393,9 +3292,8 @@
         "rbi-licensed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3424,9 +3322,8 @@
         "emi"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3455,9 +3352,8 @@
         "kerala"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3486,9 +3382,8 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3517,9 +3412,8 @@
         "merged-shriram-transport-city"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3547,9 +3441,8 @@
         "consumer-lending"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3577,9 +3470,8 @@
         "consumer-lending"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
@@ -3608,12 +3500,1080 @@
         "listed"
       ],
       "logos": {
-        "full": null,
-        "icon": null,
-        "wordmark": null,
+        "full": "full.svg",
+        "icon": "icon.svg",
         "mono_dark": null,
         "mono_light": null
       }
+    },
+    {
+      "id": "idbi-bank",
+      "name": "IDBI Bank",
+      "short_name": "IDBI",
+      "legal_name": "IDBI Bank Limited",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003DA5",
+      "country": "IN",
+      "founded": 1964,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "IBKL",
+      "upi_handles": [
+        "@idbi"
+      ],
+      "website": "https://www.idbibank.in",
+      "status": "active",
+      "tags": [
+        "reclassified-private",
+        "lic-majority-stake",
+        "psp-bank"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "jammu-kashmir-bank",
+      "name": "Jammu & Kashmir Bank",
+      "short_name": "J&K Bank",
+      "legal_name": "The Jammu and Kashmir Bank Limited",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#8B1A2B",
+      "country": "IN",
+      "founded": 1938,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "JAKA",
+      "website": "https://www.jkbank.com",
+      "status": "active",
+      "tags": [
+        "regional",
+        "state-designated-bank"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "tamilnad-mercantile-bank",
+      "name": "Tamilnad Mercantile Bank",
+      "short_name": "TMB",
+      "legal_name": "Tamilnad Mercantile Bank Limited",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#F7941D",
+      "country": "IN",
+      "founded": 1921,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "TMBL",
+      "website": "https://www.tmb.in",
+      "status": "active",
+      "tags": [
+        "old-private-bank",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "smallcase",
+      "name": "Smallcase",
+      "short_name": "Smallcase",
+      "legal_name": "Smallcase Technologies Private Limited",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00B8A9",
+      "country": "IN",
+      "founded": 2015,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.smallcase.com",
+      "status": "active",
+      "tags": [
+        "thematic-investing",
+        "broker-integrations"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "paytm-money",
+      "name": "Paytm Money",
+      "short_name": "Paytm Money",
+      "legal_name": "Paytm Money Limited",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00BAF2",
+      "country": "IN",
+      "founded": 2018,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.paytmmoney.com",
+      "status": "active",
+      "acquired_by": "paytm",
+      "tags": [
+        "stockbroking",
+        "mutual-funds"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "etmoney",
+      "name": "ET Money",
+      "short_name": "ET Money",
+      "legal_name": "Times Internet Limited",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#5C2D91",
+      "country": "IN",
+      "founded": 2015,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.etmoney.com",
+      "status": "active",
+      "tags": [
+        "mutual-funds",
+        "times-internet"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "dhan",
+      "name": "Dhan",
+      "short_name": "Dhan",
+      "legal_name": "Raise Financial Services Private Limited",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00D09C",
+      "country": "IN",
+      "founded": 2021,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://dhan.co",
+      "status": "active",
+      "tags": [
+        "options-trading",
+        "derivatives"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "insurancedekho",
+      "name": "InsuranceDekho",
+      "short_name": "InsuranceDekho",
+      "legal_name": "Digital Insurance Marketplace Private Limited",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#FF6B35",
+      "country": "IN",
+      "founded": 2016,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.insurancedekho.com",
+      "status": "active",
+      "tags": [
+        "insurance-aggregator"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "renewbuy",
+      "name": "RenewBuy",
+      "short_name": "RenewBuy",
+      "legal_name": "Renew Insurance Broking Services Private Limited",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#0071CE",
+      "country": "IN",
+      "founded": 2015,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.renewbuy.com",
+      "status": "active",
+      "tags": [
+        "insurance-aggregator",
+        "agent-network"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "plum",
+      "name": "Plum",
+      "short_name": "Plum",
+      "legal_name": "Plum Benefits Private Limited",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#725CF6",
+      "country": "IN",
+      "founded": 2019,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.plumhq.com",
+      "status": "active",
+      "tags": [
+        "group-health-insurance",
+        "employee-benefits",
+        "b2b"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "cholamandalam-finance",
+      "name": "Cholamandalam Investment and Finance Company",
+      "short_name": "Chola Finance",
+      "legal_name": "Cholamandalam Investment and Finance Company Limited",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E31E24",
+      "country": "IN",
+      "founded": 1978,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.cholamandalam.com",
+      "status": "active",
+      "tags": [
+        "murugappa-group",
+        "vehicle-finance",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "iifl-finance",
+      "name": "IIFL Finance",
+      "short_name": "IIFL Finance",
+      "legal_name": "IIFL Finance Limited",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#F58220",
+      "country": "IN",
+      "founded": 1995,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.iifl.com",
+      "status": "active",
+      "tags": [
+        "gold-loans",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "poonawalla-fincorp",
+      "name": "Poonawalla Fincorp",
+      "short_name": "Poonawalla Fincorp",
+      "legal_name": "Poonawalla Fincorp Limited",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#6A1B9A",
+      "country": "IN",
+      "founded": 1978,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.poonawallafincorp.com",
+      "status": "active",
+      "tags": [
+        "listed",
+        "consumer-lending"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "aditya-birla-capital",
+      "name": "Aditya Birla Capital",
+      "short_name": "AB Capital",
+      "legal_name": "Aditya Birla Capital Limited",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E31837",
+      "country": "IN",
+      "founded": 2007,
+      "regulated_by": [
+        "RBI",
+        "SEBI",
+        "IRDAI"
+      ],
+      "website": "https://www.adityabirlacapital.com",
+      "status": "active",
+      "tags": [
+        "diversified-financial-services",
+        "conglomerate",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "piramal-finance",
+      "name": "Piramal Finance",
+      "short_name": "Piramal Finance",
+      "legal_name": "Piramal Capital & Housing Finance Limited",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#652D90",
+      "country": "IN",
+      "founded": 1984,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.piramalfinance.com",
+      "status": "active",
+      "tags": [
+        "housing-finance",
+        "retail-lending"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "rbi",
+      "name": "Reserve Bank of India",
+      "short_name": "RBI",
+      "legal_name": "Reserve Bank of India",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#00447C",
+      "country": "IN",
+      "founded": 1935,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://www.rbi.org.in",
+      "status": "active",
+      "tags": [
+        "central-bank",
+        "banking-regulator"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "sebi",
+      "name": "Securities and Exchange Board of India",
+      "short_name": "SEBI",
+      "legal_name": "Securities and Exchange Board of India",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#003366",
+      "country": "IN",
+      "founded": 1988,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://www.sebi.gov.in",
+      "status": "active",
+      "tags": [
+        "securities-regulator",
+        "capital-markets"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "irdai",
+      "name": "Insurance Regulatory and Development Authority of India",
+      "short_name": "IRDAI",
+      "legal_name": "Insurance Regulatory and Development Authority of India",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#1B4F72",
+      "country": "IN",
+      "founded": 1999,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://irdai.gov.in",
+      "status": "active",
+      "tags": [
+        "insurance-regulator"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "pfrda",
+      "name": "Pension Fund Regulatory and Development Authority",
+      "short_name": "PFRDA",
+      "legal_name": "Pension Fund Regulatory and Development Authority",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#004C97",
+      "country": "IN",
+      "founded": 2003,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://www.pfrda.org.in",
+      "status": "active",
+      "tags": [
+        "pension-regulator",
+        "nps"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "npci",
+      "name": "National Payments Corporation of India",
+      "short_name": "NPCI",
+      "legal_name": "National Payments Corporation of India",
+      "categories": [
+        "regulator",
+        "infra-api"
+      ],
+      "brand_color": "#0B5394",
+      "country": "IN",
+      "founded": 2008,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.npci.org.in",
+      "status": "active",
+      "tags": [
+        "payments-infra",
+        "upi-operator",
+        "rupay",
+        "not-for-profit"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "coindcx",
+      "name": "CoinDCX",
+      "short_name": "CoinDCX",
+      "legal_name": "Neblio Technologies Private Limited",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#0B90F5",
+      "country": "IN",
+      "founded": 2018,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://coindcx.com",
+      "status": "active",
+      "tags": [
+        "vda-platform",
+        "fiu-registered"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "wazirx",
+      "name": "WazirX",
+      "short_name": "WazirX",
+      "legal_name": "Zanmai Labs Private Limited",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#F0B90B",
+      "country": "IN",
+      "founded": 2018,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://wazirx.com",
+      "status": "active",
+      "tags": [
+        "vda-platform"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "coinswitch",
+      "name": "CoinSwitch",
+      "short_name": "CoinSwitch",
+      "legal_name": "CoinSwitch Kuber (Bitcipher Labs LLP)",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#5D5FEF",
+      "country": "IN",
+      "founded": 2017,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://coinswitch.co",
+      "status": "active",
+      "tags": [
+        "vda-platform",
+        "fiu-registered"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "zebpay",
+      "name": "ZebPay",
+      "short_name": "ZebPay",
+      "legal_name": "Awlencan Innovations India Private Limited",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#3861FB",
+      "country": "IN",
+      "founded": 2014,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://zebpay.com",
+      "status": "active",
+      "tags": [
+        "vda-platform"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "pine-labs",
+      "name": "Pine Labs",
+      "short_name": "Pine Labs",
+      "legal_name": "Pine Labs Private Limited",
+      "categories": [
+        "pos-terminal",
+        "payment-gateway"
+      ],
+      "brand_color": "#00263E",
+      "country": "IN",
+      "founded": 1998,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.pinelabs.com",
+      "status": "active",
+      "tags": [
+        "merchant-commerce",
+        "pos-hardware",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "mswipe",
+      "name": "Mswipe",
+      "short_name": "Mswipe",
+      "legal_name": "Mswipe Technologies Private Limited",
+      "categories": [
+        "pos-terminal"
+      ],
+      "brand_color": "#EE3124",
+      "country": "IN",
+      "founded": 2011,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.mswipe.com",
+      "status": "active",
+      "tags": [
+        "pos-hardware",
+        "merchant-acquiring"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "innoviti",
+      "name": "Innoviti",
+      "short_name": "Innoviti",
+      "legal_name": "Innoviti Payment Solutions Private Limited",
+      "categories": [
+        "pos-terminal",
+        "payment-gateway"
+      ],
+      "brand_color": "#1E3A8A",
+      "country": "IN",
+      "founded": 2002,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://innoviti.com",
+      "status": "active",
+      "tags": [
+        "pos-hardware",
+        "merchant-financing"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "citibank-india",
+      "name": "Citibank India",
+      "short_name": "Citi",
+      "legal_name": "Citibank N.A. India",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#003B70",
+      "country": "US",
+      "founded": 1902,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CITI",
+      "website": "https://www.online.citibank.co.in",
+      "status": "active",
+      "tags": [
+        "foreign-bank-branch"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "hsbc-india",
+      "name": "HSBC India",
+      "short_name": "HSBC",
+      "legal_name": "The Hongkong and Shanghai Banking Corporation Limited",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#DB0011",
+      "country": "GB",
+      "founded": 1959,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "HSBC",
+      "website": "https://www.hsbc.co.in",
+      "status": "active",
+      "tags": [
+        "foreign-bank-branch"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "standard-chartered-india",
+      "name": "Standard Chartered India",
+      "short_name": "StanChart",
+      "legal_name": "Standard Chartered Bank India",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#0473EA",
+      "country": "GB",
+      "founded": 1858,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "SCBL",
+      "website": "https://www.sc.com/in",
+      "status": "active",
+      "tags": [
+        "foreign-bank-branch"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "dbs-bank-india",
+      "name": "DBS Bank India",
+      "short_name": "DBS",
+      "legal_name": "DBS Bank India Limited",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#EA1B2B",
+      "country": "SG",
+      "founded": 1994,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "DBSS",
+      "website": "https://www.dbs.com/in",
+      "status": "active",
+      "tags": [
+        "wholly-owned-subsidiary",
+        "digibank"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "nse",
+      "name": "National Stock Exchange of India",
+      "short_name": "NSE",
+      "legal_name": "National Stock Exchange of India Limited",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#0033A0",
+      "country": "IN",
+      "founded": 1992,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.nseindia.com",
+      "status": "active",
+      "tags": [
+        "stock-exchange",
+        "nifty"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "bse",
+      "name": "Bombay Stock Exchange",
+      "short_name": "BSE",
+      "legal_name": "BSE Limited",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#003DA5",
+      "country": "IN",
+      "founded": 1875,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.bseindia.com",
+      "status": "active",
+      "tags": [
+        "stock-exchange",
+        "sensex",
+        "listed",
+        "oldest-exchange-asia"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "cdsl",
+      "name": "Central Depository Services",
+      "short_name": "CDSL",
+      "legal_name": "Central Depository Services (India) Limited",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#004B87",
+      "country": "IN",
+      "founded": 1999,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.cdslindia.com",
+      "status": "active",
+      "tags": [
+        "depository",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "nsdl",
+      "name": "National Securities Depository Limited",
+      "short_name": "NSDL",
+      "legal_name": "National Securities Depository Limited",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#00539F",
+      "country": "IN",
+      "founded": 1996,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.nsdl.co.in",
+      "status": "active",
+      "tags": [
+        "depository",
+        "listed"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
+    },
+    {
+      "id": "cleartax",
+      "name": "ClearTax",
+      "short_name": "ClearTax",
+      "legal_name": "Clear (formerly Defmacro Software Private Limited)",
+      "categories": [
+        "tax-filing"
+      ],
+      "brand_color": "#2CA01C",
+      "country": "IN",
+      "founded": 2011,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://cleartax.in",
+      "status": "active",
+      "tags": [
+        "itr-filing",
+        "gst-compliance",
+        "saas"
+      ],
+      "logos": {
+        "full": "full.svg",
+        "icon": "icon.svg",
+        "mono_dark": null,
+        "mono_light": null
+      },
+      "added_at": "2026-08-06",
+      "updated_at": "2026-08-06"
     }
   ]
 }

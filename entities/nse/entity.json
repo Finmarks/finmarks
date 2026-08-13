@@ -1,0 +1,29 @@
+{
+  "id": "nse",
+  "name": "National Stock Exchange of India",
+  "short_name": "NSE",
+  "legal_name": "National Stock Exchange of India Limited",
+  "categories": [
+    "stock-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0033A0",
+  "country": "IN",
+  "founded": 1992,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.nseindia.com",
+  "status": "active",
+  "tags": [
+    "stock-exchange",
+    "nifty"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

@@ -1,30 +1,32 @@
 {
   "version": "0.1.0",
-  "generated_at": "2026-08-05",
+  "generated_at": "2026-08-13",
   "schema_version": "1.0",
-  "cdn_base": "https://cdn.bharatbrands.dev",
-  "total": 115,
+  "cdn_base": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main",
+  "total": 152,
   "category_counts": {
     "public-sector-bank": 12,
-    "private-bank": 15,
+    "private-bank": 18,
     "small-finance-bank": 10,
     "payments-bank": 6,
-    "upi-psp": 26,
+    "upi-psp": 27,
     "wallet": 7,
-    "payment-gateway": 13,
+    "payment-gateway": 15,
     "neobank": 9,
     "bnpl": 9,
-    "lending-platform": 20,
-    "wealthtech": 13,
-    "insurtech": 7,
-    "infra-api": 10,
+    "lending-platform": 25,
+    "wealthtech": 17,
+    "insurtech": 10,
+    "infra-api": 11,
     "account-aggregator": 6,
     "credit-bureau": 4,
-    "nbfc": 7,
-    "international-bank": 0,
-    "crypto-exchange": 0,
-    "pos-terminal": 0,
-    "regulator": 0
+    "nbfc": 12,
+    "international-bank": 4,
+    "crypto-exchange": 4,
+    "pos-terminal": 3,
+    "regulator": 5,
+    "stock-exchange": 4,
+    "tax-filing": 1
   },
   "entities": [
     {
@@ -37,7 +39,10 @@
       "brand_color": "#E8173C",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/5paisa/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/5paisa/icon.svg"
+      },
       "legal_name": "5paisa Capital Limited",
       "founded": 2016,
       "regulated_by": [
@@ -60,7 +65,10 @@
       "brand_color": "#00C4B4",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/acko/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/acko/icon.svg"
+      },
       "legal_name": "Acko General Insurance Limited",
       "founded": 2016,
       "regulated_by": [
@@ -70,6 +78,35 @@
       "tags": [
         "general-insurance",
         "digital-first"
+      ]
+    },
+    {
+      "id": "aditya-birla-capital",
+      "name": "Aditya Birla Capital",
+      "short_name": "AB Capital",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E31837",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/aditya-birla-capital/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/aditya-birla-capital/icon.svg"
+      },
+      "legal_name": "Aditya Birla Capital Limited",
+      "founded": 2007,
+      "regulated_by": [
+        "RBI",
+        "SEBI",
+        "IRDAI"
+      ],
+      "website": "https://www.adityabirlacapital.com",
+      "tags": [
+        "diversified-financial-services",
+        "conglomerate",
+        "listed"
       ]
     },
     {
@@ -84,7 +121,10 @@
       "brand_color": "#E40000",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/airtel-payments-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/airtel-payments-bank/icon.svg"
+      },
       "legal_name": "Airtel Payments Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -111,7 +151,10 @@
       "brand_color": "#FF9900",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/amazon-pay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/amazon-pay/icon.svg"
+      },
       "legal_name": "Amazon Pay (India) Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -140,7 +183,10 @@
       "brand_color": "#2A294E",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/angel-one/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/angel-one/icon.svg"
+      },
       "legal_name": "Angel One Limited",
       "founded": 1996,
       "regulated_by": [
@@ -163,40 +209,21 @@
       "brand_color": "#5F259F",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/anumati/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/anumati/icon.svg"
+      },
       "legal_name": "PhonePe Private Limited (Anumati)",
       "founded": 2021,
       "regulated_by": [
         "RBI"
       ],
       "aa_id": "anumati",
-      "website": "https://anumati.com",
+      "website": "https://www.anumati.co.in",
       "tags": [
         "aa-operator",
         "nbfc-aa",
         "phonepe-group"
-      ]
-    },
-    {
-      "id": "atom-technologies",
-      "name": "Atom Technologies",
-      "short_name": "Atom",
-      "categories": [
-        "payment-gateway"
-      ],
-      "brand_color": "#0066CC",
-      "country": "IN",
-      "status": "active",
-      "logos": {},
-      "legal_name": "Atom Technologies Limited",
-      "founded": 2006,
-      "regulated_by": [
-        "RBI"
-      ],
-      "website": "https://www.atomtech.in",
-      "tags": [
-        "b2b",
-        "payment-aggregator"
       ]
     },
     {
@@ -210,7 +237,10 @@
       "brand_color": "#E40520",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/au-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/au-small-finance-bank/icon.svg"
+      },
       "legal_name": "AU Small Finance Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -238,7 +268,10 @@
       "brand_color": "#6247EE",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/axio/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/axio/icon.svg"
+      },
       "legal_name": "Capital Float Financial Services Private Limited",
       "founded": 2013,
       "regulated_by": [
@@ -262,7 +295,10 @@
       "brand_color": "#97144D",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/axis-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/axis-bank/icon.svg"
+      },
       "legal_name": "Axis Bank Limited",
       "founded": 1993,
       "regulated_by": [
@@ -292,7 +328,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bajaj-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bajaj-finance/icon.svg"
+      },
       "legal_name": "Bajaj Finance Limited",
       "founded": 1987,
       "regulated_by": [
@@ -316,7 +355,10 @@
       "brand_color": "#E3001B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bandhan-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bandhan-bank/icon.svg"
+      },
       "legal_name": "Bandhan Bank Limited",
       "founded": 2015,
       "regulated_by": [
@@ -342,7 +384,10 @@
       "brand_color": "#F26522",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bank-of-baroda/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bank-of-baroda/icon.svg"
+      },
       "legal_name": "Bank of Baroda",
       "founded": 1908,
       "regulated_by": [
@@ -369,7 +414,10 @@
       "brand_color": "#003399",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bank-of-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bank-of-india/icon.svg"
+      },
       "legal_name": "Bank of India",
       "founded": 1906,
       "regulated_by": [
@@ -396,7 +444,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bank-of-maharashtra/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bank-of-maharashtra/icon.svg"
+      },
       "legal_name": "Bank of Maharashtra",
       "founded": 1935,
       "regulated_by": [
@@ -406,7 +457,7 @@
       "upi_handles": [
         "@bom"
       ],
-      "website": "https://bankofmaharashtra.in",
+      "website": "https://bankofmaharashtra.bank.in/",
       "tags": [
         "government",
         "maharashtra"
@@ -422,7 +473,10 @@
       "brand_color": "#1B3DA4",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bhim/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bhim/icon.svg"
+      },
       "legal_name": "National Payments Corporation of India",
       "founded": 2016,
       "regulated_by": [
@@ -448,7 +502,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/billdesk/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/billdesk/icon.svg"
+      },
       "legal_name": "IndiaIdeas.com Limited",
       "founded": 2000,
       "regulated_by": [
@@ -463,6 +520,33 @@
       ]
     },
     {
+      "id": "bse",
+      "name": "Bombay Stock Exchange",
+      "short_name": "BSE",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#003DA5",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bse/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/bse/icon.svg"
+      },
+      "legal_name": "BSE Limited",
+      "founded": 1875,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.bseindia.com",
+      "tags": [
+        "stock-exchange",
+        "sensex",
+        "listed",
+        "oldest-exchange-asia"
+      ]
+    },
+    {
       "id": "camsfinserv",
       "name": "CAMSfinserv",
       "short_name": "CAMSfinserv",
@@ -472,7 +556,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/camsfinserv/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/camsfinserv/icon.svg"
+      },
       "legal_name": "CAMS Financial Information Services Private Limited",
       "founded": 2020,
       "regulated_by": [
@@ -496,7 +583,10 @@
       "brand_color": "#005CA9",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/canara-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/canara-bank/icon.svg"
+      },
       "legal_name": "Canara Bank",
       "founded": 1906,
       "regulated_by": [
@@ -523,7 +613,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/capital-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/capital-small-finance-bank/icon.svg"
+      },
       "legal_name": "Capital Small Finance Bank Limited",
       "founded": 2016,
       "regulated_by": [
@@ -546,7 +639,10 @@
       "brand_color": "#E94A00",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cashe/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cashe/icon.svg"
+      },
       "legal_name": "Bhanix Finance and Investment Limited",
       "founded": 2016,
       "regulated_by": [
@@ -569,7 +665,10 @@
       "brand_color": "#1A55E3",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cashfree-payments/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cashfree-payments/icon.svg"
+      },
       "legal_name": "Cashfree Payments India Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -592,7 +691,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ccavenue/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ccavenue/icon.svg"
+      },
       "legal_name": "Infibeam Avenues Limited",
       "founded": 2001,
       "regulated_by": [
@@ -606,6 +708,31 @@
       ]
     },
     {
+      "id": "cdsl",
+      "name": "Central Depository Services",
+      "short_name": "CDSL",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#004B87",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cdsl/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cdsl/icon.svg"
+      },
+      "legal_name": "Central Depository Services (India) Limited",
+      "founded": 1999,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.cdslindia.com",
+      "tags": [
+        "depository",
+        "listed"
+      ]
+    },
+    {
       "id": "central-bank-of-india",
       "name": "Central Bank of India",
       "short_name": "Central Bank",
@@ -615,7 +742,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/central-bank-of-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/central-bank-of-india/icon.svg"
+      },
       "legal_name": "Central Bank of India",
       "founded": 1911,
       "regulated_by": [
@@ -631,6 +761,58 @@
       ]
     },
     {
+      "id": "cholamandalam-finance",
+      "name": "Cholamandalam Investment and Finance Company",
+      "short_name": "Chola Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E31E24",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cholamandalam-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cholamandalam-finance/icon.svg"
+      },
+      "legal_name": "Cholamandalam Investment and Finance Company Limited",
+      "founded": 1978,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.cholamandalam.com",
+      "tags": [
+        "murugappa-group",
+        "vehicle-finance",
+        "listed"
+      ]
+    },
+    {
+      "id": "citibank-india",
+      "name": "Citibank India",
+      "short_name": "Citi",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#003B70",
+      "country": "US",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/citibank-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/citibank-india/icon.svg"
+      },
+      "legal_name": "Citibank N.A. India",
+      "founded": 1902,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "CITI",
+      "website": "https://www.online.citibank.co.in",
+      "tags": [
+        "foreign-bank-branch"
+      ]
+    },
+    {
       "id": "city-union-bank",
       "name": "City Union Bank",
       "short_name": "CUB",
@@ -640,7 +822,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/city-union-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/city-union-bank/icon.svg"
+      },
       "legal_name": "City Union Bank Limited",
       "founded": 1904,
       "regulated_by": [
@@ -651,6 +836,82 @@
       "tags": [
         "private-sector",
         "tamil-nadu"
+      ]
+    },
+    {
+      "id": "cleartax",
+      "name": "ClearTax",
+      "short_name": "ClearTax",
+      "categories": [
+        "tax-filing"
+      ],
+      "brand_color": "#2CA01C",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cleartax/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cleartax/icon.svg"
+      },
+      "legal_name": "Clear (formerly Defmacro Software Private Limited)",
+      "founded": 2011,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://cleartax.in",
+      "tags": [
+        "itr-filing",
+        "gst-compliance",
+        "saas"
+      ]
+    },
+    {
+      "id": "coindcx",
+      "name": "CoinDCX",
+      "short_name": "CoinDCX",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#0B90F5",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/coindcx/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/coindcx/icon.svg"
+      },
+      "legal_name": "Neblio Technologies Private Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://coindcx.com",
+      "tags": [
+        "vda-platform",
+        "fiu-registered"
+      ]
+    },
+    {
+      "id": "coinswitch",
+      "name": "CoinSwitch",
+      "short_name": "CoinSwitch",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#5D5FEF",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/coinswitch/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/coinswitch/icon.svg"
+      },
+      "legal_name": "CoinSwitch Kuber (Bitcipher Labs LLP)",
+      "founded": 2017,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://coinswitch.co",
+      "tags": [
+        "vda-platform",
+        "fiu-registered"
       ]
     },
     {
@@ -665,7 +926,10 @@
       "brand_color": "#1A1A1A",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cred/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/cred/icon.svg"
+      },
       "legal_name": "Dreamplug Technologies Private Limited",
       "founded": 2018,
       "regulated_by": [
@@ -692,7 +956,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/crif-highmark/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/crif-highmark/icon.svg"
+      },
       "legal_name": "CRIF High Mark Credit Information Services Private Limited",
       "founded": 2010,
       "regulated_by": [
@@ -715,7 +982,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/csb-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/csb-bank/icon.svg"
+      },
       "legal_name": "CSB Bank Limited",
       "founded": 1920,
       "regulated_by": [
@@ -732,6 +1002,32 @@
       ]
     },
     {
+      "id": "dbs-bank-india",
+      "name": "DBS Bank India",
+      "short_name": "DBS",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#EA1B2B",
+      "country": "SG",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/dbs-bank-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/dbs-bank-india/icon.svg"
+      },
+      "legal_name": "DBS Bank India Limited",
+      "founded": 1994,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "DBSS",
+      "website": "https://www.dbs.com/in",
+      "tags": [
+        "wholly-owned-subsidiary",
+        "digibank"
+      ]
+    },
+    {
       "id": "dcb-bank",
       "name": "DCB Bank",
       "short_name": "DCB",
@@ -741,7 +1037,10 @@
       "brand_color": "#E2211B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/dcb-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/dcb-bank/icon.svg"
+      },
       "legal_name": "DCB Bank Limited",
       "founded": 1930,
       "regulated_by": [
@@ -763,7 +1062,10 @@
       "brand_color": "#6B4EFF",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/decentro/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/decentro/icon.svg"
+      },
       "legal_name": "Decentro Tech Private Limited",
       "founded": 2020,
       "regulated_by": [
@@ -776,6 +1078,31 @@
       ]
     },
     {
+      "id": "dhan",
+      "name": "Dhan",
+      "short_name": "Dhan",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00D09C",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/dhan/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/dhan/icon.svg"
+      },
+      "legal_name": "Raise Financial Services Private Limited",
+      "founded": 2021,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://dhan.co",
+      "tags": [
+        "options-trading",
+        "derivatives"
+      ]
+    },
+    {
       "id": "ditto-insurance",
       "name": "Ditto Insurance",
       "short_name": "Ditto",
@@ -785,7 +1112,10 @@
       "brand_color": "#2F4F7F",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ditto-insurance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ditto-insurance/icon.svg"
+      },
       "legal_name": "Finshots Media Private Limited",
       "founded": 2021,
       "regulated_by": [
@@ -807,7 +1137,10 @@
       "brand_color": "#E31837",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/equifax-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/equifax-india/icon.svg"
+      },
       "legal_name": "Equifax Credit Information Services Private Limited",
       "founded": 2010,
       "regulated_by": [
@@ -830,7 +1163,10 @@
       "brand_color": "#F7941D",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/equitas-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/equitas-small-finance-bank/icon.svg"
+      },
       "legal_name": "Equitas Small Finance Bank Limited",
       "founded": 2016,
       "regulated_by": [
@@ -856,7 +1192,10 @@
       "brand_color": "#006838",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/esaf-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/esaf-small-finance-bank/icon.svg"
+      },
       "legal_name": "ESAF Small Finance Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -870,6 +1209,31 @@
       ]
     },
     {
+      "id": "etmoney",
+      "name": "ET Money",
+      "short_name": "ET Money",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#5C2D91",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/etmoney/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/etmoney/icon.svg"
+      },
+      "legal_name": "Times Internet Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.etmoney.com",
+      "tags": [
+        "mutual-funds",
+        "times-internet"
+      ]
+    },
+    {
       "id": "experian-india",
       "name": "Experian India",
       "short_name": "Experian",
@@ -879,7 +1243,10 @@
       "brand_color": "#9B1B2E",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/experian-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/experian-india/icon.svg"
+      },
       "legal_name": "Experian Credit Information Company of India Private Limited",
       "founded": 2010,
       "regulated_by": [
@@ -903,7 +1270,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/federal-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/federal-bank/icon.svg"
+      },
       "legal_name": "The Federal Bank Limited",
       "founded": 1931,
       "regulated_by": [
@@ -933,8 +1303,11 @@
       ],
       "brand_color": "#3CB46E",
       "country": "IN",
-      "status": "active",
-      "logos": {},
+      "status": "defunct",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fi-money/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fi-money/icon.svg"
+      },
       "legal_name": "EpiFi Technologies Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -960,7 +1333,10 @@
       "brand_color": "#5B37EA",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fibe/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fibe/icon.svg"
+      },
       "legal_name": "Social Worth Technologies Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -983,7 +1359,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fincare-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fincare-small-finance-bank/icon.svg"
+      },
       "legal_name": "Fincare Small Finance Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -1006,7 +1385,10 @@
       "brand_color": "#0066B3",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fino-payments-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/fino-payments-bank/icon.svg"
+      },
       "legal_name": "Fino Payments Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -1032,7 +1414,10 @@
       "brand_color": "#1B3DA4",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/finvu/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/finvu/icon.svg"
+      },
       "legal_name": "Cookiejar Technologies Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -1057,7 +1442,10 @@
       "brand_color": "#00B9F2",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/freecharge/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/freecharge/icon.svg"
+      },
       "legal_name": "Axis Bank Limited (FreeCharge)",
       "founded": 2010,
       "regulated_by": [
@@ -1084,7 +1472,10 @@
       "brand_color": "#1DB89A",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/freo/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/freo/icon.svg"
+      },
       "legal_name": "MoneyTap Financial Services Private Limited",
       "founded": 2016,
       "regulated_by": [
@@ -1107,7 +1498,10 @@
       "brand_color": "#F05A27",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/go-digit/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/go-digit/icon.svg"
+      },
       "legal_name": "Go Digit General Insurance Limited",
       "founded": 2016,
       "regulated_by": [
@@ -1130,7 +1524,10 @@
       "brand_color": "#4285F4",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/gpay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/gpay/icon.svg"
+      },
       "legal_name": "Google India Digital Services Private Limited",
       "founded": 2017,
       "regulated_by": [
@@ -1161,7 +1558,10 @@
       "brand_color": "#5367FF",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/groww/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/groww/icon.svg"
+      },
       "legal_name": "Nextbillion Technology Private Limited",
       "founded": 2016,
       "regulated_by": [
@@ -1190,7 +1590,10 @@
       "brand_color": "#004C8F",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdb-financial-services/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdb-financial-services/icon.svg"
+      },
       "legal_name": "HDB Financial Services Limited",
       "founded": 2008,
       "regulated_by": [
@@ -1215,7 +1618,10 @@
       "brand_color": "#004C8F",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg"
+      },
       "legal_name": "HDFC Bank Limited",
       "founded": 1994,
       "regulated_by": [
@@ -1234,6 +1640,31 @@
       ]
     },
     {
+      "id": "hsbc-india",
+      "name": "HSBC India",
+      "short_name": "HSBC",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#DB0011",
+      "country": "GB",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hsbc-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hsbc-india/icon.svg"
+      },
+      "legal_name": "The Hongkong and Shanghai Banking Corporation Limited",
+      "founded": 1959,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "HSBC",
+      "website": "https://www.hsbc.co.in",
+      "tags": [
+        "foreign-bank-branch"
+      ]
+    },
+    {
       "id": "icici-bank",
       "name": "ICICI Bank",
       "short_name": "ICICI",
@@ -1245,7 +1676,10 @@
       "brand_color": "#B02A30",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/icici-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/icici-bank/icon.svg"
+      },
       "legal_name": "ICICI Bank Limited",
       "founded": 1994,
       "regulated_by": [
@@ -1264,6 +1698,37 @@
       ]
     },
     {
+      "id": "idbi-bank",
+      "name": "IDBI Bank",
+      "short_name": "IDBI",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003DA5",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/idbi-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/idbi-bank/icon.svg"
+      },
+      "legal_name": "IDBI Bank Limited",
+      "founded": 1964,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "IBKL",
+      "upi_handles": [
+        "@idbi"
+      ],
+      "website": "https://www.idbibank.in",
+      "tags": [
+        "reclassified-private",
+        "lic-majority-stake",
+        "psp-bank"
+      ]
+    },
+    {
       "id": "idfc-first-bank",
       "name": "IDFC FIRST Bank",
       "short_name": "IDFC FIRST",
@@ -1274,7 +1739,10 @@
       "brand_color": "#9E1B32",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/idfc-first-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/idfc-first-bank/icon.svg"
+      },
       "legal_name": "IDFC FIRST Bank Limited",
       "founded": 2015,
       "regulated_by": [
@@ -1291,6 +1759,32 @@
       ]
     },
     {
+      "id": "iifl-finance",
+      "name": "IIFL Finance",
+      "short_name": "IIFL Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#F58220",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/iifl-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/iifl-finance/icon.svg"
+      },
+      "legal_name": "IIFL Finance Limited",
+      "founded": 1995,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.iifl.com",
+      "tags": [
+        "gold-loans",
+        "listed"
+      ]
+    },
+    {
       "id": "india-post-payments-bank",
       "name": "India Post Payments Bank",
       "short_name": "IPPB",
@@ -1301,7 +1795,10 @@
       "brand_color": "#C8102E",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/india-post-payments-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/india-post-payments-bank/icon.svg"
+      },
       "legal_name": "India Post Payments Bank Limited",
       "founded": 2018,
       "regulated_by": [
@@ -1328,7 +1825,10 @@
       "brand_color": "#00529F",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indian-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indian-bank/icon.svg"
+      },
       "legal_name": "Indian Bank",
       "founded": 1907,
       "regulated_by": [
@@ -1355,7 +1855,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indian-overseas-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indian-overseas-bank/icon.svg"
+      },
       "legal_name": "Indian Overseas Bank",
       "founded": 1937,
       "regulated_by": [
@@ -1380,7 +1883,10 @@
       "brand_color": "#FF5F46",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indmoney/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indmoney/icon.svg"
+      },
       "legal_name": "INDWealth Technologies Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -1404,7 +1910,10 @@
       "brand_color": "#004C97",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indusind-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/indusind-bank/icon.svg"
+      },
       "legal_name": "IndusInd Bank Limited",
       "founded": 1994,
       "regulated_by": [
@@ -1421,6 +1930,32 @@
       ]
     },
     {
+      "id": "innoviti",
+      "name": "Innoviti",
+      "short_name": "Innoviti",
+      "categories": [
+        "pos-terminal",
+        "payment-gateway"
+      ],
+      "brand_color": "#1E3A8A",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/innoviti/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/innoviti/icon.svg"
+      },
+      "legal_name": "Innoviti Payment Solutions Private Limited",
+      "founded": 2002,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://innoviti.com",
+      "tags": [
+        "pos-hardware",
+        "merchant-financing"
+      ]
+    },
+    {
       "id": "instamojo",
       "name": "Instamojo",
       "short_name": "Instamojo",
@@ -1430,7 +1965,10 @@
       "brand_color": "#ED6237",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/instamojo/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/instamojo/icon.svg"
+      },
       "legal_name": "Instamojo Technologies Private Limited",
       "founded": 2012,
       "regulated_by": [
@@ -1444,6 +1982,80 @@
       ]
     },
     {
+      "id": "insurancedekho",
+      "name": "InsuranceDekho",
+      "short_name": "InsuranceDekho",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#FF6B35",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/insurancedekho/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/insurancedekho/icon.svg"
+      },
+      "legal_name": "Digital Insurance Marketplace Private Limited",
+      "founded": 2016,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.insurancedekho.com",
+      "tags": [
+        "insurance-aggregator"
+      ]
+    },
+    {
+      "id": "irdai",
+      "name": "Insurance Regulatory and Development Authority of India",
+      "short_name": "IRDAI",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#1B4F72",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/irdai/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/irdai/icon.svg"
+      },
+      "legal_name": "Insurance Regulatory and Development Authority of India",
+      "founded": 1999,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://irdai.gov.in",
+      "tags": [
+        "insurance-regulator"
+      ]
+    },
+    {
+      "id": "jammu-kashmir-bank",
+      "name": "Jammu & Kashmir Bank",
+      "short_name": "J&K Bank",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#8B1A2B",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jammu-kashmir-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jammu-kashmir-bank/icon.svg"
+      },
+      "legal_name": "The Jammu and Kashmir Bank Limited",
+      "founded": 1938,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "JAKA",
+      "website": "https://www.jkbank.com",
+      "tags": [
+        "regional",
+        "state-designated-bank"
+      ]
+    },
+    {
       "id": "jana-small-finance-bank",
       "name": "Jana Small Finance Bank",
       "short_name": "Jana SFB",
@@ -1453,7 +2065,10 @@
       "brand_color": "#E01E26",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jana-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jana-small-finance-bank/icon.svg"
+      },
       "legal_name": "Jana Small Finance Bank Limited",
       "founded": 2018,
       "regulated_by": [
@@ -1479,7 +2094,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jio-payments-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jio-payments-bank/icon.svg"
+      },
       "legal_name": "Jio Payments Bank Limited",
       "founded": 2018,
       "regulated_by": [
@@ -1507,7 +2125,10 @@
       "brand_color": "#3C1AF5",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jupiter/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/jupiter/icon.svg"
+      },
       "legal_name": "Amica Financial Technologies Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -1531,7 +2152,10 @@
       "brand_color": "#1A1A2E",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/juspay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/juspay/icon.svg"
+      },
       "legal_name": "Juspay Technologies Private Limited",
       "founded": 2012,
       "regulated_by": [
@@ -1554,7 +2178,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/karnataka-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/karnataka-bank/icon.svg"
+      },
       "legal_name": "Karnataka Bank Limited",
       "founded": 1924,
       "regulated_by": [
@@ -1578,7 +2205,10 @@
       "brand_color": "#E1251B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/kotak-mahindra-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/kotak-mahindra-bank/icon.svg"
+      },
       "legal_name": "Kotak Mahindra Bank Limited",
       "founded": 2003,
       "regulated_by": [
@@ -1604,7 +2234,10 @@
       "brand_color": "#00AB66",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/kreditbee/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/kreditbee/icon.svg"
+      },
       "legal_name": "Krazybee Services Private Limited",
       "founded": 2018,
       "regulated_by": [
@@ -1626,7 +2259,10 @@
       "brand_color": "#0070BA",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/kuvera/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/kuvera/icon.svg"
+      },
       "legal_name": "Arevuk Advisory Services Private Limited",
       "founded": 2016,
       "regulated_by": [
@@ -1649,7 +2285,10 @@
       "brand_color": "#FF6B6B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/lazypay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/lazypay/icon.svg"
+      },
       "legal_name": "PayU Finance India Private Limited",
       "founded": 2017,
       "regulated_by": [
@@ -1671,7 +2310,10 @@
       "brand_color": "#FF6600",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/loantap/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/loantap/icon.svg"
+      },
       "legal_name": "LoanTap Credit Products Private Limited",
       "founded": 2016,
       "regulated_by": [
@@ -1694,7 +2336,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/lt-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/lt-finance/icon.svg"
+      },
       "legal_name": "L&T Finance Limited",
       "founded": 1994,
       "regulated_by": [
@@ -1718,7 +2363,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/m2p-fintech/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/m2p-fintech/icon.svg"
+      },
       "legal_name": "M2P Solutions Private Limited",
       "founded": 2014,
       "regulated_by": [
@@ -1742,7 +2390,10 @@
       "brand_color": "#CC0000",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/mahindra-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/mahindra-finance/icon.svg"
+      },
       "legal_name": "Mahindra & Mahindra Financial Services Limited",
       "founded": 1991,
       "regulated_by": [
@@ -1767,7 +2418,10 @@
       "brand_color": "#1DACE8",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/mobikwik/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/mobikwik/icon.svg"
+      },
       "legal_name": "MobiKwik Systems Private Limited",
       "founded": 2009,
       "regulated_by": [
@@ -1793,7 +2447,10 @@
       "brand_color": "#1E4D9B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/moneyview/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/moneyview/icon.svg"
+      },
       "legal_name": "Whizdm Innovations Private Limited",
       "founded": 2014,
       "regulated_by": [
@@ -1807,6 +2464,31 @@
       ]
     },
     {
+      "id": "mswipe",
+      "name": "Mswipe",
+      "short_name": "Mswipe",
+      "categories": [
+        "pos-terminal"
+      ],
+      "brand_color": "#EE3124",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/mswipe/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/mswipe/icon.svg"
+      },
+      "legal_name": "Mswipe Technologies Private Limited",
+      "founded": 2011,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.mswipe.com",
+      "tags": [
+        "pos-hardware",
+        "merchant-acquiring"
+      ]
+    },
+    {
       "id": "muthoot-finance",
       "name": "Muthoot Finance",
       "short_name": "Muthoot",
@@ -1817,7 +2499,10 @@
       "brand_color": "#E8B91B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/muthoot-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/muthoot-finance/icon.svg"
+      },
       "legal_name": "The Muthoot Finance Limited",
       "founded": 1939,
       "regulated_by": [
@@ -1841,7 +2526,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nadl/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nadl/icon.svg"
+      },
       "legal_name": "NSDL Data Analytics Limited",
       "founded": 2020,
       "regulated_by": [
@@ -1867,7 +2555,10 @@
       "brand_color": "#3F5FFA",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/navi/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/navi/icon.svg"
+      },
       "legal_name": "Navi Technologies Limited",
       "founded": 2018,
       "regulated_by": [
@@ -1896,7 +2587,10 @@
       "brand_color": "#0060DF",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/niyo/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/niyo/icon.svg"
+      },
       "legal_name": "BankOpen Financial Technologies Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -1910,6 +2604,59 @@
       ]
     },
     {
+      "id": "npci",
+      "name": "National Payments Corporation of India",
+      "short_name": "NPCI",
+      "categories": [
+        "regulator",
+        "infra-api"
+      ],
+      "brand_color": "#0B5394",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/npci/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/npci/icon.svg"
+      },
+      "legal_name": "National Payments Corporation of India",
+      "founded": 2008,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.npci.org.in",
+      "tags": [
+        "payments-infra",
+        "upi-operator",
+        "rupay",
+        "not-for-profit"
+      ]
+    },
+    {
+      "id": "nsdl",
+      "name": "National Securities Depository Limited",
+      "short_name": "NSDL",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#00539F",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nsdl/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nsdl/icon.svg"
+      },
+      "legal_name": "National Securities Depository Limited",
+      "founded": 1996,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.nsdl.co.in",
+      "tags": [
+        "depository",
+        "listed"
+      ]
+    },
+    {
       "id": "nsdl-payments-bank",
       "name": "NSDL Payments Bank",
       "short_name": "NSDL Bank",
@@ -1919,7 +2666,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nsdl-payments-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nsdl-payments-bank/icon.svg"
+      },
       "legal_name": "NSDL Payments Bank Limited",
       "founded": 2018,
       "regulated_by": [
@@ -1932,6 +2682,56 @@
       ]
     },
     {
+      "id": "nse",
+      "name": "National Stock Exchange of India",
+      "short_name": "NSE",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#0033A0",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nse/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/nse/icon.svg"
+      },
+      "legal_name": "National Stock Exchange of India Limited",
+      "founded": 1992,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.nseindia.com",
+      "tags": [
+        "stock-exchange",
+        "nifty"
+      ]
+    },
+    {
+      "id": "ntt-data-payment-services",
+      "name": "NTT DATA Payment Services (Atom Technologies)",
+      "short_name": "NTT DATA",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#0066CC",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ntt-data-payment-services/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ntt-data-payment-services/icon.svg"
+      },
+      "legal_name": "NTT DATA Payment Services India Ltd",
+      "founded": 2006,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://in.nttdatapay.com",
+      "tags": [
+        "b2b",
+        "payment-aggregator"
+      ]
+    },
+    {
       "id": "ola-money",
       "name": "Ola Money",
       "short_name": "Ola Money",
@@ -1941,7 +2741,10 @@
       "brand_color": "#00B140",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ola-money/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ola-money/icon.svg"
+      },
       "legal_name": "Zipcash Card Services Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -1964,7 +2767,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/onemoney/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/onemoney/icon.svg"
+      },
       "legal_name": "OneMoney (Cygnet Infotech)",
       "founded": 2019,
       "regulated_by": [
@@ -1989,7 +2795,10 @@
       "brand_color": "#6C3FE7",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/open-banking/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/open-banking/icon.svg"
+      },
       "legal_name": "Open Financial Technologies Private Limited",
       "founded": 2017,
       "regulated_by": [
@@ -2016,7 +2825,10 @@
       "brand_color": "#002970",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/paytm/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/paytm/icon.svg"
+      },
       "legal_name": "One97 Communications Limited",
       "founded": 2010,
       "regulated_by": [
@@ -2037,6 +2849,32 @@
       ]
     },
     {
+      "id": "paytm-money",
+      "name": "Paytm Money",
+      "short_name": "Paytm Money",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00BAF2",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/paytm-money/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/paytm-money/icon.svg"
+      },
+      "legal_name": "Paytm Money Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.paytmmoney.com",
+      "acquired_by": "paytm",
+      "tags": [
+        "stockbroking",
+        "mutual-funds"
+      ]
+    },
+    {
       "id": "paytm-payments-bank",
       "name": "Paytm Payments Bank",
       "short_name": "PPBL",
@@ -2046,7 +2884,10 @@
       "brand_color": "#002970",
       "country": "IN",
       "status": "defunct",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/paytm-payments-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/paytm-payments-bank/icon.svg"
+      },
       "legal_name": "Paytm Payments Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -2071,7 +2912,10 @@
       "brand_color": "#009DDB",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/payu-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/payu-india/icon.svg"
+      },
       "legal_name": "PayU Payments Private Limited",
       "founded": 2002,
       "regulated_by": [
@@ -2095,7 +2939,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/perfios/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/perfios/icon.svg"
+      },
       "legal_name": "Perfios Account Aggregation Services Private Limited",
       "founded": 2008,
       "regulated_by": [
@@ -2110,19 +2957,46 @@
       ]
     },
     {
+      "id": "pfrda",
+      "name": "Pension Fund Regulatory and Development Authority",
+      "short_name": "PFRDA",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#004C97",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/pfrda/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/pfrda/icon.svg"
+      },
+      "legal_name": "Pension Fund Regulatory and Development Authority",
+      "founded": 2003,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://www.pfrda.org.in",
+      "tags": [
+        "pension-regulator",
+        "nps"
+      ]
+    },
+    {
       "id": "phonepe",
       "name": "PhonePe",
       "short_name": "PhonePe",
       "categories": [
         "upi-psp",
         "wallet",
-        "wealthtech",
         "insurtech"
       ],
       "brand_color": "#5F259F",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/phonepe/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/phonepe/icon.svg"
+      },
       "legal_name": "PhonePe Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -2146,6 +3020,85 @@
       ]
     },
     {
+      "id": "pine-labs",
+      "name": "Pine Labs",
+      "short_name": "Pine Labs",
+      "categories": [
+        "pos-terminal",
+        "payment-gateway"
+      ],
+      "brand_color": "#00263E",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/pine-labs/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/pine-labs/icon.svg"
+      },
+      "legal_name": "Pine Labs Private Limited",
+      "founded": 1998,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.pinelabs.com",
+      "tags": [
+        "merchant-commerce",
+        "pos-hardware",
+        "listed"
+      ]
+    },
+    {
+      "id": "piramal-finance",
+      "name": "Piramal Finance",
+      "short_name": "Piramal Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#652D90",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/piramal-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/piramal-finance/icon.svg"
+      },
+      "legal_name": "Piramal Capital & Housing Finance Limited",
+      "founded": 1984,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.piramalfinance.com",
+      "tags": [
+        "housing-finance",
+        "retail-lending"
+      ]
+    },
+    {
+      "id": "plum",
+      "name": "Plum",
+      "short_name": "Plum",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#725CF6",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/plum/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/plum/icon.svg"
+      },
+      "legal_name": "Plum Benefits Private Limited",
+      "founded": 2019,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.plumhq.com",
+      "tags": [
+        "group-health-insurance",
+        "employee-benefits",
+        "b2b"
+      ]
+    },
+    {
       "id": "policybazaar",
       "name": "PolicyBazaar",
       "short_name": "PolicyBazaar",
@@ -2155,7 +3108,10 @@
       "brand_color": "#EE3424",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/policybazaar/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/policybazaar/icon.svg"
+      },
       "legal_name": "PB Fintech Limited",
       "founded": 2008,
       "regulated_by": [
@@ -2169,6 +3125,32 @@
       ]
     },
     {
+      "id": "poonawalla-fincorp",
+      "name": "Poonawalla Fincorp",
+      "short_name": "Poonawalla Fincorp",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#6A1B9A",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/poonawalla-fincorp/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/poonawalla-fincorp/icon.svg"
+      },
+      "legal_name": "Poonawalla Fincorp Limited",
+      "founded": 1978,
+      "regulated_by": [
+        "RBI"
+      ],
+      "website": "https://www.poonawallafincorp.com",
+      "tags": [
+        "listed",
+        "consumer-lending"
+      ]
+    },
+    {
       "id": "punjab-national-bank",
       "name": "Punjab National Bank",
       "short_name": "PNB",
@@ -2178,7 +3160,10 @@
       "brand_color": "#002D8C",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/punjab-national-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/punjab-national-bank/icon.svg"
+      },
       "legal_name": "Punjab National Bank",
       "founded": 1894,
       "regulated_by": [
@@ -2205,7 +3190,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/punjab-sind-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/punjab-sind-bank/icon.svg"
+      },
       "legal_name": "Punjab & Sind Bank",
       "founded": 1908,
       "regulated_by": [
@@ -2230,7 +3218,10 @@
       "brand_color": "#2B6CB0",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/razorpay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/razorpay/icon.svg"
+      },
       "legal_name": "Razorpay Software Private Limited",
       "founded": 2014,
       "regulated_by": [
@@ -2256,7 +3247,10 @@
       "brand_color": "#2B6CB0",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/razorpayx/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/razorpayx/icon.svg"
+      },
       "legal_name": "Razorpay Software Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -2270,6 +3264,31 @@
       ]
     },
     {
+      "id": "rbi",
+      "name": "Reserve Bank of India",
+      "short_name": "RBI",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#00447C",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/rbi/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/rbi/icon.svg"
+      },
+      "legal_name": "Reserve Bank of India",
+      "founded": 1935,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://www.rbi.org.in",
+      "tags": [
+        "central-bank",
+        "banking-regulator"
+      ]
+    },
+    {
       "id": "rbl-bank",
       "name": "RBL Bank",
       "short_name": "RBL",
@@ -2280,7 +3299,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/rbl-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/rbl-bank/icon.svg"
+      },
       "legal_name": "RBL Bank Limited",
       "founded": 1943,
       "regulated_by": [
@@ -2298,6 +3320,31 @@
       ]
     },
     {
+      "id": "renewbuy",
+      "name": "RenewBuy",
+      "short_name": "RenewBuy",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#0071CE",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/renewbuy/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/renewbuy/icon.svg"
+      },
+      "legal_name": "Renew Insurance Broking Services Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "IRDAI"
+      ],
+      "website": "https://www.renewbuy.com",
+      "tags": [
+        "insurance-aggregator",
+        "agent-network"
+      ]
+    },
+    {
       "id": "scripbox",
       "name": "Scripbox",
       "short_name": "Scripbox",
@@ -2307,7 +3354,10 @@
       "brand_color": "#2A6495",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/scripbox/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/scripbox/icon.svg"
+      },
       "legal_name": "Scripbox Advisors Private Limited",
       "founded": 2012,
       "regulated_by": [
@@ -2320,6 +3370,31 @@
       ]
     },
     {
+      "id": "sebi",
+      "name": "Securities and Exchange Board of India",
+      "short_name": "SEBI",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#003366",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/sebi/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/sebi/icon.svg"
+      },
+      "legal_name": "Securities and Exchange Board of India",
+      "founded": 1988,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://www.sebi.gov.in",
+      "tags": [
+        "securities-regulator",
+        "capital-markets"
+      ]
+    },
+    {
       "id": "setu",
       "name": "Setu",
       "short_name": "Setu",
@@ -2329,7 +3404,10 @@
       "brand_color": "#7B5EA7",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/setu/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/setu/icon.svg"
+      },
       "legal_name": "Pine Labs Private Limited (Setu)",
       "founded": 2018,
       "regulated_by": [
@@ -2343,6 +3421,34 @@
       ]
     },
     {
+      "id": "share-market",
+      "name": "Share.Market (by PhonePe)",
+      "short_name": "Share.Market",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#5F259F",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/share-market/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/share-market/icon.svg"
+      },
+      "legal_name": "PhonePe Wealth Broking Private Limited",
+      "founded": 2023,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://share.market",
+      "tags": [
+        "stock-broker",
+        "phonepe",
+        "consumer",
+        "wealth-basket",
+        "mutual-funds"
+      ]
+    },
+    {
       "id": "shriram-finance",
       "name": "Shriram Finance",
       "short_name": "Shriram Finance",
@@ -2353,7 +3459,10 @@
       "brand_color": "#E8A000",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/shriram-finance/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/shriram-finance/icon.svg"
+      },
       "legal_name": "Shriram Finance Limited",
       "founded": 1974,
       "regulated_by": [
@@ -2377,7 +3486,10 @@
       "brand_color": "#4A00E0",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/signzy/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/signzy/icon.svg"
+      },
       "legal_name": "Signzy Technologies Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -2400,7 +3512,10 @@
       "brand_color": "#FF5C35",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/simpl/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/simpl/icon.svg"
+      },
       "legal_name": "Mool Financial Technologies Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -2424,7 +3539,10 @@
       "brand_color": "#FFDE59",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/slice/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/slice/icon.svg"
+      },
       "legal_name": "Quadrillion Finance Private Limited",
       "founded": 2016,
       "regulated_by": [
@@ -2438,6 +3556,31 @@
       ]
     },
     {
+      "id": "smallcase",
+      "name": "Smallcase",
+      "short_name": "Smallcase",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00B8A9",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/smallcase/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/smallcase/icon.svg"
+      },
+      "legal_name": "Smallcase Technologies Private Limited",
+      "founded": 2015,
+      "regulated_by": [
+        "SEBI"
+      ],
+      "website": "https://www.smallcase.com",
+      "tags": [
+        "thematic-investing",
+        "broker-integrations"
+      ]
+    },
+    {
       "id": "snapmint",
       "name": "Snapmint",
       "short_name": "Snapmint",
@@ -2447,7 +3590,10 @@
       "brand_color": "#00A4E4",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/snapmint/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/snapmint/icon.svg"
+      },
       "legal_name": "Niro Technologies India Private Limited",
       "founded": 2017,
       "regulated_by": [
@@ -2469,7 +3615,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/south-indian-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/south-indian-bank/icon.svg"
+      },
       "legal_name": "The South Indian Bank Limited",
       "founded": 1929,
       "regulated_by": [
@@ -2483,6 +3632,31 @@
       ]
     },
     {
+      "id": "standard-chartered-india",
+      "name": "Standard Chartered India",
+      "short_name": "StanChart",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#0473EA",
+      "country": "GB",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/standard-chartered-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/standard-chartered-india/icon.svg"
+      },
+      "legal_name": "Standard Chartered Bank India",
+      "founded": 1858,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "SCBL",
+      "website": "https://www.sc.com/in",
+      "tags": [
+        "foreign-bank-branch"
+      ]
+    },
+    {
       "id": "stashfin",
       "name": "Stashfin",
       "short_name": "Stashfin",
@@ -2492,7 +3666,10 @@
       "brand_color": "#FF4500",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/stashfin/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/stashfin/icon.svg"
+      },
       "legal_name": "Akara Capital Advisors Private Limited",
       "founded": 2016,
       "regulated_by": [
@@ -2515,7 +3692,10 @@
       "brand_color": "#22409A",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/state-bank-of-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/state-bank-of-india/icon.svg"
+      },
       "legal_name": "State Bank of India",
       "founded": 1955,
       "regulated_by": [
@@ -2544,7 +3724,10 @@
       "brand_color": "#FF6600",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/suryodaya-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/suryodaya-small-finance-bank/icon.svg"
+      },
       "legal_name": "Suryodaya Small Finance Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -2554,6 +3737,32 @@
       "website": "https://suryodayabank.com",
       "tags": [
         "sfb"
+      ]
+    },
+    {
+      "id": "tamilnad-mercantile-bank",
+      "name": "Tamilnad Mercantile Bank",
+      "short_name": "TMB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#F7941D",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/tamilnad-mercantile-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/tamilnad-mercantile-bank/icon.svg"
+      },
+      "legal_name": "Tamilnad Mercantile Bank Limited",
+      "founded": 1921,
+      "regulated_by": [
+        "RBI"
+      ],
+      "ifsc_prefix": "TMBL",
+      "website": "https://www.tmb.in",
+      "tags": [
+        "old-private-bank",
+        "listed"
       ]
     },
     {
@@ -2567,7 +3776,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/tata-capital/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/tata-capital/icon.svg"
+      },
       "legal_name": "Tata Capital Financial Services Limited",
       "founded": 2007,
       "regulated_by": [
@@ -2590,7 +3802,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/transunion-cibil/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/transunion-cibil/icon.svg"
+      },
       "legal_name": "TransUnion CIBIL Limited",
       "founded": 2000,
       "regulated_by": [
@@ -2613,7 +3828,10 @@
       "brand_color": "#2DBD95",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/turtlemint/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/turtlemint/icon.svg"
+      },
       "legal_name": "Turtlemint Insurance Broking Services Private Limited",
       "founded": 2015,
       "regulated_by": [
@@ -2635,7 +3853,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/uco-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/uco-bank/icon.svg"
+      },
       "legal_name": "UCO Bank",
       "founded": 1943,
       "regulated_by": [
@@ -2660,7 +3881,10 @@
       "brand_color": "#F37321",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ujjivan-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/ujjivan-small-finance-bank/icon.svg"
+      },
       "legal_name": "Ujjivan Small Finance Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -2686,7 +3910,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/union-bank-of-india/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/union-bank-of-india/icon.svg"
+      },
       "legal_name": "Union Bank of India",
       "founded": 1919,
       "regulated_by": [
@@ -2713,7 +3940,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/unity-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/unity-small-finance-bank/icon.svg"
+      },
       "legal_name": "Unity Small Finance Bank Limited",
       "founded": 2021,
       "regulated_by": [
@@ -2735,7 +3965,10 @@
       "brand_color": "#F70D4B",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/upstox/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/upstox/icon.svg"
+      },
       "legal_name": "RKSV Securities India Private Limited",
       "founded": 2012,
       "regulated_by": [
@@ -2758,7 +3991,10 @@
       "brand_color": "#E6332A",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/utkarsh-small-finance-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/utkarsh-small-finance-bank/icon.svg"
+      },
       "legal_name": "Utkarsh Small Finance Bank Limited",
       "founded": 2017,
       "regulated_by": [
@@ -2771,6 +4007,30 @@
       ]
     },
     {
+      "id": "wazirx",
+      "name": "WazirX",
+      "short_name": "WazirX",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#F0B90B",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/wazirx/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/wazirx/icon.svg"
+      },
+      "legal_name": "Zanmai Labs Private Limited",
+      "founded": 2018,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://wazirx.com",
+      "tags": [
+        "vda-platform"
+      ]
+    },
+    {
       "id": "whatsapp-pay",
       "name": "WhatsApp Pay",
       "short_name": "WhatsApp Pay",
@@ -2780,7 +4040,10 @@
       "brand_color": "#25D366",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/whatsapp-pay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/whatsapp-pay/icon.svg"
+      },
       "legal_name": "Meta Platforms India Private Limited",
       "founded": 2020,
       "regulated_by": [
@@ -2809,7 +4072,10 @@
       "brand_color": "#F25F00",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/yap/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/yap/icon.svg"
+      },
       "legal_name": "YAP Payments Private Limited",
       "founded": 2019,
       "regulated_by": [
@@ -2833,7 +4099,10 @@
       "brand_color": "#003087",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/yes-bank/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/yes-bank/icon.svg"
+      },
       "legal_name": "Yes Bank Limited",
       "founded": 2004,
       "regulated_by": [
@@ -2852,6 +4121,30 @@
       ]
     },
     {
+      "id": "zebpay",
+      "name": "ZebPay",
+      "short_name": "ZebPay",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#3861FB",
+      "country": "IN",
+      "status": "active",
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/zebpay/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/zebpay/icon.svg"
+      },
+      "legal_name": "Awlencan Innovations India Private Limited",
+      "founded": 2014,
+      "regulated_by": [
+        "None"
+      ],
+      "website": "https://zebpay.com",
+      "tags": [
+        "vda-platform"
+      ]
+    },
+    {
       "id": "zerodha",
       "name": "Zerodha",
       "short_name": "Zerodha",
@@ -2862,7 +4155,10 @@
       "brand_color": "#387ED1",
       "country": "IN",
       "status": "active",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/zerodha/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/zerodha/icon.svg"
+      },
       "legal_name": "Zerodha Broking Limited",
       "founded": 2010,
       "regulated_by": [
@@ -2888,7 +4184,10 @@
       "brand_color": "#00C4B3",
       "country": "IN",
       "status": "defunct",
-      "logos": {},
+      "logos": {
+        "full": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/zestmoney/full.svg",
+        "icon": "https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/zestmoney/icon.svg"
+      },
       "legal_name": "Camden Town Technologies Private Limited",
       "founded": 2015,
       "regulated_by": [

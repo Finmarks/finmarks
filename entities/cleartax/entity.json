@@ -1,0 +1,30 @@
+{
+  "id": "cleartax",
+  "name": "ClearTax",
+  "short_name": "ClearTax",
+  "legal_name": "Clear (formerly Defmacro Software Private Limited)",
+  "categories": [
+    "tax-filing"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#2CA01C",
+  "country": "IN",
+  "founded": 2011,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://cleartax.in",
+  "status": "active",
+  "tags": [
+    "itr-filing",
+    "gst-compliance",
+    "saas"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

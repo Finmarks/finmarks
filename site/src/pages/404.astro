@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Not found — FinMarks" description="That page does not exist.">
+  <div class="wrap page">
+    <p class="eyebrow">404</p>
+    <h1>No entity at that path.</h1>
+    <p class="desc">
+      The id may have changed, or the entity may not be in the dataset yet. Entity ids are permanent
+      once published, so a 404 usually means it was never there.
+    </p>
+    <div class="links">
+      <a class="ghost-btn" href="/#browse">Browse all entities</a>
+      <a class="ghost-btn" href="/categories/">Categories</a>
+      <button
+        data-tally-open="yPAzV8"
+        data-tally-layout="modal"
+        data-tally-width="380"
+        data-tally-auto-close="2000"
+        class="primary-btn"
+        type="button"
+        style="display:inline-flex;align-items:center;gap:0.35rem;"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Request
+      </button>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .page {
+    padding-block: 5rem 6rem;
+    max-width: 60ch;
+  }
+  h1 {
+    font-size: var(--step-2);
+    margin-block: 0.5rem 0.7rem;
+  }
+  .desc {
+    color: var(--ink-2);
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+</style>

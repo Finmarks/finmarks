@@ -6,13 +6,11 @@
   "categories": [
     "upi-psp",
     "wallet",
-    "wealthtech",
     "insurtech"
   ],
   "logos": {
-    "full": null,
-    "icon": null,
-    "wordmark": null,
+    "full": "full.svg",
+    "icon": "icon.svg",
     "mono_dark": null,
     "mono_light": null
   },

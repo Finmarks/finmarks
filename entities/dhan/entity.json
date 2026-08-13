@@ -1,0 +1,29 @@
+{
+  "id": "dhan",
+  "name": "Dhan",
+  "short_name": "Dhan",
+  "legal_name": "Raise Financial Services Private Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00D09C",
+  "country": "IN",
+  "founded": 2021,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://dhan.co",
+  "status": "active",
+  "tags": [
+    "options-trading",
+    "derivatives"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

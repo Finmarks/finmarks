@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "generated_at": "2026-08-05",
-  "total": 115,
+  "generated_at": "2026-08-13",
+  "total": 152,
   "entities": [
     {
       "id": "5paisa",
@@ -20,6 +20,16 @@
         "insurtech"
       ],
       "brand_color": "#00C4B4"
+    },
+    {
+      "id": "aditya-birla-capital",
+      "name": "Aditya Birla Capital",
+      "short_name": "AB Capital",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E31837"
     },
     {
       "id": "airtel-payments-bank",
@@ -59,15 +69,6 @@
         "account-aggregator"
       ],
       "brand_color": "#5F259F"
-    },
-    {
-      "id": "atom-technologies",
-      "name": "Atom Technologies",
-      "short_name": "Atom",
-      "categories": [
-        "payment-gateway"
-      ],
-      "brand_color": "#0066CC"
     },
     {
       "id": "au-small-finance-bank",
@@ -165,6 +166,15 @@
       "brand_color": "#003087"
     },
     {
+      "id": "bse",
+      "name": "Bombay Stock Exchange",
+      "short_name": "BSE",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#003DA5"
+    },
+    {
       "id": "camsfinserv",
       "name": "CAMSfinserv",
       "short_name": "CAMSfinserv",
@@ -220,6 +230,15 @@
       "brand_color": "#003087"
     },
     {
+      "id": "cdsl",
+      "name": "Central Depository Services",
+      "short_name": "CDSL",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#004B87"
+    },
+    {
       "id": "central-bank-of-india",
       "name": "Central Bank of India",
       "short_name": "Central Bank",
@@ -229,6 +248,25 @@
       "brand_color": "#003087"
     },
     {
+      "id": "cholamandalam-finance",
+      "name": "Cholamandalam Investment and Finance Company",
+      "short_name": "Chola Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#E31E24"
+    },
+    {
+      "id": "citibank-india",
+      "name": "Citibank India",
+      "short_name": "Citi",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#003B70"
+    },
+    {
       "id": "city-union-bank",
       "name": "City Union Bank",
       "short_name": "CUB",
@@ -236,6 +274,33 @@
         "private-bank"
       ],
       "brand_color": "#003087"
+    },
+    {
+      "id": "cleartax",
+      "name": "ClearTax",
+      "short_name": "ClearTax",
+      "categories": [
+        "tax-filing"
+      ],
+      "brand_color": "#2CA01C"
+    },
+    {
+      "id": "coindcx",
+      "name": "CoinDCX",
+      "short_name": "CoinDCX",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#0B90F5"
+    },
+    {
+      "id": "coinswitch",
+      "name": "CoinSwitch",
+      "short_name": "CoinSwitch",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#5D5FEF"
     },
     {
       "id": "cred",
@@ -267,6 +332,15 @@
       "brand_color": "#003087"
     },
     {
+      "id": "dbs-bank-india",
+      "name": "DBS Bank India",
+      "short_name": "DBS",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#EA1B2B"
+    },
+    {
       "id": "dcb-bank",
       "name": "DCB Bank",
       "short_name": "DCB",
@@ -283,6 +357,15 @@
         "infra-api"
       ],
       "brand_color": "#6B4EFF"
+    },
+    {
+      "id": "dhan",
+      "name": "Dhan",
+      "short_name": "Dhan",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00D09C"
     },
     {
       "id": "ditto-insurance",
@@ -319,6 +402,15 @@
         "small-finance-bank"
       ],
       "brand_color": "#006838"
+    },
+    {
+      "id": "etmoney",
+      "name": "ET Money",
+      "short_name": "ET Money",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#5C2D91"
     },
     {
       "id": "experian-india",
@@ -456,6 +548,15 @@
       "brand_color": "#004C8F"
     },
     {
+      "id": "hsbc-india",
+      "name": "HSBC India",
+      "short_name": "HSBC",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#DB0011"
+    },
+    {
       "id": "icici-bank",
       "name": "ICICI Bank",
       "short_name": "ICICI",
@@ -467,6 +568,16 @@
       "brand_color": "#B02A30"
     },
     {
+      "id": "idbi-bank",
+      "name": "IDBI Bank",
+      "short_name": "IDBI",
+      "categories": [
+        "private-bank",
+        "upi-psp"
+      ],
+      "brand_color": "#003DA5"
+    },
+    {
       "id": "idfc-first-bank",
       "name": "IDFC FIRST Bank",
       "short_name": "IDFC FIRST",
@@ -475,6 +586,16 @@
         "upi-psp"
       ],
       "brand_color": "#9E1B32"
+    },
+    {
+      "id": "iifl-finance",
+      "name": "IIFL Finance",
+      "short_name": "IIFL Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#F58220"
     },
     {
       "id": "india-post-payments-bank",
@@ -524,6 +645,16 @@
       "brand_color": "#004C97"
     },
     {
+      "id": "innoviti",
+      "name": "Innoviti",
+      "short_name": "Innoviti",
+      "categories": [
+        "pos-terminal",
+        "payment-gateway"
+      ],
+      "brand_color": "#1E3A8A"
+    },
+    {
       "id": "instamojo",
       "name": "Instamojo",
       "short_name": "Instamojo",
@@ -531,6 +662,33 @@
         "payment-gateway"
       ],
       "brand_color": "#ED6237"
+    },
+    {
+      "id": "insurancedekho",
+      "name": "InsuranceDekho",
+      "short_name": "InsuranceDekho",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#FF6B35"
+    },
+    {
+      "id": "irdai",
+      "name": "Insurance Regulatory and Development Authority of India",
+      "short_name": "IRDAI",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#1B4F72"
+    },
+    {
+      "id": "jammu-kashmir-bank",
+      "name": "Jammu & Kashmir Bank",
+      "short_name": "J&K Bank",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#8B1A2B"
     },
     {
       "id": "jana-small-finance-bank",
@@ -676,6 +834,15 @@
       "brand_color": "#1E4D9B"
     },
     {
+      "id": "mswipe",
+      "name": "Mswipe",
+      "short_name": "Mswipe",
+      "categories": [
+        "pos-terminal"
+      ],
+      "brand_color": "#EE3124"
+    },
+    {
       "id": "muthoot-finance",
       "name": "Muthoot Finance",
       "short_name": "Muthoot",
@@ -716,6 +883,25 @@
       "brand_color": "#0060DF"
     },
     {
+      "id": "npci",
+      "name": "National Payments Corporation of India",
+      "short_name": "NPCI",
+      "categories": [
+        "regulator",
+        "infra-api"
+      ],
+      "brand_color": "#0B5394"
+    },
+    {
+      "id": "nsdl",
+      "name": "National Securities Depository Limited",
+      "short_name": "NSDL",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#00539F"
+    },
+    {
       "id": "nsdl-payments-bank",
       "name": "NSDL Payments Bank",
       "short_name": "NSDL Bank",
@@ -723,6 +909,24 @@
         "payments-bank"
       ],
       "brand_color": "#003087"
+    },
+    {
+      "id": "nse",
+      "name": "National Stock Exchange of India",
+      "short_name": "NSE",
+      "categories": [
+        "stock-exchange"
+      ],
+      "brand_color": "#0033A0"
+    },
+    {
+      "id": "ntt-data-payment-services",
+      "name": "NTT DATA Payment Services (Atom Technologies)",
+      "short_name": "NTT DATA",
+      "categories": [
+        "payment-gateway"
+      ],
+      "brand_color": "#0066CC"
     },
     {
       "id": "ola-money",
@@ -766,6 +970,15 @@
       "brand_color": "#002970"
     },
     {
+      "id": "paytm-money",
+      "name": "Paytm Money",
+      "short_name": "Paytm Money",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00BAF2"
+    },
+    {
       "id": "paytm-payments-bank",
       "name": "Paytm Payments Bank",
       "short_name": "PPBL",
@@ -795,16 +1008,53 @@
       "brand_color": "#003087"
     },
     {
+      "id": "pfrda",
+      "name": "Pension Fund Regulatory and Development Authority",
+      "short_name": "PFRDA",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#004C97"
+    },
+    {
       "id": "phonepe",
       "name": "PhonePe",
       "short_name": "PhonePe",
       "categories": [
         "upi-psp",
         "wallet",
-        "wealthtech",
         "insurtech"
       ],
       "brand_color": "#5F259F"
+    },
+    {
+      "id": "pine-labs",
+      "name": "Pine Labs",
+      "short_name": "Pine Labs",
+      "categories": [
+        "pos-terminal",
+        "payment-gateway"
+      ],
+      "brand_color": "#00263E"
+    },
+    {
+      "id": "piramal-finance",
+      "name": "Piramal Finance",
+      "short_name": "Piramal Finance",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#652D90"
+    },
+    {
+      "id": "plum",
+      "name": "Plum",
+      "short_name": "Plum",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#725CF6"
     },
     {
       "id": "policybazaar",
@@ -814,6 +1064,16 @@
         "insurtech"
       ],
       "brand_color": "#EE3424"
+    },
+    {
+      "id": "poonawalla-fincorp",
+      "name": "Poonawalla Fincorp",
+      "short_name": "Poonawalla Fincorp",
+      "categories": [
+        "nbfc",
+        "lending-platform"
+      ],
+      "brand_color": "#6A1B9A"
     },
     {
       "id": "punjab-national-bank",
@@ -856,6 +1116,15 @@
       "brand_color": "#2B6CB0"
     },
     {
+      "id": "rbi",
+      "name": "Reserve Bank of India",
+      "short_name": "RBI",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#00447C"
+    },
+    {
       "id": "rbl-bank",
       "name": "RBL Bank",
       "short_name": "RBL",
@@ -864,6 +1133,15 @@
         "upi-psp"
       ],
       "brand_color": "#003087"
+    },
+    {
+      "id": "renewbuy",
+      "name": "RenewBuy",
+      "short_name": "RenewBuy",
+      "categories": [
+        "insurtech"
+      ],
+      "brand_color": "#0071CE"
     },
     {
       "id": "scripbox",
@@ -875,6 +1153,15 @@
       "brand_color": "#2A6495"
     },
     {
+      "id": "sebi",
+      "name": "Securities and Exchange Board of India",
+      "short_name": "SEBI",
+      "categories": [
+        "regulator"
+      ],
+      "brand_color": "#003366"
+    },
+    {
       "id": "setu",
       "name": "Setu",
       "short_name": "Setu",
@@ -882,6 +1169,15 @@
         "infra-api"
       ],
       "brand_color": "#7B5EA7"
+    },
+    {
+      "id": "share-market",
+      "name": "Share.Market (by PhonePe)",
+      "short_name": "Share.Market",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#5F259F"
     },
     {
       "id": "shriram-finance",
@@ -922,6 +1218,15 @@
       "brand_color": "#FFDE59"
     },
     {
+      "id": "smallcase",
+      "name": "Smallcase",
+      "short_name": "Smallcase",
+      "categories": [
+        "wealthtech"
+      ],
+      "brand_color": "#00B8A9"
+    },
+    {
       "id": "snapmint",
       "name": "Snapmint",
       "short_name": "Snapmint",
@@ -938,6 +1243,15 @@
         "private-bank"
       ],
       "brand_color": "#003087"
+    },
+    {
+      "id": "standard-chartered-india",
+      "name": "Standard Chartered India",
+      "short_name": "StanChart",
+      "categories": [
+        "international-bank"
+      ],
+      "brand_color": "#0473EA"
     },
     {
       "id": "stashfin",
@@ -966,6 +1280,15 @@
         "small-finance-bank"
       ],
       "brand_color": "#FF6600"
+    },
+    {
+      "id": "tamilnad-mercantile-bank",
+      "name": "Tamilnad Mercantile Bank",
+      "short_name": "TMB",
+      "categories": [
+        "private-bank"
+      ],
+      "brand_color": "#F7941D"
     },
     {
       "id": "tata-capital",
@@ -1050,6 +1373,15 @@
       "brand_color": "#E6332A"
     },
     {
+      "id": "wazirx",
+      "name": "WazirX",
+      "short_name": "WazirX",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#F0B90B"
+    },
+    {
       "id": "whatsapp-pay",
       "name": "WhatsApp Pay",
       "short_name": "WhatsApp Pay",
@@ -1077,6 +1409,15 @@
         "upi-psp"
       ],
       "brand_color": "#003087"
+    },
+    {
+      "id": "zebpay",
+      "name": "ZebPay",
+      "short_name": "ZebPay",
+      "categories": [
+        "crypto-exchange"
+      ],
+      "brand_color": "#3861FB"
     },
     {
       "id": "zerodha",

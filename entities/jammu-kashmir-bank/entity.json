@@ -1,0 +1,30 @@
+{
+  "id": "jammu-kashmir-bank",
+  "name": "Jammu & Kashmir Bank",
+  "short_name": "J&K Bank",
+  "legal_name": "The Jammu and Kashmir Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#8B1A2B",
+  "country": "IN",
+  "founded": 1938,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "JAKA",
+  "website": "https://www.jkbank.com",
+  "status": "active",
+  "tags": [
+    "regional",
+    "state-designated-bank"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

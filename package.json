@@ -1,5 +1,5 @@
 {
-  "name": "bharatbrands-monorepo",
+  "name": "finmarks-monorepo",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -14,8 +14,10 @@
     "check-logos": "node scripts/check-logos.mjs",
     "generate": "node scripts/generate-index.mjs",
     "convert-png": "node scripts/convert-png.mjs",
-    "build": "pnpm validate && pnpm generate && pnpm -F bharatbrands build",
-    "test": "pnpm validate && pnpm -F bharatbrands test"
+    "build": "pnpm validate && pnpm generate && pnpm -F finmarks build",
+    "test": "pnpm validate && pnpm -F finmarks test",
+    "sync": "npx svgo --config svgo.config.mjs -r entities/ && FINMARKS_CDN=\"\" node scripts/generate-index.mjs && pnpm -C site run build",
+    "dev-site": "pnpm -C site dev --port 3002"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

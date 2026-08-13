@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64">
+  <path fill="#2072ef" d="M0 0h64v64H0z" style="fill:#2072ef;fill:color(display-p3 .1255 .4471 .9373);fill-opacity:1"/>
+  <path fill="#fff" d="M7.2 37.84s-1.84 1.84-1.9 4.4a5.8 5.8 0 0 0 1.4 3.88 5 5 0 0 0 1.63 1.14l.28.11q.38.14.84.24c.73.15 1.62.23 2.7.14l.5-.05.51-.08q.27-.03.55-.1h.09c1.71-.34 3.8-1.05 6.32-2.28L9.65 35.27q-1.25 1.26-2.44 2.57" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="m12.47 32.5 11.4 10.87c1.03-.37 2.35-.7 3.88-.72L14.8 30.33z" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="M18.06 28.1S43.8 52.55 42.9 51.65l2.01-2.43L20.5 26l-2.43 2.08" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="m25.62 21.2-1.78 1.43q-.02 0-.53.42l-.13.1 24.28 23.1 2.04-2.43-23.82-22.68z" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="M24.77 12.72s-.92.3-1.36 1.02l28.52 27.19L54 38.5 26.54 12.32q-.93.13-1.77.4" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="M38.03 13.7s-2.4-.78-5.41-1.23l24.07 22.82 2.01-2.38-1.6-1.52-18.2-17.34z" style="fill:#fff;fill-opacity:1"/>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "id": "ntt-data-payment-services",
+  "name": "NTT DATA Payment Services (Atom Technologies)",
+  "short_name": "NTT DATA",
+  "legal_name": "NTT DATA Payment Services India Ltd",
+  "categories": [
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0066CC",
+  "country": "IN",
+  "founded": 2006,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://in.nttdatapay.com",
+  "status": "active",
+  "tags": [
+    "b2b",
+    "payment-aggregator"
+  ],
+  "added_at": "2025-08-05",
+  "updated_at": "2026-08-09"
+}

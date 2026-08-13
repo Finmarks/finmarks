@@ -1,0 +1,35 @@
+{
+  "id": "idbi-bank",
+  "name": "IDBI Bank",
+  "short_name": "IDBI",
+  "legal_name": "IDBI Bank Limited",
+  "categories": [
+    "private-bank",
+    "upi-psp"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003DA5",
+  "country": "IN",
+  "founded": 1964,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "IBKL",
+  "upi_handles": [
+    "@idbi"
+  ],
+  "website": "https://www.idbibank.in",
+  "status": "active",
+  "tags": [
+    "reclassified-private",
+    "lic-majority-stake",
+    "psp-bank"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

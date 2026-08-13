@@ -1,0 +1,30 @@
+{
+  "id": "innoviti",
+  "name": "Innoviti",
+  "short_name": "Innoviti",
+  "legal_name": "Innoviti Payment Solutions Private Limited",
+  "categories": [
+    "pos-terminal",
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1E3A8A",
+  "country": "IN",
+  "founded": 2002,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://innoviti.com",
+  "status": "active",
+  "tags": [
+    "pos-hardware",
+    "merchant-financing"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

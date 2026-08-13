@@ -1,0 +1,723 @@
+---
+/**
+ * One prerendered page per entity. These are the site's SEO surface —
+ * "PhonePe logo SVG", "HDFC IFSC prefix" and similar long-tail queries land
+ * here, and each page is complete without JavaScript.
+ */
+import Base from "../../layouts/Base.astro";
+import {
+  CDN_BASE,
+  categoryLabel,
+  entities,
+  hasArtwork,
+  monogram,
+  VARIANTS,
+  type Entity,
+} from "../../lib/data";
+import s from "../../components/Browser.module.css";
+
+export function getStaticPaths() {
+  return entities.map((e) => ({ params: { id: e.id }, props: { entity: e } }));
+}
+
+interface Props {
+  entity: Entity;
+}
+
+const { entity: e } = Astro.props;
+const sourced = hasArtwork(e);
+const available = VARIANTS.filter((v) => e.logos[v]);
+const primary = e.logos.icon ?? e.logos.full;
+
+const title = `${e.name} logo & brand assets — FinMarks`;
+const description = sourced
+  ? `Download the ${e.name} logo as SVG in ${available.length} variant${available.length === 1 ? "" : "s"}. Brand colour ${e.brand_color}${e.ifsc_prefix ? `, IFSC prefix ${e.ifsc_prefix}` : ""}. Free, MIT-licensed metadata.`
+  : `${e.name} — ${e.categories.map(categoryLabel).join(", ")}. Brand colour ${e.brand_color}${e.ifsc_prefix ? `, IFSC prefix ${e.ifsc_prefix}` : ""}. Structured metadata, free and MIT licensed.`;
+
+const related = entities
+  .filter(
+    (x) => x.id !== e.id && x.categories.some((c) => e.categories.includes(c)),
+  )
+  .slice(0, 12);
+
+// Schema.org so search engines understand this is an organisation record.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: e.name,
+  alternateName: e.short_name,
+  ...(e.legal_name ? { legalName: e.legal_name } : {}),
+  ...(e.website ? { url: e.website } : {}),
+  ...(primary ? { logo: primary } : {}),
+  ...(e.founded ? { foundingDate: String(e.founded) } : {}),
+  address: { "@type": "PostalAddress", addressCountry: e.country },
+};
+function getWebsiteWithRef(url: string | undefined) {
+  if (!url) return undefined;
+  try {
+    const parsed = new URL(url);
+    parsed.searchParams.set("utm_source", "finmarks");
+    return parsed.toString();
+  } catch (err) {
+    const separator = url.includes("?") ? "&" : "?";
+    return `${url}${separator}utm_source=finmarks`;
+  }
+}
+---
+
+<Base title={title} description={description} ogImage={primary}>
+  <article class="wrap page">
+     <form action="/browse" method="get" class={s.searchWrap} style="margin: 0 0 2rem 0;">
+      <span class={s.searchIcon} aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+          <circle cx="12" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+      </span>
+      <input 
+        id="entity-search-input"
+        class={s.search}
+        type="search" 
+        name="q" 
+        placeholder="Search for other entities... (press /)" 
+        aria-label="Search entities"
+        autocomplete="off"
+      />
+    </form>
+
+    <div class="crumbs-bar">
+      <a href="/browse" id="back-to-browse" class="ghost-btn back-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        Back
+      </a>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true" class="crumb-sep">/</span>
+        <a href="/browse">Entities</a>
+        <span aria-hidden="true" class="crumb-sep">/</span>
+        <span aria-current="page">{e.name}</span>
+      </nav>
+    </div>
+
+   
+    <header class="head">
+      <div
+        class="mark bigmark"
+        data-sourced={sourced}
+        style={
+          e.logos.icon
+            ? `background: var(--logo-bg); box-shadow: 0 0 0 1px var(--line) inset;`
+            : sourced
+              ? `background:${e.brand_color}`
+              : `background:${e.brand_color}1A;color:${e.brand_color}`
+        }
+      >
+        {
+          primary ? (
+            <img src={primary} alt={`${e.name} logo`} width="72" height="72" />
+          ) : (
+            monogram(e)
+          )
+        }
+      </div>
+
+      <div class="titles">
+        <h1>{e.name}</h1>
+        {e.legal_name && <p class="legal">{e.legal_name}</p>}
+        <div class="cats">
+          {
+            e.categories.map((c) => (
+              <a class="chip" href={`/categories/${c}/`}>
+                {categoryLabel(c)}
+              </a>
+            ))
+          }
+          {e.status !== "active" && <span class="chip status">{e.status}</span>}
+        </div>
+      </div>
+
+      {
+        e.website && (
+          <a
+            class="ghost-btn"
+            href={getWebsiteWithRef(e.website)}
+            rel="noopener nofollow"
+            target="_blank"
+            style="display:inline-flex;align-items:center;gap:0.35rem;"
+          >
+            Official site
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </a>
+        )
+      }
+    </header>
+
+    <div class="cols">
+      <section class="col">
+        <h2 class="eyebrow">Logo variants</h2>
+        {
+          sourced ? (
+            <div class="variants">
+              {available.map((v) => (
+                <a
+                  class="variant-card"
+                  href={e.logos[v]}
+                  download={`${e.id}-${v.replace(/_/g, "-")}.svg`}
+                >
+                  <span
+                    class="preview"
+                    style={
+                      v === "mono_dark"
+                        ? "background:#14161b"
+                        : "background:var(--surface-2)"
+                    }
+                  >
+                    <img
+                      src={e.logos[v]}
+                      alt={`${e.name} ${v} logo`}
+                      loading="lazy"
+                    />
+                  </span>
+                  <span class="vname">{v.replace(/_/g, "-")}</span>
+                  <span class="vhint">
+                    SVG
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                  </span>
+                </a>
+              ))}
+            </div>
+          ) : (
+            <div class="pending">
+              <p>
+                <strong>Artwork not sourced yet.</strong>
+              </p>
+              <p>
+                This entity has complete, validated metadata but no logo files.
+              </p>
+              <a
+                class="ghost-btn"
+                href={`https://github.com/finmarks/finmarks/issues/new?title=${encodeURIComponent(`add logo: ${e.id}`)}&labels=logo-needed`}
+                rel="noopener"
+                target="_blank"
+                style="display:inline-flex;align-items:center;gap:0.35rem;"
+              >
+                Contribute this logo
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          )
+        }
+
+        <h2 class="eyebrow" style="margin-top:2rem">Usage</h2>
+        <div class="usage">
+          <div class="code-row">
+            <code
+              ><span style="color: #61afef;">getEntity</span>(<span
+                style="color: #98c379;">'{e.id}'</span
+              >)</code
+            >
+            <button
+              class="copy-btn"
+              data-copy={`getEntity('${e.id}')`}
+              aria-label="Copy"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-copy"
+                ><rect width="14" height="14" x="8" y="8" rx="2" ry="2"
+                ></rect><path
+                  d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                ></path></svg
+              ></button
+            >
+          </div>
+          {
+            sourced && available[0] && (
+              <div class="code-row">
+                <code>
+                  <span style="color: #98c379;">{e.logos[available[0]]}</span>
+                </code>
+                <button
+                  class="copy-btn"
+                  data-copy={e.logos[available[0]]}
+                  aria-label="Copy"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-copy"
+                  >
+                    <>
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                    </>
+                  </svg>
+                </button>
+              </div>
+            )
+          }
+          <div class="code-row">
+            <code
+              ><span style="color: #e06c75;">&lt;img</span>
+              <span style="color: #d19a66;">src</span>=<span
+                style="color: #98c379;"
+                >"{
+                  e.logos.full ?? `${CDN_BASE}/entities/${e.id}/full.svg`
+                }"</span
+              >
+              <span style="color: #d19a66;">alt</span>=<span
+                style="color: #98c379;">"{e.name}"</span
+              >
+              <span style="color: #e06c75;">/&gt;</span></code
+            >
+            <button
+              class="copy-btn"
+              data-copy={`<img src="${e.logos.full ?? `${CDN_BASE}/entities/${e.id}/full.svg`}" alt="${e.name}" />`}
+              aria-label="Copy"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-copy"
+                ><rect width="14" height="14" x="8" y="8" rx="2" ry="2"
+                ></rect><path
+                  d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                ></path></svg
+              ></button
+            >
+          </div>
+        </div>
+      </section>
+
+      <aside class="col">
+        <h2 class="eyebrow">Metadata</h2>
+        <dl class="fields">
+          <div class="field"><dt>id</dt><dd>{e.id}</dd></div>
+          <div class="field"><dt>short name</dt><dd>{e.short_name}</dd></div>
+          {
+            e.founded && (
+              <div class="field">
+                <>
+                  <dt>founded</dt>
+                  <dd>{e.founded}</dd>
+                </>
+              </div>
+            )
+          }
+          <div class="field">
+            <dt>colour</dt>
+            <dd class="swatch-row">
+              <i class="swatch" style={`background:${e.brand_color}`}></i>
+              {e.brand_color}
+              <button
+                class="copy-btn"
+                data-copy={e.brand_color}
+                aria-label="Copy hex"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-copy"
+                  ><rect width="14" height="14" x="8" y="8" rx="2" ry="2"
+                  ></rect><path
+                    d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                  ></path></svg
+                ></button
+              >
+            </dd>
+          </div>
+          <div class="field"><dt>country</dt><dd>{e.country}</dd></div>
+          <div class="field"><dt>status</dt><dd>{e.status}</dd></div>
+          {
+            e.regulated_by?.length && (
+              <div class="field">
+                <>
+                  <dt>regulator</dt>
+                  <dd>{e.regulated_by.join(", ")}</dd>
+                </>
+              </div>
+            )
+          }
+          {
+            e.acquired_by && (
+              <div class="field">
+                <dt>owned by</dt>
+                <dd>
+                  <a href={`/entities/${e.acquired_by}/`}>{e.acquired_by}</a>
+                </dd>
+              </div>
+            )
+          }
+        </dl>
+
+        {
+          (e.ifsc_prefix ||
+            e.upi_handles?.length ||
+            e.aa_id ||
+            e.fip_id ||
+            e.fiu_id) && (
+            <>
+              <h2 class="eyebrow" style="margin-top:1.6rem">
+                Fintech identifiers
+              </h2>
+              <dl class="fields">
+                {e.ifsc_prefix && (
+                  <div class="field">
+                    <dt>IFSC</dt>
+                    <dd>{e.ifsc_prefix}</dd>
+                  </div>
+                )}
+                {e.upi_handles?.length && (
+                  <div class="field">
+                    <dt>UPI</dt>
+                    <dd>{e.upi_handles.join(", ")}</dd>
+                  </div>
+                )}
+                {e.aa_id && (
+                  <div class="field">
+                    <dt>AA id</dt>
+                    <dd>{e.aa_id}</dd>
+                  </div>
+                )}
+                {e.fip_id && (
+                  <div class="field">
+                    <dt>FIP id</dt>
+                    <dd>{e.fip_id}</dd>
+                  </div>
+                )}
+                {e.fiu_id && (
+                  <div class="field">
+                    <dt>FIU id</dt>
+                    <dd>{e.fiu_id}</dd>
+                  </div>
+                )}
+              </dl>
+            </>
+          )
+        }
+
+        {
+          e.tags?.length && (
+            <>
+              <h2 class="eyebrow" style="margin-top:1.6rem">
+                Tags
+              </h2>
+              <div class="cats">
+                {e.tags.map((t) => (
+                  <span class="chip">{t}</span>
+                ))}
+              </div>
+            </>
+          )
+        }
+      </aside>
+    </div>
+
+    {
+      related.length > 0 && (
+        <section class="related">
+          <h2 class="eyebrow" style="margin-bottom: 0.9rem;">Related entities</h2>
+          <div class={s.tiles}>
+            {related.map((r) => {
+              const rSourced = hasArtwork(r);
+              return (
+                <a class={`${s.tile} mark-host`} href={`/entities/${r.id}/`}>
+                  <span
+                    class={`mark ${s.tileMark}`}
+                    data-sourced={rSourced}
+                    style={
+                      rSourced
+                        ? `background: #ffffff; box-shadow: 0 0 0 1px var(--line) inset;`
+                        : `background: ${r.brand_color}1A; color: ${r.brand_color}`
+                    }
+                  >
+                    {rSourced ? (
+                      <img
+                        src={`${CDN_BASE}/entities/${r.id}/${r.logos.icon ? "icon" : "full"}.svg`}
+                        alt=""
+                        loading="lazy"
+                      />
+                    ) : (
+                      monogram(r)
+                    )}
+                  </span>
+                  <span>
+                    <span class={s.tileName}>{r.name}</span>
+                    <span class={s.tileId}>{r.id}</span>
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      )
+    }
+  </article>
+
+  <script
+    type="application/ld+json"
+    set:html={JSON.stringify(jsonLd)}
+    is:inline
+  />
+</Base>
+
+<script is:inline>
+  document.addEventListener("click", function (ev) {
+    var backBtn = ev.target.closest("#back-to-browse");
+    if (backBtn && window.history.length > 1 && document.referrer && document.referrer.startsWith(window.location.origin)) {
+      ev.preventDefault();
+      history.back();
+      return;
+    }
+
+    var btn = ev.target.closest("[data-copy]");
+    if (!btn) return;
+    ev.preventDefault();
+    navigator.clipboard?.writeText(btn.dataset.copy);
+    var old = btn.innerHTML;
+    btn.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>';
+    setTimeout(function () {
+      btn.innerHTML = old;
+    }, 1100);
+  });
+
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "/" && document.activeElement.tagName !== "INPUT") {
+      ev.preventDefault();
+      document.getElementById("entity-search-input")?.focus();
+    }
+  });
+</script>
+
+<style>
+  .page {
+    padding-block: 1.5rem 3rem;
+  }
+  .crumbs-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .crumbs {
+    font-family: var(--mono);
+    font-size: var(--step--1);
+    color: var(--ink-3);
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .crumbs a {
+    color: var(--ink-2);
+    text-decoration: none;
+  }
+  .crumbs a:hover {
+    color: var(--accent);
+  }
+  .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: var(--step--1);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+  .crumb-sep {
+    color: var(--line-strong);
+    margin: 0 0.2rem;
+  }
+
+  .head {
+    display: flex;
+    gap: 1.1rem;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .bigmark {
+    width: 76px;
+    height: 76px;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+  .titles {
+    flex: 1;
+    min-width: 200px;
+  }
+  h1 {
+    font-size: var(--step-2);
+  }
+  .legal {
+    color: var(--ink-3);
+    font-size: var(--step--1);
+    margin-top: 0.15rem;
+  }
+  .cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.6rem;
+  }
+  .chip.status {
+    color: var(--ink);
+    border-color: var(--line-strong);
+  }
+
+  .cols {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 1.75rem;
+  }
+  @media (min-width: 860px) {
+    .cols {
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 3rem;
+    }
+  }
+  .col h2:first-child {
+    margin-bottom: 0.9rem;
+  }
+
+  .variants {
+    display: grid;
+    gap: 0.7rem;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+  .variant-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.7rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    text-decoration: none;
+    transition: border-color 0.14s;
+  }
+  .variant-card:hover {
+    border-color: var(--accent);
+  }
+  .preview {
+    height: 72px;
+    border-radius: 6px;
+    padding: 0.6rem;
+  }
+  .preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .vname {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--ink);
+  }
+  .vhint {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    color: var(--ink-3);
+  }
+
+  .pending {
+    background: var(--surface);
+    border: 1px dashed var(--line-strong);
+    border-radius: 10px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+    color: var(--ink-2);
+    font-size: var(--step--1);
+    line-height: 1.55;
+  }
+  .pending strong {
+    color: var(--ink);
+  }
+
+  .usage {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .fields {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .field {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 0.75rem;
+    align-items: baseline;
+    font-size: var(--step--1);
+  }
+  .field dt {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-3);
+  }
+  .field dd {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    overflow-wrap: anywhere;
+  }
+  .field dd a {
+    color: var(--accent);
+  }
+  .swatch-row {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .swatch {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    border: 1px solid var(--line);
+    flex: none;
+  }
+
+  .related {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+</style>

@@ -1,0 +1,30 @@
+{
+  "id": "iifl-finance",
+  "name": "IIFL Finance",
+  "short_name": "IIFL Finance",
+  "legal_name": "IIFL Finance Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#F58220",
+  "country": "IN",
+  "founded": 1995,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.iifl.com",
+  "status": "active",
+  "tags": [
+    "gold-loans",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

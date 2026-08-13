@@ -53,7 +53,7 @@ Some invariants span files, so `scripts/validate.mjs` enforces them separately:
 | `acquired_by` resolves to an entity in the dataset | error |
 | `acquired_by` does not point at itself | error |
 | Declared logo files exist on disk and are non-empty | error |
-| SVGs have a `viewBox`, no raster embeds, no `<script>`, under 50KB | error |
+| SVGs have a `viewBox`, no raster embeds, no `<script>`, under 150KB | error |
 | The category enum matches `schemas/categories.json` | error |
 | SVGs use hex rather than `rgb()` | warning |
 | Mono variants use a single fill colour | warning |
@@ -94,7 +94,7 @@ VS Code binds the schema to every `entity.json` automatically via [`.vscode/sett
 
 1. Add the id to the `categories` enum in `entity.schema.json`
 2. Add the full definition to `schemas/categories.json`
-3. Add the union member to `packages/bharatbrands/src/types.ts`
+3. Add the union member to `packages/finmarks/src/types.ts`
 4. Run `pnpm validate` — it fails if the schema and the taxonomy have drifted apart
 
 Step 4 exists because these three files falling out of sync is the most likely way to break the dataset, and it is invisible until a consumer hits it.

@@ -1,0 +1,129 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { stats } from '../../lib/data';
+---
+
+<Docs
+  title="Entities"
+  description="Query individual entities and fetch all entities from the FinMarks dataset."
+>
+  <p class="eyebrow">Using the Package</p>
+  <h1>Entities</h1>
+
+  <p class="intro">
+    The dataset currently holds <strong>{stats.total} entities</strong>. Each entity is a structured
+    record with brand metadata, logos, financial identifiers, and category tags. All accessors return
+    plain data — no classes, no wrappers.
+  </p>
+
+  <h2>getEntity</h2>
+
+  <p>Look up a single entity by its id. Returns <code>undefined</code> for an unknown id.</p>
+
+  <div class="fn-sig">function getEntity(id: string): Entity | undefined</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getEntity }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#c678dd">const</span> <span style="color:#e06c75">hdfc</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getEntity</span>(<span style="color:#98c379">'hdfc-bank'</span>);
+
+hdfc<span style="color:#56b6c2">?.</span>name<span style="color:#56b6c2">;</span>          <span style="color:#7f848e">// 'HDFC Bank'</span>
+hdfc<span style="color:#56b6c2">?.</span>brand_color<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// '#004C8F'</span>
+hdfc<span style="color:#56b6c2">?.</span>ifsc_prefix<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// 'HDFC'</span>
+hdfc<span style="color:#56b6c2">?.</span>categories<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// ['private-bank', 'upi-psp']</span></code></pre>
+
+  <h2>mustGetEntity</h2>
+
+  <p>
+    Like <code>getEntity</code> but throws when the id is unknown. Use this when a missing entity
+    means a bug in your code rather than an expected case — it saves optional chaining on a value
+    you know exists.
+  </p>
+
+  <div class="fn-sig">function mustGetEntity(id: string): Entity</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ mustGetEntity }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#c678dd">const</span> <span style="color:#e06c75">paytm</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">mustGetEntity</span>(<span style="color:#98c379">'paytm'</span>);  <span style="color:#7f848e">// throws if not found</span>
+paytm<span style="color:#56b6c2">.</span>name<span style="color:#56b6c2">;</span>  <span style="color:#7f848e">// 'Paytm' — no ?. needed</span></code></pre>
+
+  <h2>hasEntity</h2>
+
+  <p>Returns <code>true</code> if an entity with this id exists in the dataset.</p>
+
+  <div class="fn-sig">function hasEntity(id: string): boolean</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ hasEntity }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#61afef">hasEntity</span>(<span style="color:#98c379">'phonepe'</span>)<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// true</span>
+<span style="color:#61afef">hasEntity</span>(<span style="color:#98c379">'not-real'</span>)<span style="color:#56b6c2">;</span>  <span style="color:#7f848e">// false</span></code></pre>
+
+  <h2>getAllEntities</h2>
+
+  <p>
+    Returns every entity in the dataset. Pass <code>{"{ includeInactive: false }"}</code> to drop
+    entities with a status other than <code>'active'</code>.
+  </p>
+
+  <div class="fn-sig">function getAllEntities(options?: FilterOptions): Entity[]</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getAllEntities }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// All entities, including defunct and acquired</span>
+<span style="color:#61afef">getAllEntities</span>()<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Active entities only</span>
+<span style="color:#61afef">getAllEntities</span>(<span style="color:#eef0f4">{"{ includeInactive: false }"}</span>)<span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>getAllEntityIds</h2>
+
+  <p>Returns every entity id, in dataset order.</p>
+
+  <div class="fn-sig">function getAllEntityIds(): string[]</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getAllEntityIds }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#c678dd">const</span> <span style="color:#e06c75">ids</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getAllEntityIds</span>();
+<span style="color:#7f848e">// ['hdfc-bank', 'icici-bank', 'sbi', ...]</span></code></pre>
+
+  <h2>Entity status</h2>
+
+  <p>
+    Entities are not deleted when they are acquired or shut down — they stay in the dataset with an
+    updated status, because old logos and identifiers still appear in real data.
+  </p>
+
+  <table>
+    <thead>
+      <tr><th>Status</th><th>Meaning</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>active</code></td><td>Operating under its own brand</td></tr>
+      <tr><td><code>acquired</code></td><td>No longer independent; <code>acquired_by</code> is set</td></tr>
+      <tr><td><code>defunct</code></td><td>Shut down</td></tr>
+      <tr><td><code>rebranded</code></td><td>Operating under a different name; <code>acquired_by</code> points at the successor</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-nav">
+    <a href="/docs/getting-started">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Getting Started</span>
+    </a>
+    <a href="/docs/logos" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Logos →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .fn-sig { background:#0c0e12; border:1px solid #272c36; border-radius:8px; padding:0.75rem 1rem; margin:0.5rem 0; font-family:var(--mono); font-size:0.78rem; line-height:1.5; color:#eef0f4; overflow-x:auto; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

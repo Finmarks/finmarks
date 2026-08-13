@@ -9,6 +9,11 @@ packages/*/data/
 # Rasterised PNGs are build output, regenerated on release.
 dist/png/
 
+# Site build output and Astro's generated types.
+site/dist/
+site/.astro/
+site/public/cdn/
+
 # dist/*.json IS committed — it is the published index and its diff is the
 # review surface for data changes. Do not add it here.
 

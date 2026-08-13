@@ -1,0 +1,145 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="Contributing Guide"
+  description="How to add entities, logo variants, and categories to the FinMarks dataset."
+>
+  <p class="eyebrow">Contributing</p>
+  <h1>Contributing Guide</h1>
+
+  <p class="intro">
+    Two things move FinMarks forward: <strong>new entities</strong> and <strong>missing logo
+    variants</strong>. Both are welcome. A metadata-only PR with <code>"logos": {"{"} "full": null {"}"}</code>
+    is a real contribution — you do not need to bring artwork.
+  </p>
+
+  <h2>Setup</h2>
+
+  <pre><code><span style="color:#61afef">git</span> <span style="color:#98c379">clone</span> https://github.com/finmarks/finmarks.git
+<span style="color:#61afef">cd</span> finmarks
+<span style="color:#61afef">pnpm</span> install
+<span style="color:#61afef">pnpm</span> validate</code></pre>
+
+  <p>You need Node 18+ and pnpm.</p>
+
+  <h2>Adding an entity</h2>
+
+  <h3>1. Create the folder</h3>
+
+  <p>
+    The folder name is the entity <code>id</code> — lowercase, kebab-case, and stable forever,
+    because it appears in CDN URLs.
+  </p>
+
+  <pre><code><span style="color:#61afef">mkdir</span> -p entities/acme-bank</code></pre>
+
+  <h3>2. Write entity.json</h3>
+
+  <p>Minimum viable record:</p>
+
+  <pre><code><span style="color:#eef0f4">{"{"}</span>
+  <span style="color:#98c379">"id"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"acme-bank"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"name"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"Acme Bank"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"short_name"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"Acme"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"categories"</span><span style="color:#56b6c2">:</span> [<span style="color:#98c379">"private-bank"</span>]<span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"logos"</span><span style="color:#56b6c2">:</span> <span style="color:#eef0f4">{"{"}</span> <span style="color:#98c379">"full"</span><span style="color:#56b6c2">:</span> <span style="color:#c678dd">null</span> <span style="color:#eef0f4">{"}"}</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"brand_color"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"#004C8F"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"country"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"IN"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"status"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"active"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"added_at"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"2026-08-12"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"updated_at"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"2026-08-12"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"contributors"</span><span style="color:#56b6c2">:</span> [<span style="color:#98c379">"your-github-username"</span>]
+<span style="color:#eef0f4">{"}"}</span></code></pre>
+
+  <p>
+    If you open <code>entity.json</code> in VS Code you get autocomplete and inline validation — the
+    schema is bound in <code>.vscode/settings.json</code>.
+  </p>
+
+  <h3>3. Add logos (optional but encouraged)</h3>
+
+  <p>Drop SVGs into the folder and point at them in <code>logos</code>:</p>
+
+  <pre><code><span style="color:#98c379">"logos"</span><span style="color:#56b6c2">:</span> <span style="color:#eef0f4">{"{"}</span>
+  <span style="color:#98c379">"full"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"full.svg"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"icon"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"icon.svg"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"mono_dark"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"mono-dark.svg"</span><span style="color:#56b6c2">,</span>
+  <span style="color:#98c379">"mono_light"</span><span style="color:#56b6c2">:</span> <span style="color:#98c379">"mono-light.svg"</span>
+<span style="color:#eef0f4">{"}"}</span></code></pre>
+
+  <p>
+    Use <code>null</code> for variants you do not have. The generated index only publishes URLs for
+    files that actually exist, so a <code>null</code> never becomes a broken link.
+  </p>
+
+  <h3>4. Validate and open a PR</h3>
+
+  <pre><code><span style="color:#61afef">pnpm</span> validate      <span style="color:#7f848e"># must pass</span>
+<span style="color:#61afef">pnpm</span> check-logos   <span style="color:#7f848e"># shows what is still missing</span></code></pre>
+
+  <h2>Field reference</h2>
+
+  <table>
+    <thead>
+      <tr><th>Field</th><th>Required</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>id</code></td><td>✅</td><td>Kebab-case, matches the folder name, permanent</td></tr>
+      <tr><td><code>name</code></td><td>✅</td><td>Full official brand name</td></tr>
+      <tr><td><code>short_name</code></td><td>✅</td><td>For space-constrained UI, ≤24 chars</td></tr>
+      <tr><td><code>categories</code></td><td>✅</td><td>At least one. Tags are additive — list all that apply</td></tr>
+      <tr><td><code>logos</code></td><td>✅</td><td>The <code>full</code> key must be present, though it may be <code>null</code></td></tr>
+      <tr><td><code>country</code></td><td>✅</td><td><code>IN</code>, <code>US</code>, <code>GB</code>, <code>SG</code>, <code>AE</code></td></tr>
+      <tr><td><code>brand_color</code></td><td></td><td><code>#RRGGBB</code>, the primary brand colour</td></tr>
+      <tr><td><code>legal_name</code></td><td></td><td>Registered entity name</td></tr>
+      <tr><td><code>founded</code></td><td></td><td>Year, 1800–2030</td></tr>
+      <tr><td><code>regulated_by</code></td><td></td><td><code>RBI</code>, <code>SEBI</code>, <code>IRDAI</code>, <code>NPCI</code>, <code>PFRDA</code>, <code>IFSCA</code>, <code>MCA</code>, <code>None</code></td></tr>
+      <tr><td><code>ifsc_prefix</code></td><td></td><td>4 uppercase letters. Banks only</td></tr>
+      <tr><td><code>upi_handles</code></td><td></td><td>Include the <code>@</code>, e.g. <code>["@ybl"]</code></td></tr>
+      <tr><td><code>fip_id</code> / <code>fiu_id</code></td><td></td><td>AA framework identifiers. <code>null</code> if unverified (vs. absent if unchecked)</td></tr>
+      <tr><td><code>website</code></td><td></td><td>Official website URL</td></tr>
+      <tr><td><code>tags</code></td><td></td><td>Additional search terms not covered by other fields</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Logo sourcing rules</h2>
+
+  <ul>
+    <li>Assets must come from an official brand kit or official web property</li>
+    <li>Never trace logos by hand or pull from third-party aggregators</li>
+    <li>Declare the source in the PR description</li>
+    <li>Do not submit logos where the brand guidelines explicitly forbid redistribution — open an issue instead</li>
+  </ul>
+
+  <blockquote>
+    <p>
+      SVGs must include a <code>viewBox</code>, use no raster embeds, no <code>&lt;script&gt;</code>
+      tags, and weigh under 50KB. Run <code>pnpm validate</code> — it will tell you exactly what
+      failed.
+    </p>
+  </blockquote>
+
+  <div class="page-nav">
+    <a href="/docs/types">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">TypeScript Types</span>
+    </a>
+    <a href="/docs/trademarks" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Trademarks →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

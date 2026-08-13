@@ -14,7 +14,7 @@
 - [ ] `full.svg` is present (minimum requirement for a logo PR)
 - [ ] `icon.svg` is square or near-square, if included
 - [ ] `mono-dark.svg` / `mono-light.svg` use a single fill color, if included
-- [ ] Every SVG is under 50KB
+- [ ] Every SVG is under 150KB
 - [ ] Source is official (brand kit URL, or extracted from official website/app)
 
 ### Metadata checklist

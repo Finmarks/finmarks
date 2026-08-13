@@ -1,0 +1,28 @@
+{
+  "id": "wazirx",
+  "name": "WazirX",
+  "short_name": "WazirX",
+  "legal_name": "Zanmai Labs Private Limited",
+  "categories": [
+    "crypto-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#F0B90B",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://wazirx.com",
+  "status": "active",
+  "tags": [
+    "vda-platform"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

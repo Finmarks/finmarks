@@ -1,0 +1,32 @@
+{
+  "id": "npci",
+  "name": "National Payments Corporation of India",
+  "short_name": "NPCI",
+  "legal_name": "National Payments Corporation of India",
+  "categories": [
+    "regulator",
+    "infra-api"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0B5394",
+  "country": "IN",
+  "founded": 2008,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.npci.org.in",
+  "status": "active",
+  "tags": [
+    "payments-infra",
+    "upi-operator",
+    "rupay",
+    "not-for-profit"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

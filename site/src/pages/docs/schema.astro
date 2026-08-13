@@ -1,0 +1,139 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="Schema"
+  description="The FinMarks entity schema — design decisions, field semantics, validation rules and generated output."
+>
+  <p class="eyebrow">Reference</p>
+  <h1>Schema</h1>
+
+  <p class="intro">
+    The source of truth is <code>schemas/entity.schema.json</code> (JSON Schema draft-07). Every
+    <code>entities/{"{"}{`id`}{"}"}/entity.json</code> is validated against it on every PR. Nothing malformed
+    reaches <code>main</code>.
+  </p>
+
+  <h2>Design decisions</h2>
+
+  <h3>Categories are tags, not folders</h3>
+
+  <p>
+    Every entity lives in one flat <code>entities/{"{"}{`id`}{"}"}/</code> directory, and <code>categories</code> is
+    an array. This is the single most important structural choice in the schema.
+  </p>
+
+  <p>
+    A folder hierarchy would force a false primary category. Paytm is a UPI app, a wallet, a BNPL
+    provider, a payments bank, a wealthtech platform and a payment gateway — genuinely, all at once.
+    Filing it under one of those makes the other five queries fail to find it, and picking which one
+    is "primary" is arbitrary.
+  </p>
+
+  <p>
+    Tags also make the taxonomy additive: a new category is a new enum value, not a repository
+    reshuffle.
+  </p>
+
+  <h3>id is permanent</h3>
+
+  <p>
+    The id is the folder name, the npm export key, and part of every CDN URL. Once published it must
+    never change, because a rename breaks every hotlinked image in the wild.
+  </p>
+
+  <p>
+    This is why rebrands are modelled with <code>status: 'rebranded'</code> and <code>acquired_by</code>
+    rather than by renaming the folder.
+  </p>
+
+  <h3>Logo values may be null</h3>
+
+  <p>
+    <code>logos.full</code> is a required <em>key</em>, but its value may be <code>null</code>. An
+    entity with verified metadata and no artwork yet is a genuinely useful record — it carries the
+    IFSC prefix, the UPI handles, the category tags. Requiring artwork before accepting an entity
+    would either block those contributions or push contributors toward submitting bad logos.
+    <code>null</code> means "not sourced yet" and is an honest, valid state.
+  </p>
+
+  <h3>Nullable identifier fields</h3>
+
+  <p>
+    <code>fip_id</code>, <code>fiu_id</code>, <code>ifsc_prefix</code> and <code>upi_handles</code>
+    accept <code>null</code> as well as a value. The distinction is deliberate: <strong>absent</strong>
+    means nobody has looked into it; <strong><code>null</code></strong> means someone checked and
+    could not verify it. In a dataset where a wrong FIP ID silently breaks an account aggregator
+    consent flow, that difference is worth encoding.
+  </p>
+
+  <h2>Validation</h2>
+
+  <p>Some invariants span files, so <code>scripts/validate.mjs</code> enforces them separately:</p>
+
+  <table>
+    <thead>
+      <tr><th>Check</th><th>Severity</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Folder name matches the <code>id</code> field</td><td>error</td></tr>
+      <tr><td><code>id</code> values are unique</td><td>error</td></tr>
+      <tr><td><code>acquired_by</code> resolves to an entity in the dataset</td><td>error</td></tr>
+      <tr><td>Declared logo files exist on disk and are non-empty</td><td>error</td></tr>
+      <tr><td>SVGs have a <code>viewBox</code>, no raster embeds, no <code>&lt;script&gt;</code>, under 50KB</td><td>error</td></tr>
+      <tr><td>The category enum matches <code>schemas/categories.json</code></td><td>error</td></tr>
+      <tr><td>SVGs use hex rather than <code>rgb()</code></td><td>warning</td></tr>
+      <tr><td>Mono variants use a single fill colour</td><td>warning</td></tr>
+      <tr><td>Account aggregators carry an <code>aa_id</code></td><td>warning</td></tr>
+    </tbody>
+  </table>
+
+  <p>Errors fail CI. Warnings never do — they flag things worth a human's attention without blocking a contribution that is otherwise fine.</p>
+
+  <h2>Generated output</h2>
+
+  <p><code>scripts/generate-index.mjs</code> builds three files. All are generated — never hand-edit them.</p>
+
+  <table>
+    <thead>
+      <tr><th>File</th><th>Contents</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>dist/index.json</code></td><td>Full records with resolved CDN URLs, plus <code>category_counts</code></td></tr>
+      <tr><td><code>dist/index-lite.json</code></td><td><code>id</code>, <code>name</code>, <code>short_name</code>, <code>categories</code>, <code>brand_color</code></td></tr>
+      <tr><td><code>dist/categories.json</code></td><td>The taxonomy with live counts</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Adding a category</h2>
+
+  <ol>
+    <li>Add the id to the <code>categories</code> enum in <code>entity.schema.json</code></li>
+    <li>Add the full definition to <code>schemas/categories.json</code></li>
+    <li>Add the union member to <code>packages/finmarks/src/types.ts</code></li>
+    <li>Run <code>pnpm validate</code> — it fails if the schema and the taxonomy have drifted apart</li>
+  </ol>
+
+  <div class="page-nav">
+    <a href="/docs/api">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">API Reference</span>
+    </a>
+    <a href="/docs/types" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">TypeScript Types →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

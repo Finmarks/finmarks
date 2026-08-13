@@ -1,0 +1,118 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="Categories"
+  description="Query entities by fintech category using the FinMarks category API."
+>
+  <p class="eyebrow">Using the Package</p>
+  <h1>Categories</h1>
+
+  <p class="intro">
+    FinMarks uses a tag-based taxonomy rather than a folder hierarchy. An entity can belong to
+    multiple categories — Paytm is simultaneously a UPI PSP, a wallet, a BNPL provider, a payments
+    bank, and a payment gateway. The category API gives you precise control over how you query across
+    this taxonomy.
+  </p>
+
+  <h2>getByCategory</h2>
+
+  <p>
+    Returns all entities in a category, or the <strong>union</strong> of several categories — deduped
+    and in dataset order.
+  </p>
+
+  <div class="fn-sig">function getByCategory(category: Category | Category[], options?: FilterOptions): Entity[]</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByCategory }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// All UPI PSPs</span>
+<span style="color:#61afef">getByCategory</span>(<span style="color:#98c379">'upi-psp'</span>)<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Union of two categories (deduped)</span>
+<span style="color:#61afef">getByCategory</span>([<span style="color:#98c379">'upi-psp'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'payment-gateway'</span>])<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Active BNPL providers only</span>
+<span style="color:#61afef">getByCategory</span>(<span style="color:#98c379">'bnpl'</span><span style="color:#56b6c2">,</span> <span style="color:#eef0f4">{"{ includeInactive: false }"}</span>)<span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>getByAllCategories</h2>
+
+  <p>
+    Returns entities matching <strong>every</strong> listed category (intersection). Use this to find
+    super-apps or multi-licensed entities.
+  </p>
+
+  <div class="fn-sig">function getByAllCategories(categories: Category[], options?: FilterOptions): Entity[]</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByAllCategories }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// Entities that are both a UPI PSP AND a wallet</span>
+<span style="color:#61afef">getByAllCategories</span>([<span style="color:#98c379">'upi-psp'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'wallet'</span>])<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Banks that are also account aggregators</span>
+<span style="color:#61afef">getByAllCategories</span>([<span style="color:#98c379">'private-bank'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'account-aggregator'</span>])<span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>listCategories</h2>
+
+  <p>Returns the full taxonomy with live entity counts.</p>
+
+  <div class="fn-sig">function listCategories(): CategoryInfo[]</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ listCategories }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#61afef">listCategories</span>();
+<span style="color:#7f848e">// [</span>
+<span style="color:#7f848e">//   {"{"} id: 'upi-psp', label: 'UPI / PSP apps', regulator: 'NPCI', count: 26, ... {"}"},</span>
+<span style="color:#7f848e">//   {"{"} id: 'private-bank', label: 'Private banks', regulator: 'RBI', count: 18, ... {"}"},</span>
+<span style="color:#7f848e">//   ...</span>
+<span style="color:#7f848e">// ]</span></code></pre>
+
+  <h2>getCategory</h2>
+
+  <p>Returns a single category's definition and count, or <code>undefined</code> if unknown.</p>
+
+  <div class="fn-sig">function getCategory(id: Category): CategoryInfo | undefined</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getCategory }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#61afef">getCategory</span>(<span style="color:#98c379">'wealthtech'</span>);
+<span style="color:#7f848e">// {"{"} id: 'wealthtech', label: 'Wealthtech', count: 14, phase: 2, ... {"}"}</span></code></pre>
+
+  <h2>The fintech taxonomy</h2>
+
+  <p>
+    The category taxonomy is built around the Indian fintech regulatory stack — you can filter by
+    regulator directly if needed. Categories also carry a <code>phase</code> field indicating which
+    build phase of the dataset they belong to.
+  </p>
+
+  <p>
+    The full list of category IDs is available in <a href="/docs/types">TypeScript Types</a> as the
+    <code>Category</code> union type. Every valid category id has autocompletion in VS Code because
+    the TypeScript types are derived from the same source as the schema enum.
+  </p>
+
+  <div class="page-nav">
+    <a href="/docs/search">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Search & Lookup</span>
+    </a>
+    <a href="/docs/api" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">API Reference →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .fn-sig { background:#0c0e12; border:1px solid #272c36; border-radius:8px; padding:0.75rem 1rem; margin:0.5rem 0; font-family:var(--mono); font-size:0.78rem; line-height:1.5; color:#eef0f4; overflow-x:auto; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

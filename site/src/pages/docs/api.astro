@@ -1,0 +1,145 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { CDN_BASE, VERSION } from '../../lib/data';
+---
+
+<Docs
+  title="API Reference"
+  description="Complete API reference for the FinMarks npm package — all functions, types, and constants."
+>
+  <p class="eyebrow">Reference</p>
+  <h1>API Reference</h1>
+
+  <p class="intro">
+    The complete function reference for the <code>finmarks</code> npm package (v{VERSION}). All
+    functions return plain data — no classes, no wrappers. Arrays are fresh copies safe to mutate.
+  </p>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{"}</span>
+  <span style="color:#7f848e">// Entities</span>
+  getEntity<span style="color:#56b6c2">,</span> mustGetEntity<span style="color:#56b6c2">,</span> hasEntity<span style="color:#56b6c2">,</span> getAllEntities<span style="color:#56b6c2">,</span> getAllEntityIds<span style="color:#56b6c2">,</span>
+  <span style="color:#7f848e">// Logos</span>
+  getLogoUrl<span style="color:#56b6c2">,</span> getLogoUrlWithFallback<span style="color:#56b6c2">,</span> getLogos<span style="color:#56b6c2">,</span> buildLogoUrl<span style="color:#56b6c2">,</span>
+  <span style="color:#7f848e">// Categories</span>
+  getByCategory<span style="color:#56b6c2">,</span> getByAllCategories<span style="color:#56b6c2">,</span> listCategories<span style="color:#56b6c2">,</span> getCategory<span style="color:#56b6c2">,</span>
+  <span style="color:#7f848e">// Search & lookup</span>
+  search<span style="color:#56b6c2">,</span> getByIfscPrefix<span style="color:#56b6c2">,</span> getByUpiHandle<span style="color:#56b6c2">,</span>
+  <span style="color:#7f848e">// Constants</span>
+  VERSION<span style="color:#56b6c2">,</span> CDN_BASE<span style="color:#56b6c2">,</span> data<span style="color:#56b6c2">,</span>
+<span style="color:#eef0f4">{"}"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span><span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>Entities</h2>
+
+  <h3>getEntity(id)</h3>
+  <div class="fn-sig">function getEntity(id: string): Entity | undefined</div>
+  <p>Look up a single entity. Returns <code>undefined</code> for an unknown id.</p>
+
+  <h3>mustGetEntity(id)</h3>
+  <div class="fn-sig">function mustGetEntity(id: string): Entity</div>
+  <p>Like <code>getEntity</code> but throws on an unknown id. Use when a missing entity is a programming error.</p>
+
+  <h3>hasEntity(id)</h3>
+  <div class="fn-sig">function hasEntity(id: string): boolean</div>
+  <p>Returns <code>true</code> if an entity with this id exists.</p>
+
+  <h3>getAllEntities(options?)</h3>
+  <div class="fn-sig">function getAllEntities(options?: FilterOptions): Entity[]</div>
+  <p>Every entity. Pass <code>{"{ includeInactive: false }"}</code> to drop anything not <code>active</code>.</p>
+
+  <h3>getAllEntityIds()</h3>
+  <div class="fn-sig">function getAllEntityIds(): string[]</div>
+  <p>Every entity id, in dataset order.</p>
+
+  <h2>Logos</h2>
+
+  <h3>getLogoUrl(id, variant?)</h3>
+  <div class="fn-sig">function getLogoUrl(id: string, variant?: LogoVariant): string | undefined</div>
+  <p>CDN URL for one variant, defaulting to <code>'full'</code>. Returns <code>undefined</code> when the entity is unknown or that variant has not been sourced.</p>
+
+  <h3>getLogoUrlWithFallback(id, variants?)</h3>
+  <div class="fn-sig">function getLogoUrlWithFallback(id: string, variants?: LogoVariant[]): string | undefined</div>
+  <p>Tries each variant in order and returns the first that exists. Default order: <code>['full', 'icon']</code>.</p>
+
+  <h3>getLogos(id)</h3>
+  <div class="fn-sig">function getLogos(id: string): LogoUrls</div>
+  <p>Every available URL for an entity, keyed by variant. Returns a fresh object.</p>
+
+  <h3>buildLogoUrl(id, filename)</h3>
+  <div class="fn-sig">function buildLogoUrl(id: string, filename: string): string</div>
+  <p>Composes a CDN URL without a dataset lookup. Does not verify the asset exists — prefer <code>getLogoUrl</code> unless you have a reason not to.</p>
+
+  <h2>Categories</h2>
+
+  <h3>getByCategory(category, options?)</h3>
+  <div class="fn-sig">function getByCategory(category: Category | Category[], options?: FilterOptions): Entity[]</div>
+  <p>Entities in a category, or the <strong>union</strong> of several, deduped and in dataset order.</p>
+
+  <h3>getByAllCategories(categories, options?)</h3>
+  <div class="fn-sig">function getByAllCategories(categories: Category[], options?: FilterOptions): Entity[]</div>
+  <p>The <strong>intersection</strong> — entities holding every listed category.</p>
+
+  <h3>listCategories()</h3>
+  <div class="fn-sig">function listCategories(): CategoryInfo[]</div>
+  <p>The taxonomy with live entity counts.</p>
+
+  <h3>getCategory(id)</h3>
+  <div class="fn-sig">function getCategory(id: Category): CategoryInfo | undefined</div>
+  <p>One category's definition and count.</p>
+
+  <h2>Search & Lookup</h2>
+
+  <h3>search(query, options?)</h3>
+  <div class="fn-sig">function search(query: string, options?: SearchOptions): Entity[]</div>
+  <p>
+    Matches against id, name, short name, legal name, tags, UPI handles and IFSC prefixes.
+    Results are ranked by match quality, then alphabetically.
+  </p>
+
+  <h3>getByIfscPrefix(prefix)</h3>
+  <div class="fn-sig">function getByIfscPrefix(prefix: string): Entity | undefined</div>
+  <p>Resolves the first four characters of an IFSC code to a bank. Case-insensitive.</p>
+
+  <h3>getByUpiHandle(handle)</h3>
+  <div class="fn-sig">function getByUpiHandle(handle: string): Entity | undefined</div>
+  <p>
+    Resolves a UPI VPA or handle suffix to its issuing entity. Accepts a full VPA
+    (<code>someone@ybl</code>), a handle with <code>@</code> (<code>@ybl</code>), or a bare suffix
+    (<code>ybl</code>).
+  </p>
+
+  <h2>Constants</h2>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ VERSION, CDN_BASE, data }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+VERSION<span style="color:#56b6c2">;</span>     <span style="color:#7f848e">// '{VERSION}' — dataset version</span>
+CDN_BASE<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// '{CDN_BASE}'</span>
+data<span style="color:#56b6c2">;</span>        <span style="color:#7f848e">// the raw EntityIndex</span></code></pre>
+
+  <h2>Raw JSON subpaths</h2>
+
+  <pre><code><span style="color:#c678dd">import</span> index <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks/index.json'</span>;
+<span style="color:#c678dd">import</span> categories <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks/categories.json'</span>;</code></pre>
+
+  <div class="page-nav">
+    <a href="/docs/categories-api">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Categories</span>
+    </a>
+    <a href="/docs/schema" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Schema →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .fn-sig { background:#0c0e12; border:1px solid #272c36; border-radius:8px; padding:0.75rem 1rem; margin:0.5rem 0 1rem; font-family:var(--mono); font-size:0.78rem; line-height:1.5; color:#eef0f4; overflow-x:auto; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 284 64">
+  <g fill="#3167ee" fill-rule="evenodd" clip-path="url(#clip0_88_3880)" clip-rule="evenodd">
+    <path d="M90.34 22.7h10.34l5 19.7 5.52-19.7h8.39l5.52 19.7 5-19.7h10.34l-10.34 31.87H121l-5.8-20.81-5.52 20.72h-9.27z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M159.26 46.6c-4.62 0-8.38-3.6-8.38-8.05 0-4.44 3.76-8.05 8.38-8.05s8.39 3.6 8.39 8.05-3.76 8.05-8.39 8.05m8.39-23.98v3.44c-1.72-2.9-4.57-4.46-9.1-4.46-9.95 0-17.65 7.4-17.65 16.95 0 9.56 7.35 17.3 17.3 17.3 4.77 0 7.7-1.64 9.45-4.6v3.23h9.8V22.62z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M182.1 22.62h24.6v7.54l-12.84 17.13h12.84v7.2h-24.6v-6.51l14.08-18.16h-14.09z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M211.16 54.48h9.99V22.62h-10z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M237.55 25.87v-3.25h-9.27v31.86h9.99v-17.9c0-5.9 7.66-5.4 7.66-5.4V21.6c-4.84 0-7.3 2.61-8.38 4.28" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M247.18 22.62h11.95l5.35 8.4 5.35-8.4h11.95l-11.41 14.9 12.66 16.45v.51h-11.95l-6.6-9.76-6.6 9.76h-11.95v-.51l12.49-16.44z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M220.43 15.6a4.2 4.2 0 0 0-4.28-4.11 4.2 4.2 0 0 0-4.28 4.11 4.2 4.2 0 0 0 4.28 4.11 4.2 4.2 0 0 0 4.28-4.11" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M2.98 64h67.7v-7.67H2.99z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M16.7 26.04 0 14.91l3.07 33.24z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M23.83 52.24h46.93l3.36-36.48z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+    <path d="M52.81 25.36 16.08 51.98H5.96l18.67-30.3L36.54 2.45z" style="fill:#3167ee;fill:color(display-p3 .1922 .4039 .9333);fill-opacity:1"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_88_3880">
+      <path fill="#fff" d="M0 0h283.83v64H0z" style="fill:#fff;fill-opacity:1"/>
+    </clipPath>
+  </defs>
+</svg>

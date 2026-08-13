@@ -1,0 +1,29 @@
+{
+  "id": "cdsl",
+  "name": "Central Depository Services",
+  "short_name": "CDSL",
+  "legal_name": "Central Depository Services (India) Limited",
+  "categories": [
+    "stock-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#004B87",
+  "country": "IN",
+  "founded": 1999,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.cdslindia.com",
+  "status": "active",
+  "tags": [
+    "depository",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "dbs-bank-india",
+  "name": "DBS Bank India",
+  "short_name": "DBS",
+  "legal_name": "DBS Bank India Limited",
+  "categories": [
+    "international-bank"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#EA1B2B",
+  "country": "SG",
+  "founded": 1994,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "DBSS",
+  "website": "https://www.dbs.com/in",
+  "status": "active",
+  "tags": [
+    "wholly-owned-subsidiary",
+    "digibank"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

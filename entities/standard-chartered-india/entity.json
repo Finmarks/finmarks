@@ -1,0 +1,29 @@
+{
+  "id": "standard-chartered-india",
+  "name": "Standard Chartered India",
+  "short_name": "StanChart",
+  "legal_name": "Standard Chartered Bank India",
+  "categories": [
+    "international-bank"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0473EA",
+  "country": "GB",
+  "founded": 1858,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "SCBL",
+  "website": "https://www.sc.com/in",
+  "status": "active",
+  "tags": [
+    "foreign-bank-branch"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

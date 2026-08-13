@@ -1,0 +1,214 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="Logos"
+  description="How to fetch logo URLs, use variants, and handle fallbacks with the FinMarks package."
+>
+  <p class="eyebrow">Using the Package</p>
+  <h1>Logos</h1>
+
+  <p class="intro">
+    FinMarks tracks multiple logo <em>variants</em> per entity. Every URL returned by the API resolves
+    — the index only lists variants that actually exist on disk at build time, so you never need to
+    handle a 404.
+  </p>
+
+  <h2>Variants</h2>
+
+  <div class="variant-grid">
+    <div class="variant-card">
+      <span class="v-name">full</span>
+      <span class="v-desc">Symbol + wordmark. The primary logo. Use this as the default.</span>
+    </div>
+    <div class="variant-card">
+      <span class="v-name">icon</span>
+      <span class="v-desc">Symbol only. Square or near-square. Good for avatars and small sizes.</span>
+    </div>
+    <div class="variant-card">
+      <span class="v-name">mono_dark</span>
+      <span class="v-desc">Single colour, for placement on dark backgrounds.</span>
+    </div>
+    <div class="variant-card">
+      <span class="v-name">mono_light</span>
+      <span class="v-desc">Single colour, for placement on light backgrounds.</span>
+    </div>
+  </div>
+
+  <h2>getLogoUrl</h2>
+
+  <p>
+    Returns the CDN URL for a single variant, or <code>undefined</code> if the entity is unknown or
+    that variant has not been sourced. Defaults to <code>'full'</code>.
+  </p>
+
+  <div class="fn-sig">function getLogoUrl(id: string, variant?: LogoVariant): string | undefined</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span>)<span style="color:#56b6c2">;</span>           <span style="color:#7f848e">// full logo (default)</span>
+<span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'icon'</span>)<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// icon only</span>
+<span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'mono_dark'</span>)<span style="color:#56b6c2">;</span> <span style="color:#7f848e">// monochrome for dark bg</span>
+<span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'unknown-id'</span>)<span style="color:#56b6c2">;</span>        <span style="color:#7f848e">// undefined</span></code></pre>
+
+  <h2>getLogoUrlWithFallback</h2>
+
+  <p>
+    Tries each variant in order and returns the first that exists. Use this when you want a specific
+    variant but need to gracefully degrade.
+  </p>
+
+  <div class="fn-sig">function getLogoUrlWithFallback(id: string, variants?: LogoVariant[]): string | undefined</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrlWithFallback }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// Prefer icon, fall back to the full logo</span>
+<span style="color:#61afef">getLogoUrlWithFallback</span>(<span style="color:#98c379">'phonepe'</span><span style="color:#56b6c2">,</span> [<span style="color:#98c379">'icon'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'full'</span>])<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Default order: ['full', 'icon']</span>
+<span style="color:#61afef">getLogoUrlWithFallback</span>(<span style="color:#98c379">'phonepe'</span>)<span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>getLogos</h2>
+
+  <p>
+    Returns an object with every available URL for an entity, keyed by variant. Returns a fresh
+    object — mutating it does not affect the dataset.
+  </p>
+
+  <div class="fn-sig">function getLogos(id: string): LogoUrls</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogos }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#c678dd">const</span> <span style="color:#e06c75">logos</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getLogos</span>(<span style="color:#98c379">'icici-bank'</span>);
+<span style="color:#7f848e">// {"{"} full: '...', icon: '...', mono_dark: '...' {"}"}</span></code></pre>
+
+  <h2>Hotlinking without npm</h2>
+
+  <p>
+    Logo URLs follow a predictable pattern. You can construct them manually if you do not want to use
+    the npm package at all:
+  </p>
+
+  <pre><code>https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/{`{id}`}/{`{variant}`}.svg</code></pre>
+
+  <p>For example:</p>
+
+  <pre><code><span style="color:#e06c75">&lt;img</span>
+  <span style="color:#d19a66">src</span>=<span style="color:#98c379">"https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/phonepe/icon.svg"</span>
+  <span style="color:#d19a66">alt</span>=<span style="color:#98c379">"PhonePe"</span>
+  <span style="color:#d19a66">width</span>=<span style="color:#98c379">"32"</span>
+  <span style="color:#d19a66">height</span>=<span style="color:#98c379">"32"</span>
+<span style="color:#e06c75">/&gt;</span></code></pre>
+
+  <blockquote>
+    <p>
+      <strong>Tip:</strong> Use <code>buildLogoUrl(id, filename)</code> to compose a URL without a
+      dataset lookup, for cases where you already know the filename.
+    </p>
+  </blockquote>
+
+  <div class="page-nav">
+    <a href="/docs/entities">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Entities</span>
+    </a>
+    <a href="/docs/search" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Search & Lookup →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .intro {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 2rem !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+  .variant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 0.65rem;
+    margin: 0.75rem 0 1.5rem;
+  }
+  .variant-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .v-name {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .v-desc {
+    font-size: 0.78rem;
+    color: var(--ink-2);
+    line-height: 1.5;
+  }
+  .fn-sig {
+    background: #0c0e12;
+    border: 1px solid #272c36;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: #eef0f4;
+    overflow-x: auto;
+  }
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    gap: 1rem;
+  }
+  .page-nav a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: border-color 0.15s, background 0.15s;
+    max-width: 48%;
+  }
+  .page-nav a:hover {
+    border-color: var(--accent) !important;
+    background: var(--accent-dim) !important;
+  }
+  .next-link { margin-left: auto; text-align: right; }
+  .nav-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+  .nav-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+</style>

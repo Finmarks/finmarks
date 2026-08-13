@@ -1,0 +1,29 @@
+{
+  "id": "smallcase",
+  "name": "Smallcase",
+  "short_name": "Smallcase",
+  "legal_name": "Smallcase Technologies Private Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00B8A9",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.smallcase.com",
+  "status": "active",
+  "tags": [
+    "thematic-investing",
+    "broker-integrations"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

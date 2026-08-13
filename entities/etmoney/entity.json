@@ -1,0 +1,29 @@
+{
+  "id": "etmoney",
+  "name": "ET Money",
+  "short_name": "ET Money",
+  "legal_name": "Times Internet Limited",
+  "categories": [
+    "wealthtech"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#5C2D91",
+  "country": "IN",
+  "founded": 2015,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.etmoney.com",
+  "status": "active",
+  "tags": [
+    "mutual-funds",
+    "times-internet"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

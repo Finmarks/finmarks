@@ -1,0 +1,136 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="Search & Lookup"
+  description="Full-text search and identifier-based lookup functions in the FinMarks package."
+>
+  <p class="eyebrow">Using the Package</p>
+  <h1>Search & Lookup</h1>
+
+  <p class="intro">
+    FinMarks exposes a ranked full-text search and two identifier-based resolvers — for IFSC codes
+    and UPI handles. These are the functions that make FinMarks useful in a real payment UI, not
+    just a static logo pack.
+  </p>
+
+  <h2>search</h2>
+
+  <p>
+    Matches against id, name, short name, legal name, tags, UPI handles and IFSC prefixes.
+    Case-insensitive. Returns <code>[]</code> for a blank query.
+  </p>
+
+  <p>
+    Results are ranked by match quality — exact id or name match first, then IFSC prefix, then
+    prefix match, then word-boundary, then substring, then tag — with ties broken alphabetically so
+    output is stable across calls.
+  </p>
+
+  <div class="fn-sig">function search(query: string, options?: SearchOptions): Entity[]</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ search }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// Basic search — surfaces Paytm first (exact name match)</span>
+<span style="color:#61afef">search</span>(<span style="color:#98c379">'paytm'</span>)<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Limit results</span>
+<span style="color:#61afef">search</span>(<span style="color:#98c379">'bank'</span><span style="color:#56b6c2">,</span> <span style="color:#eef0f4">{"{ limit: 5 }"}</span>)<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Restrict to a category</span>
+<span style="color:#61afef">search</span>(<span style="color:#98c379">'invest'</span><span style="color:#56b6c2">,</span> <span style="color:#eef0f4">{"{ categories: 'wealthtech' }"}</span>)<span style="color:#56b6c2">;</span>
+
+<span style="color:#7f848e">// Multiple categories, active only</span>
+<span style="color:#61afef">search</span>(<span style="color:#98c379">'pay'</span><span style="color:#56b6c2">,</span> <span style="color:#eef0f4">{"{ categories: ['upi-psp', 'wallet'], includeInactive: false }"}</span>)<span style="color:#56b6c2">;</span></code></pre>
+
+  <h3>SearchOptions</h3>
+
+  <table>
+    <thead>
+      <tr><th>Option</th><th>Type</th><th>Default</th><th>Description</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>limit</code></td><td><code>number</code></td><td>—</td><td>Maximum number of results to return</td></tr>
+      <tr><td><code>categories</code></td><td><code>Category | Category[]</code></td><td>—</td><td>Restrict search pool to these categories</td></tr>
+      <tr><td><code>includeInactive</code></td><td><code>boolean</code></td><td><code>true</code></td><td>Set to <code>false</code> to exclude defunct/acquired entities</td></tr>
+    </tbody>
+  </table>
+
+  <h2>getByIfscPrefix</h2>
+
+  <p>
+    Resolves the first four characters of an IFSC code to the issuing bank. Accepts the full IFSC
+    or just the 4-letter prefix. Case-insensitive.
+  </p>
+
+  <div class="fn-sig">function getByIfscPrefix(prefix: string): Entity | undefined</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByIfscPrefix }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#c678dd">const</span> <span style="color:#e06c75">ifsc</span> <span style="color:#56b6c2">=</span> <span style="color:#98c379">'HDFC0000123'</span><span style="color:#56b6c2">;</span>
+<span style="color:#61afef">getByIfscPrefix</span>(ifsc<span style="color:#56b6c2">.</span><span style="color:#61afef">slice</span>(<span style="color:#d19a66">0</span><span style="color:#56b6c2">,</span> <span style="color:#d19a66">4</span>))<span style="color:#56b6c2">;</span>  <span style="color:#7f848e">// → HDFC Bank</span>
+
+<span style="color:#7f848e">// Works with the full IFSC too</span>
+<span style="color:#61afef">getByIfscPrefix</span>(<span style="color:#98c379">'UTIB0001234'</span>)<span style="color:#56b6c2">;</span>        <span style="color:#7f848e">// → Axis Bank</span></code></pre>
+
+  <blockquote>
+    <p>
+      <strong>Note:</strong> IFSC identifies the branch, not just the bank. <code>getByIfscPrefix</code>
+      uses only the first 4 characters (the bank code) and ignores the branch suffix. It resolves to the
+      entity that owns that bank code.
+    </p>
+  </blockquote>
+
+  <h2>getByUpiHandle</h2>
+
+  <p>
+    Resolves a UPI handle suffix to the entity that issues it. Accepts a full VPA
+    (<code>someone@ybl</code>), a handle with <code>@</code> (<code>@ybl</code>), or a bare suffix
+    (<code>ybl</code>).
+  </p>
+
+  <div class="fn-sig">function getByUpiHandle(handle: string): Entity | undefined</div>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByUpiHandle }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// Full VPA from a payment confirmation</span>
+<span style="color:#61afef">getByUpiHandle</span>(<span style="color:#98c379">'kaval@ybl'</span>)<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// → PhonePe</span>
+
+<span style="color:#7f848e">// @-prefixed handle</span>
+<span style="color:#61afef">getByUpiHandle</span>(<span style="color:#98c379">'@okaxis'</span>)<span style="color:#56b6c2">;</span>      <span style="color:#7f848e">// → Google Pay</span>
+
+<span style="color:#7f848e">// Bare suffix</span>
+<span style="color:#61afef">getByUpiHandle</span>(<span style="color:#98c379">'paytm'</span>)<span style="color:#56b6c2">;</span>        <span style="color:#7f848e">// → Paytm</span></code></pre>
+
+  <blockquote>
+    <p>
+      <strong>Note:</strong> A UPI handle identifies the <em>PSP</em>, not the user's bank.
+      <code>@ybl</code> means the VPA was issued through PhonePe's Yes Bank rails — the user's actual
+      bank account may be with any bank.
+    </p>
+  </blockquote>
+
+  <div class="page-nav">
+    <a href="/docs/logos">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Logos</span>
+    </a>
+    <a href="/docs/categories-api" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Categories →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .fn-sig { background:#0c0e12; border:1px solid #272c36; border-radius:8px; padding:0.75rem 1rem; margin:0.5rem 0; font-family:var(--mono); font-size:0.78rem; line-height:1.5; color:#eef0f4; overflow-x:auto; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

@@ -1,0 +1,29 @@
+{
+  "id": "rbi",
+  "name": "Reserve Bank of India",
+  "short_name": "RBI",
+  "legal_name": "Reserve Bank of India",
+  "categories": [
+    "regulator"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00447C",
+  "country": "IN",
+  "founded": 1935,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://www.rbi.org.in",
+  "status": "active",
+  "tags": [
+    "central-bank",
+    "banking-regulator"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

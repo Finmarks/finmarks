@@ -1,0 +1,122 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+
+<Docs
+  title="TypeScript Types"
+  description="All exported TypeScript types and interfaces from the FinMarks package."
+>
+  <p class="eyebrow">Reference</p>
+  <h1>TypeScript Types</h1>
+
+  <p class="intro">
+    Every type is exported from <code>finmarks</code>. You can import them alongside the query
+    functions, or import types only for annotation without shipping any runtime code.
+  </p>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#c678dd">type</span> <span style="color:#eef0f4">{"{"}</span>
+  Entity<span style="color:#56b6c2">,</span>
+  EntityIndex<span style="color:#56b6c2">,</span>
+  Category<span style="color:#56b6c2">,</span>
+  CategoryInfo<span style="color:#56b6c2">,</span>
+  LogoVariant<span style="color:#56b6c2">,</span>
+  LogoUrls<span style="color:#56b6c2">,</span>
+  Regulator<span style="color:#56b6c2">,</span>
+  EntityStatus<span style="color:#56b6c2">,</span>
+  CountryCode<span style="color:#56b6c2">,</span>
+  SearchOptions<span style="color:#56b6c2">,</span>
+  FilterOptions<span style="color:#56b6c2">,</span>
+<span style="color:#eef0f4">{"}"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span><span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>Entity</h2>
+
+  <p>The core record for a fintech entity.</p>
+
+  <pre><code><span style="color:#c678dd">interface</span> <span style="color:#e5c07b">Entity</span> <span style="color:#eef0f4">{"{"}</span>
+  <span style="color:#7f848e">// Required fields</span>
+  id<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  name<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  short_name<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  categories<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">Category</span><span style="color:#56b6c2">[];</span>
+  brand_color<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  country<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">CountryCode</span><span style="color:#56b6c2">;</span>
+  status<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">EntityStatus</span><span style="color:#56b6c2">;</span>
+  logos<span style="color:#56b6c2">:</span> <span style="color:#e5c07b">LogoUrls</span><span style="color:#56b6c2">;</span>
+
+  <span style="color:#7f848e">// Optional fields — omitted entirely when empty</span>
+  legal_name<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  founded<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">number</span><span style="color:#56b6c2">;</span>
+  regulated_by<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">Regulator</span><span style="color:#56b6c2">[];</span>
+  ifsc_prefix<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  upi_handles<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">[];</span>
+  fip_id<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span> <span style="color:#56b6c2">|</span> <span style="color:#c678dd">null</span><span style="color:#56b6c2">;</span>
+  fiu_id<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span> <span style="color:#56b6c2">|</span> <span style="color:#c678dd">null</span><span style="color:#56b6c2">;</span>
+  aa_id<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span> <span style="color:#56b6c2">|</span> <span style="color:#c678dd">null</span><span style="color:#56b6c2">;</span>
+  website<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  acquired_by<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">;</span>
+  tags<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">[];</span>
+<span style="color:#eef0f4">{"}"}</span></code></pre>
+
+  <blockquote>
+    <p>
+      Optional fields are omitted entirely when empty, so <code>'ifsc_prefix' in entity</code> is a
+      meaningful check. Nullable identifiers (<code>fip_id</code>, <code>fiu_id</code>) use
+      <code>null</code> to signal "checked but unverified" vs. absent meaning "nobody has looked".
+    </p>
+  </blockquote>
+
+  <h2>LogoUrls</h2>
+
+  <pre><code><span style="color:#c678dd">type</span> <span style="color:#e5c07b">LogoUrls</span> <span style="color:#56b6c2">=</span> <span style="color:#e5c07b">Partial</span><span style="color:#56b6c2">&lt;</span><span style="color:#e5c07b">Record</span><span style="color:#56b6c2">&lt;</span><span style="color:#e5c07b">LogoVariant</span><span style="color:#56b6c2">,</span> <span style="color:#e5c07b">string</span><span style="color:#56b6c2">&gt;&gt;;</span>
+
+<span style="color:#c678dd">type</span> <span style="color:#e5c07b">LogoVariant</span> <span style="color:#56b6c2">=</span>
+  <span style="color:#56b6c2">|</span> <span style="color:#98c379">'full'</span>
+  <span style="color:#56b6c2">|</span> <span style="color:#98c379">'icon'</span>
+  <span style="color:#56b6c2">|</span> <span style="color:#98c379">'mono_dark'</span>
+  <span style="color:#56b6c2">|</span> <span style="color:#98c379">'mono_light'</span><span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>EntityStatus</h2>
+
+  <pre><code><span style="color:#c678dd">type</span> <span style="color:#e5c07b">EntityStatus</span> <span style="color:#56b6c2">=</span> <span style="color:#98c379">'active'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'acquired'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'defunct'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'rebranded'</span><span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>CountryCode / Regulator</h2>
+
+  <pre><code><span style="color:#c678dd">type</span> <span style="color:#e5c07b">CountryCode</span> <span style="color:#56b6c2">=</span> <span style="color:#98c379">'IN'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'US'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'GB'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'SG'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'AE'</span><span style="color:#56b6c2">;</span>
+
+<span style="color:#c678dd">type</span> <span style="color:#e5c07b">Regulator</span> <span style="color:#56b6c2">=</span>
+  <span style="color:#56b6c2">|</span> <span style="color:#98c379">'RBI'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'SEBI'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'IRDAI'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'NPCI'</span>
+  <span style="color:#56b6c2">|</span> <span style="color:#98c379">'PFRDA'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'IFSCA'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'MCA'</span> <span style="color:#56b6c2">|</span> <span style="color:#98c379">'None'</span><span style="color:#56b6c2">;</span></code></pre>
+
+  <h2>FilterOptions / SearchOptions</h2>
+
+  <pre><code><span style="color:#c678dd">interface</span> <span style="color:#e5c07b">FilterOptions</span> <span style="color:#eef0f4">{"{"}</span>
+  includeInactive<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">boolean</span><span style="color:#56b6c2">;</span>  <span style="color:#7f848e">// default true</span>
+<span style="color:#eef0f4">{"}"}</span>
+
+<span style="color:#c678dd">interface</span> <span style="color:#e5c07b">SearchOptions</span> <span style="color:#c678dd">extends</span> <span style="color:#e5c07b">FilterOptions</span> <span style="color:#eef0f4">{"{"}</span>
+  limit<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">number</span><span style="color:#56b6c2">;</span>
+  categories<span style="color:#56b6c2">?:</span> <span style="color:#e5c07b">Category</span> <span style="color:#56b6c2">|</span> <span style="color:#e5c07b">Category</span><span style="color:#56b6c2">[];</span>
+<span style="color:#eef0f4">{"}"}</span></code></pre>
+
+  <div class="page-nav">
+    <a href="/docs/schema">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">Schema</span>
+    </a>
+    <a href="/docs/contributing" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Contributing Guide →</span>
+    </a>
+  </div>
+</Docs>
+
+<style>
+  .eyebrow { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem; }
+  .intro { font-size:1rem!important; line-height:1.7!important; margin-bottom:2rem!important; padding-bottom:2rem!important; border-bottom:1px solid var(--line)!important; }
+  .page-nav { display:flex; justify-content:space-between; align-items:stretch; margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); gap:1rem; }
+  .page-nav a { display:flex; flex-direction:column; gap:0.15rem; padding:0.75rem 1rem; border:1px solid var(--line); border-radius:8px; text-decoration:none!important; transition:border-color 0.15s, background 0.15s; max-width:48%; }
+  .page-nav a:hover { border-color:var(--accent)!important; background:var(--accent-dim)!important; }
+  .next-link { margin-left:auto; text-align:right; }
+  .nav-label { font-size:0.68rem; text-transform:uppercase; letter-spacing:0.07em; color:var(--ink-3); font-weight:600; }
+  .nav-title { font-size:0.85rem; font-weight:500; color:var(--ink); }
+</style>

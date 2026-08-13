@@ -1,0 +1,29 @@
+{
+  "id": "sebi",
+  "name": "Securities and Exchange Board of India",
+  "short_name": "SEBI",
+  "legal_name": "Securities and Exchange Board of India",
+  "categories": [
+    "regulator"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003366",
+  "country": "IN",
+  "founded": 1988,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://www.sebi.gov.in",
+  "status": "active",
+  "tags": [
+    "securities-regulator",
+    "capital-markets"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

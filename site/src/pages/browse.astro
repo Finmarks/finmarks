@@ -1,0 +1,34 @@
+---
+import Base from "../layouts/Base.astro";
+import Browser from "../components/Browser.tsx";
+import { activeCategories, browseData, CDN_BASE } from "../lib/data";
+
+const title = "Browse Entities | FinMarks";
+const description = "Browse and search through all Indian fintech entities with their metadata and brand assets.";
+---
+
+<Base title={title} description={description} hideHeader={true}>
+  <section class="browse-section">
+    <Browser
+      client:load
+      entities={browseData}
+      categories={activeCategories}
+      cdnBase={CDN_BASE}
+    />
+  </section>
+</Base>
+
+<style>
+  .browse-section {
+    padding-block: 0 5rem;
+  }
+  @media (min-width: 940px) {
+    .browse-section {
+      height: 100vh;
+      padding: 0;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+</style>

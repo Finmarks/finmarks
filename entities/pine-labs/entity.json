@@ -1,0 +1,31 @@
+{
+  "id": "pine-labs",
+  "name": "Pine Labs",
+  "short_name": "Pine Labs",
+  "legal_name": "Pine Labs Private Limited",
+  "categories": [
+    "pos-terminal",
+    "payment-gateway"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00263E",
+  "country": "IN",
+  "founded": 1998,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.pinelabs.com",
+  "status": "active",
+  "tags": [
+    "merchant-commerce",
+    "pos-hardware",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

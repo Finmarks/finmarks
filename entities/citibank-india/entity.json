@@ -1,0 +1,29 @@
+{
+  "id": "citibank-india",
+  "name": "Citibank India",
+  "short_name": "Citi",
+  "legal_name": "Citibank N.A. India",
+  "categories": [
+    "international-bank"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003B70",
+  "country": "US",
+  "founded": 1902,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "CITI",
+  "website": "https://www.online.citibank.co.in",
+  "status": "active",
+  "tags": [
+    "foreign-bank-branch"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

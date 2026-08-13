@@ -1,0 +1,29 @@
+{
+  "id": "coindcx",
+  "name": "CoinDCX",
+  "short_name": "CoinDCX",
+  "legal_name": "Neblio Technologies Private Limited",
+  "categories": [
+    "crypto-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#0B90F5",
+  "country": "IN",
+  "founded": 2018,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://coindcx.com",
+  "status": "active",
+  "tags": [
+    "vda-platform",
+    "fiu-registered"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

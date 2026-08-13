@@ -26,15 +26,9 @@ Typical unsafe uses:
 - Suggesting endorsement, affiliation, or certification you do not have
 - Modifying a mark — recolouring, distorting, adding to it — and continuing to present it as the brand's
 
-The line is **confusion**. If a reasonable person could conclude the brand endorses you, you are on the wrong side of it, regardless of what any licence says.
 
 Some brands publish explicit rules — minimum clear space, approved colourways, prohibited treatments. Where they do, those rules govern. Check the brand's own guidelines before shipping.
 
-## Why the logos are here at all
-
-An interoperable financial system needs its participants to be identifiable. A UPI app that cannot show you which bank you are paying is a worse and less safe product. These marks are included to make software correct and legible, not to trade on their goodwill.
-
-That is also why this project holds a strict sourcing rule: assets come from official brand kits or official properties, never from third-party aggregators and never traced by hand. A distorted logo misrepresents the brand, which serves nobody.
 
 ## For contributors
 

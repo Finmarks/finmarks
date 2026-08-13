@@ -1,0 +1,28 @@
+{
+  "id": "zebpay",
+  "name": "ZebPay",
+  "short_name": "ZebPay",
+  "legal_name": "Awlencan Innovations India Private Limited",
+  "categories": [
+    "crypto-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#3861FB",
+  "country": "IN",
+  "founded": 2014,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://zebpay.com",
+  "status": "active",
+  "tags": [
+    "vda-platform"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

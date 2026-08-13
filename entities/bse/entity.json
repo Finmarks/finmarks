@@ -1,0 +1,31 @@
+{
+  "id": "bse",
+  "name": "Bombay Stock Exchange",
+  "short_name": "BSE",
+  "legal_name": "BSE Limited",
+  "categories": [
+    "stock-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#003DA5",
+  "country": "IN",
+  "founded": 1875,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.bseindia.com",
+  "status": "active",
+  "tags": [
+    "stock-exchange",
+    "sensex",
+    "listed",
+    "oldest-exchange-asia"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

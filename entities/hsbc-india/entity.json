@@ -1,0 +1,29 @@
+{
+  "id": "hsbc-india",
+  "name": "HSBC India",
+  "short_name": "HSBC",
+  "legal_name": "The Hongkong and Shanghai Banking Corporation Limited",
+  "categories": [
+    "international-bank"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#DB0011",
+  "country": "GB",
+  "founded": 1959,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "HSBC",
+  "website": "https://www.hsbc.co.in",
+  "status": "active",
+  "tags": [
+    "foreign-bank-branch"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

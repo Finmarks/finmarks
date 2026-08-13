@@ -1,0 +1,220 @@
+---
+import Base from '../../layouts/Base.astro';
+import { categories, stats } from '../../lib/data';
+
+const live = categories.filter((c) => c.count > 0);
+const upcoming = categories.filter((c) => c.count === 0);
+---
+
+<Base
+  title="Categories — Indian fintech taxonomy | FinMarks"
+  description={`The ${live.length}-category taxonomy covering ${stats.total} Indian fintech entities — banks, UPI apps, gateways, neobanks, lenders, account aggregators and more.`}>
+  <div class="wrap page">
+    <div class="category-orbits" aria-hidden="true">
+      <div class="orbit-track orbit-1" style="--radius: 225px">
+        <div class="orbit-item" style="--angle: 0deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/state-bank-of-india/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 90deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/axis-bank/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 180deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/hdfc-bank/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 270deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/kotak-mahindra-bank/icon.svg" alt=""/></div></div></div>
+      </div>
+      <div class="orbit-track orbit-2" style="--radius: 350px">
+        <div class="orbit-item" style="--angle: 0deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/icici-bank/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 72deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/gpay/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 144deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/amazon-pay/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 216deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/paytm/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 288deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/freecharge/icon.svg" alt=""/></div></div></div>
+      </div>
+      <div class="orbit-track orbit-3" style="--radius: 475px">
+        <div class="orbit-item" style="--angle: 0deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/phonepe/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 60deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/groww/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 120deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/cred/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 180deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/zerodha/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 240deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/upstox/icon.svg" alt=""/></div></div></div>
+        <div class="orbit-item" style="--angle: 300deg"><div class="orbit-item-inner"><div class="orbit-logo-wrapper"><img src="/entities/razorpay/icon.svg" alt=""/></div></div></div>
+      </div>
+    </div>
+    <header class="head">
+      <p class="eyebrow">Taxonomy</p>
+      <h1>Categories</h1>
+      <p class="desc">
+        Categories are tags, not folders — an entity can hold several. Paytm is a UPI app, a wallet,
+        a BNPL provider, a wealthtech platform and a payment gateway at once.
+      </p>
+    </header>
+
+    <div class="cards">
+      {live.map((c) => (
+        <a class="card" href={`/categories/${c.id}/`}>
+          <div class="card-top">
+            <h2>{c.label}</h2>
+            <span class="n">{c.count}</span>
+          </div>
+          <p class="cdesc">{c.description}</p>
+          <p class="creg mono">{c.id} · {c.regulator}</p>
+        </a>
+      ))}
+    </div>
+
+    {upcoming.length > 0 && (
+      <section class="upcoming">
+        <h2 class="eyebrow">Defined, awaiting entities</h2>
+        <div class="chips">
+          {upcoming.map((c) => <span class="chip">{c.id}</span>)}
+        </div>
+      </section>
+    )}
+  </div>
+</Base>
+
+<style>
+  .page {
+    padding-block: 2rem 4rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+  
+  .category-orbits {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%) scale(0.65);
+    width: 1100px;
+    height: 1100px;
+    z-index: -1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    -webkit-mask-image: radial-gradient(ellipse at center, transparent 15%, black 45%, black 75%, transparent 95%);
+    mask-image: radial-gradient(ellipse at center, transparent 15%, black 45%, black 75%, transparent 95%);
+  }
+  .orbit-track {
+    position: absolute;
+    border: 1px dashed var(--line-strong);
+    border-radius: 50%;
+    animation: spin linear infinite;
+  }
+  .orbit-1 { width: 450px; height: 450px; animation-duration: 40s; }
+  .orbit-2 { width: 700px; height: 700px; animation-duration: 55s; animation-direction: reverse; }
+  .orbit-3 { width: 950px; height: 950px; animation-duration: 70s; }
+
+  .orbit-1 .orbit-logo-wrapper { animation: counter-spin 40s linear infinite; }
+  .orbit-2 .orbit-logo-wrapper { animation: spin 55s linear infinite; }
+  .orbit-3 .orbit-logo-wrapper { animation: counter-spin 70s linear infinite; }
+
+  .orbit-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 56px;
+    height: 56px;
+    margin: -28px 0 0 -28px;
+    transform: rotate(var(--angle)) translateY(calc(var(--radius) * -1));
+  }
+  
+  .orbit-item-inner {
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(var(--angle) * -1));
+  }
+  
+  .orbit-logo-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  }
+  
+  :root[data-theme="dark"] .orbit-logo-wrapper {
+    background: var(--surface-2);
+    border-color: var(--line-strong);
+  }
+
+  .orbit-logo-wrapper img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes counter-spin {
+    to { transform: rotate(-360deg); }
+  }
+  .head {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: var(--step-2);
+    margin-block: 0.4rem 0.6rem;
+  }
+  .desc {
+    color: var(--ink-2);
+    max-width: 62ch;
+  }
+  .cards {
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.1rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.14s, transform 0.14s;
+  }
+  .card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-1px);
+  }
+  .card-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+  .card h2 {
+    font-size: var(--step-0);
+  }
+  .n {
+    font-family: var(--mono);
+    font-size: var(--step-1);
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .cdesc {
+    color: var(--ink-2);
+    font-size: var(--step--1);
+    line-height: 1.5;
+    flex: 1;
+  }
+  .creg {
+    font-size: 0.66rem;
+    color: var(--ink-3);
+  }
+  .upcoming {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: 0.8rem;
+  }
+</style>

@@ -1,0 +1,33 @@
+{
+  "id": "aditya-birla-capital",
+  "name": "Aditya Birla Capital",
+  "short_name": "AB Capital",
+  "legal_name": "Aditya Birla Capital Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E31837",
+  "country": "IN",
+  "founded": 2007,
+  "regulated_by": [
+    "RBI",
+    "SEBI",
+    "IRDAI"
+  ],
+  "website": "https://www.adityabirlacapital.com",
+  "status": "active",
+  "tags": [
+    "diversified-financial-services",
+    "conglomerate",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64">
+  <g clip-path="url(#clip0_42_82)">
+    <path fill="#dc3026" d="m33.72 37.65 15.83-27.43 8.63 4.98a11.64 11.64 0 0 1 4.26 15.9l-8.92 15.45a7.3 7.3 0 0 1-9.94 2.66l-8-4.62a5.1 5.1 0 0 1-1.86-6.94" style="fill:#dc3026;fill:color(display-p3 .8627 .1882 .149);fill-opacity:1"/>
+    <path fill="#fdbd00" d="m32.03 18.6-19.7 34.12 8.63 4.98a11.65 11.65 0 0 0 15.9-4.26L49.64 31.3a7.3 7.3 0 0 0-2.67-9.94l-8-4.62a5.07 5.07 0 0 0-6.94 1.86" style="fill:#fdbd00;fill:color(display-p3 .9922 .7412 0);fill-opacity:1"/>
+    <path fill="#2da94f" d="m49.55 10.22-6.1-3.53a14.55 14.55 0 0 0-19.88 5.33l-11.32 19.6a7.3 7.3 0 0 0 2.66 9.95l6.1 3.52a7.3 7.3 0 0 0 9.95-2.67l13.51-23.4a10.16 10.16 0 0 1 13.89-3.73z" style="fill:#2da94f;fill:color(display-p3 .1765 .6627 .3098);fill-opacity:1"/>
+    <path fill="#4587f8" d="m25.32 17.77-6.73-3.88c-3-1.73-6.84-.7-8.57 2.29L1.93 30.14A14.35 14.35 0 0 0 7.2 49.78l5.13 2.95 6.22 3.58 2.7 1.55a11.04 11.04 0 0 1-3.38-14.69l2.09-3.61 7.66-13.24a6.25 6.25 0 0 0-2.3-8.55" style="fill:#4587f8;fill:color(display-p3 .2706 .5294 .9725);fill-opacity:1"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_42_82">
+      <path fill="#fff" d="M0 0h64v64H0z" style="fill:#fff;fill-opacity:1"/>
+    </clipPath>
+  </defs>
+</svg>

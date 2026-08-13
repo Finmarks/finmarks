@@ -1,0 +1,127 @@
+---
+import Base from '../layouts/Base.astro';
+const REPO = 'https://github.com/finmarks/finmarks';
+---
+
+<Base
+  title="Trademarks — FinMarks"
+  description="The MIT licence covers FinMarks code and metadata, not the logos. Every mark belongs to its owner. What that means for you, and how brand owners can request changes.">
+  <div class="wrap page">
+    <header class="head">
+      <p class="eyebrow">Policy</p>
+      <h1>Trademarks</h1>
+      <p class="desc">
+        This page explains the project's position. It is not legal advice — if your use is
+        commercially significant, ask a lawyer.
+      </p>
+    </header>
+
+    <div class="prose">
+      <h2>The short version</h2>
+      <p>
+        The MIT licence covers <strong>this project's code, schemas and metadata</strong>. It does
+        <strong>not</strong> cover the logos.
+      </p>
+      <p>
+        Every mark distributed here belongs to its owner. HDFC Bank owns the HDFC Bank logo;
+        PhonePe owns the PhonePe logo. Nothing about this project transfers, dilutes or licenses
+        those rights, and no contributor here has the standing to grant you permission to use them.
+      </p>
+
+      <h2>What that means in practice</h2>
+      <p>
+        Reproducing a logo to <em>identify the thing it names</em> is normally fine. That is
+        nominative use, and it is why a comparison table can show competitor logos and why your app
+        can show a bank's mark next to a linked account.
+      </p>
+      <p>Typical safe uses:</p>
+      <ul>
+        <li>Showing a bank's logo beside a user's linked account</li>
+        <li>A payment method picker displaying UPI app icons</li>
+        <li>An account aggregator consent screen naming the FIP</li>
+        <li>Documentation or a comparison table referring to real providers</li>
+      </ul>
+      <p>Typical unsafe uses:</p>
+      <ul>
+        <li>Putting a bank's logo on your marketing site in a way that implies partnership</li>
+        <li>Using a mark in your own logo, product name, app icon or domain</li>
+        <li>Suggesting endorsement, affiliation or certification you do not have</li>
+        <li>Modifying a mark and continuing to present it as the brand's</li>
+      </ul>
+      <p>
+        The line is <strong>confusion</strong>. If a reasonable person could conclude the brand
+        endorses you, you are on the wrong side of it, regardless of what any licence says.
+      </p>
+
+      <h2>Why the logos are here at all</h2>
+      <p>
+        An interoperable financial system needs its participants to be identifiable. A UPI app that
+        cannot show you which bank you are paying is a worse and less safe product. These marks are
+        included to make software correct and legible, not to trade on their goodwill.
+      </p>
+      <p>
+        That is also why the project holds a strict sourcing rule: assets come from official brand
+        kits or official properties, never from third-party aggregators and never traced by hand. A
+        distorted logo misrepresents the brand, which serves nobody.
+      </p>
+
+      <h2>For brand owners</h2>
+      <p>
+        If you own a mark in this dataset and want it changed or removed, open an issue titled
+        <code>trademark: &lt;brand&gt;</code> on GitHub. Requests are honoured — the asset will be
+        removed without arguing the merits.
+      </p>
+      <p>Two things worth knowing before you ask:</p>
+      <p>
+        <strong>We would rather host your correct logo than have developers use a wrong one.</strong>
+        Removal does not stop your mark appearing in Indian fintech products; it just means the
+        version in circulation is a stale screenshot someone scraped. If your objection is to a
+        specific outdated or distorted asset, sending the current one solves the problem better than
+        removal does.
+      </p>
+      <p>
+        <strong>Metadata is separate from artwork.</strong> The SVG can be dropped while the factual
+        record — name, category, IFSC prefix, website — stays, since that is public information.
+        Tell us which you want.
+      </p>
+
+      <div class="links">
+        <a class="ghost-btn" href={`${REPO}/issues/new`} rel="noopener" target="_blank" style="display:inline-flex;align-items:center;gap:0.35rem;">Open an issue <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+        <a class="ghost-btn" href={`${REPO}/blob/main/LICENSE`} rel="noopener" target="_blank" style="display:inline-flex;align-items:center;gap:0.35rem;">Licence <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .page {
+    padding-block: 2rem 4rem;
+  }
+  .head {
+    margin-bottom: 2rem;
+  }
+  h1 {
+    font-size: var(--step-2);
+    margin-block: 0.4rem 0.6rem;
+  }
+  .desc {
+    color: var(--ink-2);
+    max-width: 60ch;
+  }
+  .prose strong {
+    color: var(--ink);
+  }
+  .prose ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+</style>

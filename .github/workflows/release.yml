@@ -16,6 +16,7 @@ jobs:
   publish:
     name: Publish to npm
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v4
 
@@ -34,8 +35,8 @@ jobs:
         run: |
           pnpm validate
           pnpm generate
-          pnpm -F bharatbrands build
-          pnpm -F bharatbrands test
+          pnpm -F finmarks build
+          pnpm -F finmarks test
 
       - name: Publish
         env:
@@ -45,4 +46,4 @@ jobs:
             echo "::notice::NPM_TOKEN not configured — skipping publish."
             exit 0
           fi
-          pnpm -F bharatbrands publish --no-git-checks --access public --provenance
+          pnpm -F finmarks publish --no-git-checks --access public --provenance

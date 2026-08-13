@@ -1,0 +1,29 @@
+{
+  "id": "coinswitch",
+  "name": "CoinSwitch",
+  "short_name": "CoinSwitch",
+  "legal_name": "CoinSwitch Kuber (Bitcipher Labs LLP)",
+  "categories": [
+    "crypto-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#5D5FEF",
+  "country": "IN",
+  "founded": 2017,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://coinswitch.co",
+  "status": "active",
+  "tags": [
+    "vda-platform",
+    "fiu-registered"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

@@ -1,0 +1,28 @@
+# GitHub only enforces CODEOWNERS review when combined with branch
+# protection's "Require review from Code Owners" setting — see
+# SECURITY.md / CONTRIBUTING.md for context.
+
+# Default: any file not matched below still needs a maintainer's review.
+*                                @kaval1810
+
+# Entity data and logo assets — highest-risk path for trademark/authenticity
+# issues, so every addition or change requires maintainer sign-off.
+/entities/                       @kaval1810
+/schemas/                        @kaval1810
+
+# Lists which known-bad logos are allowed to ship anyway. Adding or removing
+# an entry here changes what validate.yml will let through, so it needs the
+# same review as the entities themselves.
+/scripts/logo-exceptions.json    @kaval1810
+
+# Release, deploy and CI configuration — controls what can reach npm, the
+# CDN and the public site.
+/.github/workflows/              @kaval1810
+/.github/CODEOWNERS              @kaval1810
+
+# The published npm package.
+/packages/                       @kaval1810
+
+# Governance and legal.
+/LICENSE                         @kaval1810
+/docs/trademarks.md              @kaval1810

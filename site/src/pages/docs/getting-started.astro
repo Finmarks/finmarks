@@ -1,0 +1,264 @@
+---
+import Docs from '../../layouts/Docs.astro';
+import { CDN_BASE } from '../../lib/data';
+---
+
+<Docs
+  title="Getting Started"
+  description="Install the FinMarks npm package and make your first API call in minutes."
+>
+  <p class="eyebrow">Introduction</p>
+  <h1>Getting Started</h1>
+
+  <p class="intro">
+    FinMarks ships as a zero-dependency npm package. The entire dataset is bundled inline — no
+    runtime fetch, no env vars, no loader config. Install and import.
+  </p>
+
+  <h2>Installation</h2>
+
+  <p>Install with your package manager of choice:</p>
+
+  <div class="install-tabs">
+    <div class="tab-row">
+      <button class="tab-btn active" data-tab="npm">npm</button>
+      <button class="tab-btn" data-tab="pnpm">pnpm</button>
+      <button class="tab-btn" data-tab="yarn">yarn</button>
+      <button class="tab-btn" data-tab="bun">bun</button>
+    </div>
+    <div class="code-row" data-panel="npm">
+      <code><span style="color:#c678dd">npm</span> <span style="color:#61afef">install</span> <span style="color:#98c379">finmarks</span></code>
+      <button class="copy-btn" data-copy="npm install finmarks" aria-label="Copy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+      </button>
+    </div>
+    <div class="code-row hidden" data-panel="pnpm">
+      <code><span style="color:#c678dd">pnpm</span> <span style="color:#61afef">add</span> <span style="color:#98c379">finmarks</span></code>
+      <button class="copy-btn" data-copy="pnpm add finmarks" aria-label="Copy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+      </button>
+    </div>
+    <div class="code-row hidden" data-panel="yarn">
+      <code><span style="color:#c678dd">yarn</span> <span style="color:#61afef">add</span> <span style="color:#98c379">finmarks</span></code>
+      <button class="copy-btn" data-copy="yarn add finmarks" aria-label="Copy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+      </button>
+    </div>
+    <div class="code-row hidden" data-panel="bun">
+      <code><span style="color:#c678dd">bun</span> <span style="color:#61afef">add</span> <span style="color:#98c379">finmarks</span></code>
+      <button class="copy-btn" data-copy="bun add finmarks" aria-label="Copy">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <p>The package ships ESM and CJS builds with TypeScript declarations.</p>
+
+  <h2>Your first query</h2>
+
+  <p>Look up an entity and get its logo URL:</p>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getEntity, getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#c678dd">const</span> <span style="color:#e06c75">hdfc</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getEntity</span>(<span style="color:#98c379">'hdfc-bank'</span>);
+
+hdfc<span style="color:#56b6c2">?.</span>name<span style="color:#56b6c2">;</span>          <span style="color:#7f848e">// 'HDFC Bank'</span>
+hdfc<span style="color:#56b6c2">?.</span>brand_color<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// '#004C8F'</span>
+hdfc<span style="color:#56b6c2">?.</span>ifsc_prefix<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// 'HDFC'</span>
+hdfc<span style="color:#56b6c2">?.</span>upi_handles<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// ['@hdfcbank', '@okhdfcbank']</span>
+
+<span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span>)<span style="color:#56b6c2">;</span>          <span style="color:#7f848e">// full logo CDN URL</span>
+<span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'icon'</span>)<span style="color:#56b6c2">;</span>   <span style="color:#7f848e">// icon variant</span></code></pre>
+
+  <h2>Resolve identifiers you have at runtime</h2>
+
+  <p>
+    If you have an IFSC code or UPI VPA from a payment flow, you can go straight to the brand
+    without any lookup table of your own:
+  </p>
+
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByIfscPrefix, getByUpiHandle }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+
+<span style="color:#7f848e">// First 4 characters of any IFSC code → Bank</span>
+<span style="color:#61afef">getByIfscPrefix</span>(<span style="color:#98c379">'HDFC0000123'</span><span style="color:#56b6c2">.</span><span style="color:#61afef">slice</span>(<span style="color:#d19a66">0</span><span style="color:#56b6c2">,</span> <span style="color:#d19a66">4</span>));  <span style="color:#7f848e">// → HDFC Bank</span>
+
+<span style="color:#7f848e">// Full VPA, @-prefixed, or bare handle</span>
+<span style="color:#61afef">getByUpiHandle</span>(<span style="color:#98c379">'someone@ybl'</span>);   <span style="color:#7f848e">// → PhonePe (YBL = Yes Bank for PhonePe)</span>
+<span style="color:#61afef">getByUpiHandle</span>(<span style="color:#98c379">'@okaxis'</span>);       <span style="color:#7f848e">// → Google Pay</span></code></pre>
+
+  <h2>Without npm</h2>
+
+  <p>
+    You can hotlink logos directly from jsDelivr — no account, no API key, no rate limit. Assets
+    are served from the same repository as the npm package, so they are always in sync.
+  </p>
+
+  <pre><code><span style="color:#e06c75">&lt;img</span> <span style="color:#d19a66">src</span>=<span style="color:#98c379">"{CDN_BASE}/entities/hdfc-bank/icon.svg"</span> <span style="color:#d19a66">width</span>=<span style="color:#98c379">"32"</span> <span style="color:#e06c75">/&gt;</span></code></pre>
+
+  <p>The generated index is also fetchable:</p>
+
+  <pre><code><span style="color:#61afef">curl</span> <span style="color:#98c379">{CDN_BASE}/dist/index.json</span></code></pre>
+
+  <h2>Requirements</h2>
+
+  <ul>
+    <li>Node.js 18+ (for the npm package)</li>
+    <li>TypeScript 5+ (optional, but types are included)</li>
+    <li>Any modern browser (for CDN hotlinks)</li>
+  </ul>
+
+  <div class="page-nav">
+    <a href="/docs">
+      <span class="nav-label">← Previous</span>
+      <span class="nav-title">What is FinMarks?</span>
+    </a>
+    <a href="/docs/entities" class="next-link">
+      <span class="nav-label">Next</span>
+      <span class="nav-title">Entities →</span>
+    </a>
+  </div>
+</Docs>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var tab = btn.dataset.tab;
+        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        document.querySelectorAll('[data-panel]').forEach(function (p) {
+          p.classList.toggle('hidden', p.dataset.panel !== tab);
+        });
+      });
+    });
+
+    document.addEventListener('click', function (ev) {
+      var copyBtn = ev.target.closest('[data-copy]');
+      if (!copyBtn) return;
+      navigator.clipboard?.writeText(copyBtn.dataset.copy);
+      var old = copyBtn.innerHTML;
+      copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+      setTimeout(function () { copyBtn.innerHTML = old; }, 1100);
+    });
+  });
+</script>
+
+<style>
+  .eyebrow {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .intro {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 2rem !important;
+    border-bottom: 1px solid var(--line) !important;
+  }
+  .install-tabs {
+    margin: 0.75rem 0 1.25rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0c0e12;
+  }
+  .tab-row {
+    display: flex;
+    border-bottom: 1px solid #272c36;
+    padding: 0 0.75rem;
+    gap: 0;
+  }
+  .tab-btn {
+    background: none;
+    border: none;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #767d8b;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color 0.15s, border-color 0.15s;
+    font-family: var(--mono);
+  }
+  .tab-btn:hover {
+    color: #eef0f4;
+  }
+  .tab-btn.active {
+    color: #00c08b;
+    border-bottom-color: #00c08b;
+  }
+  .code-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+  .code-row code {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    background: none;
+    border: none;
+    color: #eef0f4;
+    padding: 0;
+  }
+  .copy-btn {
+    background: none;
+    border: 1px solid #39404d;
+    border-radius: 6px;
+    padding: 0.35rem;
+    color: #767d8b;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s, border-color 0.15s;
+    flex-shrink: 0;
+  }
+  .copy-btn:hover {
+    color: #eef0f4;
+    border-color: #767d8b;
+  }
+  .hidden { display: none !important; }
+  .page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    gap: 1rem;
+  }
+  .page-nav a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    text-decoration: none !important;
+    transition: border-color 0.15s, background 0.15s;
+    max-width: 48%;
+  }
+  .page-nav a:hover {
+    border-color: var(--accent) !important;
+    background: var(--accent-dim) !important;
+  }
+  .next-link { margin-left: auto; text-align: right; }
+  .nav-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--ink-3);
+    font-weight: 600;
+  }
+  .nav-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+</style>

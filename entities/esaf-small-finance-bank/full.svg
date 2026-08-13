@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 227 64">
+  <path fill="#c92123" d="M104.15 11.3H87.12v6.5h15.69v10.45H87.1v8.1h17.63v10.54H75.4V.76h28.75z" style="fill:#c92123;fill:color(display-p3 .7882 .1294 .1373);fill-opacity:1"/>
+  <path fill="#c92123" d="M134.85 33.31c0-3.29-3.8-3.96-8.43-4.21-10.04-.76-16.61-4.22-16.7-14.17-.42-19.9 35.42-19.9 35.17 0h-11.22c0-6.16-12.4-5.65-12.82-.17-.25 3.54 3.2 4.22 7.34 4.72 9.1.93 18.13 2.36 18.13 13.83 0 19.4-37.53 19.74-37.27-.59h11.38c0 5.9 14.42 5.99 14.42.6" style="fill:#c92123;fill:color(display-p3 .7882 .1294 .1373);fill-opacity:1"/>
+  <path fill="#c92123" d="M178.88 41.07h-18.14l-2.7 5.82H146.5v-1.77L167.24.17h5.06l20.83 44.95v1.77h-11.56zm-9.11-22.18-5.23 12.06h10.54z" style="fill:#c92123;fill:color(display-p3 .7882 .1294 .1373);fill-opacity:1"/>
+  <path fill="#c92123" d="M209.83 31.88v15.01h-11.98V.76h28.76V11.3h-16.78v10.04h14.84v10.54z" style="fill:#c92123;fill:color(display-p3 .7882 .1294 .1373);fill-opacity:1"/>
+  <path fill="#243b77" d="M7 55.5H2.95V57h3.71v2.45h-3.7v1.85h4.12v2.45H.25v-10.7H7z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M14.08 60.55c0-.76-.84-.92-1.94-.92-2.36-.17-3.88-1.02-3.88-3.3-.08-4.63 8.27-4.63 8.19 0h-2.62c0-1.43-2.87-1.34-2.95-.08-.09.84.67 1.01 1.69 1.1 2.1.25 4.21.59 4.21 3.29 0 4.47-8.77 4.55-8.68-.17h2.61c0 1.35 3.37 1.35 3.37.08" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M24.37 62.4h-4.21l-.68 1.36h-2.7v-.42l4.9-10.46h1.17l4.81 10.46v.42h-2.7zm-2.19-5.14L21 60.05h2.45z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M31.54 60.3v3.46h-2.78V53.05h6.66v2.44h-3.88v2.28H35v2.53z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M47.48 60.55c0-.76-.93-.92-2.02-.92-2.28-.17-3.8-1.02-3.88-3.3-.09-4.63 8.26-4.63 8.18 0h-2.62c0-1.43-2.86-1.34-2.95-.08-.08.84.76 1.01 1.69 1.1 2.2.25 4.22.59 4.22 3.2 0 4.56-8.7 4.64-8.7-.08h2.7c0 1.35 3.38 1.35 3.38.08" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M62.16 52.96h1v10.8h-2.78v-4.81l-2.27 2.36h-.34l-2.28-2.36v4.8h-2.78V52.97h1.01l4.22 4.64z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M72.95 62.4h-4.22l-.67 1.36h-2.7v-.42l4.9-10.46h1.17l4.8 10.46v.42h-2.69zm-2.1-5.14-1.27 2.79h2.44z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M80.96 61.23h3.97v2.53h-6.67V53.05h2.7z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M90.15 61.23h3.88v2.53h-6.66V53.05h2.78z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M104.07 60.22v3.54h-2.78V53.05h6.74v2.44h-3.96v2.28h3.46v2.45z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M115.29 61.31v2.45h-5.48V61.3h1.34v-5.9h-1.18v-2.36h5.15v2.36h-1.18v5.9z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M120.52 58.44v5.32h-2.87v-10.8h1.01l5.4 5.32v-5.23h2.86v10.7h-1z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M136.37 62.4h-4.22l-.59 1.36h-2.7v-.42l4.81-10.46h1.18l4.9 10.46v.42h-2.7zm-2.1-5.14-1.19 2.79h2.45z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M144.55 58.44v5.32h-2.78v-10.8h.92l5.49 5.32v-5.23h2.78v10.7h-1.01z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M159.14 52.88c2.2 0 4.64 1.18 5.06 4.05h-2.7q-.61-1.52-2.36-1.52c-1.6 0-2.7 1.18-2.7 2.95 0 1.6 1.1 2.95 2.7 2.95 1.18 0 2.1-.59 2.36-1.69h2.7c-.42 3.04-2.78 4.22-5.06 4.22-2.7 0-5.48-1.85-5.48-5.48s2.78-5.48 5.48-5.48" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M173.65 55.5h-3.97V57h3.63v2.45h-3.63v1.85h4.05v2.45h-6.83v-10.7h6.75z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M188.57 58.2c.93.41 1.35 1.17 1.35 2.18 0 1.86-1.18 3.38-3.37 3.38h-4.98V53.05h4.56a3.24 3.24 0 0 1 3.29 3.29 2.5 2.5 0 0 1-.85 1.85m-4.38-2.7v1.68h1.77c1.01 0 1.01-1.69-.09-1.69zm0 3.96v1.85h2.2c1.09 0 1.09-1.85 0-1.85z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M198.86 62.4h-4.21l-.68 1.36h-2.7v-.42l4.9-10.46h1.18l4.8 10.46v.42h-2.7zm-2.1-5.14-1.27 2.79h2.44z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M206.96 58.44v5.32h-2.78v-10.8h1l5.4 5.32v-5.23h2.79v10.7h-1.01z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M216.74 63.76V53.05h2.78v4.05h.17c2.79 0 2.62-2.11 2.62-4.05h2.87c0 2.19 0 4.21-2.11 5.56l2.86 4.73v.42h-3.03l-2.36-4.22c-.34.09-.68.09-1.01.09v4.13z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#243b77" d="M63.84 46.97H0V0h63.84z" style="fill:#243b77;fill:color(display-p3 .1412 .2314 .4667);fill-opacity:1"/>
+  <path fill="#fefefe" d="M22.77 14.5h-8.35V6.25h8.35z" style="fill:#fefefe;fill:color(display-p3 .9961 .9961 .9961);fill-opacity:1"/>
+  <path fill="#fefefe" d="M30.36 25.47H6.83V17.2h23.53z" style="fill:#fefefe;fill:color(display-p3 .9961 .9961 .9961);fill-opacity:1"/>
+  <path fill="#fefefe" d="M14.42 40.73V17.2h8.35v23.53z" style="fill:#fefefe;fill:color(display-p3 .9961 .9961 .9961);fill-opacity:1"/>
+  <path fill="#fefefe" d="M49.34 14.5h-8.27V6.25h8.27z" style="fill:#fefefe;fill:color(display-p3 .9961 .9961 .9961);fill-opacity:1"/>
+  <path fill="#fefefe" d="M57.01 25.47H33.48V17.2h23.53z" style="fill:#fefefe;fill:color(display-p3 .9961 .9961 .9961);fill-opacity:1"/>
+  <path fill="#fefefe" d="M41.07 40.73V17.2h8.27v23.53z" style="fill:#fefefe;fill:color(display-p3 .9961 .9961 .9961);fill-opacity:1"/>
+</svg>

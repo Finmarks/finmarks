@@ -12,12 +12,25 @@ export const SCHEMAS_DIR = join(ROOT, 'schemas');
 export const DIST_DIR = join(ROOT, 'dist');
 
 /** Logo variants in canonical order. `full` is the primary. */
-export const LOGO_VARIANTS = ['full', 'icon', 'wordmark', 'mono_dark', 'mono_light', 'square'];
+export const LOGO_VARIANTS = ['full', 'icon', 'mono_dark', 'mono_light'];
 
-/** Variants a complete entity is expected to ship. `square` stays optional. */
-export const EXPECTED_VARIANTS = ['full', 'icon', 'wordmark', 'mono_dark', 'mono_light'];
+/** Variants a complete entity is expected to ship. */
+export const EXPECTED_VARIANTS = ['full', 'icon', 'mono_dark', 'mono_light'];
 
-export const CDN_BASE = process.env.BHARATBRANDS_CDN ?? 'https://cdn.bharatbrands.dev';
+/**
+ * Where published assets are served from.
+ *
+ * jsDelivr mirrors any public GitHub repo for free with no account, no
+ * credentials and no egress cost, which keeps this project entirely on free
+ * infrastructure. Assets are pinned to a release tag so URLs are immutable.
+ *
+ * Override with FINMARKS_CDN to point at a custom domain later — the URL
+ * shape is identical, so moving to R2 is a config change, not a migration.
+ */
+export const CDN_REPO = process.env.FINMARKS_REPO ?? 'finmarks/finmarks';
+export const CDN_REF = process.env.FINMARKS_REF ?? 'main';
+export const CDN_BASE =
+  process.env.FINMARKS_CDN ?? `https://cdn.jsdelivr.net/gh/${CDN_REPO}@${CDN_REF}`;
 
 const c = {
   reset: '\x1b[0m',

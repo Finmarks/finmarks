@@ -1,0 +1,31 @@
+{
+  "id": "cholamandalam-finance",
+  "name": "Cholamandalam Investment and Finance Company",
+  "short_name": "Chola Finance",
+  "legal_name": "Cholamandalam Investment and Finance Company Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#E31E24",
+  "country": "IN",
+  "founded": 1978,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.cholamandalam.com",
+  "status": "active",
+  "tags": [
+    "murugappa-group",
+    "vehicle-finance",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

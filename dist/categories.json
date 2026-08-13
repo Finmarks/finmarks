@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "generated_at": "2026-08-05",
-  "total": 20,
+  "generated_at": "2026-08-13",
+  "total": 22,
   "categories": [
     {
       "id": "public-sector-bank",
@@ -17,7 +17,7 @@
       "regulator": "RBI",
       "phase": 1,
       "description": "Privately held scheduled commercial banks.",
-      "count": 15
+      "count": 18
     },
     {
       "id": "small-finance-bank",
@@ -41,7 +41,7 @@
       "regulator": "NPCI",
       "phase": 1,
       "description": "Payment service provider apps on the UPI rails.",
-      "count": 26
+      "count": 27
     },
     {
       "id": "wallet",
@@ -57,7 +57,7 @@
       "regulator": "RBI",
       "phase": 1,
       "description": "Online payment acceptance and aggregation platforms.",
-      "count": 13
+      "count": 15
     },
     {
       "id": "neobank",
@@ -81,7 +81,7 @@
       "regulator": "RBI",
       "phase": 1,
       "description": "Digital personal, consumer and SME lending platforms.",
-      "count": 20
+      "count": 25
     },
     {
       "id": "wealthtech",
@@ -89,7 +89,7 @@
       "regulator": "SEBI",
       "phase": 1,
       "description": "Broking, mutual fund and wealth management platforms.",
-      "count": 13
+      "count": 17
     },
     {
       "id": "insurtech",
@@ -97,7 +97,7 @@
       "regulator": "IRDAI",
       "phase": 1,
       "description": "Digital insurers, brokers and aggregators.",
-      "count": 7
+      "count": 10
     },
     {
       "id": "infra-api",
@@ -105,7 +105,7 @@
       "regulator": "Varies",
       "phase": 1,
       "description": "Banking-as-a-service, payment orchestration and fintech API infrastructure.",
-      "count": 10
+      "count": 11
     },
     {
       "id": "account-aggregator",
@@ -129,7 +129,7 @@
       "regulator": "RBI",
       "phase": 1,
       "description": "Non-banking financial companies.",
-      "count": 7
+      "count": 12
     },
     {
       "id": "international-bank",
@@ -137,7 +137,7 @@
       "regulator": "Varies",
       "phase": 3,
       "description": "Global banks operating in India or globally relevant.",
-      "count": 0
+      "count": 4
     },
     {
       "id": "crypto-exchange",
@@ -145,7 +145,7 @@
       "regulator": "FIU-IND",
       "phase": 3,
       "description": "Registered virtual digital asset platforms.",
-      "count": 0
+      "count": 4
     },
     {
       "id": "pos-terminal",
@@ -153,7 +153,7 @@
       "regulator": "RBI",
       "phase": 3,
       "description": "Point-of-sale hardware and merchant terminal vendors.",
-      "count": 0
+      "count": 3
     },
     {
       "id": "regulator",
@@ -161,7 +161,23 @@
       "regulator": "None",
       "phase": 3,
       "description": "Regulatory and standard-setting bodies.",
-      "count": 0
+      "count": 5
+    },
+    {
+      "id": "stock-exchange",
+      "label": "Exchanges / depositories",
+      "regulator": "SEBI",
+      "phase": 3,
+      "description": "Stock exchanges and securities depositories.",
+      "count": 4
+    },
+    {
+      "id": "tax-filing",
+      "label": "Tax / compliance filing",
+      "regulator": "MCA",
+      "phase": 3,
+      "description": "Income tax, GST and regulatory compliance filing platforms.",
+      "count": 1
     }
   ]
 }

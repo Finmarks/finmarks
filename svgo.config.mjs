@@ -19,9 +19,9 @@ export default {
           removeViewBox: false,
           // Keep ids: some brand SVGs reference them from gradients and masks.
           cleanupIds: false,
-          // 3 decimal places keeps curves smooth on large renders.
-          cleanupNumericValues: { floatPrecision: 3 },
-          convertPathData: { floatPrecision: 3 },
+          // 2 decimal places to help large logos pass the 150KB cap.
+          cleanupNumericValues: { floatPrecision: 2 },
+          convertPathData: { floatPrecision: 2 },
           // Merging paths can change fill-rule rendering on complex marks.
           mergePaths: false,
         },
@@ -31,7 +31,7 @@ export default {
     'sortAttrs',
     {
       name: 'removeAttrs',
-      params: { attrs: '(data-name|class|xmlns:xlink)' },
+      params: { attrs: '(data-name|class)' },
     },
   ],
 };

@@ -1,0 +1,29 @@
+{
+  "id": "pfrda",
+  "name": "Pension Fund Regulatory and Development Authority",
+  "short_name": "PFRDA",
+  "legal_name": "Pension Fund Regulatory and Development Authority",
+  "categories": [
+    "regulator"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#004C97",
+  "country": "IN",
+  "founded": 2003,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://www.pfrda.org.in",
+  "status": "active",
+  "tags": [
+    "pension-regulator",
+    "nps"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

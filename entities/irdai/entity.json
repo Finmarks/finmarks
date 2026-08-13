@@ -1,0 +1,28 @@
+{
+  "id": "irdai",
+  "name": "Insurance Regulatory and Development Authority of India",
+  "short_name": "IRDAI",
+  "legal_name": "Insurance Regulatory and Development Authority of India",
+  "categories": [
+    "regulator"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#1B4F72",
+  "country": "IN",
+  "founded": 1999,
+  "regulated_by": [
+    "None"
+  ],
+  "website": "https://irdai.gov.in",
+  "status": "active",
+  "tags": [
+    "insurance-regulator"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

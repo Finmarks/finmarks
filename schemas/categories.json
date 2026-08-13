@@ -140,6 +140,20 @@
       "regulator": "None",
       "phase": 3,
       "description": "Regulatory and standard-setting bodies."
+    },
+    {
+      "id": "stock-exchange",
+      "label": "Exchanges / depositories",
+      "regulator": "SEBI",
+      "phase": 3,
+      "description": "Stock exchanges and securities depositories."
+    },
+    {
+      "id": "tax-filing",
+      "label": "Tax / compliance filing",
+      "regulator": "MCA",
+      "phase": 3,
+      "description": "Income tax, GST and regulatory compliance filing platforms."
     }
   ]
 }

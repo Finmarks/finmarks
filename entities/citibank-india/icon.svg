@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 64 64">
+  <path fill="#255be3" d="M0 0h64v64H0z" style="fill:#255be3;fill:color(display-p3 .1451 .3569 .8902);fill-opacity:1"/>
+  <path fill="#fff" d="M7.64 37c0-5.03 4.12-8.96 9.49-8.96a9.6 9.6 0 0 1 7.56 3.49l-2.33 2.33a6.7 6.7 0 0 0-5.2-2.57c-3.2 0-5.77 2.4-5.77 5.71a5.64 5.64 0 0 0 5.77 5.75 6.7 6.7 0 0 0 5.37-2.67l2.3 2.27c-1.56 2.2-4.53 3.65-7.7 3.65-5.37 0-9.49-3.92-9.49-9" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="M27.86 28.65h3.68V45.4h-3.68z" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="M38.4 40.9v-9.14h-4.02v-3.1h4.19v-3.6L42 23.39v5.27h5.47v3.11H42v8.52c0 1.7.95 2.44 2.73 2.44q1.42 0 2.7-.58v3.18q-1.6.7-3.37.68c-3.28 0-5.67-1.8-5.67-5.1" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#fff" d="M50.38 28.65h3.68V45.4h-3.68z" style="fill:#fff;fill-opacity:1"/>
+  <path fill="#ff3c28" d="M40.93 18a18.8 18.8 0 0 1 15.43 7.98h-4.29a15 15 0 0 0-22.28 0H25.5A18.8 18.8 0 0 1 40.93 18" style="fill:#ff3c28;fill:color(display-p3 1 .2353 .1569);fill-opacity:1"/>
+</svg>

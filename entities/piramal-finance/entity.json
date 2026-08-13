@@ -1,0 +1,30 @@
+{
+  "id": "piramal-finance",
+  "name": "Piramal Finance",
+  "short_name": "Piramal Finance",
+  "legal_name": "Piramal Capital & Housing Finance Limited",
+  "categories": [
+    "nbfc",
+    "lending-platform"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#652D90",
+  "country": "IN",
+  "founded": 1984,
+  "regulated_by": [
+    "RBI"
+  ],
+  "website": "https://www.piramalfinance.com",
+  "status": "active",
+  "tags": [
+    "housing-finance",
+    "retail-lending"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

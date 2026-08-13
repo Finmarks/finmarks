@@ -1,9 +1,9 @@
-# BharatBrands
+# FinMarks
 
 Logos and structured metadata for the Indian fintech ecosystem — banks, UPI apps, payment gateways, neobanks, account aggregators and more.
 
-[![Validate](https://github.com/bharatbrands/bharatbrands/actions/workflows/validate.yml/badge.svg)](https://github.com/bharatbrands/bharatbrands/actions/workflows/validate.yml)
-[![npm](https://img.shields.io/npm/v/bharatbrands.svg)](https://www.npmjs.com/package/bharatbrands)
+[![Validate](https://github.com/finmarks/finmarks/actions/workflows/validate.yml/badge.svg)](https://github.com/finmarks/finmarks/actions/workflows/validate.yml)
+[![npm](https://img.shields.io/npm/v/finmarks.svg)](https://www.npmjs.com/package/finmarks)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **115 entities · 16 categories · MIT licensed**
@@ -19,14 +19,22 @@ There is no single structured source of truth for Indian fintech brand assets. T
 ## Install
 
 ```bash
-npm install bharatbrands
-# or: pnpm add bharatbrands / yarn add bharatbrands
+npm install finmarks
+# or: pnpm add finmarks / yarn add finmarks
 ```
+
+> **Before shipping a logo to production:** this package's MIT licence covers
+> the code and metadata only. The logos themselves are third-party
+> trademarks — check the brand's own guidelines before using one in your
+> product. See [Trademarks](#trademarks) below.
+
+This project is pre-1.0 (`0.x`) — minor versions may include breaking
+changes. See [CHANGELOG.md](CHANGELOG.md) before upgrading.
 
 ## Usage
 
 ```ts
-import { getEntity, getLogoUrl, getByCategory, search } from 'bharatbrands';
+import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
 
 // One entity, fully typed
 const hdfc = getEntity('hdfc-bank');
@@ -36,7 +44,7 @@ hdfc?.upi_handles;   // ['@hdfcbank']
 
 // A logo URL
 getLogoUrl('hdfc-bank', 'icon');
-// 'https://cdn.bharatbrands.dev/entities/hdfc-bank/icon.svg'
+// 'https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg'
 
 // Everything in a category
 getByCategory('upi-psp');                        // 26 entities
@@ -52,7 +60,7 @@ search('bank', { categories: 'neobank', limit: 5 });
 The metadata is the point. These resolve the identifiers you actually have at runtime:
 
 ```ts
-import { getByIfscPrefix, getByUpiHandle } from 'bharatbrands';
+import { getByIfscPrefix, getByUpiHandle } from 'finmarks';
 
 // You have an IFSC code from a bank account
 getByIfscPrefix('HDFC0000123'.slice(0, 4));  // → HDFC Bank
@@ -64,7 +72,7 @@ getByUpiHandle('someone@ybl');               // → PhonePe
 ### Displaying a linked account
 
 ```tsx
-import { getByIfscPrefix, getLogoUrlWithFallback } from 'bharatbrands';
+import { getByIfscPrefix, getLogoUrlWithFallback } from 'finmarks';
 
 function AccountRow({ ifsc }: { ifsc: string }) {
   const bank = getByIfscPrefix(ifsc.slice(0, 4));
@@ -86,19 +94,22 @@ function AccountRow({ ifsc }: { ifsc: string }) {
 
 ### Without npm
 
-Every asset is on the CDN at a predictable path:
+Every asset is served free by [jsDelivr](https://www.jsdelivr.com) straight from
+this repository — no account, no API key, no rate limit:
 
 ```html
-<img src="https://cdn.bharatbrands.dev/entities/hdfc-bank/icon.svg" width="32" />
-<img src="https://cdn.bharatbrands.dev/entities/phonepe/full.svg" alt="PhonePe" width="120" />
+<img src="https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg" width="32" />
+<img src="https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/phonepe/full.svg" alt="PhonePe" width="120" />
 ```
 
 The index is fetchable too:
 
 ```bash
-curl https://cdn.bharatbrands.dev/index.json        # full dataset
-curl https://cdn.bharatbrands.dev/index-lite.json   # id, name, categories, colour
-curl https://cdn.bharatbrands.dev/categories.json   # taxonomy with counts
+BASE=https://cdn.jsdelivr.net/gh/finmarks/finmarks@main
+
+curl $BASE/dist/index.json        # full dataset
+curl $BASE/dist/index-lite.json   # id, name, categories, colour
+curl $BASE/dist/categories.json   # taxonomy with counts
 ```
 
 ## Coverage
@@ -157,10 +168,7 @@ Full reference in [docs/api.md](docs/api.md).
 |---|---|
 | `full` | Symbol + wordmark. The primary logo. |
 | `icon` | Symbol only, no text. Square-ish. |
-| `wordmark` | Text only, no symbol. |
-| `mono_dark` | Single colour, for dark backgrounds. |
-| `mono_light` | Single colour, for light backgrounds. |
-| `square` | App-icon format, for circular avatars. |
+
 
 ## Repository layout
 
@@ -169,7 +177,7 @@ entities/{id}/entity.json   source of truth — one folder per brand
 entities/{id}/*.svg         logo variants
 schemas/                    JSON Schema + category taxonomy
 scripts/                    validate, generate, check-logos, convert-png
-packages/bharatbrands/      the npm package
+packages/finmarks/      the npm package
 dist/                       generated index — never edited by hand
 ```
 

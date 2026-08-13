@@ -8,9 +8,8 @@
     "wealthtech"
   ],
   "logos": {
-    "full": null,
-    "icon": null,
-    "wordmark": null,
+    "full": "full.svg",
+    "icon": "icon.svg",
     "mono_dark": null,
     "mono_light": null
   },
@@ -25,12 +24,12 @@
   ],
   "fiu_id": null,
   "website": "https://fi.money",
-  "status": "active",
+  "status": "defunct",
   "tags": [
     "consumer",
     "federal-bank-partner",
     "savings-account"
   ],
   "added_at": "2025-08-05",
-  "updated_at": "2025-08-05"
+  "updated_at": "2026-08-09"
 }

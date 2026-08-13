@@ -1,0 +1,29 @@
+{
+  "id": "nsdl",
+  "name": "National Securities Depository Limited",
+  "short_name": "NSDL",
+  "legal_name": "National Securities Depository Limited",
+  "categories": [
+    "stock-exchange"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#00539F",
+  "country": "IN",
+  "founded": 1996,
+  "regulated_by": [
+    "SEBI"
+  ],
+  "website": "https://www.nsdl.co.in",
+  "status": "active",
+  "tags": [
+    "depository",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

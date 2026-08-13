@@ -10,7 +10,7 @@ on:
       - 'entities/**'
       - 'schemas/**'
       - 'scripts/**'
-      - 'packages/bharatbrands/package.json'
+      - 'packages/finmarks/package.json'
   workflow_dispatch:
 
 concurrency:

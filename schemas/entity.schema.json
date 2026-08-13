@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://bharatbrands.dev/schemas/entity.schema.json",
-  "title": "BharatBrands Entity",
+  "$id": "https://finmarks.dev/schemas/entity.schema.json",
+  "title": "FinMarks Entity",
   "description": "A single fintech brand entity with logos and metadata",
   "type": "object",
   "required": ["id", "name", "short_name", "categories", "country", "logos"],
@@ -62,7 +62,9 @@
           "international-bank",
           "crypto-exchange",
           "pos-terminal",
-          "regulator"
+          "regulator",
+          "stock-exchange",
+          "tax-filing"
         ]
       },
       "description": "One or more category tags. An entity can belong to multiple."
@@ -84,11 +86,6 @@
           "pattern": "^[a-z0-9._/-]+\\.svg$",
           "description": "Symbol + wordmark. Primary logo. Key is required; null until sourced."
         },
-        "wordmark": {
-          "type": ["string", "null"],
-          "pattern": "^[a-z0-9._/-]+\\.svg$",
-          "description": "Text/wordmark only, no symbol."
-        },
         "mono_dark": {
           "type": ["string", "null"],
           "pattern": "^[a-z0-9._/-]+\\.svg$",
@@ -98,11 +95,6 @@
           "type": ["string", "null"],
           "pattern": "^[a-z0-9._/-]+\\.svg$",
           "description": "Single-color version for light backgrounds (black or dark)."
-        },
-        "square": {
-          "type": ["string", "null"],
-          "pattern": "^[a-z0-9._/-]+\\.svg$",
-          "description": "Square/app-icon format, used for circular avatar UI."
         }
       }
     },

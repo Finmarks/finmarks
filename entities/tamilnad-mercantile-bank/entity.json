@@ -1,0 +1,30 @@
+{
+  "id": "tamilnad-mercantile-bank",
+  "name": "Tamilnad Mercantile Bank",
+  "short_name": "TMB",
+  "legal_name": "Tamilnad Mercantile Bank Limited",
+  "categories": [
+    "private-bank"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#F7941D",
+  "country": "IN",
+  "founded": 1921,
+  "regulated_by": [
+    "RBI"
+  ],
+  "ifsc_prefix": "TMBL",
+  "website": "https://www.tmb.in",
+  "status": "active",
+  "tags": [
+    "old-private-bank",
+    "listed"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}

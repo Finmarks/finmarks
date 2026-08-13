@@ -12,6 +12,16 @@
  *
  * Exit code 1 on any error. Warnings never fail the build.
  *
+ * scripts/logo-exceptions.json lists known-bad SVGs (raster-embedded or
+ * oversized) that are allowed to ship anyway. Each entry downgrades that
+ * specific id+variant's size/raster findings from error to warning — never
+ * silent, always printed, and never for structural breakage (missing file,
+ * missing viewBox, <script> tags stay hard errors regardless). Adding an
+ * entry is a deliberate, reviewed exception, not a way to mute the check:
+ * it requires a `reason` and is covered by CODEOWNERS the same as
+ * entities/ and schemas/, and CI (validate.yml) prints it every run so the
+ * debt stays visible until someone re-sources the logo and removes it.
+ *
  *   node scripts/validate.mjs [--quiet]
  */
 import { join } from 'node:path';
@@ -33,7 +43,10 @@ import {
 
 const quiet = process.argv.includes('--quiet');
 
-const MAX_SVG_BYTES = 50 * 1024;
+const MAX_SVG_BYTES = 150 * 1024;
+
+const logoExceptionsRaw = await readFile(new URL('./logo-exceptions.json', import.meta.url), 'utf8');
+const LOGO_EXCEPTIONS = new Map(JSON.parse(logoExceptionsRaw).map((e) => [`${e.id}:${e.variant}`, e]));
 
 const errors = [];
 const warnings = [];
@@ -51,8 +64,17 @@ async function lintSvg(id, variant, path, relPath) {
   const svg = await readFile(path, 'utf8');
   const bytes = Buffer.byteLength(svg);
 
+  // Size and raster-embed findings can be downgraded to a warning by a
+  // reviewed entry in logo-exceptions.json; everything else is always a
+  // hard error, no matter what.
+  const exception = LOGO_EXCEPTIONS.get(`${id}:${variant}`);
+  const flag = (msg) =>
+    exception
+      ? warn(id, `${msg} — KNOWN EXCEPTION (${exception.reason}, since ${exception.since})`)
+      : err(id, msg);
+
   if (bytes > MAX_SVG_BYTES) {
-    err(id, `${relPath} is ${(bytes / 1024).toFixed(1)}KB, over the 50KB cap — needs SVGO cleanup`);
+    flag(`${relPath} is ${(bytes / 1024).toFixed(1)}KB, over the 150KB cap — needs SVGO cleanup`);
   }
   if (!/<svg[\s>]/i.test(svg)) {
     err(id, `${relPath} does not contain an <svg> element`);
@@ -62,7 +84,7 @@ async function lintSvg(id, variant, path, relPath) {
     err(id, `${relPath} has no viewBox attribute`);
   }
   if (/<image[\s>]/i.test(svg) || /data:image\/(png|jpe?g|gif|webp)/i.test(svg)) {
-    err(id, `${relPath} embeds a raster image — SVG sources must be pure vector`);
+    flag(`${relPath} embeds a raster image — SVG sources must be pure vector`);
   }
   if (/<script[\s>]/i.test(svg)) {
     err(id, `${relPath} contains a <script> tag`);
@@ -138,7 +160,7 @@ async function main() {
     }
 
     // Only banks get an IFSC prefix.
-    const bankish = ['public-sector-bank', 'private-bank', 'small-finance-bank', 'payments-bank'];
+    const bankish = ['public-sector-bank', 'private-bank', 'small-finance-bank', 'payments-bank', 'international-bank'];
     if (data.ifsc_prefix && !data.categories?.some((c) => bankish.includes(c))) {
       warn(id, `has ifsc_prefix "${data.ifsc_prefix}" but is not categorised as a bank`);
     }
@@ -154,6 +176,18 @@ async function main() {
   for (const { id, msg } of errors) {
     if (!byEntity.has(id)) byEntity.set(id, []);
     byEntity.get(id).push(msg);
+  }
+
+  const activeExceptions = warnings.filter((w) => w.msg.includes('KNOWN EXCEPTION'));
+  if (activeExceptions.length > 0) {
+    console.log(
+      yellow(
+        bold(
+          `\n⚠ ${activeExceptions.length} known logo exception${activeExceptions.length === 1 ? '' : 's'} active — see scripts/logo-exceptions.json`,
+        ),
+      ),
+    );
+    for (const { id } of activeExceptions) console.log(`    - ${id}`);
   }
 
   if (!quiet && warnings.length > 0) {

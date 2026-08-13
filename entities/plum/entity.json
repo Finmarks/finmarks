@@ -1,0 +1,30 @@
+{
+  "id": "plum",
+  "name": "Plum",
+  "short_name": "Plum",
+  "legal_name": "Plum Benefits Private Limited",
+  "categories": [
+    "insurtech"
+  ],
+  "logos": {
+    "full": "full.svg",
+    "icon": "icon.svg",
+    "mono_dark": null,
+    "mono_light": null
+  },
+  "brand_color": "#725CF6",
+  "country": "IN",
+  "founded": 2019,
+  "regulated_by": [
+    "IRDAI"
+  ],
+  "website": "https://www.plumhq.com",
+  "status": "active",
+  "tags": [
+    "group-health-insurance",
+    "employee-benefits",
+    "b2b"
+  ],
+  "added_at": "2026-08-06",
+  "updated_at": "2026-08-06"
+}
