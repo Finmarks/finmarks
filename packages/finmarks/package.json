@@ -47,6 +47,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "node --test test/*.test.mjs",
+    "pretypecheck": "node scripts/copy-data.mjs",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build && npm test"
   },
