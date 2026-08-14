@@ -3,7 +3,7 @@
 Logos and structured metadata for the Indian fintech ecosystem — banks, UPI apps, payment gateways, neobanks, account aggregators and more.
 
 [![Validate](https://github.com/Finmarks/Finmarks/actions/workflows/validate.yml/badge.svg)](https://github.com/Finmarks/Finmarks/actions/workflows/validate.yml)
-[![npm](https://img.shields.io/npm/v/Finmarks.svg)](https://www.npmjs.com/package/Finmarks)
+[![npm](https://img.shields.io/npm/v/Finmarks.svg)](https://www.npmjs.com/package/@finmarks/finmarks)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **115 entities · 16 categories · MIT licensed**
