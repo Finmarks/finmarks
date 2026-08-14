@@ -1,13 +1,13 @@
 # API reference
 
 ```bash
-npm install Finmarks
+npm install finmarks
 ```
 
 The package ships ESM and CJS builds with TypeScript declarations. The dataset is inlined into the bundle, so there is no runtime fetch and no loader configuration.
 
 ```ts
-import { getEntity, getLogoUrl, getByCategory, search } from 'Finmarks';
+import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
 ```
 
 ---
@@ -219,7 +219,7 @@ Note that a handle identifies the **PSP**, not the user's bank — `@ybl` means 
 ## Constants
 
 ```ts
-import { VERSION, CDN_BASE, data } from 'Finmarks';
+import { VERSION, CDN_BASE, data } from 'finmarks';
 
 VERSION;     // '0.1.0' — dataset version
 CDN_BASE;    // 'https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main'
@@ -245,7 +245,7 @@ import type {
   CountryCode,
   SearchOptions,
   FilterOptions,
-} from 'Finmarks';
+} from 'finmarks';
 ```
 
 ### `Entity`

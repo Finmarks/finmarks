@@ -1,5 +1,5 @@
 {
-  "name": "Finmarks",
+  "name": "finmarks",
   "version": "0.1.0",
   "description": "Logos and structured metadata for the Indian fintech ecosystem — banks, UPI apps, gateways, neobanks, AAs and more",
   "keywords": [
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Finmarks/Finmarks.git",
-    "directory": "packages/Finmarks"
+    "directory": "packages/finmarks"
   },
   "bugs": "https://github.com/Finmarks/Finmarks/issues",
   "type": "module",

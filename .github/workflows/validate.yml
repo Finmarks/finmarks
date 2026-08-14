@@ -45,13 +45,13 @@ jobs:
         run: pnpm generate
 
       - name: Typecheck package
-        run: pnpm -F Finmarks typecheck
+        run: pnpm -F finmarks typecheck
 
       - name: Build package
-        run: pnpm -F Finmarks build
+        run: pnpm -F finmarks build
 
       - name: Test package
-        run: pnpm -F Finmarks test
+        run: pnpm -F finmarks test
 
       - name: Logo coverage report
         if: always()

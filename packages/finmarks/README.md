@@ -5,13 +5,13 @@ Logos and structured metadata for the Indian fintech ecosystem — banks, UPI ap
 **115 entities · 16 categories · MIT licensed**
 
 ```bash
-npm install Finmarks
+npm install finmarks
 ```
 
 ## Usage
 
 ```ts
-import { getEntity, getLogoUrl, getByCategory, search } from 'Finmarks';
+import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
 
 const hdfc = getEntity('hdfc-bank');
 hdfc?.brand_color;   // '#004C8F'
@@ -30,7 +30,7 @@ search('paytm');
 ### Resolving identifiers you have at runtime
 
 ```ts
-import { getByIfscPrefix, getByUpiHandle } from 'Finmarks';
+import { getByIfscPrefix, getByUpiHandle } from 'finmarks';
 
 getByIfscPrefix('HDFC0000123'.slice(0, 4));  // → HDFC Bank
 getByUpiHandle('someone@ybl');               // → PhonePe
@@ -39,7 +39,7 @@ getByUpiHandle('someone@ybl');               // → PhonePe
 ### Rendering a logo
 
 ```tsx
-import { getByIfscPrefix, getLogoUrlWithFallback } from 'Finmarks';
+import { getByIfscPrefix, getLogoUrlWithFallback } from 'finmarks';
 
 function AccountRow({ ifsc }: { ifsc: string }) {
   const bank = getByIfscPrefix(ifsc.slice(0, 4));
@@ -101,7 +101,7 @@ Categories are tags — an entity can hold several. Paytm is `upi-psp`, `wallet`
 Fully typed, ESM and CJS, no runtime dependencies.
 
 ```ts
-import type { Entity, Category, LogoVariant, CategoryInfo } from 'Finmarks';
+import type { Entity, Category, LogoVariant, CategoryInfo } from 'finmarks';
 ```
 
 ## Trademarks

@@ -35,4 +35,4 @@ for (const file of FILES) {
   await copyFile(src, join(DATA, file));
 }
 
-console.log(`Finmarks: copied ${FILES.length} data files into packages/Finmarks/data/`);
+console.log(`Finmarks: copied ${FILES.length} data files into packages/finmarks/data/`);

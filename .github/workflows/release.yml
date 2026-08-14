@@ -35,8 +35,8 @@ jobs:
         run: |
           pnpm validate
           pnpm generate
-          pnpm -F Finmarks build
-          pnpm -F Finmarks test
+          pnpm -F finmarks build
+          pnpm -F finmarks test
 
       - name: Publish
         env:
@@ -46,4 +46,4 @@ jobs:
             echo "::notice::NPM_TOKEN not configured — skipping publish."
             exit 0
           fi
-          pnpm -F Finmarks publish --no-git-checks --access public --provenance
+          pnpm -F finmarks publish --no-git-checks --access public --provenance
