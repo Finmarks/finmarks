@@ -68,7 +68,7 @@ jobs:
         if: steps.creds.outputs.available == 'true'
         run: |
           mkdir -p cdn/entities
-          # SVG sources, mirroring the cdn.Finmarks.dev/entities/{id}/ layout.
+          # SVG sources, mirroring the cdn.finmarks.dev/entities/{id}/ layout.
           for dir in entities/*/; do
             id=$(basename "$dir")
             if compgen -G "$dir*.svg" > /dev/null; then

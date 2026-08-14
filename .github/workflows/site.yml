@@ -63,7 +63,7 @@ jobs:
       - name: Build
         working-directory: site
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://Finmarks.pages.dev' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://finmarks.pages.dev' }}
           GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
           CLARITY_PROJECT_ID: ${{ vars.CLARITY_PROJECT_ID }}
         run: npm run build
@@ -117,4 +117,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site/dist --project-name=Finmarks
+          command: pages deploy site/dist --project-name=finmarks
