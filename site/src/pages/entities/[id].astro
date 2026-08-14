@@ -469,6 +469,7 @@ function getWebsiteWithRef(url: string | undefined) {
                         src={`${CDN_BASE}/entities/${r.id}/${r.logos.icon ? "icon" : "full"}.svg`}
                         alt=""
                         loading="lazy"
+                        onerror={`if(this.src !== window.location.origin + '/entities/${r.id}/${r.logos.icon ? 'icon' : 'full'}.svg') this.src='/entities/${r.id}/${r.logos.icon ? 'icon' : 'full'}.svg'`}
                       />
                     ) : (
                       monogram(r)
