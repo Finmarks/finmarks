@@ -1,10 +1,10 @@
 ---
 import Base from "../layouts/Base.astro";
 import Browser from "../components/Browser.tsx";
-import { activeCategories, browseData, CDN_BASE } from "../lib/data";
+import { activeCategories, browseData, CDN_BASE, stats } from "../lib/data";
 
-const title = "Browse Entities | FinMarks";
-const description = "Browse and search through all Indian fintech entities with their metadata and brand assets.";
+const title = "Browse All Indian Fintech Logos & Entities | Finmarks";
+const description = `Search and filter ${stats.total} Indian banks, UPI apps, payment gateways, and neobanks. Download SVG logos and structured brand metadata instantly.`;
 ---
 
 <Base title={title} description={description} hideHeader={true}>

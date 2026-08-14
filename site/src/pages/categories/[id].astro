@@ -18,8 +18,8 @@ interface Props {
 const { category: c, list } = Astro.props;
 const sourced = list.filter((e) => e.variants.length > 0).length;
 
-const title = `${c.label} in India — logos & metadata | FinMarks`;
-const description = `${c.count} ${c.label.toLowerCase()} in the Indian fintech ecosystem, regulated by ${c.regulator}. ${c.description} Free logos and structured metadata.`;
+const title = `${c.label} in India: Logos & Brand Data | Finmarks`;
+const description = `${c.count} ${c.label} in India, regulated by ${c.regulator}. Free SVG logos and structured metadata for each.`;
 ---
 
 <Base title={title} description={description}>

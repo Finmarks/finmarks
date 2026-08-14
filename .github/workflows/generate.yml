@@ -10,7 +10,7 @@ on:
       - 'entities/**'
       - 'schemas/**'
       - 'scripts/**'
-      - 'packages/finmarks/package.json'
+      - 'packages/Finmarks/package.json'
   workflow_dispatch:
 
 concurrency:

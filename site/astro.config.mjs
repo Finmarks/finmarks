@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // Set SITE_URL in the Cloudflare Pages build env for correct canonical URLs
 // and a valid sitemap. The fallback keeps local builds working.
-const site = process.env.SITE_URL ?? 'https://finmarks.pages.dev';
+const site = process.env.SITE_URL ?? 'https://Finmarks.pages.dev';
 
 export default defineConfig({
   site,

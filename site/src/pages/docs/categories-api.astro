@@ -4,13 +4,13 @@ import Docs from '../../layouts/Docs.astro';
 
 <Docs
   title="Categories"
-  description="Query entities by fintech category using the FinMarks category API."
+  description="Query entities by fintech category using the Finmarks category API."
 >
   <p class="eyebrow">Using the Package</p>
   <h1>Categories</h1>
 
   <p class="intro">
-    FinMarks uses a tag-based taxonomy rather than a folder hierarchy. An entity can belong to
+    Finmarks uses a tag-based taxonomy rather than a folder hierarchy. An entity can belong to
     multiple categories — Paytm is simultaneously a UPI PSP, a wallet, a BNPL provider, a payments
     bank, and a payment gateway. The category API gives you precise control over how you query across
     this taxonomy.
@@ -25,7 +25,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getByCategory(category: Category | Category[], options?: FilterOptions): Entity[]</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByCategory }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByCategory }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#7f848e">// All UPI PSPs</span>
 <span style="color:#61afef">getByCategory</span>(<span style="color:#98c379">'upi-psp'</span>)<span style="color:#56b6c2">;</span>
@@ -45,7 +45,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getByAllCategories(categories: Category[], options?: FilterOptions): Entity[]</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByAllCategories }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByAllCategories }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#7f848e">// Entities that are both a UPI PSP AND a wallet</span>
 <span style="color:#61afef">getByAllCategories</span>([<span style="color:#98c379">'upi-psp'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'wallet'</span>])<span style="color:#56b6c2">;</span>
@@ -59,7 +59,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function listCategories(): CategoryInfo[]</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ listCategories }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ listCategories }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#61afef">listCategories</span>();
 <span style="color:#7f848e">// [</span>
@@ -74,7 +74,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getCategory(id: Category): CategoryInfo | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getCategory }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getCategory }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#61afef">getCategory</span>(<span style="color:#98c379">'wealthtech'</span>);
 <span style="color:#7f848e">// {"{"} id: 'wealthtech', label: 'Wealthtech', count: 14, phase: 2, ... {"}"}</span></code></pre>

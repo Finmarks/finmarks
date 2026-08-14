@@ -4,14 +4,14 @@ import Docs from '../../layouts/Docs.astro';
 
 <Docs
   title="Search & Lookup"
-  description="Full-text search and identifier-based lookup functions in the FinMarks package."
+  description="Full-text search and identifier-based lookup functions in the Finmarks package."
 >
   <p class="eyebrow">Using the Package</p>
   <h1>Search & Lookup</h1>
 
   <p class="intro">
-    FinMarks exposes a ranked full-text search and two identifier-based resolvers — for IFSC codes
-    and UPI handles. These are the functions that make FinMarks useful in a real payment UI, not
+    Finmarks exposes a ranked full-text search and two identifier-based resolvers — for IFSC codes
+    and UPI handles. These are the functions that make Finmarks useful in a real payment UI, not
     just a static logo pack.
   </p>
 
@@ -30,7 +30,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function search(query: string, options?: SearchOptions): Entity[]</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ search }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ search }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#7f848e">// Basic search — surfaces Paytm first (exact name match)</span>
 <span style="color:#61afef">search</span>(<span style="color:#98c379">'paytm'</span>)<span style="color:#56b6c2">;</span>
@@ -66,7 +66,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getByIfscPrefix(prefix: string): Entity | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByIfscPrefix }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByIfscPrefix }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#c678dd">const</span> <span style="color:#e06c75">ifsc</span> <span style="color:#56b6c2">=</span> <span style="color:#98c379">'HDFC0000123'</span><span style="color:#56b6c2">;</span>
 <span style="color:#61afef">getByIfscPrefix</span>(ifsc<span style="color:#56b6c2">.</span><span style="color:#61afef">slice</span>(<span style="color:#d19a66">0</span><span style="color:#56b6c2">,</span> <span style="color:#d19a66">4</span>))<span style="color:#56b6c2">;</span>  <span style="color:#7f848e">// → HDFC Bank</span>
@@ -92,7 +92,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getByUpiHandle(handle: string): Entity | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByUpiHandle }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByUpiHandle }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#7f848e">// Full VPA from a payment confirmation</span>
 <span style="color:#61afef">getByUpiHandle</span>(<span style="color:#98c379">'kaval@ybl'</span>)<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// → PhonePe</span>

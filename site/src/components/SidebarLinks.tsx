@@ -15,9 +15,9 @@ export default function SidebarLinks({ currentPath = '' }: SidebarLinksProps) {
   return (
     <>
       <div className="rail-header">
-        <a className="brand" href="/" aria-label="FinMarks">
-          <img src="/finmark_light.svg" alt="FinMarks" className="logo-light brand-logo" />
-          <img src="/finmark_dark.svg" alt="FinMarks" className="logo-dark brand-logo" />
+        <a className="brand" href="/" aria-label="Finmarks">
+          <img src="/finmark_light.svg" alt="Finmarks" className="logo-light brand-logo" />
+          <img src="/finmark_dark.svg" alt="Finmarks" className="logo-dark brand-logo" />
         </a>
       </div>
       <div className="rail-links">
@@ -51,15 +51,15 @@ export default function SidebarLinks({ currentPath = '' }: SidebarLinksProps) {
 }
 
 export function SidebarBottom() {
-  const [themeMode, setThemeMode] = useState<'system' | 'light' | 'dark'>('system');
+  const [themeMode, setThemeMode] = useState<'system' | 'light' | 'dark'>('light');
 
   useEffect(() => {
     try {
       const saved = localStorage.getItem('bb-theme');
-      if (saved === 'dark' || saved === 'light') {
+      if (saved === 'dark' || saved === 'system') {
         setThemeMode(saved);
       } else {
-        setThemeMode('system');
+        setThemeMode('light');
       }
     } catch (e) {}
 
@@ -69,9 +69,12 @@ export function SidebarBottom() {
         if (val === 'dark' || val === 'light') {
           setThemeMode(val);
           document.documentElement.setAttribute('data-theme', val);
-        } else {
+        } else if (val === 'system') {
           setThemeMode('system');
           document.documentElement.removeAttribute('data-theme');
+        } else {
+          setThemeMode('light');
+          document.documentElement.setAttribute('data-theme', 'light');
         }
       }
     };
@@ -83,7 +86,7 @@ export function SidebarBottom() {
     setThemeMode(mode);
     try {
       if (mode === 'system') {
-        localStorage.removeItem('bb-theme');
+        localStorage.setItem('bb-theme', 'system');
         document.documentElement.removeAttribute('data-theme');
       } else {
         localStorage.setItem('bb-theme', mode);
@@ -105,12 +108,13 @@ export function SidebarBottom() {
       background: 'var(--surface)',
       zIndex: 10
     }}>
-      <a href="https://github.com/finmarks/finmarks" target="_blank" rel="noopener noreferrer" className="nav-link">
+      <div className="nav-link" style={{ opacity: 0.6, cursor: 'not-allowed' }}>
         <span className="nav-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>
         </span>
         GitHub
-      </a>
+        <span style={{ fontSize: '0.65rem', padding: '0.1rem 0.4rem', borderRadius: '4px', background: 'var(--line)', marginLeft: 'auto', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Soon</span>
+      </div>
       <div className="nav-link" style={{ opacity: 0.6, cursor: 'not-allowed' }}>
         <span className="nav-icon">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" /><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" /><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" /><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" /><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" /></svg>

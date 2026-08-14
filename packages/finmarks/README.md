@@ -1,17 +1,17 @@
-# finmarks
+# Finmarks
 
 Logos and structured metadata for the Indian fintech ecosystem — banks, UPI apps, payment gateways, neobanks, account aggregators and more.
 
 **115 entities · 16 categories · MIT licensed**
 
 ```bash
-npm install finmarks
+npm install Finmarks
 ```
 
 ## Usage
 
 ```ts
-import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
+import { getEntity, getLogoUrl, getByCategory, search } from 'Finmarks';
 
 const hdfc = getEntity('hdfc-bank');
 hdfc?.brand_color;   // '#004C8F'
@@ -19,7 +19,7 @@ hdfc?.ifsc_prefix;   // 'HDFC'
 hdfc?.upi_handles;   // ['@hdfcbank']
 
 getLogoUrl('hdfc-bank', 'icon');
-// 'https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg'
+// 'https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/hdfc-bank/icon.svg'
 
 getByCategory('upi-psp');                        // 26 entities
 getByCategory(['upi-psp', 'payment-gateway']);   // union, deduped
@@ -30,7 +30,7 @@ search('paytm');
 ### Resolving identifiers you have at runtime
 
 ```ts
-import { getByIfscPrefix, getByUpiHandle } from 'finmarks';
+import { getByIfscPrefix, getByUpiHandle } from 'Finmarks';
 
 getByIfscPrefix('HDFC0000123'.slice(0, 4));  // → HDFC Bank
 getByUpiHandle('someone@ybl');               // → PhonePe
@@ -39,7 +39,7 @@ getByUpiHandle('someone@ybl');               // → PhonePe
 ### Rendering a logo
 
 ```tsx
-import { getByIfscPrefix, getLogoUrlWithFallback } from 'finmarks';
+import { getByIfscPrefix, getLogoUrlWithFallback } from 'Finmarks';
 
 function AccountRow({ ifsc }: { ifsc: string }) {
   const bank = getByIfscPrefix(ifsc.slice(0, 4));
@@ -82,7 +82,7 @@ Logo URLs point at the CDN, so the dataset stays small — the package inlines m
 | `getAllEntityIds()` | every id |
 | `buildLogoUrl(id, filename)` | a CDN URL, no lookup |
 
-Full reference: [docs/api.md](https://github.com/finmarks/finmarks/blob/main/docs/api.md)
+Full reference: [docs/api.md](https://github.com/Finmarks/Finmarks/blob/main/docs/api.md)
 
 ## Categories
 
@@ -101,16 +101,16 @@ Categories are tags — an entity can hold several. Paytm is `upi-psp`, `wallet`
 Fully typed, ESM and CJS, no runtime dependencies.
 
 ```ts
-import type { Entity, Category, LogoVariant, CategoryInfo } from 'finmarks';
+import type { Entity, Category, LogoVariant, CategoryInfo } from 'Finmarks';
 ```
 
 ## Trademarks
 
-The MIT licence covers this package's code and metadata. It does not grant rights to the trademarks — every logo remains the property of its owner, and your use is governed by that brand's policy. See [docs/trademarks.md](https://github.com/finmarks/finmarks/blob/main/docs/trademarks.md).
+The MIT licence covers this package's code and metadata. It does not grant rights to the trademarks — every logo remains the property of its owner, and your use is governed by that brand's policy. See [docs/trademarks.md](https://github.com/Finmarks/Finmarks/blob/main/docs/trademarks.md).
 
 ## Contributing
 
-Missing brands and missing logo variants are what this project needs most. [CONTRIBUTING.md](https://github.com/finmarks/finmarks/blob/main/CONTRIBUTING.md)
+Missing brands and missing logo variants are what this project needs most. [CONTRIBUTING.md](https://github.com/Finmarks/Finmarks/blob/main/CONTRIBUTING.md)
 
 ## Licence
 

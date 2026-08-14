@@ -4,13 +4,13 @@ import Docs from '../../layouts/Docs.astro';
 
 <Docs
   title="Logos"
-  description="How to fetch logo URLs, use variants, and handle fallbacks with the FinMarks package."
+  description="How to fetch logo URLs, use variants, and handle fallbacks with the Finmarks package."
 >
   <p class="eyebrow">Using the Package</p>
   <h1>Logos</h1>
 
   <p class="intro">
-    FinMarks tracks multiple logo <em>variants</em> per entity. Every URL returned by the API resolves
+    Finmarks tracks multiple logo <em>variants</em> per entity. Every URL returned by the API resolves
     — the index only lists variants that actually exist on disk at build time, so you never need to
     handle a 404.
   </p>
@@ -45,7 +45,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getLogoUrl(id: string, variant?: LogoVariant): string | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span>)<span style="color:#56b6c2">;</span>           <span style="color:#7f848e">// full logo (default)</span>
 <span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'icon'</span>)<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// icon only</span>
@@ -61,7 +61,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getLogoUrlWithFallback(id: string, variants?: LogoVariant[]): string | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrlWithFallback }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrlWithFallback }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#7f848e">// Prefer icon, fall back to the full logo</span>
 <span style="color:#61afef">getLogoUrlWithFallback</span>(<span style="color:#98c379">'phonepe'</span><span style="color:#56b6c2">,</span> [<span style="color:#98c379">'icon'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'full'</span>])<span style="color:#56b6c2">;</span>
@@ -78,7 +78,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getLogos(id: string): LogoUrls</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogos }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogos }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#c678dd">const</span> <span style="color:#e06c75">logos</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getLogos</span>(<span style="color:#98c379">'icici-bank'</span>);
 <span style="color:#7f848e">// {"{"} full: '...', icon: '...', mono_dark: '...' {"}"}</span></code></pre>
@@ -90,12 +90,12 @@ import Docs from '../../layouts/Docs.astro';
     the npm package at all:
   </p>
 
-  <pre><code>https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/{`{id}`}/{`{variant}`}.svg</code></pre>
+  <pre><code>https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/{`{id}`}/{`{variant}`}.svg</code></pre>
 
   <p>For example:</p>
 
   <pre><code><span style="color:#e06c75">&lt;img</span>
-  <span style="color:#d19a66">src</span>=<span style="color:#98c379">"https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/phonepe/icon.svg"</span>
+  <span style="color:#d19a66">src</span>=<span style="color:#98c379">"https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/phonepe/icon.svg"</span>
   <span style="color:#d19a66">alt</span>=<span style="color:#98c379">"PhonePe"</span>
   <span style="color:#d19a66">width</span>=<span style="color:#98c379">"32"</span>
   <span style="color:#d19a66">height</span>=<span style="color:#98c379">"32"</span>
@@ -138,7 +138,7 @@ import Docs from '../../layouts/Docs.astro';
   }
   .variant-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 0.65rem;
     margin: 0.75rem 0 1.5rem;
   }

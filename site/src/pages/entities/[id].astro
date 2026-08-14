@@ -29,10 +29,15 @@ const sourced = hasArtwork(e);
 const available = VARIANTS.filter((v) => e.logos[v]);
 const primary = e.logos.icon ?? e.logos.full;
 
-const title = `${e.name} logo & brand assets — FinMarks`;
+const identifiers: string[] = [];
+if (e.ifsc_prefix) identifiers.push(`IFSC prefix ${e.ifsc_prefix}`);
+if (e.upi_handles?.length) identifiers.push(`UPI handle ${e.upi_handles[0]}`);
+const identifierText = identifiers.length ? `, ${identifiers.join(" and ")}` : "";
+
+const title = `${e.name} Logo (SVG) & Brand Data | Finmarks`;
 const description = sourced
-  ? `Download the ${e.name} logo as SVG in ${available.length} variant${available.length === 1 ? "" : "s"}. Brand colour ${e.brand_color}${e.ifsc_prefix ? `, IFSC prefix ${e.ifsc_prefix}` : ""}. Free, MIT-licensed metadata.`
-  : `${e.name} — ${e.categories.map(categoryLabel).join(", ")}. Brand colour ${e.brand_color}${e.ifsc_prefix ? `, IFSC prefix ${e.ifsc_prefix}` : ""}. Structured metadata, free and MIT licensed.`;
+  ? `Download the ${e.name} logo as SVG in ${available.length} variant${available.length === 1 ? "" : "s"}. Brand colour ${e.brand_color}${identifierText}. Free, MIT-licensed.`
+  : `${e.name} — ${e.categories.map(categoryLabel).join(", ")}. Brand colour ${e.brand_color}${identifierText}. Structured metadata, free and MIT licensed.`;
 
 const related = entities
   .filter(
@@ -56,11 +61,11 @@ function getWebsiteWithRef(url: string | undefined) {
   if (!url) return undefined;
   try {
     const parsed = new URL(url);
-    parsed.searchParams.set("utm_source", "finmarks");
+    parsed.searchParams.set("utm_source", "Finmarks");
     return parsed.toString();
   } catch (err) {
     const separator = url.includes("?") ? "&" : "?";
-    return `${url}${separator}utm_source=finmarks`;
+    return `${url}${separator}utm_source=Finmarks`;
   }
 }
 ---
@@ -203,7 +208,7 @@ function getWebsiteWithRef(url: string | undefined) {
               </p>
               <a
                 class="ghost-btn"
-                href={`https://github.com/finmarks/finmarks/issues/new?title=${encodeURIComponent(`add logo: ${e.id}`)}&labels=logo-needed`}
+                href={`https://github.com/Finmarks/Finmarks/issues/new?title=${encodeURIComponent(`add logo: ${e.id}`)}&labels=logo-needed`}
                 rel="noopener"
                 target="_blank"
                 style="display:inline-flex;align-items:center;gap:0.35rem;"

@@ -5,13 +5,13 @@ import { CDN_BASE } from '../../lib/data';
 
 <Docs
   title="Getting Started"
-  description="Install the FinMarks npm package and make your first API call in minutes."
+  description="Install the Finmarks npm package and make your first API call in minutes."
 >
   <p class="eyebrow">Introduction</p>
   <h1>Getting Started</h1>
 
   <p class="intro">
-    FinMarks ships as a zero-dependency npm package. The entire dataset is bundled inline — no
+    Finmarks ships as a zero-dependency npm package. The entire dataset is bundled inline — no
     runtime fetch, no env vars, no loader config. Install and import.
   </p>
 
@@ -27,26 +27,26 @@ import { CDN_BASE } from '../../lib/data';
       <button class="tab-btn" data-tab="bun">bun</button>
     </div>
     <div class="code-row" data-panel="npm">
-      <code><span style="color:#c678dd">npm</span> <span style="color:#61afef">install</span> <span style="color:#98c379">finmarks</span></code>
-      <button class="copy-btn" data-copy="npm install finmarks" aria-label="Copy">
+      <code><span style="color:#c678dd">npm</span> <span style="color:#61afef">install</span> <span style="color:#98c379">Finmarks</span></code>
+      <button class="copy-btn" data-copy="npm install Finmarks" aria-label="Copy">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
       </button>
     </div>
     <div class="code-row hidden" data-panel="pnpm">
-      <code><span style="color:#c678dd">pnpm</span> <span style="color:#61afef">add</span> <span style="color:#98c379">finmarks</span></code>
-      <button class="copy-btn" data-copy="pnpm add finmarks" aria-label="Copy">
+      <code><span style="color:#c678dd">pnpm</span> <span style="color:#61afef">add</span> <span style="color:#98c379">Finmarks</span></code>
+      <button class="copy-btn" data-copy="pnpm add Finmarks" aria-label="Copy">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
       </button>
     </div>
     <div class="code-row hidden" data-panel="yarn">
-      <code><span style="color:#c678dd">yarn</span> <span style="color:#61afef">add</span> <span style="color:#98c379">finmarks</span></code>
-      <button class="copy-btn" data-copy="yarn add finmarks" aria-label="Copy">
+      <code><span style="color:#c678dd">yarn</span> <span style="color:#61afef">add</span> <span style="color:#98c379">Finmarks</span></code>
+      <button class="copy-btn" data-copy="yarn add Finmarks" aria-label="Copy">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
       </button>
     </div>
     <div class="code-row hidden" data-panel="bun">
-      <code><span style="color:#c678dd">bun</span> <span style="color:#61afef">add</span> <span style="color:#98c379">finmarks</span></code>
-      <button class="copy-btn" data-copy="bun add finmarks" aria-label="Copy">
+      <code><span style="color:#c678dd">bun</span> <span style="color:#61afef">add</span> <span style="color:#98c379">Finmarks</span></code>
+      <button class="copy-btn" data-copy="bun add Finmarks" aria-label="Copy">
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
       </button>
     </div>
@@ -58,7 +58,7 @@ import { CDN_BASE } from '../../lib/data';
 
   <p>Look up an entity and get its logo URL:</p>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getEntity, getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getEntity, getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#c678dd">const</span> <span style="color:#e06c75">hdfc</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getEntity</span>(<span style="color:#98c379">'hdfc-bank'</span>);
 
@@ -77,7 +77,7 @@ hdfc<span style="color:#56b6c2">?.</span>upi_handles<span style="color:#56b6c2">
     without any lookup table of your own:
   </p>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByIfscPrefix, getByUpiHandle }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getByIfscPrefix, getByUpiHandle }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'Finmarks'</span>;
 
 <span style="color:#7f848e">// First 4 characters of any IFSC code → Bank</span>
 <span style="color:#61afef">getByIfscPrefix</span>(<span style="color:#98c379">'HDFC0000123'</span><span style="color:#56b6c2">.</span><span style="color:#61afef">slice</span>(<span style="color:#d19a66">0</span><span style="color:#56b6c2">,</span> <span style="color:#d19a66">4</span>));  <span style="color:#7f848e">// → HDFC Bank</span>
@@ -110,7 +110,7 @@ hdfc<span style="color:#56b6c2">?.</span>upi_handles<span style="color:#56b6c2">
   <div class="page-nav">
     <a href="/docs">
       <span class="nav-label">← Previous</span>
-      <span class="nav-title">What is FinMarks?</span>
+      <span class="nav-title">What is Finmarks?</span>
     </a>
     <a href="/docs/entities" class="next-link">
       <span class="nav-label">Next</span>

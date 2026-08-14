@@ -144,13 +144,13 @@ export async function downloadZip(
   // question is the first thing a downloader will have.
   files['README.txt'] = new TextEncoder().encode(
     [
-      'FinMarks — Indian fintech brand assets',
-      'https://github.com/finmarks/finmarks',
+      'Finmarks — Indian fintech brand assets',
+      'https://github.com/Finmarks/Finmarks',
       '',
       `${count} file(s) across ${targets.length} entit(ies).`,
       '',
       'These logos are the trademarks of their respective owners. The MIT licence',
-      'covers the FinMarks code and metadata, NOT the marks themselves. Your',
+      'covers the Finmarks code and metadata, NOT the marks themselves. Your',
       'use of any logo is governed by that brand’s own trademark policy.',
       '',
       'Nominative use — identifying the brand a logo names — is normally fine.',
@@ -167,7 +167,7 @@ export async function downloadZip(
   });
 
   const filename =
-    targets.length === 1 ? `finmarks-${targets[0].id}.zip` : `finmarks-${targets.length}-logos.zip`;
+    targets.length === 1 ? `Finmarks-${targets[0].id}.zip` : `Finmarks-${targets.length}-logos.zip`;
   triggerBlobDownload(blob, filename);
 
   return {

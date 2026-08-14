@@ -1,19 +1,20 @@
 ---
 import Docs from '../../layouts/Docs.astro';
 import { stats } from '../../lib/data';
+import CreatorCredit from '../../components/CreatorCredit.astro';
 
 const REPO = 'https://github.com/finmarks/finmarks';
 ---
 
 <Docs
-  title="What is FinMarks?"
-  description="An introduction to FinMarks — the open dataset of Indian fintech brands, logos, and identifiers."
+  title="Finmarks Docs: Indian Fintech Logo & Data API"
+  description="An introduction to Finmarks — the open dataset of Indian fintech brands, logos, and identifiers."
 >
   <p class="eyebrow">Introduction</p>
-  <h1>What is FinMarks?</h1>
+  <h1>What is Finmarks?</h1>
 
   <p class="intro">
-    FinMarks is an open dataset of <strong>{stats.total} Indian fintech entities</strong> — banks,
+    Finmarks is an open dataset of <strong>{stats.total} Indian fintech entities</strong> — banks,
     UPI apps, wallets, NBFCs, and more — with verified brand metadata, SVG logos, and a fully-typed
     npm package. It exists because building fintech software in India means constantly looking up the
     same logos, IFSC prefixes, and UPI handles.
@@ -22,7 +23,7 @@ const REPO = 'https://github.com/finmarks/finmarks';
   <h2>What it contains</h2>
 
   <p>
-    Every entity in FinMarks carries structured metadata — not just a logo. The dataset is built to
+    Every entity in Finmarks carries structured metadata — not just a logo. The dataset is built to
     answer the questions that come up at runtime in a real fintech product:
   </p>
 
@@ -37,7 +38,7 @@ const REPO = 'https://github.com/finmarks/finmarks';
   <h2>What makes it different</h2>
 
   <p>
-    Most logo packs give you files and stop there. FinMarks pairs every asset with a structured
+    Most logo packs give you files and stop there. Finmarks pairs every asset with a structured
     record: IFSC prefix, UPI handles, FIP/FIU identifiers, regulatory body, founding year, and a
     category taxonomy built for the Indian fintech stack.
   </p>
@@ -47,10 +48,10 @@ const REPO = 'https://github.com/finmarks/finmarks';
     dataset is inlined into the bundle. After tree-shaking, you only ship the code paths you use.
   </p>
 
-  <h2>Why FinMarks exists</h2>
+  <h2>Why Finmarks exists</h2>
 
   <p>
-    Every fintech product — whether it is a UPI app, a checkout page, or an investment platform — needs to display bank, payment gateway, and regulator assets to build trust and legibility. Whenever a company builds a new screen or releases an update, sourcing and managing these correct, high-quality assets is a repetitive hurdle. FinMarks exists to solve this: aiming to be a centralized, open-source database of financial logos and metadata that any company can rely on, ensuring software is built faster and remains accurate.
+    Every fintech product — whether it is a UPI app, a checkout page, or an investment platform — needs to display bank, payment gateway, and regulator assets to build trust and legibility. Whenever a company builds a new screen or releases an update, sourcing and managing these correct, high-quality assets is a repetitive hurdle. Finmarks exists to solve this: aiming to be a centralized, open-source database of financial logos and metadata that any company can rely on, ensuring software is built faster and remains accurate.
   </p>
 
   <p>
@@ -66,10 +67,12 @@ const REPO = 'https://github.com/finmarks/finmarks';
   <h2>Community</h2>
 
   <p>
-    FinMarks is community-driven. Missing an entity? Want to add a logo variant? PRs are welcome
+    Finmarks is community-driven. Missing an entity? Want to add a logo variant? PRs are welcome
     — a metadata-only contribution with <code>"logos": {"{"} "full": null {"}"}</code> is a real
     contribution. See the <a href="/docs/contributing">Contributing Guide</a> to get started.
   </p>
+
+  <CreatorCredit />
 
   <div class="page-nav">
     <div></div>

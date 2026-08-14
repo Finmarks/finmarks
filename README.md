@@ -1,9 +1,9 @@
-# FinMarks
+# Finmarks
 
 Logos and structured metadata for the Indian fintech ecosystem — banks, UPI apps, payment gateways, neobanks, account aggregators and more.
 
-[![Validate](https://github.com/finmarks/finmarks/actions/workflows/validate.yml/badge.svg)](https://github.com/finmarks/finmarks/actions/workflows/validate.yml)
-[![npm](https://img.shields.io/npm/v/finmarks.svg)](https://www.npmjs.com/package/finmarks)
+[![Validate](https://github.com/Finmarks/Finmarks/actions/workflows/validate.yml/badge.svg)](https://github.com/Finmarks/Finmarks/actions/workflows/validate.yml)
+[![npm](https://img.shields.io/npm/v/Finmarks.svg)](https://www.npmjs.com/package/Finmarks)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 **115 entities · 16 categories · MIT licensed**
@@ -19,8 +19,8 @@ There is no single structured source of truth for Indian fintech brand assets. T
 ## Install
 
 ```bash
-npm install finmarks
-# or: pnpm add finmarks / yarn add finmarks
+npm install Finmarks
+# or: pnpm add Finmarks / yarn add Finmarks
 ```
 
 > **Before shipping a logo to production:** this package's MIT licence covers
@@ -34,7 +34,7 @@ changes. See [CHANGELOG.md](CHANGELOG.md) before upgrading.
 ## Usage
 
 ```ts
-import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
+import { getEntity, getLogoUrl, getByCategory, search } from 'Finmarks';
 
 // One entity, fully typed
 const hdfc = getEntity('hdfc-bank');
@@ -44,7 +44,7 @@ hdfc?.upi_handles;   // ['@hdfcbank']
 
 // A logo URL
 getLogoUrl('hdfc-bank', 'icon');
-// 'https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg'
+// 'https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/hdfc-bank/icon.svg'
 
 // Everything in a category
 getByCategory('upi-psp');                        // 26 entities
@@ -60,7 +60,7 @@ search('bank', { categories: 'neobank', limit: 5 });
 The metadata is the point. These resolve the identifiers you actually have at runtime:
 
 ```ts
-import { getByIfscPrefix, getByUpiHandle } from 'finmarks';
+import { getByIfscPrefix, getByUpiHandle } from 'Finmarks';
 
 // You have an IFSC code from a bank account
 getByIfscPrefix('HDFC0000123'.slice(0, 4));  // → HDFC Bank
@@ -72,7 +72,7 @@ getByUpiHandle('someone@ybl');               // → PhonePe
 ### Displaying a linked account
 
 ```tsx
-import { getByIfscPrefix, getLogoUrlWithFallback } from 'finmarks';
+import { getByIfscPrefix, getLogoUrlWithFallback } from 'Finmarks';
 
 function AccountRow({ ifsc }: { ifsc: string }) {
   const bank = getByIfscPrefix(ifsc.slice(0, 4));
@@ -98,14 +98,14 @@ Every asset is served free by [jsDelivr](https://www.jsdelivr.com) straight from
 this repository — no account, no API key, no rate limit:
 
 ```html
-<img src="https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg" width="32" />
-<img src="https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/phonepe/full.svg" alt="PhonePe" width="120" />
+<img src="https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/hdfc-bank/icon.svg" width="32" />
+<img src="https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/phonepe/full.svg" alt="PhonePe" width="120" />
 ```
 
 The index is fetchable too:
 
 ```bash
-BASE=https://cdn.jsdelivr.net/gh/finmarks/finmarks@main
+BASE=https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main
 
 curl $BASE/dist/index.json        # full dataset
 curl $BASE/dist/index-lite.json   # id, name, categories, colour
@@ -177,7 +177,7 @@ entities/{id}/entity.json   source of truth — one folder per brand
 entities/{id}/*.svg         logo variants
 schemas/                    JSON Schema + category taxonomy
 scripts/                    validate, generate, check-logos, convert-png
-packages/finmarks/      the npm package
+packages/Finmarks/      the npm package
 dist/                       generated index — never edited by hand
 ```
 
@@ -203,4 +203,4 @@ The MIT licence covers the code and metadata in this repository. It does **not**
 ## Licence
 
 [MIT](LICENSE)
-# finmarks
+# Finmarks

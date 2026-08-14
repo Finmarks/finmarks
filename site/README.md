@@ -1,4 +1,4 @@
-# FinMarks site
+# Finmarks site
 
 The discovery site — an entity browser over the dataset in [`../dist/`](../dist).
 
@@ -78,5 +78,5 @@ canonical URLs and the sitemap are correct.
 
 ```bash
 npm run build
-npx wrangler pages deploy dist --project-name=finmarks
+npx wrangler pages deploy dist --project-name=Finmarks
 ```

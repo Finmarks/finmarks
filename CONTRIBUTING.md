@@ -5,8 +5,8 @@ Two things move this project forward: **new entities** and **missing logo varian
 ## Setup
 
 ```bash
-git clone https://github.com/finmarks/finmarks.git
-cd finmarks
+git clone https://github.com/Finmarks/Finmarks.git
+cd Finmarks
 pnpm install
 pnpm validate
 ```

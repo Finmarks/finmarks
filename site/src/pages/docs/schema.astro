@@ -4,7 +4,7 @@ import Docs from '../../layouts/Docs.astro';
 
 <Docs
   title="Schema"
-  description="The FinMarks entity schema — design decisions, field semantics, validation rules and generated output."
+  description="The Finmarks entity schema — design decisions, field semantics, validation rules and generated output."
 >
   <p class="eyebrow">Reference</p>
   <h1>Schema</h1>
@@ -111,7 +111,7 @@ import Docs from '../../layouts/Docs.astro';
   <ol>
     <li>Add the id to the <code>categories</code> enum in <code>entity.schema.json</code></li>
     <li>Add the full definition to <code>schemas/categories.json</code></li>
-    <li>Add the union member to <code>packages/finmarks/src/types.ts</code></li>
+    <li>Add the union member to <code>packages/Finmarks/src/types.ts</code></li>
     <li>Run <code>pnpm validate</code> — it fails if the schema and the taxonomy have drifted apart</li>
   </ol>
 

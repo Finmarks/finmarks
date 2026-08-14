@@ -1,5 +1,5 @@
 {
-  "name": "finmarks-monorepo",
+  "name": "Finmarks-monorepo",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -15,9 +15,9 @@
     "check-logos": "node scripts/check-logos.mjs",
     "generate": "node scripts/generate-index.mjs",
     "convert-png": "node scripts/convert-png.mjs",
-    "build": "pnpm validate && pnpm generate && pnpm -F finmarks build",
-    "test": "pnpm validate && pnpm -F finmarks test",
-    "sync": "npx svgo --config svgo.config.mjs -r entities/ && FINMARKS_CDN=\"\" node scripts/generate-index.mjs && pnpm -C site run build",
+    "build": "pnpm validate && pnpm generate && pnpm -F Finmarks build",
+    "test": "pnpm validate && pnpm -F Finmarks test",
+    "sync": "npx svgo --config svgo.config.mjs -r entities/ && Finmarks_CDN=\"\" node scripts/generate-index.mjs && pnpm -C site run build",
     "dev-site": "pnpm -C site dev --port 3002"
   },
   "devDependencies": {

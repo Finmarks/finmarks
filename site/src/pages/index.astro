@@ -1,17 +1,18 @@
 ---
 import Base from "../layouts/Base.astro";
 import { stats } from "../lib/data";
+import CreatorCredit from "../components/CreatorCredit.astro";
 
 const title =
-  "FinMarks — brand assets for Indian fintech, as structured data";
+  "Finmarks — brand assets for Indian fintech, as structured data";
 const description = `Logos and structured metadata for ${stats.total} Indian fintech entities — banks, UPI apps, payment gateways, neobanks and account aggregators. IFSC prefixes, UPI handles, FIP IDs. MIT licensed, free via npm and CDN.`;
 ---
 
 <Base title={title} description={description}>
-  <section class="hero wrap">
+  <section class="hero">
 
     <div class="hero-content">
-      <img src="/finmark_transparent.svg" alt="FinMarks Logo" class="hero-logo" style="height: 32px;" />
+      <img src="/finmark_transparent.svg" alt="Finmarks Logo" class="hero-logo" style="height: 32px;" />
       <h1>
         Ship fintech apps faster with <span class="dim"
           >structured brand assets.</span
@@ -68,10 +69,10 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
           <div class="cta">
             <div class="install">
           <span class="sigil">$</span>
-          <span>npm i finmarks</span>
+          <span>npm i Finmarks</span>
           <button
             class="copy-btn"
-            data-copy="npm i finmarks"
+            data-copy="npm i Finmarks"
             aria-label="Copy install command"
           >
             <svg
@@ -97,6 +98,26 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
         </div>
       </div>
     </div>
+
+    <a href="#feature-universal-asset" class="scroll-cue" aria-label="Scroll down to explore features">
+      <span class="scroll-cue-pill">
+        <span class="scroll-cue-text">Scroll to explore</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="scroll-cue-chevron"
+        >
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </span>
+    </a>
   </section>
 
   <section class="wrap features-section" id="feature-universal-asset">
@@ -163,7 +184,7 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
                  <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
                </div>
                <div class="window-code">
-                 <pre><code><span class="token tag">&lt;img</span> <span class="token attr">src=</span><span class="token string">"https://unpkg.com/finmarks"</span> <span class="token tag">/&gt;</span></code></pre>
+                 <pre><code><span class="token tag">&lt;img</span> <span class="token attr">src=</span><span class="token string">"https://unpkg.com/Finmarks"</span> <span class="token tag">/&gt;</span></code></pre>
                </div>
             </div>
           </div>
@@ -174,7 +195,10 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
             <h2>100% Open Source</h2>
             <p>Built for the community, by the community. Finmarks is MIT licensed, meaning it is completely free to use in commercial and personal projects.</p>
             <div class="feature-cta">
-              <a href="https://github.com/your/repo" target="_blank" rel="noopener noreferrer" class="outline-btn">Contribute</a>
+              <span class="outline-btn disabled" aria-disabled="true">
+                Contribute
+                <span class="soon-badge">Soon</span>
+              </span>
             </div>
           </div>
           <div class="feature-visual">
@@ -185,6 +209,8 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
           </div>
         </div>
       </div>
+
+      <CreatorCredit />
   </section>
 </Base>
 
@@ -195,7 +221,7 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     var devCtaWrapper = document.getElementById("dev-cta-wrapper");
     if (devCheckbox && devCtaWrapper) {
       // Load from local storage
-      var isDev = localStorage.getItem("finmarks_dev_mode") === "true";
+      var isDev = localStorage.getItem("Finmarks_dev_mode") === "true";
       devCheckbox.checked = isDev;
       if (isDev) {
         devCtaWrapper.classList.add("active");
@@ -203,7 +229,7 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
       
       devCheckbox.addEventListener("change", function(e) {
         var checked = e.target.checked;
-        localStorage.setItem("finmarks_dev_mode", checked);
+        localStorage.setItem("Finmarks_dev_mode", checked);
         if (checked) {
           devCtaWrapper.classList.add("active");
         } else {
@@ -256,7 +282,7 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.4 ), rgba(0, 0, 0, 0.1)), url('/fintech_india.png');
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4 ), rgba(0, 0, 0, 0)), url('/fintech_india.png');
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;
@@ -267,10 +293,12 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     scroll-snap-stop: normal;
     padding-top: clamp(4rem, 8vh, 7rem);
     padding-bottom: 6rem;
+    max-width: 1200px;
   }
   .hero-content {
     width: 100%;
     max-width: 800px;
+    padding-inline: var(--gutter);
     position: relative;
     z-index: 2;
     min-width: 0;
@@ -441,6 +469,13 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     border-color: var(--line-strong);
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .feature-icon-wrapper {
+      background: var(--surface-2);
+      border-color: var(--line-strong);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+  }
 
   .feature-text h2 {
     font-size: 2rem;
@@ -482,6 +517,26 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     background: var(--surface-2);
   }
 
+  .outline-btn.disabled {
+    gap: 0.5rem;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  .outline-btn.disabled:hover {
+    border-color: var(--line-strong);
+    background: var(--surface);
+  }
+
+  .soon-badge {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background: var(--line);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   .feature-visual {
     flex: 1;
     display: flex;
@@ -521,6 +576,13 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
     border: 1px solid rgba(255,255,255,0.08);
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .glass-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
   }
   
   .marquee-container {
@@ -721,6 +783,11 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
   :root[data-theme="dark"] .open-source-visual {
     background: #11141a;
   }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .open-source-visual {
+      background: #11141a;
+    }
+  }
   
   .glowing-orb {
     width: 120px;
@@ -753,9 +820,84 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
   .pulse {
     animation: subtle-pulse 3s infinite alternate ease-in-out;
   }
-  
+
   @keyframes subtle-pulse {
     0% { opacity: 0.7; transform: scale(0.98); }
     100% { opacity: 1; transform: scale(1.02); }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: clamp(1.5rem, 5vh, 3rem);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .scroll-cue-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    background: rgba(12, 14, 18, 0.65);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+  }
+
+  .scroll-cue:hover .scroll-cue-pill {
+    background: rgba(12, 14, 18, 0.88);
+    border-color: var(--accent);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 25px var(--accent-dim);
+    transform: translateY(-3px);
+  }
+
+  .scroll-cue-text {
+    white-space: nowrap;
+  }
+
+  .scroll-cue-chevron {
+    color: var(--accent);
+    animation: caret-bounce 1.6s ease-in-out infinite;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+
+  @keyframes caret-bounce {
+    0%, 100% {
+      transform: translateY(-2px);
+      opacity: 0.8;
+    }
+    50% {
+      transform: translateY(3px);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-cue-chevron {
+      animation: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .scroll-cue {
+      bottom: 1.25rem;
+    }
+    .scroll-cue-pill {
+      padding: 0.45rem 0.95rem;
+      font-size: 0.78rem;
+      gap: 0.45rem;
+    }
   }
 </style>

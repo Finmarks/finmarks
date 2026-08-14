@@ -20,7 +20,7 @@ const DATA = join(PKG, 'data');
 const FILES = ['index.json', 'index-lite.json', 'categories.json'];
 
 if (!existsSync(REPO_DIST)) {
-  console.error('finmarks: repo dist/ not found — run `pnpm generate` at the repo root first.');
+  console.error('Finmarks: repo dist/ not found — run `pnpm generate` at the repo root first.');
   process.exit(1);
 }
 
@@ -29,10 +29,10 @@ await mkdir(DATA, { recursive: true });
 for (const file of FILES) {
   const src = join(REPO_DIST, file);
   if (!existsSync(src)) {
-    console.error(`finmarks: dist/${file} missing — run \`pnpm generate\` at the repo root.`);
+    console.error(`Finmarks: dist/${file} missing — run \`pnpm generate\` at the repo root.`);
     process.exit(1);
   }
   await copyFile(src, join(DATA, file));
 }
 
-console.log(`finmarks: copied ${FILES.length} data files into packages/finmarks/data/`);
+console.log(`Finmarks: copied ${FILES.length} data files into packages/Finmarks/data/`);

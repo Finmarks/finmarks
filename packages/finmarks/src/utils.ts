@@ -44,7 +44,7 @@ export function getEntity(id: string): Entity | undefined {
  */
 export function mustGetEntity(id: string): Entity {
   const entity = idIndex().get(id);
-  if (!entity) throw new Error(`finmarks: unknown entity id "${id}"`);
+  if (!entity) throw new Error(`Finmarks: unknown entity id "${id}"`);
   return entity;
 }
 
@@ -62,7 +62,7 @@ export function hasEntity(id: string): boolean {
  *
  * @example
  * getLogoUrl('hdfc-bank', 'icon');
- * // 'https://cdn.jsdelivr.net/gh/finmarks/finmarks@main/entities/hdfc-bank/icon.svg'
+ * // 'https://cdn.jsdelivr.net/gh/Finmarks/Finmarks@main/entities/hdfc-bank/icon.svg'
  */
 export function getLogoUrl(id: string, variant: LogoVariant = 'full'): string | undefined {
   return idIndex().get(id)?.logos[variant];

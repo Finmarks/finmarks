@@ -7,8 +7,8 @@ const upcoming = categories.filter((c) => c.count === 0);
 ---
 
 <Base
-  title="Categories — Indian fintech taxonomy | FinMarks"
-  description={`The ${live.length}-category taxonomy covering ${stats.total} Indian fintech entities — banks, UPI apps, gateways, neobanks, lenders, account aggregators and more.`}>
+  title="Fintech Categories: Banks, UPI, Payments & More | Finmarks"
+  description={`${live.length} categories covering ${stats.total} Indian fintech brands — banks, UPI apps, payment gateways, neobanks, lenders, and account aggregators.`}>
   <div class="wrap page">
     <div class="category-orbits" aria-hidden="true">
       <div class="orbit-track orbit-1" style="--radius: 225px">
@@ -135,6 +135,13 @@ const upcoming = categories.filter((c) => c.count === 0);
   :root[data-theme="dark"] .orbit-logo-wrapper {
     background: var(--surface-2);
     border-color: var(--line-strong);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .orbit-logo-wrapper {
+      background: var(--surface-2);
+      border-color: var(--line-strong);
+    }
   }
 
   .orbit-logo-wrapper img {

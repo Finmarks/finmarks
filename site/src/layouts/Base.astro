@@ -14,6 +14,11 @@ interface Props {
 const { title, description, ogImage, hideHeader = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
+
+// Set in the build env (see .github/workflows/site.yml); unset locally and on
+// PR builds, so no tracking script ships until the production env vars exist.
+const gaId = import.meta.env.GA_MEASUREMENT_ID;
+const clarityId = import.meta.env.CLARITY_PROJECT_ID;
 ---
 
 <!doctype html>
@@ -47,20 +52,45 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
     />
 
     <!--
-      Applied before first paint so a dark-mode visitor never sees a white
-      flash. Kept inline and tiny for that reason.
+      Applied before first paint so visitor never sees a theme flash.
+      Defaults to 'light' if not explicitly set.
     -->
     <script is:inline>
       (function () {
         try {
           var saved = localStorage.getItem("bb-theme");
-          if (saved === "dark" || saved === "light") {
-            document.documentElement.setAttribute("data-theme", saved);
+          var theme = saved || "light";
+          if (theme === "dark" || theme === "light") {
+            document.documentElement.setAttribute("data-theme", theme);
+          } else if (theme === "system") {
+            document.documentElement.removeAttribute("data-theme");
           }
         } catch (e) {}
       })();
     </script>
     <script is:inline src="https://tally.so/widgets/embed.js"></script>
+
+    {gaId && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline define:vars={{ gaId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag("js", new Date());
+          gtag("config", gaId);
+        </script>
+      </>
+    )}
+
+    {clarityId && (
+      <script is:inline define:vars={{ clarityId }}>
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", clarityId);
+      </script>
+    )}
   </head>
 
   <body>
@@ -69,9 +99,9 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
     {!hideHeader ? (
       <div class={`app-layout ${isHome ? 'is-home-layout' : ''}`}>
         <header class="mobile-header">
-          <a class="brand" href="/" aria-label="FinMarks">
-            <img src="/finmark_light.svg" alt="FinMarks" class="logo-light brand-logo" />
-            <img src="/finmark_dark.svg" alt="FinMarks" class="logo-dark brand-logo" />
+          <a class="brand" href="/" aria-label="Finmarks">
+            <img src="/finmark_light.svg" alt="Finmarks" class="logo-light brand-logo" />
+            <img src="/finmark_dark.svg" alt="Finmarks" class="logo-dark brand-logo" />
           </a>
           <button class="menu-toggle" aria-label="Toggle Menu" id="mobile-menu-toggle">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>

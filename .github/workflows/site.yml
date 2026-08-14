@@ -9,6 +9,13 @@ name: Site
 #
 # Without them the deploy step is skipped with a notice, so forks and
 # contributors still get the build check.
+#
+# Optional repository variables (Settings > Secrets and variables > Actions >
+# Variables — not Secrets, since both IDs end up in the public page source):
+#   GA_MEASUREMENT_ID   Google Analytics 4 measurement ID, e.g. G-XXXXXXXXXX
+#   CLARITY_PROJECT_ID  Microsoft Clarity project ID
+#
+# Without them the site builds as normal with no tracking scripts.
 
 on:
   push:
@@ -56,7 +63,9 @@ jobs:
       - name: Build
         working-directory: site
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://finmarks.pages.dev' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://Finmarks.pages.dev' }}
+          GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
+          CLARITY_PROJECT_ID: ${{ vars.CLARITY_PROJECT_ID }}
         run: npm run build
 
       - name: Check page count
@@ -108,4 +117,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site/dist --project-name=finmarks
+          command: pages deploy site/dist --project-name=Finmarks

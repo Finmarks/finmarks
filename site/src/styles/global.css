@@ -29,12 +29,12 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
     --ground: #0c0e12;
     --surface: #14171d;
     --surface-2: #1b1f27;
-    --logo-bg: #1b1f27;
+    --logo-bg: #fff;
     --line: #272c36;
     --line-strong: #39404d;
     --ink: #eef0f4;
@@ -365,19 +365,19 @@ a.chip:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-  .icon-sun {
+  :root:not([data-theme="light"]) .icon-sun {
     display: block;
   }
 
-  .icon-moon {
+  :root:not([data-theme="light"]) .icon-moon {
     display: none;
   }
 
-  .logo-dark {
+  :root:not([data-theme="light"]) .logo-dark {
     display: block;
   }
 
-  .logo-light {
+  :root:not([data-theme="light"]) .logo-light {
     display: none;
   }
 }
@@ -802,6 +802,13 @@ body.sidebar-open .mobile-overlay {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-segmented-btn[aria-pressed="true"],
+  :root:not([data-theme="light"]) .theme-segmented-btn.active {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+}
+
 @media (min-width: 940px) {
   .app-main {
     height: 100%;
@@ -845,6 +852,19 @@ body.sidebar-open .mobile-overlay {
 :root[data-theme="dark"] .search-input-wrapper:focus-within {
   border-color: var(--accent);
   box-shadow: 0 12px 40px rgba(0, 192, 139, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .search-input-wrapper {
+    background: var(--surface-2);
+    border-color: var(--line);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  :root:not([data-theme="light"]) .search-input-wrapper:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 12px 40px rgba(0, 192, 139, 0.15);
+  }
 }
 
 .search-icon-wrap {
@@ -969,6 +989,15 @@ body.sidebar-open .mobile-overlay {
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero-search .search-input-wrapper {
+    background: rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  }
 }
 
 .hero-search .search-input-wrapper input {

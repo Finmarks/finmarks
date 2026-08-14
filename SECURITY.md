@@ -18,7 +18,7 @@ mitigation plan within 30 days for confirmed vulnerabilities.
 
 ## Scope
 
-This policy covers the `finmarks` npm package, the build/validation scripts
+This policy covers the `Finmarks` npm package, the build/validation scripts
 in this repository, and the CI/CD pipelines that publish to npm, the CDN and
 the discovery site.
 
@@ -29,4 +29,4 @@ correction of a brand asset.
 ## Supported versions
 
 This project is pre-1.0 (`0.x`). Only the latest published version of the
-`finmarks` package receives security fixes.
+`Finmarks` package receives security fixes.

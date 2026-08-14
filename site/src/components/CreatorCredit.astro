@@ -1,0 +1,248 @@
+---
+interface Props {
+  class?: string;
+  style?: string;
+}
+
+const { class: className = '', style = '' } = Astro.props;
+---
+
+<div class:list={['creator-credit-wrapper', className]} style={style}>
+  <div class="creator-credit-card">
+    <div class="credit-main">
+      <div class="credit-badge">
+        <span class="credit-heart" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+          </svg>
+        </span>
+        <span>Made with love for Fintech</span>
+      </div>
+      <div class="credit-author">
+        <span class="credit-by">Crafted by</span>
+        <span class="credit-name">Kaval Patel</span>
+      </div>
+    </div>
+    
+    <div class="credit-links">
+      <a
+        href="https://www.kaval.design/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="credit-link-btn"
+        aria-label="Visit Kaval Patel's Website (opens in new tab)"
+      >
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="2" y1="12" x2="22" y2="12" />
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+        </svg>
+        <span>kaval.design</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+          <path d="M7 17l9.2-9.2M17 17V8H8" />
+        </svg>
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/kavalpatel18/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="credit-link-btn linkedin-btn"
+        aria-label="Visit Kaval Patel's LinkedIn profile (opens in new tab)"
+      >
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none" class="link-icon">
+          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+        </svg>
+        <span>LinkedIn</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+          <path d="M7 17l9.2-9.2M17 17V8H8" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .creator-credit-wrapper {
+    width: 100%;
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: center;
+  }
+
+  .creator-credit-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.25rem 1.75rem;
+    border-radius: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  :root[data-theme="dark"] .creator-credit-card {
+    background: var(--surface-2);
+    border-color: var(--line-strong);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .creator-credit-card {
+      background: var(--surface-2);
+      border-color: var(--line-strong);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .creator-credit-card:hover {
+    border-color: var(--line-strong);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  }
+
+  :root[data-theme="dark"] .creator-credit-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .creator-credit-card:hover {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    }
+  }
+
+  .credit-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .credit-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-2);
+  }
+
+  .credit-heart {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ef4444;
+    animation: heart-beat 2.4s infinite ease-in-out;
+  }
+
+  @keyframes heart-beat {
+    0%, 100% { transform: scale(1); }
+    12% { transform: scale(1.22); }
+    24% { transform: scale(1); }
+    36% { transform: scale(1.18); }
+    60% { transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .credit-heart {
+      animation: none;
+    }
+  }
+
+  .credit-author {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+  }
+
+  .credit-by {
+    font-size: 0.82rem;
+    color: var(--ink-3);
+  }
+
+  .credit-name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  .credit-links {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    flex-wrap: wrap;
+  }
+
+  .credit-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--ground);
+    border: 1px solid var(--line);
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  :root[data-theme="dark"] .credit-link-btn {
+    background: var(--surface);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .credit-link-btn {
+      background: var(--surface);
+    }
+  }
+
+  .credit-link-btn .link-icon {
+    color: var(--ink-2);
+    transition: color 0.2s ease;
+  }
+
+  .credit-link-btn .arrow-icon {
+    color: var(--ink-3);
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+
+  .credit-link-btn:hover {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--accent-dim);
+  }
+
+  .credit-link-btn:hover .link-icon,
+  .credit-link-btn:hover .arrow-icon {
+    color: var(--accent);
+  }
+
+  .credit-link-btn:hover .arrow-icon {
+    transform: translate(2px, -2px);
+  }
+
+  @media (max-width: 680px) {
+    .creator-credit-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.25rem;
+      gap: 1.1rem;
+    }
+
+    .credit-links {
+      width: 100%;
+    }
+
+    .credit-link-btn {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+</style>

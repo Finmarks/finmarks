@@ -167,74 +167,74 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
     <div className={hideSidebar ? s.embedded : undefined}>
       {children}
       <div className={s.stickyHead}>
-          <div className={s.toolbar}>
-            <div className={s.searchWrap}>
-              <span className={s.searchIcon} aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                  <circle cx="12" cy="11" r="7" />
-                  <path d="m20 20-3.5-3.5" />
-                </svg>
-              </span>
-              <input
-                ref={searchRef}
-                className={s.search}
-                type="search"
-                value={query}
-                onChange={(ev) => setQuery(ev.target.value)}
-                placeholder="Search name, id, @handle, IFSC…   (press /)"
-                aria-label="Search entities"
-                autoComplete="off"
-              />
-            </div>
-            <button
-              data-tally-open="dWGzWd"
-              data-tally-layout="modal"
-              data-tally-width="380"
-              data-tally-auto-close="2000"
-              className="primary-btn"
-              type="button"
-            >
-              <Plus size={16} />
-              Contribute
+        <div className={s.toolbar}>
+          <div className={s.searchWrap}>
+            <span className={s.searchIcon} aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
+                <circle cx="12" cy="11" r="7" />
+                <path d="m20 20-3.5-3.5" />
+              </svg>
+            </span>
+            <input
+              ref={searchRef}
+              className={s.search}
+              type="search"
+              value={query}
+              onChange={(ev) => setQuery(ev.target.value)}
+              placeholder="Search name, id, @handle, IFSC…   (press /)"
+              aria-label="Search entities"
+              autoComplete="off"
+            />
+          </div>
+          <button
+            data-tally-open="dWGzWd"
+            data-tally-layout="modal"
+            data-tally-width="380"
+            data-tally-auto-close="2000"
+            className="primary-btn"
+            type="button"
+          >
+            <Plus size={16} />
+            Contribute
+          </button>
+        </div>
+      </div>
+
+      <div className={s.browseContent}>
+        <div className={s.resultLine}>
+          <div className={s.resultMeta}>
+            <span>
+              <b>{visible.length}</b> {visible.length === 1 ? 'entity' : 'entities'}
+            </span>
+            {withArtwork.length > 0 && (
+              <button className="ghost-btn" onClick={selectAllVisible} type="button">
+                Select all
+              </button>
+            )}
+            {selected.size > 0 && (
+              <button className="ghost-btn" onClick={clear} type="button">
+                Clear selection
+              </button>
+            )}
+          </div>
+          <div className={s.segToggle} role="group" aria-label="View">
+            <button type="button" aria-pressed={view === 'grid'} onClick={() => setView('grid')}>
+              <LayoutGrid size={14} /> Grid
+            </button>
+            <button type="button" aria-pressed={view === 'table'} onClick={() => setView('table')}>
+              <Table size={14} /> Table
             </button>
           </div>
         </div>
-
-        <div className={s.browseContent}>
-          <div className={s.resultLine}>
-            <div className={s.resultMeta}>
-              <span>
-                <b>{visible.length}</b> {visible.length === 1 ? 'entity' : 'entities'}
-              </span>
-              {withArtwork.length > 0 && (
-                <button className="ghost-btn" onClick={selectAllVisible} type="button">
-                  Select all
-                </button>
-              )}
-              {selected.size > 0 && (
-                <button className="ghost-btn" onClick={clear} type="button">
-                  Clear selection
-                </button>
-              )}
-            </div>
-            <div className={s.segToggle} role="group" aria-label="View">
-              <button type="button" aria-pressed={view === 'grid'} onClick={() => setView('grid')}>
-                <LayoutGrid size={14} /> Grid
-              </button>
-              <button type="button" aria-pressed={view === 'table'} onClick={() => setView('table')}>
-                <Table size={14} /> Table
-              </button>
-            </div>
-          </div>
 
         {visible.length === 0 && (
           <div className={s.empty}>
             <p>No entities match that query.</p>
             <div className={s.emptyActions}>
-              <button 
-                data-tally-open="yPAzV8" 
-                data-tally-layout="modal" 
-                data-tally-width="380" 
+              <button
+                data-tally-open="yPAzV8"
+                data-tally-layout="modal"
+                data-tally-width="380"
                 data-tally-auto-close="2000"
                 className="outline-btn"
                 type="button"
@@ -428,7 +428,7 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
             </table>
           </div>
         )}
-        </div>
+      </div>
 
       {selected.size > 0 && (
         <div className={s.selBar} role="status">
@@ -486,22 +486,22 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
   return (
     <div className="app-layout" id="browse">
       <header className="mobile-header">
-        <a className="brand" href="/" aria-label="FinMarks">
-          <img src="/finmark_light.svg" alt="FinMarks" className="logo-light brand-logo" />
-          <img src="/finmark_dark.svg" alt="FinMarks" className="logo-dark brand-logo" />
+        <a className="brand" href="/" aria-label="Finmarks">
+          <img src="/finmark_light.svg" alt="Finmarks" className="logo-light brand-logo" />
+          <img src="/finmark_dark.svg" alt="Finmarks" className="logo-dark brand-logo" />
         </a>
-        <button 
-          className="menu-toggle" 
-          aria-label="Toggle Menu" 
+        <button
+          className="menu-toggle"
+          aria-label="Toggle Menu"
           onClick={() => document.body.classList.toggle('sidebar-open')}
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
       </header>
 
-      <div 
-        className="mobile-overlay" 
-        onClick={() => document.body.classList.remove('sidebar-open')} 
+      <div
+        className="mobile-overlay"
+        onClick={() => document.body.classList.remove('sidebar-open')}
         aria-hidden="true"
       ></div>
 

@@ -1,5 +1,5 @@
 /**
- * Types for the FinMarks dataset.
+ * Types for the Finmarks dataset.
  *
  * These mirror schemas/entity.schema.json. The union members are written out
  * literally rather than generated at build time so that editor autocomplete

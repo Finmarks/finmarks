@@ -9,12 +9,14 @@ interface Props {
 
 const { title, description, section = '' } = Astro.props;
 const currentPath = Astro.url.pathname;
+// Avoid "X — Finmarks Docs — Finmarks Docs" when a page's own title already carries the suffix.
+const pageTitle = title.includes('Finmarks Docs') ? title : `${title} — Finmarks Docs`;
 
 const nav = [
   {
     group: 'Introduction',
     items: [
-      { label: 'What is FinMarks?', href: '/docs' },
+      { label: 'What is Finmarks?', href: '/docs' },
       { label: 'Getting Started', href: '/docs/getting-started' },
     ],
   },
@@ -51,7 +53,7 @@ const isActive = (href: string) => {
 };
 ---
 
-<Base title={`${title} — FinMarks Docs`} description={description}>
+<Base title={pageTitle} description={description}>
   <div class="docs-layout">
     <!-- Mobile Docs Nav -->
     <details class="docs-mobile-nav">

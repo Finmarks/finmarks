@@ -24,13 +24,13 @@ export const EXPECTED_VARIANTS = ['full', 'icon', 'mono_dark', 'mono_light'];
  * credentials and no egress cost, which keeps this project entirely on free
  * infrastructure. Assets are pinned to a release tag so URLs are immutable.
  *
- * Override with FINMARKS_CDN to point at a custom domain later — the URL
+ * Override with Finmarks_CDN to point at a custom domain later — the URL
  * shape is identical, so moving to R2 is a config change, not a migration.
  */
-export const CDN_REPO = process.env.FINMARKS_REPO ?? 'finmarks/finmarks';
-export const CDN_REF = process.env.FINMARKS_REF ?? 'main';
+export const CDN_REPO = process.env.Finmarks_REPO ?? 'Finmarks/Finmarks';
+export const CDN_REF = process.env.Finmarks_REF ?? 'main';
 export const CDN_BASE =
-  process.env.FINMARKS_CDN ?? `https://cdn.jsdelivr.net/gh/${CDN_REPO}@${CDN_REF}`;
+  process.env.Finmarks_CDN ?? `https://cdn.jsdelivr.net/gh/${CDN_REPO}@${CDN_REF}`;
 
 const c = {
   reset: '\x1b[0m',
