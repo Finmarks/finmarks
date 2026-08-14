@@ -45,7 +45,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getLogoUrl(id: string, variant?: LogoVariant): string | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrl }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'@finmarks/finmarks'</span>;
 
 <span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span>)<span style="color:#56b6c2">;</span>           <span style="color:#7f848e">// full logo (default)</span>
 <span style="color:#61afef">getLogoUrl</span>(<span style="color:#98c379">'hdfc-bank'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'icon'</span>)<span style="color:#56b6c2">;</span>    <span style="color:#7f848e">// icon only</span>
@@ -61,7 +61,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getLogoUrlWithFallback(id: string, variants?: LogoVariant[]): string | undefined</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrlWithFallback }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogoUrlWithFallback }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'@finmarks/finmarks'</span>;
 
 <span style="color:#7f848e">// Prefer icon, fall back to the full logo</span>
 <span style="color:#61afef">getLogoUrlWithFallback</span>(<span style="color:#98c379">'phonepe'</span><span style="color:#56b6c2">,</span> [<span style="color:#98c379">'icon'</span><span style="color:#56b6c2">,</span> <span style="color:#98c379">'full'</span>])<span style="color:#56b6c2">;</span>
@@ -78,7 +78,7 @@ import Docs from '../../layouts/Docs.astro';
 
   <div class="fn-sig">function getLogos(id: string): LogoUrls</div>
 
-  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogos }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'finmarks'</span>;
+  <pre><code><span style="color:#c678dd">import</span> <span style="color:#eef0f4">{"{ getLogos }"}</span> <span style="color:#c678dd">from</span> <span style="color:#98c379">'@finmarks/finmarks'</span>;
 
 <span style="color:#c678dd">const</span> <span style="color:#e06c75">logos</span> <span style="color:#56b6c2">=</span> <span style="color:#61afef">getLogos</span>(<span style="color:#98c379">'icici-bank'</span>);
 <span style="color:#7f848e">// {"{"} full: '...', icon: '...', mono_dark: '...' {"}"}</span></code></pre>

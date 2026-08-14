@@ -19,8 +19,8 @@ There is no single structured source of truth for Indian fintech brand assets. T
 ## Install
 
 ```bash
-npm install finmarks
-# or: pnpm add finmarks / yarn add finmarks
+npm install @finmarks/finmarks
+# or: pnpm add @finmarks/finmarks / yarn add @finmarks/finmarks
 ```
 
 > **Before shipping a logo to production:** this package's MIT licence covers
@@ -34,7 +34,7 @@ changes. See [CHANGELOG.md](CHANGELOG.md) before upgrading.
 ## Usage
 
 ```ts
-import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
+import { getEntity, getLogoUrl, getByCategory, search } from '@finmarks/finmarks';
 
 // One entity, fully typed
 const hdfc = getEntity('hdfc-bank');
@@ -60,7 +60,7 @@ search('bank', { categories: 'neobank', limit: 5 });
 The metadata is the point. These resolve the identifiers you actually have at runtime:
 
 ```ts
-import { getByIfscPrefix, getByUpiHandle } from 'finmarks';
+import { getByIfscPrefix, getByUpiHandle } from '@finmarks/finmarks';
 
 // You have an IFSC code from a bank account
 getByIfscPrefix('HDFC0000123'.slice(0, 4));  // → HDFC Bank
@@ -72,7 +72,7 @@ getByUpiHandle('someone@ybl');               // → PhonePe
 ### Displaying a linked account
 
 ```tsx
-import { getByIfscPrefix, getLogoUrlWithFallback } from 'finmarks';
+import { getByIfscPrefix, getLogoUrlWithFallback } from '@finmarks/finmarks';
 
 function AccountRow({ ifsc }: { ifsc: string }) {
   const bank = getByIfscPrefix(ifsc.slice(0, 4));

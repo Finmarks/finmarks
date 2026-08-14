@@ -2,7 +2,7 @@
  * Finmarks — logos and structured metadata for the Indian fintech ecosystem.
  *
  * @example
- * import { getEntity, getLogoUrl, getByCategory, search } from 'finmarks';
+ * import { getEntity, getLogoUrl, getByCategory, search } from '@finmarks/finmarks';
  *
  * getLogoUrl('hdfc-bank', 'icon');
  * getByCategory('upi-psp');

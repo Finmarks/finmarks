@@ -1,5 +1,5 @@
 {
-  "name": "finmarks",
+  "name": "@finmarks/finmarks",
   "version": "0.1.0",
   "description": "Logos and structured metadata for the Indian fintech ecosystem — banks, UPI apps, gateways, neobanks, AAs and more",
   "keywords": [
