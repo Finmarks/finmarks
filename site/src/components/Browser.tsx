@@ -293,9 +293,16 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
                     }>
                     {sourced ? (
                       <img
-                        src={`${cdnBase}/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`}
+                        src={`${cdnBase ? cdnBase : ''}/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`}
                         alt=""
                         loading="lazy"
+                        onError={(ev) => {
+                          const target = ev.currentTarget;
+                          const fallback = `/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`;
+                          if (target.src !== new URL(fallback, window.location.href).href) {
+                            target.src = fallback;
+                          }
+                        }}
                       />
                     ) : (
                       e.mono
@@ -375,9 +382,16 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
                           aria-hidden="true">
                           {sourced ? (
                             <img
-                              src={`${cdnBase}/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`}
+                              src={`${cdnBase ? cdnBase : ''}/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`}
                               alt=""
                               loading="lazy"
+                              onError={(ev) => {
+                                const target = ev.currentTarget;
+                                const fallback = `/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`;
+                                if (target.src !== new URL(fallback, window.location.href).href) {
+                                  target.src = fallback;
+                                }
+                              }}
                             />
                           ) : (
                             e.mono.slice(0, 2)

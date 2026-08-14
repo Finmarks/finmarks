@@ -42,9 +42,30 @@ export interface CategoryInfo {
 }
 
 export const VERSION: string = indexJson.version;
-export const CDN_BASE: string = indexJson.cdn_base;
+/**
+ * In development (pnpm dev), serve logos from the local symlinked entities/
+ * directory so you don't need an internet connection or a published GitHub repo.
+ * In production builds, use the CDN URL baked into dist/index.json.
+ */
+export const CDN_BASE: string = import.meta.env.DEV ? '' : indexJson.cdn_base;
 export const GENERATED_AT: string = indexJson.generated_at;
-export const entities = indexJson.entities as Entity[];
+
+const rawEntities = indexJson.entities as Entity[];
+export const entities: Entity[] = import.meta.env.DEV
+  ? rawEntities.map((e) => ({
+      ...e,
+      logos: Object.fromEntries(
+        Object.entries(e.logos).map(([k, url]) => {
+          if (!url) return [k, url];
+          const filename = url.includes('/entities/')
+            ? url.slice(url.indexOf('/entities/'))
+            : `/entities/${e.id}/${k === 'mono_dark' ? 'mono-dark' : k === 'mono_light' ? 'mono-light' : k}.svg`;
+          return [k, filename];
+        })
+      ) as Partial<Record<LogoVariant, string>>,
+    }))
+  : rawEntities;
+
 export const categories = categoriesJson.categories as CategoryInfo[];
 
 /** Canonical order of logo variants, used everywhere variants are listed. */

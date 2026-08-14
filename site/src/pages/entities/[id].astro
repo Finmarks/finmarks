@@ -114,7 +114,13 @@ function getWebsiteWithRef(url: string | undefined) {
       >
         {
           primary ? (
-            <img src={primary} alt={`${e.name} logo`} width="72" height="72" />
+            <img
+              src={primary}
+              alt={`${e.name} logo`}
+              width="72"
+              height="72"
+              onerror={`if(this.src !== window.location.origin + '/entities/${e.id}/${e.logos.icon ? 'icon' : 'full'}.svg') this.src='/entities/${e.id}/${e.logos.icon ? 'icon' : 'full'}.svg'`}
+            />
           ) : (
             monogram(e)
           )
@@ -176,6 +182,7 @@ function getWebsiteWithRef(url: string | undefined) {
                       src={e.logos[v]}
                       alt={`${e.name} ${v} logo`}
                       loading="lazy"
+                      onerror={`if(this.src !== window.location.origin + '/entities/${e.id}/${v === 'full' ? 'full' : v === 'icon' ? 'icon' : v.replace(/_/g, '-')}.svg') this.src='/entities/${e.id}/${v === 'full' ? 'full' : v === 'icon' ? 'icon' : v.replace(/_/g, '-')}.svg'`}
                     />
                   </span>
                   <span class="vname">{v.replace(/_/g, "-")}</span>
