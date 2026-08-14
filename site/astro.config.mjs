@@ -3,9 +3,11 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 
-// Set SITE_URL in the Cloudflare Pages build env for correct canonical URLs
-// and a valid sitemap. The fallback keeps local builds working.
-const site = process.env.SITE_URL ?? 'https://Finmarks.pages.dev';
+// The custom domain connected in Cloudflare Pages. Canonicals and the sitemap
+// must point here rather than at the pages.dev origin, or search engines and
+// the GA data stream see two hostnames for the same site. SITE_URL overrides
+// for forks and preview deploys ( `||`, since an unset CI variable is "" ).
+const site = process.env.SITE_URL || 'https://www.finmarks.org';
 
 export default defineConfig({
   site,

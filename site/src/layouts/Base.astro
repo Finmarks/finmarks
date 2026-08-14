@@ -15,10 +15,17 @@ const { title, description, ogImage, hideHeader = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
 
-// Set in the build env (see .github/workflows/site.yml); unset locally and on
-// PR builds, so no tracking script ships until the production env vars exist.
-const gaId = import.meta.env.GA_MEASUREMENT_ID;
-const clarityId = import.meta.env.CLARITY_PROJECT_ID;
+// Both IDs are public by design — every analytics install ships them in the
+// page source. The literals are the fallback so the tags survive whichever
+// path builds the site: a Cloudflare Pages Git build never sees the GitHub
+// Actions variables in .github/workflows/site.yml. Setting the env var still
+// overrides, which is how a fork points the site at its own property.
+// Empty-string check, not `??`: an unset Actions variable expands to "".
+// Guarded on PROD so `astro dev` never lands local browsing in the reports.
+const gaId =
+  import.meta.env.GA_MEASUREMENT_ID || (import.meta.env.PROD ? "G-HRD0EBS9LD" : "");
+const clarityId =
+  import.meta.env.CLARITY_PROJECT_ID || (import.meta.env.PROD ? "y26e4i6pe2" : "");
 ---
 
 <!doctype html>
@@ -74,8 +81,11 @@ const clarityId = import.meta.env.CLARITY_PROJECT_ID;
       <>
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
         <script is:inline define:vars={{ gaId }}>
+          // Assigned onto window, not declared: define:vars wraps this block in
+          // an IIFE, so a bare `function gtag()` would be scoped to it and any
+          // later gtag("event", ...) call would find no global.
           window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
+          window.gtag = function () { window.dataLayer.push(arguments); };
           gtag("js", new Date());
           gtag("config", gaId);
         </script>

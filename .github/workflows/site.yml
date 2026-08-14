@@ -12,10 +12,13 @@ name: Site
 #
 # Optional repository variables (Settings > Secrets and variables > Actions >
 # Variables — not Secrets, since both IDs end up in the public page source):
+#   SITE_URL            Canonical origin, default https://www.finmarks.org
 #   GA_MEASUREMENT_ID   Google Analytics 4 measurement ID, e.g. G-XXXXXXXXXX
 #   CLARITY_PROJECT_ID  Microsoft Clarity project ID
 #
-# Without them the site builds as normal with no tracking scripts.
+# All three have production defaults baked into the site, so leaving them
+# unset builds the real site rather than one with the tracking stripped out.
+# Set them only to point a fork at its own properties.
 
 on:
   push:
@@ -63,7 +66,7 @@ jobs:
       - name: Build
         working-directory: site
         env:
-          SITE_URL: ${{ vars.SITE_URL || 'https://finmarks.pages.dev' }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://www.finmarks.org' }}
           GA_MEASUREMENT_ID: ${{ vars.GA_MEASUREMENT_ID }}
           CLARITY_PROJECT_ID: ${{ vars.CLARITY_PROJECT_ID }}
         run: npm run build
