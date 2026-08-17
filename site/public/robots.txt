@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://Finmarks.pages.dev/sitemap-index.xml
