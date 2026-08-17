@@ -709,16 +709,41 @@ const schema = [
     display: flex;
     align-items: center;
     font-family: var(--mono);
-    font-size: 0.9rem;
+    /* Sized so the whole `src="…"` token clears the panel width. At 0.9rem it
+       overshot by a couple of characters, and since the token cannot break at
+       a space the browser split it mid-URL and orphaned the closing quote. */
+    font-size: 0.82rem;
+    line-height: 1.7;
     color: #eef0f4;
     min-width: 0;
   }
   .window-code pre {
     margin: 0;
-    padding: 1.5rem;
-    overflow-x: auto;
+    padding: 1.35rem;
     min-width: 0;
     width: 100%;
+    /* Wrap rather than scroll. This is a display panel, not a scroller, so an
+       overflow is invisible — it simply truncated the URL at the card edge. */
+    white-space: pre-wrap;
+  }
+  /* The URL is one long token with no space to break at, so without this it
+     overflows the panel instead of wrapping. Scoped to the string so the short
+     tags either side are never broken mid-word. */
+  .window-code .token.string {
+    overflow-wrap: anywhere;
+  }
+
+  /* On a phone the card loses ~45px of width and the src token stops fitting,
+     which puts the split back in the middle of the URL. One step down buys it
+     back. Below roughly 340px the token cannot fit at any readable size, and
+     the rule above lets it break rather than overflow. */
+  @media (max-width: 430px) {
+    .window-code {
+      font-size: 0.76rem;
+    }
+    .window-code pre {
+      padding: 1.1rem;
+    }
   }
   .hero-content {
     min-width: 0;

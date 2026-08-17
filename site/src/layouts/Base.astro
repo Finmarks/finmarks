@@ -205,6 +205,85 @@ const clarityId =
         })(window, document, "clarity", "script", clarityId);
       </script>
     )}
+
+    <script is:inline>
+      // Drives the logo loading skeleton (styles in global.css). Two flags:
+      // data-pending once an image is close enough to the viewport that its
+      // fetch has begun, data-loaded once the bytes arrive. Shimmering only
+      // between the two matters here — /browse renders all 152 tiles at once
+      // and they are loading="lazy", so an ungated skeleton would animate
+      // scores of tiles that have not started downloading anything.
+      (function () {
+        var LOGO = "img[data-logo]";
+
+        // Delegated, and registered in <head> before the parser reaches any
+        // image. The browse grid is a hydrated React island, so an onLoad prop
+        // attached at hydration would miss images that already finished and
+        // leave those tiles shimmering forever. `load` does not bubble, hence
+        // the capture phase.
+        document.addEventListener(
+          "load",
+          function (ev) {
+            var t = ev.target;
+            if (t && t.tagName === "IMG" && t.hasAttribute("data-logo")) {
+              t.setAttribute("data-loaded", "");
+            }
+          },
+          true,
+        );
+
+        // The margin is deliberately generous: it should trip slightly before
+        // the browser's own lazy-load threshold, so the skeleton is already
+        // showing by the time the request goes out.
+        var io =
+          "IntersectionObserver" in window
+            ? new IntersectionObserver(
+                function (entries) {
+                  entries.forEach(function (entry) {
+                    if (!entry.isIntersecting) return;
+                    entry.target.setAttribute("data-pending", "");
+                    io.unobserve(entry.target);
+                  });
+                },
+                { rootMargin: "300px" },
+              )
+            : null;
+
+        function track(img) {
+          if (img.complete && img.naturalWidth > 0) {
+            img.setAttribute("data-loaded", "");
+            return;
+          }
+          // Without IntersectionObserver, show the skeleton everywhere rather
+          // than nowhere — correctness over the animation budget.
+          if (io) io.observe(img);
+          else img.setAttribute("data-pending", "");
+        }
+
+        function scan(node) {
+          if (!node || node.nodeType !== 1) return;
+          if (node.matches(LOGO)) track(node);
+          node.querySelectorAll(LOGO).forEach(track);
+        }
+
+        function start() {
+          scan(document.body);
+          // Filtering the browse grid mounts a fresh set of tiles, which the
+          // initial scan cannot know about.
+          new MutationObserver(function (records) {
+            records.forEach(function (r) {
+              r.addedNodes.forEach(scan);
+            });
+          }).observe(document.body, { childList: true, subtree: true });
+        }
+
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", start);
+        } else {
+          start();
+        }
+      })();
+    </script>
   </head>
 
   <body>

@@ -147,11 +147,12 @@ function getWebsiteWithRef(url: string | undefined) {
         {
           primary ? (
             <img
+              data-logo
               src={primary}
               alt={`${e.name} logo`}
               width="72"
               height="72"
-              onerror={`if(this.src !== window.location.origin + '/entities/${e.id}/${e.logos.icon ? 'icon' : 'full'}.svg') this.src='/entities/${e.id}/${e.logos.icon ? 'icon' : 'full'}.svg'`}
+              onerror={`if(this.src !== window.location.origin + '/entities/${e.id}/${e.logos.icon ? 'icon' : 'full'}.svg'){this.src='/entities/${e.id}/${e.logos.icon ? 'icon' : 'full'}.svg'}else{this.setAttribute('data-loaded','')}`}
             />
           ) : (
             monogram(e)
@@ -211,10 +212,11 @@ function getWebsiteWithRef(url: string | undefined) {
                     }
                   >
                     <img
+                      data-logo
                       src={e.logos[v]}
                       alt={`${e.name} ${v} logo`}
                       loading="lazy"
-                      onerror={`if(this.src !== window.location.origin + '/entities/${e.id}/${v === 'full' ? 'full' : v === 'icon' ? 'icon' : v.replace(/_/g, '-')}.svg') this.src='/entities/${e.id}/${v === 'full' ? 'full' : v === 'icon' ? 'icon' : v.replace(/_/g, '-')}.svg'`}
+                      onerror={`if(this.src !== window.location.origin + '/entities/${e.id}/${v === 'full' ? 'full' : v === 'icon' ? 'icon' : v.replace(/_/g, '-')}.svg'){this.src='/entities/${e.id}/${v === 'full' ? 'full' : v === 'icon' ? 'icon' : v.replace(/_/g, '-')}.svg'}else{this.setAttribute('data-loaded','')}`}
                     />
                   </span>
                   <span class="vname">{v.replace(/_/g, "-")}</span>
@@ -498,10 +500,11 @@ function getWebsiteWithRef(url: string | undefined) {
                   >
                     {rSourced ? (
                       <img
+                        data-logo
                         src={`${CDN_BASE}/entities/${r.id}/${r.logos.icon ? "icon" : "full"}.svg`}
                         alt=""
                         loading="lazy"
-                        onerror={`if(this.src !== window.location.origin + '/entities/${r.id}/${r.logos.icon ? 'icon' : 'full'}.svg') this.src='/entities/${r.id}/${r.logos.icon ? 'icon' : 'full'}.svg'`}
+                        onerror={`if(this.src !== window.location.origin + '/entities/${r.id}/${r.logos.icon ? 'icon' : 'full'}.svg'){this.src='/entities/${r.id}/${r.logos.icon ? 'icon' : 'full'}.svg'}else{this.setAttribute('data-loaded','')}`}
                       />
                     ) : (
                       monogram(r)

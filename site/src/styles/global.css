@@ -24,6 +24,7 @@
   --step-3: clamp(1.9rem, 1.55rem + 1.6vw, 3.1rem);
 
   --rail: 224px;
+  --rail-pad-x: 1rem;
   --gutter: clamp(1rem, 0.55rem + 2.1vw, 2.25rem);
   --maxw: 1600px;
 }
@@ -519,6 +520,69 @@ a.chip:hover {
   background: transparent;
 }
 
+/* ---------- logo loading state ---------- */
+/*
+ * Logo SVGs are fetched one file at a time from the CDN, so a cold cache can
+ * leave a mark blank for a noticeable beat. The <img> box is already sized by
+ * its container, so the skeleton rides on the image's own background and needs
+ * no extra wrapper element. Both flags are stamped by the script in Base.astro
+ * — data-pending once the fetch is underway, data-loaded once it lands — which
+ * keeps this identical across the static entity pages and the hydrated browse
+ * island.
+ *
+ * Neutral translucent grey rather than a theme token: these plates are white
+ * in both themes (--logo-bg), except the mono-dark preview which is near-black,
+ * and a low-alpha grey reads as "loading" on either.
+ */
+@keyframes logo-skeleton {
+  from {
+    background-position: 150% 0;
+  }
+  to {
+    background-position: -150% 0;
+  }
+}
+
+@keyframes logo-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+img[data-logo][data-pending]:not([data-loaded]) {
+  border-radius: inherit;
+  background-color: rgba(128, 133, 145, 0.13);
+  background-image: linear-gradient(
+    90deg,
+    transparent 20%,
+    rgba(128, 133, 145, 0.28) 50%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: logo-skeleton 1.2s linear infinite;
+}
+
+img[data-logo][data-loaded] {
+  animation: logo-fade-in 0.22s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Keep the flat plate so the box still reads as "something is coming",
+     drop the travelling sheen and the fade. */
+  img[data-logo][data-pending]:not([data-loaded]) {
+    background-image: none;
+    animation: none;
+  }
+
+  img[data-logo][data-loaded] {
+    animation: none;
+  }
+}
+
 /* ---------- prose (docs-ish pages) ---------- */
 .prose {
   max-width: 100%;
@@ -600,7 +664,9 @@ a.chip:hover {
   z-index: 50;
   background: var(--surface);
   border-right: 1px solid var(--line);
-  padding: 1.5rem 1rem;
+  /* No padding here — each rail section pads itself so the scroll track can sit
+     flush against the rail edge instead of over the content. */
+  padding: 0;
   overflow: hidden;
   transition: transform 0.25s ease-in-out;
 }
@@ -612,10 +678,24 @@ a.chip:hover {
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
-  padding-bottom: 0.5rem;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.rail-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.rail-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.rail-scroll::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 999px;
 }
 
 /* Keep rows at their natural height instead of squeezing when the list overflows. */
@@ -724,20 +804,30 @@ body.sidebar-open .mobile-overlay {
   pointer-events: auto;
 }
 
+/* Section 1 — logo. The extra 0.5rem matches the .nav-link inner padding so the
+   wordmark lines up with the nav labels below it. */
 .rail-header {
   margin-bottom: 2rem;
-  padding-left: 0.5rem;
+  padding-left: calc(var(--rail-pad-x) + 0.5rem);
+  padding-right: var(--rail-pad-x);
 }
 
 .rail-header .brand {
   font-size: var(--step-0);
 }
 
+/* Section 2 — nav links. */
 .rail-links {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
   margin-bottom: 2rem;
+  padding-inline: var(--rail-pad-x);
+}
+
+/* Any further block inside the scroll area (e.g. the Browse category list). */
+.rail-section {
+  padding-inline: var(--rail-pad-x);
 }
 
 .rail-bottom {
@@ -745,7 +835,7 @@ body.sidebar-open .mobile-overlay {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  padding-top: 0.75rem;
+  padding: 0.75rem var(--rail-pad-x) 1.5rem;
   border-top: 1px solid var(--line);
   background: var(--surface);
 }

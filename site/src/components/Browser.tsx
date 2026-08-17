@@ -293,6 +293,7 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
                     }>
                     {sourced ? (
                       <img
+                        data-logo
                         src={`${cdnBase ? cdnBase : ''}/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`}
                         alt=""
                         loading="lazy"
@@ -301,6 +302,11 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
                           const fallback = `/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`;
                           if (target.src !== new URL(fallback, window.location.href).href) {
                             target.src = fallback;
+                          } else {
+                            // Both sources are gone — stop the skeleton rather
+                            // than shimmer forever over an image that will
+                            // never arrive.
+                            target.setAttribute('data-loaded', '');
                           }
                         }}
                       />
@@ -382,6 +388,7 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
                           aria-hidden="true">
                           {sourced ? (
                             <img
+                              data-logo
                               src={`${cdnBase ? cdnBase : ''}/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`}
                               alt=""
                               loading="lazy"
@@ -390,6 +397,8 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
                                 const fallback = `/entities/${e.id}/${e.variants.includes('icon') ? 'icon' : 'full'}.svg`;
                                 if (target.src !== new URL(fallback, window.location.href).href) {
                                   target.src = fallback;
+                                } else {
+                                  target.setAttribute('data-loaded', '');
                                 }
                               }}
                             />
@@ -510,28 +519,30 @@ export default function Browser({ entities, categories, cdnBase, hideSidebar, ch
           <div onClick={() => { if (window.innerWidth < 940) document.body.classList.remove('sidebar-open'); }}>
             <SidebarLinks currentPath="/browse" />
           </div>
-          <p className={`eyebrow ${s.railTitle}`}>Categories</p>
-          <button
-            className={s.cat}
-            aria-pressed={cat === ALL}
-            onClick={() => setCat(ALL)}
-            type="button">
-            <span className={s.catLabel}>All entities</span>
-            <span className={s.catN}>{entities.length}</span>
-          </button>
-          <div className={s.railSep} />
-          {categories.map((c) => (
+          <div className="rail-section">
+            <p className={`eyebrow ${s.railTitle}`}>Categories</p>
             <button
-              key={c.id}
               className={s.cat}
-              aria-pressed={cat === c.id}
-              onClick={() => setCat(c.id)}
-              title={c.description}
+              aria-pressed={cat === ALL}
+              onClick={() => setCat(ALL)}
               type="button">
-              <span className={s.catLabel}>{c.label}</span>
-              <span className={s.catN}>{c.count}</span>
+              <span className={s.catLabel}>All entities</span>
+              <span className={s.catN}>{entities.length}</span>
             </button>
-          ))}
+            <div className={s.railSep} />
+            {categories.map((c) => (
+              <button
+                key={c.id}
+                className={s.cat}
+                aria-pressed={cat === c.id}
+                onClick={() => setCat(c.id)}
+                title={c.description}
+                type="button">
+                <span className={s.catLabel}>{c.label}</span>
+                <span className={s.catN}>{c.count}</span>
+              </button>
+            ))}
+          </div>
         </div>
         <SidebarBottom />
       </aside>
