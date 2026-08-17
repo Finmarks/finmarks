@@ -2,23 +2,77 @@
 import Base from "../layouts/Base.astro";
 import Browser from "../components/Browser.tsx";
 import { activeCategories, browseData, CDN_BASE, stats } from "../lib/data";
+import { breadcrumbList, itemList } from "../lib/seo";
 
 const title = "Browse All Indian Fintech Logos & Entities | Finmarks";
 const description = `Search and filter ${stats.total} Indian banks, UPI apps, payment gateways, and neobanks. Download SVG logos and structured brand metadata instantly.`;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Browse Indian fintech logos and entities",
+    description,
+    url: new URL("/browse/", Astro.site).href,
+    isPartOf: { "@type": "WebSite", url: new URL("/", Astro.site).href },
+    mainEntity: itemList(browseData, Astro.site),
+  },
+  breadcrumbList(
+    [
+      ["Home", "/"],
+      ["Browse", "/browse/"],
+    ],
+    Astro.site,
+  ),
+];
 ---
 
-<Base title={title} description={description} hideHeader={true}>
+<Base
+  title={title}
+  description={description}
+  hideHeader={true}
+  schema={schema}
+>
   <section class="browse-section">
     <Browser
       client:load
       entities={browseData}
       categories={activeCategories}
       cdnBase={CDN_BASE}
-    />
+    >
+      {/*
+        This page is the hub linking all 152 entity pages and had no heading at
+        all — no h1, no h2. Passed as a child so it renders inside the island's
+        own layout, the same way the category pages supply their header.
+      */}
+      <header class="browse-head">
+        <h1>Indian fintech logos &amp; brand data</h1>
+        <p class="browse-sub">
+          Search and filter {stats.total} banks, UPI apps, payment gateways,
+          neobanks and lenders. Every logo is SVG, every record is structured.
+        </p>
+      </header>
+    </Browser>
   </section>
 </Base>
 
 <style>
+  /* Inline gutter matches .stickyHead in Browser.module.css so the heading
+     lines up with the search field it sits above. */
+  .browse-head {
+    padding-inline: var(--gutter);
+    padding-top: 1.5rem;
+  }
+  .browse-head h1 {
+    font-size: var(--step-2);
+    margin-block: 0 0.4rem;
+  }
+  .browse-sub {
+    color: var(--ink-2);
+    max-width: 60ch;
+    font-size: var(--step--1);
+  }
+
   .browse-section {
     padding-block: 0 5rem;
   }

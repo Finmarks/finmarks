@@ -15,6 +15,7 @@ import {
   type Entity,
 } from "../../lib/data";
 import s from "../../components/Browser.module.css";
+import { breadcrumbList, fitTitle } from "../../lib/seo";
 
 export function getStaticPaths() {
   return entities.map((e) => ({ params: { id: e.id }, props: { entity: e } }));
@@ -34,7 +35,17 @@ if (e.ifsc_prefix) identifiers.push(`IFSC prefix ${e.ifsc_prefix}`);
 if (e.upi_handles?.length) identifiers.push(`UPI handle ${e.upi_handles[0]}`);
 const identifierText = identifiers.length ? `, ${identifiers.join(" and ")}` : "";
 
-const title = `${e.name} Logo (SVG) & Brand Data | Finmarks`;
+// Most brands keep the fully descriptive title; only the handful with very long
+// legal-style names ("Insurance Regulatory and Development Authority of India")
+// degrade, and they shed the least valuable words first rather than being cut
+// mid-phrase by the search engine.
+const title = fitTitle([
+  `${e.name} Logo (SVG) & Brand Data | Finmarks`,
+  `${e.name} Logo (SVG) | Finmarks`,
+  `${e.name} Logo | Finmarks`,
+  `${e.short_name} Logo (SVG) & Brand Data | Finmarks`,
+  `${e.short_name} Logo (SVG) | Finmarks`,
+]);
 const description = sourced
   ? `Download the ${e.name} logo as SVG in ${available.length} variant${available.length === 1 ? "" : "s"}. Brand colour ${e.brand_color}${identifierText}. Free, MIT-licensed.`
   : `${e.name} — ${e.categories.map(categoryLabel).join(", ")}. Brand colour ${e.brand_color}${identifierText}. Structured metadata, free and MIT licensed.`;
@@ -57,6 +68,17 @@ const jsonLd = {
   ...(e.founded ? { foundingDate: String(e.founded) } : {}),
   address: { "@type": "PostalAddress", addressCountry: e.country },
 };
+
+// Mirrors the visible breadcrumb nav below, which is the condition for search
+// engines showing a path instead of the bare URL in results.
+const crumbs = breadcrumbList(
+  [
+    ["Home", "/"],
+    ["Entities", "/browse/"],
+    [e.name, `/entities/${e.id}/`],
+  ],
+  Astro.site,
+);
 function getWebsiteWithRef(url: string | undefined) {
   if (!url) return undefined;
   try {
@@ -70,7 +92,12 @@ function getWebsiteWithRef(url: string | undefined) {
 }
 ---
 
-<Base title={title} description={description} ogImage={primary}>
+{/*
+  No ogImage: `primary` is the brand's logo SVG, and no social platform renders
+  an SVG card — every entity share came out blank. Falling through to the
+  sitewide JPEG card in Base.astro gives a real preview on all 152 pages.
+*/}
+<Base title={title} description={description} schema={[jsonLd, crumbs]}>
   <article class="wrap page">
      <form action="/browse" method="get" class={s.searchWrap} style="margin: 0 0 2rem 0;">
       <span class={s.searchIcon} aria-hidden="true">
@@ -493,11 +520,6 @@ function getWebsiteWithRef(url: string | undefined) {
     }
   </article>
 
-  <script
-    type="application/ld+json"
-    set:html={JSON.stringify(jsonLd)}
-    is:inline
-  />
 </Base>
 
 <script is:inline>

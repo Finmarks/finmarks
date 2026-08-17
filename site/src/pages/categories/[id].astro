@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import Browser from '../../components/Browser';
 import { CDN_BASE, activeCategories, browseData, type CategoryInfo, type BrowseEntity } from '../../lib/data';
+import { breadcrumbList, fitTitle, itemList } from '../../lib/seo';
 
 export function getStaticPaths() {
   return activeCategories.map((c) => ({
@@ -18,11 +19,35 @@ interface Props {
 const { category: c, list } = Astro.props;
 const sourced = list.filter((e) => e.variants.length > 0).length;
 
-const title = `${c.label} in India: Logos & Brand Data | Finmarks`;
+const title = fitTitle([
+  `${c.label} in India: Logos & Brand Data | Finmarks`,
+  `${c.label} in India: Logos & Data | Finmarks`,
+  `${c.label} in India | Finmarks`,
+]);
 const description = `${c.count} ${c.label} in India, regulated by ${c.regulator}. Free SVG logos and structured metadata for each.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: `${c.label} in India`,
+    description: c.description,
+    url: new URL(`/categories/${c.id}/`, Astro.site).href,
+    isPartOf: { '@type': 'WebSite', url: new URL('/', Astro.site).href },
+    mainEntity: itemList(list, Astro.site),
+  },
+  breadcrumbList(
+    [
+      ['Home', '/'],
+      ['Categories', '/categories/'],
+      [c.label, `/categories/${c.id}/`],
+    ],
+    Astro.site,
+  ),
+];
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} schema={schema}>
   <div class="wrap page">
     <div class="crumbs-bar">
       <a

@@ -1,11 +1,26 @@
 ---
 import Base from '../layouts/Base.astro';
+import { breadcrumbList } from '../lib/seo';
 const REPO = 'https://github.com/Finmarks/Finmarks';
+
+// 149 characters — the previous wording ran to 165 and lost its final clause to
+// truncation, which was the half explaining what brand owners can do.
+const description =
+  'The MIT licence covers Finmarks code and metadata, not the logos. Every mark belongs to its owner — what that means for you, and for brand owners.';
+
+const schema = breadcrumbList(
+  [
+    ['Home', '/'],
+    ['Trademarks', '/trademarks/'],
+  ],
+  Astro.site,
+);
 ---
 
 <Base
   title="Trademarks — Finmarks"
-  description="The MIT licence covers Finmarks code and metadata, not the logos. Every mark belongs to its owner. What that means for you, and how brand owners can request changes.">
+  description={description}
+  schema={schema}>
   <div class="wrap page">
     <header class="head">
       <p class="eyebrow">Policy</p>

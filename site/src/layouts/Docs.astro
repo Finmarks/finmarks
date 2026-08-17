@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import { breadcrumbList, type Crumb } from '../lib/seo';
 
 interface Props {
   title: string;
@@ -11,6 +12,18 @@ const { title, description, section = '' } = Astro.props;
 const currentPath = Astro.url.pathname;
 // Avoid "X — Finmarks Docs — Finmarks Docs" when a page's own title already carries the suffix.
 const pageTitle = title.includes('Finmarks Docs') ? title : `${title} — Finmarks Docs`;
+
+// Docs pages carried no structured data at all. The trail is derived from the
+// path so every page gets one without each having to declare it; /docs itself
+// is the root of the section and stops at two levels.
+const trail: Crumb[] = [
+  ['Home', '/'],
+  ['Docs', '/docs/'],
+];
+if (currentPath !== '/docs' && currentPath !== '/docs/') {
+  trail.push([title, currentPath.endsWith('/') ? currentPath : `${currentPath}/`]);
+}
+const schema = breadcrumbList(trail, Astro.site);
 
 const nav = [
   {
@@ -53,7 +66,7 @@ const isActive = (href: string) => {
 };
 ---
 
-<Base title={pageTitle} description={description}>
+<Base title={pageTitle} description={description} schema={schema}>
   <div class="docs-layout">
     <!-- Mobile Docs Nav -->
     <details class="docs-mobile-nav">

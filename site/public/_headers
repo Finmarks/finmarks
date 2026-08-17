@@ -12,3 +12,25 @@
 
 /favicon.svg
   Cache-Control: public, max-age=86400
+
+# The sitewide social card. Unhashed filename, so keep the window short enough
+# that regenerating it from a new hero reaches the crawlers within a day.
+/og-default.jpg
+  Cache-Control: public, max-age=86400
+
+# Crawler and language-model entry points. Rebuilt on every deploy, so an hour
+# is long enough to absorb a crawl burst and short enough that a dataset update
+# reaches search engines the same day. These rules live here rather than on the
+# Response in each endpoint: the build is static, so Astro writes the body to
+# disk and drops the headers — Cloudflare Pages is what actually serves them.
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Cache-Control: public, max-age=3600
+
+/llms-full.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap-*.xml
+  Cache-Control: public, max-age=3600

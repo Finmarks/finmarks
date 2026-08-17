@@ -3,12 +3,49 @@ import Base from "../layouts/Base.astro";
 import { stats } from "../lib/data";
 import CreatorCredit from "../components/CreatorCredit.astro";
 
-const title =
-  "Finmarks — brand assets for Indian fintech, as structured data";
-const description = `Logos and structured metadata for ${stats.total} Indian fintech entities — banks, UPI apps, payment gateways, neobanks and account aggregators. IFSC prefixes, UPI handles, FIP IDs. MIT licensed, free via npm and CDN.`;
+// 59 characters, so it survives Google's ~60-character display width intact.
+const title = "Finmarks — Indian Fintech Logos & Brand Data";
+// Trimmed to 156 characters: the identifier list is what differentiates this
+// from any other logo pack, so it stays and the licence detail goes.
+const description = `Free SVG logos and structured metadata for ${stats.total} Indian fintech brands — banks, UPI apps, payment gateways and neobanks. IFSC prefixes, UPI handles, FIP IDs.`;
+
+/**
+ * The site itself, plus the search box Google can surface directly in results.
+ * The target is the real browse form (`<form action="/browse" method="get">`
+ * with `name="q"`), so the URL it builds is one the site genuinely serves.
+ */
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Finmarks",
+    alternateName: "Finmarks — Indian fintech brand assets",
+    url: new URL("/", Astro.site).href,
+    description,
+    inLanguage: "en",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${new URL("/browse/", Astro.site).href}?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Finmarks",
+    url: new URL("/", Astro.site).href,
+    logo: new URL("/finmark_light.svg", Astro.site).href,
+    description:
+      "Open-source brand asset library for the Indian fintech ecosystem.",
+    sameAs: ["https://github.com/Finmarks/Finmarks"],
+  },
+];
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} schema={schema}>
   <section class="hero">
 
     <div class="hero-content">
@@ -282,7 +319,7 @@ const description = `Logos and structured metadata for ${stats.total} Indian fin
     justify-content: center;
     position: relative;
     overflow: hidden;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.4 ), rgba(0, 0, 0, 0)), url('/fintech_india.png');
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4 ), rgba(0, 0, 0, 0)), url('/fintech_india.webp');
     background-size: cover;
     background-position: center;
     scroll-snap-align: start;

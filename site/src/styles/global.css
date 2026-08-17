@@ -601,8 +601,26 @@ a.chip:hover {
   background: var(--surface);
   border-right: 1px solid var(--line);
   padding: 1.5rem 1rem;
-  overflow-y: auto;
+  overflow: hidden;
   transition: transform 0.25s ease-in-out;
+}
+
+/* Only the nav + category list scrolls; .rail-bottom stays pinned. */
+.rail-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Keep rows at their natural height instead of squeezing when the list overflows. */
+.rail-scroll > * {
+  flex: 0 0 auto;
 }
 
 body.sidebar-open .app-sidebar {
@@ -613,6 +631,8 @@ body.sidebar-open .app-sidebar {
   .app-sidebar {
     position: static;
     width: auto;
+    height: 100%;
+    min-height: 0;
     transform: none;
     transition: none;
     border-right: 1px solid var(--line);
@@ -718,6 +738,16 @@ body.sidebar-open .mobile-overlay {
   flex-direction: column;
   gap: 0.2rem;
   margin-bottom: 2rem;
+}
+
+.rail-bottom {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .nav-link {

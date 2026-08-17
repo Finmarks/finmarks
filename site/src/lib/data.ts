@@ -48,6 +48,13 @@ export const VERSION: string = indexJson.version;
  * In production builds, use the CDN URL baked into dist/index.json.
  */
 export const CDN_BASE: string = import.meta.env.DEV ? '' : indexJson.cdn_base;
+/**
+ * The published CDN origin, always absolute. CDN_BASE goes empty in dev so the
+ * site serves local SVGs, but the generated text endpoints (llms.txt,
+ * llms-full.txt) document URLs a reader will fetch from the open internet —
+ * those must be the real CDN paths even when previewing locally.
+ */
+export const CDN_ORIGIN: string = indexJson.cdn_base;
 export const GENERATED_AT: string = indexJson.generated_at;
 
 const rawEntities = indexJson.entities as Entity[];

@@ -1,14 +1,46 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { categories, stats } from '../../lib/data';
+import { breadcrumbList } from '../../lib/seo';
 
 const live = categories.filter((c) => c.count > 0);
 const upcoming = categories.filter((c) => c.count === 0);
+
+const description = `${live.length} categories covering ${stats.total} Indian fintech brands — banks, UPI apps, payment gateways, neobanks, lenders, and account aggregators.`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Indian fintech categories',
+    description,
+    url: new URL('/categories/', Astro.site).href,
+    isPartOf: { '@type': 'WebSite', url: new URL('/', Astro.site).href },
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: live.length,
+      itemListElement: live.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.label,
+        url: new URL(`/categories/${c.id}/`, Astro.site).href,
+      })),
+    },
+  },
+  breadcrumbList(
+    [
+      ['Home', '/'],
+      ['Categories', '/categories/'],
+    ],
+    Astro.site,
+  ),
+];
 ---
 
 <Base
   title="Fintech Categories: Banks, UPI, Payments & More | Finmarks"
-  description={`${live.length} categories covering ${stats.total} Indian fintech brands — banks, UPI apps, payment gateways, neobanks, lenders, and account aggregators.`}>
+  description={description}
+  schema={schema}>
   <div class="wrap page">
     <div class="category-orbits" aria-hidden="true">
       <div class="orbit-track orbit-1" style="--radius: 225px">

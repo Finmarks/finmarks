@@ -6,12 +6,66 @@ import SidebarLinks, { SidebarBottom } from "../components/SidebarLinks";
 interface Props {
   title: string;
   description: string;
-  /** Optional OG image path, relative to the site root. */
+  /**
+   * Optional OG image path, relative to the site root. Must be a raster format:
+   * Facebook, LinkedIn, X, Slack and WhatsApp all refuse SVG. Entity pages used
+   * to pass their logo SVG here, which is why every share rendered blank.
+   * Omit it to get the sitewide card below.
+   */
   ogImage?: string;
   hideHeader?: boolean;
+  /**
+   * JSON-LD for this page — one object or several. Rendered into <head> as a
+   * single graph so a page can describe itself as, say, both an Organization
+   * and a BreadcrumbList without emitting duplicate <script> tags.
+   */
+  schema?: Schema | Schema[];
 }
 
-const { title, description, ogImage, hideHeader = false } = Astro.props;
+type Schema = Record<string, unknown>;
+
+const { title, description, ogImage, hideHeader = false, schema } = Astro.props;
+
+/**
+ * The sitewide social card, used by every page that does not supply its own.
+ *
+ * Derived from public/fintech_india.webp — the homepage hero — cropped to the
+ * 1.91:1 box Facebook, LinkedIn and X all render, and encoded as JPEG rather
+ * than kept as WebP because LinkedIn and WhatsApp do not reliably unfurl WebP.
+ * Regenerate after changing the hero with:
+ *
+ *   node -e "require('sharp')('public/fintech_india.webp')\
+ *     .resize(1200,630,{fit:'cover'}).jpeg({quality:82,mozjpeg:true})\
+ *     .toFile('public/og-default.jpg')"
+ */
+const OG_DEFAULT = {
+  path: "/og-default.jpg",
+  width: 1200,
+  height: 630,
+  type: "image/jpeg",
+  alt: "Finmarks — free SVG logos and structured brand data for the Indian fintech ecosystem",
+};
+
+const ogPath = ogImage ?? OG_DEFAULT.path;
+const ogUrl = new URL(ogPath, Astro.site);
+// Dimensions and type describe the default card specifically, so they are only
+// emitted when that is what is actually being served — a page supplying its own
+// image would otherwise advertise the wrong size and get cropped oddly.
+const ogIsDefault = ogPath === OG_DEFAULT.path;
+
+const schemas: Schema[] = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+// Several objects become one @graph. Each arrives carrying its own @context
+// (they are built independently and are valid alone); the graph declares it
+// once, so drop the now-redundant copies rather than nesting them.
+const jsonLd =
+  schemas.length === 0
+    ? null
+    : schemas.length === 1
+      ? schemas[0]
+      : {
+          '@context': 'https://schema.org',
+          '@graph': schemas.map(({ '@context': _context, ...rest }) => rest),
+        };
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "";
 
@@ -38,25 +92,69 @@ const clarityId =
     <link rel="canonical" href={canonical} />
 
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Finmarks" />
+    <meta property="og:locale" content="en_IN" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogUrl} />
     {
-      ogImage && (
-        <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+      ogIsDefault && (
+        <>
+          <meta property="og:image:width" content={String(OG_DEFAULT.width)} />
+          <meta property="og:image:height" content={String(OG_DEFAULT.height)} />
+          <meta property="og:image:type" content={OG_DEFAULT.type} />
+          <meta property="og:image:alt" content={OG_DEFAULT.alt} />
+        </>
       )
     }
     <meta name="twitter:card" content="summary_large_image" />
+    <!-- X reads og:image, but naming it explicitly avoids depending on that
+         fallback, and lets the alt text differ from the OG one if ever needed. -->
+    <meta name="twitter:image" content={ogUrl} />
+    {ogIsDefault && <meta name="twitter:image:alt" content={OG_DEFAULT.alt} />}
+
+    <!-- Matches --ground in global.css, per scheme, so the mobile browser
+         chrome does not sit in the opposite theme to the page. -->
+    <meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0e12" media="(prefers-color-scheme: dark)" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
+    {
+      jsonLd && (
+        <script
+          type="application/ld+json"
+          is:inline
+          set:html={JSON.stringify(jsonLd)}
+        />
+      )
+    }
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      Loaded without blocking the first paint. A plain stylesheet link to
+      fonts.googleapis.com holds rendering on a third-party round trip, which
+      lands directly on LCP; `media="print"` makes it a non-blocking fetch that
+      is promoted to `all` once it arrives. `display=swap` is already set, so
+      text paints in the fallback face either way — this only stops the whole
+      page waiting on it. The fallback below keeps the fonts when scripting is
+      off, since the media swap depends on the onload handler running.
+    -->
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Lexend:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'; this.onload=null;"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Lexend:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!--
       Applied before first paint so visitor never sees a theme flash.
@@ -75,7 +173,13 @@ const clarityId =
         } catch (e) {}
       })();
     </script>
-    <script is:inline src="https://tally.so/widgets/embed.js"></script>
+    <!--
+      Deferred: this only powers the data-tally-open buttons inside the Browser
+      island, which cannot be clicked until React has hydrated anyway. Without
+      `defer` it blocked first paint on all 190 pages waiting on a third-party
+      host, for a widget nothing needs during the initial render.
+    -->
+    <script is:inline defer src="https://tally.so/widgets/embed.js"></script>
 
     {gaId && (
       <>
@@ -121,7 +225,9 @@ const clarityId =
         <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
         
         <aside class="app-sidebar" id="app-sidebar">
-          <SidebarLinks currentPath={Astro.url.pathname} />
+          <div class="rail-scroll">
+            <SidebarLinks currentPath={Astro.url.pathname} />
+          </div>
           <SidebarBottom client:load />
         </aside>
         
