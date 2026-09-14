@@ -232,10 +232,9 @@ const schema = [
             <h2>100% Open Source</h2>
             <p>Built for the community, by the community. Finmarks is MIT licensed, meaning it is completely free to use in commercial and personal projects.</p>
             <div class="feature-cta">
-              <span class="outline-btn disabled" aria-disabled="true">
+              <a href="/docs/contributing" class="outline-btn">
                 Contribute
-                <span class="soon-badge">Soon</span>
-              </span>
+              </a>
             </div>
           </div>
           <div class="feature-visual">
@@ -555,23 +554,13 @@ const schema = [
   }
 
   .outline-btn.disabled {
-    gap: 0.5rem;
-    opacity: 0.6;
+    opacity: 0.5;
     cursor: not-allowed;
   }
 
   .outline-btn.disabled:hover {
     border-color: var(--line-strong);
     background: var(--surface);
-  }
-
-  .soon-badge {
-    font-size: 0.65rem;
-    padding: 0.1rem 0.4rem;
-    border-radius: 4px;
-    background: var(--line);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
 
   .feature-visual {
