@@ -59,10 +59,15 @@ const nav = [
   },
 ];
 
+const normalize = (p: string) => p.replace(/\/+$/, '') || '/';
+const normalizedCurrent = normalize(currentPath);
+
 const isActive = (href: string) => {
-  if (href === '/docs' && currentPath === '/docs') return true;
-  if (href !== '/docs' && currentPath.startsWith(href)) return true;
-  return false;
+  const target = normalize(href);
+  if (target === '/docs') {
+    return normalizedCurrent === '/docs';
+  }
+  return normalizedCurrent === target || normalizedCurrent.startsWith(`${target}/`);
 };
 ---
 
