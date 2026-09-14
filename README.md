@@ -200,7 +200,7 @@ Missing brands and missing logo variants are the two things this project needs m
 
 The MIT licence covers the code and metadata in this repository. It does **not** grant rights to the trademarks themselves — every logo remains the property of its owner, and your use of a mark is governed by that brand's own trademark policy. See [docs/trademarks.md](docs/trademarks.md).
 
+
 ## Licence
 
 [MIT](LICENSE)
-# Finmarks

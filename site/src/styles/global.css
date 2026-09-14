@@ -1097,49 +1097,60 @@ body.sidebar-open .mobile-overlay {
 
 /* Glassmorphism Overrides */
 .hero-search .search-input-wrapper {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(12, 14, 18, 0.65) !important;
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+}
+
+.hero-search .search-input-wrapper:hover {
+  background: rgba(12, 14, 18, 0.78) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.hero-search .search-input-wrapper:focus-within {
+  background: rgba(12, 14, 18, 0.88) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.55), 0 0 25px var(--accent-dim), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
 }
 
 :root[data-theme="dark"] .hero-search .search-input-wrapper {
-  background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(24px) saturate(180%);
-  -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  background: rgba(12, 14, 18, 0.65) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .hero-search .search-input-wrapper {
-    background: rgba(0, 0, 0, 0.3) !important;
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    background: rgba(12, 14, 18, 0.65) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
   }
 }
 
 .hero-search .search-input-wrapper input {
   color: #ffffff !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero-search .search-input-wrapper input::placeholder {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
 }
 
 .hero-search .search-icon-wrap {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
 }
 
-.hero-search .shortcut-hint kbd {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.4) !important;
-  color: #ffffff !important;
-  box-shadow: none !important;
+.hero-search .search-input-wrapper:focus-within .search-icon-wrap {
+  color: var(--accent) !important;
 }
 
 .hero-search .shortcut-hint {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+.hero-search .shortcut-hint kbd {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3) !important;
 }

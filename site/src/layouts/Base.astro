@@ -17,7 +17,7 @@ interface Props {
   /**
    * JSON-LD for this page — one object or several. Rendered into <head> as a
    * single graph so a page can describe itself as, say, both an Organization
-   * and a BreadcrumbList without emitting duplicate <script> tags.
+   * and a BreadcrumbList without emitting duplicate script tags.
    */
   schema?: Schema | Schema[];
 }
@@ -183,7 +183,7 @@ const clarityId =
 
     {gaId && (
       <>
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+        <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
         <script is:inline define:vars={{ gaId }}>
           // Assigned onto window, not declared: define:vars wraps this block in
           // an IIFE, so a bare `function gtag()` would be scoped to it and any
