@@ -50,6 +50,11 @@ const schema = [
 
     <div class="hero-content">
       <img src="/finmark_transparent.svg" alt="Finmarks Logo" class="hero-logo" style="height: 32px;" />
+      <a href="/figma-plugin" class="figma-chip">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 200 300" width="14" height="14"><style>.st0{fill:#0acf83}.st1{fill:#a259ff}.st2{fill:#f24e1e}.st3{fill:#ff7262}.st4{fill:#1abcfe}</style><path id="path0_fill" class="st0" d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z"/><path id="path1_fill" class="st1" d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z"/><path id="path1_fill_1_" class="st2" d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z"/><path id="path2_fill" class="st3" d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50V0z"/><path id="path3_fill" class="st4" d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"/></svg>
+        <span>Now available for Figma</span>
+        <span class="chip-arrow">&rarr;</span>
+      </a>
       <h1>
         Ship fintech apps faster with <span class="dim"
           >structured brand assets.</span
@@ -227,7 +232,34 @@ const schema = [
           </div>
         </div>
 
-        <div class="feature-row">
+        <div class="feature-row" id="feature-figma">
+          <div class="feature-text">
+            <h2>Official Figma Plugin</h2>
+            <p>Design fintech apps faster and easier. Insert 150+ verified Indian fintech and bank vector logos directly into your Figma canvas with a single click.</p>
+            <div class="feature-cta">
+              <a href="/figma-plugin" class="outline-btn">Explore plugin</a>
+            </div>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-card glass-card">
+               <div class="figma-mock-ui">
+                 <div class="figma-sidebar">
+                   <div class="figma-skeleton-item"></div>
+                   <div class="figma-skeleton-item short"></div>
+                   <div class="figma-skeleton-item"></div>
+                   <div class="figma-skeleton-item"></div>
+                 </div>
+                 <div class="figma-canvas">
+                   <div class="figma-logo-wrapper">
+                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300" width="60" height="60"><path fill="#0acf83" d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z"/><path fill="#a259ff" d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z"/><path fill="#f24e1e" d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z"/><path fill="#ff7262" d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50V0z"/><path fill="#1abcfe" d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"/></svg>
+                   </div>
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
           <div class="feature-text">
             <h2>100% Open Source</h2>
             <p>Built for the community, by the community. Finmarks is MIT licensed, meaning it is completely free to use in commercial and personal projects.</p>
@@ -308,8 +340,8 @@ const schema = [
 
 <style>
   .hero {
-    padding-block: clamp(3rem, 2rem + 6vw, 6rem)
-      clamp(2rem, 1.5rem + 4vw, 4rem);
+    padding-block: clamp(2rem, 3vh, 3.5rem)
+      clamp(4.5rem, 6vh, 5.5rem);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -341,9 +373,76 @@ const schema = [
   }
   .hero-logo {
     display: block;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 1rem auto;
     max-width: 280px;
     height: auto;
+  }
+
+  .figma-chip {
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 99px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 auto 1.25rem auto;
+    transition: all 0.2s ease;
+  }
+  .figma-chip > * {
+    position: relative;
+    z-index: 1;
+  }
+  .figma-chip::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -150%;
+    width: 80%;
+    height: 200%;
+    background: linear-gradient(
+      105deg,
+      transparent 20%,
+      rgba(255, 255, 255, 0.28) 50%,
+      transparent 80%
+    );
+    transform: skewX(-20deg);
+    animation: chip-shimmer 5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+  }
+  @keyframes chip-shimmer {
+    0%, 20% {
+      left: -150%;
+    }
+    60%, 100% {
+      left: 200%;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .figma-chip::after {
+      animation: none;
+      display: none;
+    }
+  }
+  .figma-chip:hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-1px);
+  }
+  .figma-chip .chip-arrow {
+    opacity: 0.7;
+    transition: transform 0.2s;
+  }
+  .figma-chip:hover .chip-arrow {
+    transform: translateX(3px);
   }
 
   @keyframes fadeUp {
@@ -360,7 +459,7 @@ const schema = [
     font-size: clamp(2rem, 0.5rem + 2.5vw, 3rem);
     font-weight: 700;
     line-height: 1.1;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     letter-spacing: -0.025em;
     text-wrap: balance;
     color: #ffffff;
@@ -396,6 +495,7 @@ const schema = [
     .cta {
       display: grid;
       grid-template-columns: 1fr auto;
+      gap: 1rem;
     }
   }
   .cta .ghost-btn {
@@ -738,7 +838,7 @@ const schema = [
     min-width: 0;
   }
   .hero-search {
-    margin: 2rem auto;
+    margin: 1.25rem auto;
     position: relative;
     max-width: 680px;
     width: 100%;
@@ -752,7 +852,7 @@ const schema = [
     padding: 0.6rem 1rem 0.6rem 0.6rem;
     border-radius: 99px;
     cursor: pointer;
-    margin: 0 auto 1.5rem auto;
+    margin: 0 auto 1.25rem auto;
     user-select: none;
     transition: all 0.2s ease;
     background: rgba(0, 0, 0, 0.4);
@@ -825,7 +925,108 @@ const schema = [
   .token.attr { color: #79c0ff; }
   .token.string { color: #a5d6ff; }
 
-  /* 3. Open Source Glowing Orb */
+  /* 3. Figma Mock UI */
+  .figma-mock-ui {
+    width: 90%;
+    height: 85%;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  :root[data-theme="dark"] .figma-mock-ui {
+    background: rgba(30, 30, 30, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .figma-mock-ui {
+      background: rgba(30, 30, 30, 0.4);
+      border-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+  }
+
+  .figma-sidebar {
+    width: 25%;
+    background: rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1.25rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  :root[data-theme="dark"] .figma-sidebar {
+    background: rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .figma-sidebar {
+      background: rgba(0, 0, 0, 0.2);
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  }
+
+  .figma-skeleton-item {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 100%;
+  }
+  .figma-skeleton-item.short {
+    width: 60%;
+  }
+  :root[data-theme="dark"] .figma-skeleton-item {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .figma-skeleton-item {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .figma-canvas {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0,0,0,0.05) 1.5px, transparent 1.5px);
+    background-size: 16px 16px;
+  }
+  :root[data-theme="dark"] .figma-canvas {
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+    background-size: 16px 16px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .figma-canvas {
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 1.5px, transparent 1.5px);
+      background-size: 16px 16px;
+    }
+  }
+
+  .figma-logo-wrapper {
+    animation: bounce-subtle 4s infinite alternate ease-in-out;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
+  }
+  :root[data-theme="dark"] .figma-logo-wrapper {
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .figma-logo-wrapper {
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.4));
+    }
+  }
+  
+  @keyframes bounce-subtle {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-8px); }
+  }
+
+  /* 4. Open Source Glowing Orb */
   .open-source-visual {
     background: var(--surface-2);
     border: 1px solid var(--line);
@@ -879,7 +1080,7 @@ const schema = [
 
   .scroll-cue {
     position: absolute;
-    bottom: clamp(1.5rem, 5vh, 3rem);
+    bottom: clamp(1rem, 2.5vh, 1.75rem);
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;

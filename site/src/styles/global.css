@@ -671,6 +671,10 @@ img[data-logo][data-loaded] {
   transition: transform 0.25s ease-in-out;
 }
 
+.app-sidebar astro-island {
+  display: contents;
+}
+
 /* Only the nav + category list scrolls; .rail-bottom stays pinned. */
 .rail-scroll {
   flex: 1 1 auto;

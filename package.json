@@ -18,7 +18,8 @@
     "build": "pnpm validate && pnpm generate && pnpm -F @finmarks/finmarks build",
     "test": "pnpm validate && pnpm -F @finmarks/finmarks test",
     "sync": "npx svgo --config svgo.config.mjs -r entities/ && Finmarks_CDN=\"\" node scripts/generate-index.mjs && pnpm -C site run build",
-    "dev-site": "pnpm -C site dev --port 3002"
+    "dev-site": "pnpm -C site dev --port 3002",
+    "build:figma": "pnpm --filter @finmarks/figma-plugin build"
   },
   "devDependencies": {
     "ajv": "^8.17.1",

@@ -1,0 +1,385 @@
+---
+import Base from "../layouts/Base.astro";
+import CreatorCredit from "../components/CreatorCredit.astro";
+
+const title = "Finmarks Figma Plugin — Insert Indian Fintech Logos Fast";
+const description = "The official Figma plugin for Finmarks. Search and insert 100+ verified Indian bank, UPI app, and fintech vector SVG logos directly into your Figma designs.";
+---
+
+<Base title={title} description={description}>
+  <div class="plugin-page-wrapper">
+    {/* Ambient Figma Canvas Background & Spotlight Glow */}
+    <div class="canvas-bg" aria-hidden="true">
+      <div class="canvas-glow"></div>
+      <div class="canvas-dots"></div>
+    </div>
+
+    <div class="plugin-page">
+      {/* Hero Section */}
+      <section class="hero-section">
+        <div class="figma-badge">
+          <img  src="/favicon.svg" alt="Figma Logo" width="18" height="18" style="border-radius: 100%" />
+          <span>Finmarks Figma Plugin</span>
+        </div>
+
+        <h1 class="hero-title">
+          Design fintech apps <br class="desktop-only" />
+          <span class="gradient-text-blue">faster</span> and <span class="gradient-text-orange">easier</span>
+        </h1>
+
+        <p class="hero-sub">
+          A faster way to design fintech products. Use the Finmarks plugin to search 152+ fintech logos directly inside Figma in just a one click.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://www.figma.com/community/plugin/1683441288203040129/finmarks" target="_blank" rel="noreferrer" class="btn-figma-install">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" viewBox="0 0 200 300" width="18" height="18"><style>.st0{fill:#0acf83}.st1{fill:#a259ff}.st2{fill:#f24e1e}.st3{fill:#ff7262}.st4{fill:#1abcfe}</style><title>Figma.logo</title><desc>Created using Figma</desc><path id="path0_fill" class="st0" d="M50 300c27.6 0 50-22.4 50-50v-50H50c-27.6 0-50 22.4-50 50s22.4 50 50 50z"/><path id="path1_fill" class="st1" d="M0 150c0-27.6 22.4-50 50-50h50v100H50c-27.6 0-50-22.4-50-50z"/><path id="path1_fill_1_" class="st2" d="M0 50C0 22.4 22.4 0 50 0h50v100H50C22.4 100 0 77.6 0 50z"/><path id="path2_fill" class="st3" d="M100 0h50c27.6 0 50 22.4 50 50s-22.4 50-50 50h-50V0z"/><path id="path3_fill" class="st4" d="M200 150c0 27.6-22.4 50-50 50s-50-22.4-50-50 22.4-50 50-50 50 22.4 50 50z"/></svg>
+            <span>Install on Figma</span>
+          </a>
+
+          <a href="/browse" class="btn-secondary">
+            <span>Browse Library</span>
+          </a>
+        </div>
+
+        {/* Hero Showcase Mockup Frame */}
+        <div class="mockup-window">
+          <img 
+            src="/landing.jpg" 
+            alt="Finmarks Figma Plugin Preview" 
+            class="mockup-landing-img" 
+            loading="eager" 
+            decoding="async"
+          />
+        </div>
+      </section>
+
+    {/* Feature Grid */}
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Instant Search</h3>
+          <p>Find assets fast by brand name, IFSC code prefix, UPI handle, or financial category right inside your canvas.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+          </div>
+          <h3>Icon & Full Variants</h3>
+          <p>Toggle globally between compact app icon marks and full horizontal brand lockups depending on your design layout.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3>Vector SVG Quality</h3>
+          <p>Inserts 100% clean, vector SVGs verified for accurate viewBox dimensions and clean layer structures.</p>
+        </div>
+      </div>
+    </section>
+
+    <CreatorCredit />
+    </div>
+  </div>
+</Base>
+
+<style>
+  .plugin-page-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* --- Ambient Figma Canvas Background & Spotlight --- */
+  .canvas-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 980px;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .canvas-glow {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    max-width: 100vw;
+    height: 640px;
+    background: 
+      radial-gradient(ellipse 55% 45% at 50% 30%, rgba(162, 89, 255, 0.14) 0%, transparent 70%),
+      radial-gradient(circle at 25% 40%, rgba(26, 188, 254, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 75% 35%, rgba(242, 78, 30, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% 55%, rgba(10, 207, 131, 0.1) 0%, transparent 70%);
+    filter: blur(50px);
+    opacity: 0.9;
+  }
+
+  :root[data-theme="dark"] .canvas-glow {
+    background: 
+      radial-gradient(ellipse 55% 45% at 50% 30%, rgba(162, 89, 255, 0.22) 0%, transparent 70%),
+      radial-gradient(circle at 25% 40%, rgba(26, 188, 254, 0.18) 0%, transparent 60%),
+      radial-gradient(circle at 75% 35%, rgba(242, 78, 30, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 50% at 50% 55%, rgba(10, 207, 131, 0.15) 0%, transparent 70%);
+    opacity: 0.95;
+    filter: blur(65px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .canvas-glow {
+      background: 
+        radial-gradient(ellipse 55% 45% at 50% 30%, rgba(162, 89, 255, 0.22) 0%, transparent 70%),
+        radial-gradient(circle at 25% 40%, rgba(26, 188, 254, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 75% 35%, rgba(242, 78, 30, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 50% at 50% 55%, rgba(10, 207, 131, 0.15) 0%, transparent 70%);
+      opacity: 0.95;
+      filter: blur(65px);
+    }
+  }
+
+  .canvas-dots {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(20, 22, 27, 0.12) 1.5px, transparent 1.5px);
+    background-size: 26px 26px;
+    background-position: center top;
+    mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 65% at 50% 35%, black 20%, transparent 80%);
+  }
+
+  :root[data-theme="dark"] .canvas-dots {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.13) 1.5px, transparent 1.5px);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .canvas-dots {
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.13) 1.5px, transparent 1.5px);
+    }
+  }
+
+  .plugin-page {
+    position: relative;
+    z-index: 1;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  /* --- Hero Section --- */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .figma-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.25rem 0.6rem 0.25rem 0.4rem;
+    border-radius: 9999px;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .hero-title {
+    font-family: var(--sans);
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+  }
+
+  .gradient-text-blue {
+    display: inline-block;
+    padding-right: 0.12em;
+    margin-right: -0.08em;
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-orange {
+    display: inline-block;
+    padding-right: 0.12em;
+    margin-right: -0.08em;
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-sub {
+    max-width: 680px;
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin-bottom: 2.25rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+  }
+
+  .btn-figma-install {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 9999px;
+    background: #1e1e1e;
+    color: #ffffff;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+
+  :root[data-theme="dark"] .btn-figma-install {
+    background: #ffffff;
+    color: #0c0e12;
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .btn-figma-install {
+      background: #ffffff;
+      color: #0c0e12;
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .btn-figma-install:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.85rem 1.6rem;
+    border-radius: 9999px;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background: var(--surface-2);
+    transform: translateY(-1px);
+  }
+
+  /* --- Showcase Mockup Frame --- */
+  .mockup-window {
+    position: relative;
+    z-index: 1;
+    background: var(--surface);
+    border: 1px solid var(--line-strong);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  :root[data-theme="dark"] .mockup-window {
+    box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px rgba(162, 89, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .mockup-window {
+      box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.7), 0 0 40px -10px rgba(162, 89, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+  }
+
+  .mockup-landing-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* --- Features Section --- */
+  .features-section {
+    margin-bottom: 5rem;
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    box-shadow: var(--shadow);
+  }
+
+  .feature-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  .feature-card p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .desktop-only { display: none; }
+  }
+</style>

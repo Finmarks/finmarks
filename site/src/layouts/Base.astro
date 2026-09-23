@@ -307,7 +307,7 @@ const clarityId =
           <div class="rail-scroll">
             <SidebarLinks currentPath={Astro.url.pathname} />
           </div>
-          <SidebarBottom client:load />
+          <SidebarBottom client:load currentPath={Astro.url.pathname} />
         </aside>
         
         <main class="app-main" id="main">
